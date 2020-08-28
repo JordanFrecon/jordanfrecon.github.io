@@ -7,7 +7,7 @@ weight: 3
 
 # **List of Publications**
 
-    {% for post in site.categories.science %}
+    {% for post in site.publications %}
       {% if post.work-type == 'Paper' %}
         <li>
           <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
