@@ -5,6 +5,5 @@ permalink: /publications/
 weight: 3
 ---
 
-# **List of Publications**
 
 {% include publications/index.html %}
