@@ -7,12 +7,26 @@ weight: 3
 
 # **List of Publications**
 
-<h2>Upcoming</h2>
-<ol>
-<li>J. Frecon, S. Salzo, and M. Pontil,<br>
-<b>Bilevel optimization of groupwise penalties.</b>,<br>
-</li><br>
-<li>J. Frecon, R. Grazzi, S. Salzo, and M. Pontil,<br>
-<b>Smooth optimization of orthogonal wavelet basis</b>,<br>
-</li><br>
-</ol>
+<div class="publist">
+  <ul>
+    {% for post in site.publications %}
+      {% if post.work-type == 'Paper' %}
+        <li>
+          <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
+            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
+            <h2>{{ post.ref-authors }} ({{ post.ref-year }}).</h2></a>
+          <p>
+            {{ post.ref-title }}. 
+            <em>{{ post.ref-journal}}</em>
+            {% if post.ref-vol %}, {{ post.ref-vol }}{% endif %}. 
+            {% if post.ref-doi %}
+              <a href="http://dx.doi.org/{{ post.ref-doi }}">
+                doi: {{ post.ref-doi }}
+              </a>
+            {% endif %}
+          </p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  <ul>
+</div>
