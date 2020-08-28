@@ -1,7 +1,8 @@
 ---
 title: Bilevel Optimization of Groupwise penalties
+layout: post
+category: science
 date: 2020
-category:
 
 work-type: Paper
 ref-authors: Frecon J., Saverio S., Pontil M.
