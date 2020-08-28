@@ -2,10 +2,10 @@
   percentage: 95
   color: info
 
-- name: (Hyperparameter) Optimization
+- name: Optimization
   percentage: 90
   color: dark
 
 - name: Signal/Image Processing
   percentage: 80
-  color:
+  color: orange
