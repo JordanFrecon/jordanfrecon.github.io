@@ -3,7 +3,7 @@ title               : Jordan Frecon
 description         : >-
                       Postdoctoral Researcher in Machine Learning.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-#repository          : YoussefRaafatNasry/portfolYOU     # Change to <your-username>/<your-#username>.github.io (or remove it if you don't need remote projects)
+repository          : jordanfrecon/jordanfrecon.github.io
 remote_theme        : YoussefRaafatNasry/portfolYOU
 
 
