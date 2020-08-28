@@ -1,0 +1,11 @@
+- name: Machine Learning
+  percentage: 95
+  color: info
+
+- name: (Hyperparameter) Optimization
+  percentage: 90
+  color: dark
+
+- name: Signal/Image Processing
+  percentage: 80
+  color:
