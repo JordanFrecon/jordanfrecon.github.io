@@ -7,8 +7,6 @@ weight: 3
 
 # **List of Publications**
 
-<div class="publist">
-  <ul>
     {% for post in site.publications %}
       {% if post.work-type == 'Paper' %}
         <li>
@@ -28,5 +26,4 @@ weight: 3
         </li>
       {% endif %}
     {% endfor %}
-  <ul>
-</div>
+
