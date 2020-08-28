@@ -79,6 +79,11 @@ defaults:
       type: "posts"
     values:
       comments: false                                   # Set to true to enable disqus comments
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "page"
 
 ### Exclude from processing ###
 exclude:
