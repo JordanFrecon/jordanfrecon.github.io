@@ -5,7 +5,7 @@ permalink: /
 
 {% include landing.html %}
 
-<b>Latest News:</b>
+<div class="newstitle"> Latest News:</div>
 <ul>
   <li><i>June 2020</i> I have joined the editorial board of JMLR</li>
   <li><i>Sept. 2019</i> I will give a talk on smooth bilevel optimization at the IIT-RIKEN Advancement of Artficial Intelligence Workshop</li>
