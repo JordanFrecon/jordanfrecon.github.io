@@ -29,6 +29,9 @@ layout: default
      {% if page.doi %}
      <a href="http://dx.doi.org/{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
      {% endif %}
+     {% if page.toolbox %}
+     <a href="{{ page.toolbox }}"><i class="fa fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+     {% endif %}
    </p>
   {% endif %}
 </div>
