@@ -5,4 +5,5 @@ authors: J. Spilka, J. Frecon, R.F. Leonarduzzi, N. Pustelnik, P. Abry, and M. D
 publication: IEEE Journal of Biomedical and Health Informatics
 year: 2017
 doi: http://dx.doi.org/XX.XXX/
+type: journal
 ---
