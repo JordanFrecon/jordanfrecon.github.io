@@ -5,5 +5,4 @@ permalink: /CV/
 weight: 5
 ---
 
-<iframe src="https://drive.google.com/file/d/1taCaC5cIAtgwyF2SMpREuShdbc_5T8Yu/preview" width="100%" height="100%"></iframe>
-
+<embed src="https://jordanfrecon.github.io/download/CV_Frecon.pdf" width="600px" height="500px" />
