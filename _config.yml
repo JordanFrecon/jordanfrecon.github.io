@@ -54,7 +54,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-collections:
   publications:
     output: true
     permalink: /:collection/:name
