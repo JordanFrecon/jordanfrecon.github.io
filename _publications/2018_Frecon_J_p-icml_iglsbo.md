@@ -2,7 +2,7 @@
 layout: publication
 title: Inferring the group Lasso structure via bilevel optimization
 authors: J. Frecon, S. Salzo, and M. Pontil
-publication: ICML Workshop : Modern Trends in Nonconvex Optimization for Machine Learning
+publication: ICML Workshop - Modern Trends in Nonconvex Optimization for Machine Learning
 year: 2018
 type: workshop
 ---
