@@ -9,6 +9,29 @@ weight: 3
 
 {% assign publications = site.publications | sort: "year" | reverse %}
 
+# **To Appear**
+<ol>
+{% for pub in publications %}
+ {% if pub.type == 'unpublished' %}
+ <li>
+ <div class="pubitem">
+   <div class="pubauthors">
+     {{ pub.authors }},
+   </div>
+   <div class="pubtitle">
+     {{ pub.title }},
+   </div>
+   <div class="pubinfo">
+     {{ pub.publication }}, {{ pub.year}}
+   </div>
+ </div>
+ <div class="publinks">
+ </div>
+ </li>
+ {% endif %}
+{% endfor %}
+</ol>
+
 # **International Journals**
 <ol>
 {% for pub in publications %}
