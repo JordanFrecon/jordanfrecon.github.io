@@ -11,7 +11,7 @@ weight: 3
 
 # **International Journals**
 {% for pub in publications %}
- {% if pub.work-type == 'journal' %}
+ {% if pub.type == 'journal' %}
  <div class="pubitem">
    <div class="pubauthors">
      {{ pub.authors }}
@@ -33,7 +33,7 @@ weight: 3
 
 # **International Conferences**
 {% for pub in publications %}
- {% if pub.work-type == 'conference' %}
+ {% if pub.type == 'conference' %}
  <div class="pubitem">
    <div class="pubauthors">
      {{ pub.authors }}
