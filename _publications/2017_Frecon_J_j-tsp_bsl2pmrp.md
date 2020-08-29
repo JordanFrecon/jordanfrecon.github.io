@@ -5,4 +5,5 @@ authors: J. Frecon, N. Pustelnik, N. Dobigeon, H. Wendt and P. Abry,
 publication: IEEE Transactions on Signal Processing
 year: 2017
 doi: http://dx.doi.org/XX.XXX/
+type: journal
 ---
