@@ -5,7 +5,8 @@ permalink: /publications/
 weight: 3
 ---
 
-<h1 class="mt-4">Publications</h1>
+# **List of Publications**
+
 {% assign publications = site.publications | sort: "year" | reverse %}
 {% for pub in publications %}
 <div class="pubitem">
