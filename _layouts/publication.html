@@ -10,7 +10,9 @@ layout: default
   <div class="publication-info">
     {{ page.publication }}, {{ page.year}}
   </div>
+  {% if page.image %}
   <img class="publication-teaser" src="/images/{{ page.slug }}.png" alt="project teaser"/>
+  {% endif %}
   {{ content }}
   <h2 id="downloads">Downloads</h2>
   <p>

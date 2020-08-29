@@ -6,6 +6,7 @@ publication: IEEE Transactions on Signal Processing
 year: 2017
 doi: http://dx.doi.org/XX.XXX/
 type: journal
+image: False
 ---
 
 ## Abstract

@@ -6,6 +6,7 @@ publication: IEEE Journal of Biomedical and Health Informatics
 year: 2017
 doi: http://dx.doi.org/XX.XXX/
 type: journal
+image: True
 ---
 
 
