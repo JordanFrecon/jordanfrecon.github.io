@@ -26,6 +26,7 @@ weight: 3
    </div>
  </div>
  <div class="publinks">
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
  </div>
  </li>
  {% endif %}
