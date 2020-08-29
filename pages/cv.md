@@ -1,6 +1,8 @@
 ---
 layout: default
 title: CV
-link: [Link to a file]({{ site.baseurl }}{% link /download/CV_Frecon.pdf %})
+permalink: /CV/
 weight: 5
 ---
+
+[Link to a file]({{ site.baseurl }}{% link /download/CV_Frecon.pdf %})
