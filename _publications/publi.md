@@ -1,8 +1,8 @@
 ---
 layout: default
-title: A New Method for Fancy Research
-authors: John Doe and Mary Jane
-publication: Journal of Fancy Research
-year: 2019
+title: Bayesian selection for the l2-Potts model regularization parameter: 1D piecewise constant signal denoising,
+authors: J. Frecon, N. Pustelnik, N. Dobigeon, H. Wendt and P. Abry,
+publication: IEEE Transactions on Signal Processing
+year: 2017
 doi: http://dx.doi.org/XX.XXX/
 ---
