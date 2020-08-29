@@ -22,7 +22,7 @@ weight: 3
      {{ pub.title }},
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+     {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
  <div class="publinks">
@@ -46,7 +46,7 @@ weight: 3
      {{ pub.title }},
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+     {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
  <div class="publinks">
@@ -72,7 +72,7 @@ weight: 3
      {{ pub.title }}
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+     {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
  <div class="publinks">
