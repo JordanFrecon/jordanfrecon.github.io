@@ -4,7 +4,7 @@ title: Sélection du paramètre de régularisation dans le problème L2-Potts
 authors: J. Frecon, N. Pustelnik, N. Dobigeon, H. Wendt and P. Abry
 publication: GRETSI
 year: 2017
-doi: 
+doi:
 type: workshop
 ---
 
