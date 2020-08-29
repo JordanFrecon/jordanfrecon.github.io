@@ -16,10 +16,10 @@ weight: 3
  <li>
  <div class="pubitem">
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ pub.authors }},
    </div>
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ pub.title }},
    </div>
    <div class="pubinfo">
      {{ pub.publication }}, {{ pub.year}}
