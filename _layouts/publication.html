@@ -21,6 +21,7 @@ layout: default
     {% if page.slides %}
     <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
     {% endif %}
+    {% if page.supplementary %}
     <a href="/download/{{ page.slug }}_supp.pdf"><i class="far fa-file-pdf"></i> Supplementary</a>&nbsp;&nbsp;
     {% endif %}
     <a href="/download/{{ page.slug }}.bib"><i class="fas fa-quote-left"></i> BibTex</a>&nbsp;&nbsp;
