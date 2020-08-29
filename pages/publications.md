@@ -20,4 +20,8 @@ weight: 3
     {{ pub.publication }}, {{ pub.year}}
   </div>
 </div>
+<div class="publinks">
+  <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+  <a href="{{pub.url}}"><i class="fas fa-link"></i> Project Page</a>
+</div>
 {% endfor %}
