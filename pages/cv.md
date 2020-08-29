@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CV
-permalink: /CV/
+permalink: /download/CV_Frecon.pdf
 weight: 5
 ---
 
