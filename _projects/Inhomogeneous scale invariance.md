@@ -1,6 +1,6 @@
 ---
 name: Inhomogenous Scale Invariance
-tools: [Multifractal, Segmentation]
+tools: [Multifractal, Segmentation, Textures]
 image: https://jordanfrecon.github.io/images/projects/inhomogeneousScaleInvariance_preview.png
 description: This project deals with the case where the scale invariance properties are inhomogenous in time or in space.
 ---
