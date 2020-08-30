@@ -1,6 +1,6 @@
 ---
 name: Multivariate Autosimilarity
-tools: [Neural networks, Variational inference]
+tools: [Monofractal, Multivariate data]
 image: https://jordanfrecon.github.io/images/bivariateOFBM.jpg
 description: Joint analysis of the scale invariance of multivariate data.
 ---
