@@ -1,7 +1,7 @@
 ---
 name: Multivariate Scale Invariance
 tools: [Monofractal, Multivariate data, Branch and bound algorithm, Internet traffic]
-image: https://jordanfrecon.github.io/images/projects/multivariateScaleInvariance_preview.jpg
+image: /images/projects/multivariateScaleInvariance_preview.jpg
 description: Joint analysis of the scale invariance of multivariate data.
 ---
 
