@@ -1,8 +1,8 @@
 ---
-name: Inhomgeneous Scale Invariance
+name: Piecewise Multifractality
 tools: [Multifractal, Segmentation]
 image: https://jordanfrecon.github.io/images/piecewiseMF.png
-description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
+description: This project deals with the case where the scale invariance properties are inhomogenous in time or in space.
 ---
 
 # Piecewise Multifractality Project
@@ -15,9 +15,36 @@ The originality of this project is to i) consider the study of inhomogeneous sca
 
 
 
-## Search Movies
+## Related Publications
 
-![search](https://www.sketchappsources.com/resources/source-image/microsoft-windows-10-virtual-keyboard-diogo-sousa.png)
+<ol>
+{% for pub in publications %}
+ {% if pub.project == 'piecewiseMF' %}
+ <li>
+ <div class="pubitem">
+   <div class="pubauthors">
+     {{ pub.authors }},
+   </div>
+   <div class="pubtitle">
+     {{ pub.title }},
+   </div>
+   <div class="pubinfo">
+     {{ pub.publication }}, {{ pub.year}}.
+   </div>
+ </div>
+ <div class="publinks">
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   {% if pub.toolbox %}
+   <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   {% endif %}
+ </div>
+ </li>
+ {% endif %}
+{% endfor %}
+</ol>
+
 
 <p class="text-center">
 {% include elements/button.html link="https://github.com/YoussefRaafatNasry/portfolYOU" text="Learn More" %}
