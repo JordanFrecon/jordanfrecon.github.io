@@ -1,7 +1,7 @@
 ---
 name: Hyperparameter Optimization
 tools: [Bilevel optimization, Nonsmooth, Bregman]
-image: https://jordanfrecon.github.io/images/projects/hyperparamOpt_preview.png
+image: /images/projects/hyperparamOpt_preview.png
 description: This project aims at optimizing the hyperparameters of models learned by minimizing nonsmooth functionals
 --- 
 

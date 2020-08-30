@@ -1,7 +1,7 @@
 ---
 name: Fetal Heart Rate Analysis
 tools: [Multifractal, FHR, Fetal Acidosis, Sparse SVM]
-image: https://jordanfrecon.github.io/images/projects/fhr_preview.jpg
+image: /images/projects/fhr_preview.jpg
 description: Scale invariance analysis of fetal heart rate.
 ---
 
