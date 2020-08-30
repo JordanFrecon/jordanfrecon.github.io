@@ -9,6 +9,7 @@ permalink: /
 {% assign news_list = site.news | sort: "date" | reverse %}
 
 <ul>
-  {% for news in news_list %}
-  <li><b>{{ news.date_string }}:</b> {{ news.info }}</li>
+{% for news in news_list %}
+<li><b>{{ news.date_string }}:</b> {{ news.info }}</li>
+{% endfor %}
 </ul>
