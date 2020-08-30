@@ -1,6 +1,6 @@
 ---
 name: Multivariate Scale Invariance
-tools: [Monofractal, Multivariate data]
+tools: [Monofractal, Multivariate data, Branch and bound algorithm]
 image: https://jordanfrecon.github.io/images/projects/multivariateScaleInvariance_preview.jpg
 description: Joint analysis of the scale invariance of multivariate data.
 ---
