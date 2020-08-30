@@ -1,6 +1,6 @@
 ---
-name: Piecewise Multifractality
-tools: [C#, XML, WPF]
+name: Inhomgeneous Scale Invariance
+tools: [Multifractal, Segmentation]
 image: https://jordanfrecon.github.io/images/piecewiseMF.png
 description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
 ---
