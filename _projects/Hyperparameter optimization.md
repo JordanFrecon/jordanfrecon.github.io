@@ -1,13 +1,14 @@
 ---
-name: Multivariate Autosimilarity
-tools: [Monofractal, Multivariate data]
-image: https://jordanfrecon.github.io/images/bivariateOFBM.jpg
-description: Joint analysis of the scale invariance of multivariate data.
----
+name: Hyperparameter Optimization
+tools: [Bilevel, Nonsmooth, Bregman]
+image: https://jordanfrecon.github.io/images/projects/hyperparamOpt_preview.png
+description: This project aims at optimizing the hyperparameters of models learned by minimizing nonsmooth functionals
+--- 
 
+# Hyperparameter Optimization
 
-# Multivariate Autosimilarity
 (soon...)
+
 
 
 
@@ -16,7 +17,7 @@ description: Joint analysis of the scale invariance of multivariate data.
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'deepLearning' %}
+ {% if pub.project == 'hyperparamOpt' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">

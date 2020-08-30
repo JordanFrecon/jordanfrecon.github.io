@@ -1,14 +1,13 @@
 ---
-name: Hyperparameter Optimization
-tools: [Nonsmooth, Bregman]
-image: https://jordanfrecon.github.io/images/courbe.png
-description: This project aims at optimizing the hyperparameters of models learned by minimizing nonsmooth functionals
---- 
+name: Fetal Heart Rate Analysis
+tools: [Multifractal, FHR]
+image: https://jordanfrecon.github.io/images/projects/fhr_preview.jpg
+description: Scale invariance analysis of fetal heart rate.
+---
 
-# Hyperparameter Optimization
 
+# Fetal Heart Rate Analysis
 (soon...)
-
 
 
 
@@ -17,7 +16,7 @@ description: This project aims at optimizing the hyperparameters of models learn
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'hyperparamOpt' %}
+ {% if pub.project == 'fhr' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">

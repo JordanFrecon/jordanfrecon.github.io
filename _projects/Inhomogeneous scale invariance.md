@@ -1,11 +1,11 @@
 ---
-name: Piecewise Multifractality
+name: Inhomogenous Scale Invariance
 tools: [Multifractal, Segmentation]
-image: https://jordanfrecon.github.io/images/piecewiseMF.png
+image: https://jordanfrecon.github.io/images/projects/inhomogeneousScaleInvariance_preview.png
 description: This project deals with the case where the scale invariance properties are inhomogenous in time or in space.
 ---
 
-# Piecewise Multifractality Project
+# Inhomogenous Scale Invariance
 
 The classical formulation of the multifractal formalism relies on the assumption that the multifractal properties of the process of interest are homogeneous. However, in many scenarios, it might happen that they could vary in time or in space. For instance, one faces this situation when dealing with the analysis of satellite photographs having both textures of clouds and snow.
 
