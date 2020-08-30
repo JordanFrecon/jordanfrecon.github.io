@@ -1,6 +1,7 @@
 ---
 name: Hyperparameter Optimization
 tools: [Nonsmooth, Bregman]
+image: https://jordanfrecon.github.io/images/courbe.png
 description: This project aims at optimizing the hyperparameters of models learned by minimizing nonsmooth functionals
 --- 
 
