@@ -1,12 +1,12 @@
 ---
-name: Understanding Deep Learning
-tools: [Neural networks, Variational inference]
-image: https://jordanfrecon.github.io/images/deepLearning.jpg
-description: Towards the unification of deep neural networks and variational models.
+name: Piecewise constant denoising
+tools: [Potts, Total-variation, online learning, regularization parameter]
+image: https://jordanfrecon.github.io/images/projects/piecewiseConstantDenoising_preview.jpg
+description: Various contributions about piecewise constant denoising.
 ---
 
 
-# Understanding Deep Learning
+# Piecewise constant denoising
 (soon...)
 
 
@@ -16,7 +16,7 @@ description: Towards the unification of deep neural networks and variational mod
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'deepLearning' %}
+ {% if pub.project == 'piecewiseDenoising' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">

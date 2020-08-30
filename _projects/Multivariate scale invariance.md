@@ -1,12 +1,12 @@
 ---
-name: Fetal Heart Rate Analysis
-tools: [Multifractal, FHR]
-image: https://jordanfrecon.github.io/images/fhr.jpg
-description: Scale invariance analysis of fetal heart rate.
+name: Multivariate Scale Invariance
+tools: [Monofractal, Multivariate data]
+image: https://jordanfrecon.github.io/images/projects/multivariateScaleInvariance_preview.jpg
+description: Joint analysis of the scale invariance of multivariate data.
 ---
 
 
-# Fetal Heart Rate Analysis
+# Multivariate Scale Invariance
 (soon...)
 
 
@@ -16,7 +16,7 @@ description: Scale invariance analysis of fetal heart rate.
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'fhr' %}
+ {% if pub.project == 'deepLearning' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">

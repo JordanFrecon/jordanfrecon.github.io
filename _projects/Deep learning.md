@@ -1,12 +1,12 @@
 ---
-name: Piecewise constant denoising
-tools: [Potts, Total-variation, online learning, regularization parameter]
-image: https://jordanfrecon.github.io/images/piecewiseConstant.jpg
-description: Various contributions about piecewise constant denoising.
+name: Understanding Deep Learning
+tools: [Neural networks, Variational inference]
+image: https://jordanfrecon.github.io/images/projects/deepLearning_preview.jpg
+description: Towards the unification of deep neural networks and variational models.
 ---
 
 
-# Piecewise constant denoising
+# Understanding Deep Learning
 (soon...)
 
 
@@ -16,7 +16,7 @@ description: Various contributions about piecewise constant denoising.
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'piecewiseDenoising' %}
+ {% if pub.project == 'deepLearning' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
