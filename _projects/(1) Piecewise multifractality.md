@@ -16,9 +16,10 @@ The originality of this project is to i) consider the study of inhomogeneous sca
 
 
 ## Related Publications
+{% assign publications = site.publications | sort: "year" | reverse %}
 
 <ol>
-{% for pub in site.publications %}
+{% for pub in publications %}
  {% if pub.project == 'piecewiseMF' %}
  <li>
  <div class="pubitem">
