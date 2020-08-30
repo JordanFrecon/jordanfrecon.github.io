@@ -19,7 +19,7 @@ The originality of this project is to i) consider the study of inhomogeneous sca
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'piecewiseMF' %}
+ {% if pub.projectname == 'piecewisemf' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
