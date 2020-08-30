@@ -1,10 +1,12 @@
 ---
-name: Fetal Hear Rate
-tools: [Multifractal, Segmentation]
+name: Fetal Heart Rate Analysis
+tools: [Multifractal, FHR]
 image: https://jordanfrecon.github.io/images/fhr.jpg
 description: Scale invariance analysis of fetal heart rate.
 ---
 
+
+# Fetal Heart Rate Analysis
 (soon...)
 
 
