@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{{ page.title }}
+<h2>{{ page.title }}</h2>
 
 
 {{ content }}
 
 
-## Related Publications
+<h2>Related Publications</h2>
 {% assign publications = site.publications | sort: "year" | reverse %}
 
 <ol>
