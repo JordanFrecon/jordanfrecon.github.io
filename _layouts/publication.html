@@ -36,6 +36,6 @@ layout: default
   {% endif %}
 
 <p class="text-center">
-{% include elements/button.html onclick="window.history.back()" text="Back" %}
+{% include elements/button.html href="{{page.previous.url}}" text="Back" %}
 </p>
 </div>
