@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{{ page.title }}
+
+
 {{ content }}
 
 
@@ -10,7 +13,7 @@ layout: default
 
 <ol>
 {% for pub in publications %}
- {% if pub.project ==  %}
+ {% if pub.project ==  {{ page.keyword }} %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
