@@ -4,4 +4,5 @@ tools: [Potts model, Total-variation, Online denoising, Regularization parameter
 image: /images/projects/piecewiseConstantDenoising_preview.jpg
 description: Various contributions about piecewise constant denoising.
 layout: project
+keyword: piecewiseCstDenoising
 ---
