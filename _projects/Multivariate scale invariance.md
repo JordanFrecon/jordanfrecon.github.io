@@ -16,7 +16,7 @@ description: Joint analysis of the scale invariance of multivariate data.
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'deepLearning' %}
+ {% if pub.project == 'multiScaleInvariance' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">

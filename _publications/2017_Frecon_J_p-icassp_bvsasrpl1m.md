@@ -7,6 +7,7 @@ year: 2017
 doi: 10.1109/ICASSP.2017.7952875
 type: conference
 toolbox: https://github.com/JordanFrecon/TVL0_select
+project: piecewiseCstDenoising
 ---
 
 This work focusses on the parameter estimation in the L1-Potts model, i.e., a variational approach involving a L1 dataterm and a

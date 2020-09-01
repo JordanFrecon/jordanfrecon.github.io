@@ -16,7 +16,7 @@ description: Various contributions about piecewise constant denoising.
 
 <ol>
 {% for pub in publications %}
- {% if pub.project == 'piecewiseDenoising' %}
+ {% if pub.project == 'piecewiseCstDenoising' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
