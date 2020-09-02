@@ -2,7 +2,7 @@
 layout: publication
 title: Variation totale multivariee pour la detection de changement du spectre multifractal
 authors: J. Frecon, N. Pustelnik, H. Wendt and P. Abry
-publication: GRETSI
+publication: Colloque francophone de traitement du signal et des images (GRETSI)
 year: 2015
 doi: 
 type: workshop

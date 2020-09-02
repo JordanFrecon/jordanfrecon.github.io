@@ -2,7 +2,7 @@
 layout: publication
 title: Multifractal-based texture segmentation using variational procedure
 authors: J. Frecon, N. Pustelnik, H. Wendt, L. Condat and P. Abry
-publication: IVMSP
+publication: Image, Video, and Multidimensional Signal Processing Workshop (IVMSP)
 year: 2016
 doi: 10.1109/IVMSPW.2016.7528187
 type: workshop
