@@ -2,7 +2,7 @@
 layout: publication
 title: Selection du parametre de regularisation dans le probleme L2-Potts
 authors: J. Frecon, N. Pustelnik, N. Dobigeon, H. Wendt and P. Abry
-publication: GRETSI
+publication: Colloque francophone de traitement du signal et des images (GRETSI)
 year: 2017
 doi:
 type: workshop
