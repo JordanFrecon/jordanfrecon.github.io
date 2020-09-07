@@ -5,7 +5,7 @@ var courses2015 = ['Science of matter', 'Optics and spectroscopy', 'Introduction
 var hours2014 = [18, 20];
 var courses2014 = ['Agregation de physique', 'Science of matter'];
 
-var teaching2015 = new Chart(ctx, {
+var teachingsecond = new Chart(ctx, {
  type: 'polarArea',
  data: {
     labels: courses2015,
@@ -17,7 +17,7 @@ var teaching2015 = new Chart(ctx, {
 });
 
 
-var teaching2014 = new Chart(ctx, {
+var teachingfirst = new Chart(ctx, {
  type: 'polarArea',
  data: {
     labels: courses2014,
