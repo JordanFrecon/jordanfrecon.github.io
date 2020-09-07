@@ -12,7 +12,7 @@ window.onload = function() {
   });
   var ctx2 = document.getElementById("myChart2");
   var lineChart2 = new Chart(ctx2, {
-    type: 'line',
+    type: 'polarArea',
     data: {
       labels: ["Electromagnetism", "Optics", "Complex systems", "Applied Statistics"],
       datasets: [{
