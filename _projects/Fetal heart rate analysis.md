@@ -7,13 +7,14 @@ layout: project
 keyword: fhr
 ---
 
-Fetal Heart Rate (FHR) monitoring is routinely used to help obstetricians assess fetal health status during delivery. In daily clinical practice, FHR is mostly examined visually following the guidelines edited by national and international scientific societies, such as the International Federation of Gynecology and Obstetrics (FIGO), that mostly focus on decelerations and accelerations, long term variabilities, and baseline levels and trends.
-
 
 ![preview](/images/projects/fhr_figoTable.jpg)
 
 {:.image-caption}
 *Image Credit: The 2015 FIGO intrapartum cardiotocography classification system in summary*
+
+
+Fetal Heart Rate (FHR) monitoring is routinely used to help obstetricians assess fetal health status during delivery. In daily clinical practice, FHR is mostly examined visually following the guidelines edited by national and international scientific societies, such as the International Federation of Gynecology and Obstetrics (FIGO), that mostly focus on decelerations and accelerations, long term variabilities, and baseline levels and trends.
 
 
 Instead of performing the analysis of variability at pre-defined time
