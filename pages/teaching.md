@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Publications
-permalink: /publications/
-weight: 3
+title: Teaching
+permalink: /teaching/
+weight: 1
 ---
 
 
