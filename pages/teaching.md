@@ -9,5 +9,19 @@ weight: 3
 
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
-    data: [10, 30, 50],
+    data: data,
 });
+
+
+data = {
+    datasets: [{
+        data: [10, 20, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ]
+};
