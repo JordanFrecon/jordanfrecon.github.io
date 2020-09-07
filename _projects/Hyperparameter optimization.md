@@ -8,7 +8,7 @@ keyword: hyperparamOpt
 --- 
 
 
-![preview](/images/projects/hyperparamOpt_space.png.png)
+![preview](/images/projects/hyperparamOpt_space.png)
 
 {:.image-caption}
 *Image Credit: Franceschi, L., et al. "Bilevel programming for hyperparameter optimization and meta-learning." (2018).*
