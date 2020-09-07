@@ -1,14 +1,15 @@
 var ctx = document.getElementById('myChart');
-var stars = [135850, 52122, 148825, 16939, 9763];
-var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi'];
+
+var hours = [18, 20];
+var courses = ['Agregation de physique', 'Science of matter'];
 
 var myChart = new Chart(ctx, {
- type: 'bar',
+ type: 'polarArea',
  data: {
-    labels: frameworks,
+    labels: courses,
     datasets: [{
-        label: 'Popular JavaScript Frameworks',
-        data: stars
+        label: 'Teaching activities 2013-2014',
+        data: hours
         }]
  },
 });
