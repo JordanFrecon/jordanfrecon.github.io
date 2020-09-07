@@ -9,8 +9,7 @@ $(function () {
         data: [10, 8, 6, 5, 12, 8, 16, 17, 6, 7, 6, 10]
       }]
     }
-  })
-
+  });
   var ctx2 = document.getElementById("myChart2");
   var lineChart2 = new Chart(ctx2, {
     type: 'line',
