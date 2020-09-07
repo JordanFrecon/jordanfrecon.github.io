@@ -6,7 +6,7 @@ var courses = ['Science of matter', 'Optics and spectroscopy', 'Introduction to 
 var myChart = new Chart(ctx, {
  type: 'polarArea',
  data: {
-    labels: courses2015,
+    labels: courses,
     datasets: [{
         label: 'Teaching activities 2014-2015',
         data: hours
