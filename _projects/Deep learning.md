@@ -7,5 +7,5 @@ layout: project
 keyword: deepLearning
 ---
 
-(soon...)
+(Coming soon... :wink:)
 
