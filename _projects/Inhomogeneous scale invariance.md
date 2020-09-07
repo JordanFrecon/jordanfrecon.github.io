@@ -16,8 +16,9 @@ The classical formulation of the multifractal formalism relies on the assumption
 
 
 ![preview](/images/projects/inhomogeneousScaleInvariance_preview.png)
-{:.image-caption}
+<div class=image-caption>
 *Image Credit: NASA image courtesy LANCE/EOSDIS MODIS Rapid Response Team at NASA GSFC*
+</div>
 
 
 
