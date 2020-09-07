@@ -3,10 +3,10 @@ window.onload = function() {
   var lineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      labels: ["Electromagnetism","Agregation de Physique"],
       datasets: [{
-        label: "2015",
-        data: [10, 8, 6, 5, 12, 8, 16, 17, 6, 7, 6, 10]
+        label: "2013-2014",
+        data: [20, 18]
       }]
     }
   });
@@ -14,10 +14,10 @@ window.onload = function() {
   var lineChart2 = new Chart(ctx2, {
     type: 'line',
     data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      labels: ["Electromagnetism", "Optics", "Complex systems", "Applied Statistics"],
       datasets: [{
-        label: "2015",
-        data: [10, 8, 6, 5, 12, 8, 16, 17, 6, 7, 6, 10]
+        label: "2014-2015",
+        data: [20, 26, 10, 16]
       }]
     }
   })
