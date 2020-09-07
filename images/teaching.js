@@ -1,4 +1,4 @@
-$(function () {
+window.onload = function() {
   var ctx = document.getElementById("myChart");
   var lineChart = new Chart(ctx, {
     type: 'polarArea',
@@ -21,4 +21,4 @@ $(function () {
       }]
     }
   })
-});
+};
