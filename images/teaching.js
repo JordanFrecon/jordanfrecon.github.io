@@ -1,4 +1,4 @@
-window.onload = function() {
+$(function () {
   var ctx = document.getElementById("myChart");
   var lineChart = new Chart(ctx, {
     type: 'polarArea',
@@ -10,9 +10,7 @@ window.onload = function() {
       }]
     }
   })
-}
 
-window.onload = function() {
   var ctx2 = document.getElementById("myChart2");
   var lineChart2 = new Chart(ctx2, {
     type: 'line',
@@ -24,4 +22,4 @@ window.onload = function() {
       }]
     }
   })
-}
+});
