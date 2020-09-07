@@ -1,17 +1,13 @@
-
-
 window.onload = function() {
-	var ctx = document.getElementById("myChart");
-	var hours = [20, 26, 10, 16];
-	var courses = ['Science of matter', 'Optics and spectroscopy', 'Introduction to complex systems', 'Applied statistics for quality control'];
-	var polarChart = new Chart(ctx, {
- 	type: 'polarArea',
- 	data: {
-    	  labels: courses,
-    	  datasets: [{
-        	label: 'Teaching activities 2014-2015',
-        	data: hours
-        	}]
- 	},
-	})
+  var ctx = document.getElementById("myChart");
+  var lineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [{
+        label: "2015",
+        data: [10, 8, 6, 5, 12, 8, 16, 17, 6, 7, 6, 10]
+      }]
+    }
+  })
 }
