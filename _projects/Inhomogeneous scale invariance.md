@@ -16,13 +16,11 @@ The classical formulation of the multifractal formalism relies on the assumption
 
 
 ![preview](/images/projects/inhomogeneousScaleInvariance_preview.png)
-
-{:.image-caption}
-*Image Credit: NASA image courtesy LANCE/EOSDIS MODIS Rapid Response Team at NASA GSFC*
+{:.image-caption} *Image Credit: NASA image courtesy LANCE/EOSDIS MODIS Rapid Response Team at NASA GSFC*
 
 
 
 The originality of this project is to 
 <li> consider the study of inhomogeneous scale invariance as a joint problem of detection/segmentation
-<li> propose a formulation through the minimisation of a vectorial functionals build around the total-variation penalty
+<li> propose a formulation through the minimisation of functionals build around the total-variation penalty
 
