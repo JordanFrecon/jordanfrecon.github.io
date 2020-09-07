@@ -3,7 +3,7 @@ var ctx = document.getElementById('myChart');
 var hours = [18, 20];
 var courses = ['Agregation de physique', 'Science of matter'];
 
-var myChart = new Chart(ctx, {
+var teaching2014t = new Chart(ctx, {
  type: 'polarArea',
  data: {
     labels: courses,
