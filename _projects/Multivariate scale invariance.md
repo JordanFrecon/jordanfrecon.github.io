@@ -14,7 +14,7 @@ properties in univariate real-world signals.
 ![preview](/images/projects/multivariateScaleInvariance_internet.png)
 
 {:.image-caption}
-*Example of packet and byte aggregated time series from the MAWI repository*
+*Example of aggregated packet and byte aggregated time series from the MAWI repository*
 
 Notwithstanding its theoretical and practical importance, fBm falls short of providing an encompassing modeling framework for scaling because most modern contexts of application involve the recording of multivariate time series that hence need to be jointly analyzed. The construction of a comprehensive multivariate estimation paradigm is still an open problem in the literature. The so-named Operator fractional Brownian motion (OfBm) is a natural extension of fBm. It was recently been
 defined as the only Gaussian, multivariate self-similar process with stationary increment.
