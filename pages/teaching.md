@@ -5,23 +5,9 @@ permalink: /teaching/
 weight: 1
 ---
 
-
-
-var myDoughnutChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-});
-
-
-data = {
-    datasets: [{
-        data: [10, 20, 30]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
-};
+<body>
+<canvas id="myChart" width="800" height="400"></canvas>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="data/script.js"></script>
+</body>
