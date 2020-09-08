@@ -20,6 +20,12 @@ window.onload = function() {
         backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
         data: [20, 26, 10, 16]
       }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Teaching 2014-2015'
+      }
     }
   });
   var ctx3 = document.getElementById("myChart3");
