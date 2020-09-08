@@ -8,6 +8,7 @@ doi: 10.1109/TSP.2016.2516962
 type: journal
 toolbox: https://github.com/JordanFrecon/TV_OnTheFly
 project: piecewiseCstDenoising
+video: plHJDZFR_fc
 ---
 
 In the context of change-point detection, addressed by Total Variation minimization strategies, an efficient on-the-fly algorithm has been designed leading to exact solutions for univariate data. In this contribution, an extension of such an on-the-fly strategy to multivariate data is investigated. The proposed algorithm relies on the local validation of the Karush-Kuhn-Tucker conditions on the dual problem. Showing that the non-local nature of the multivariate setting precludes to obtain an exact on-the-fly solution, we devise an on-the-fly algorithm delivering an approximate solution, whose quality is controlled by a practitioner-tunable parameter, acting as a trade-off between quality and computational cost. Performance assessment shows that high quality solutions are obtained on-the-fly while benefiting of computational costs several orders of magnitude lower than standard iterative procedures. The proposed algorithm thus provides practitioners with an efficient multivariate change-point detection on-the-fly procedure.
