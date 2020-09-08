@@ -9,6 +9,12 @@ window.onload = function() {
         backgroundColor: ["#e76f51", "#264653"],
         data: [20, 18]
       }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Teaching 2013-2014'
+      }
     }
   });
   var ctx2 = document.getElementById("myChart2");
@@ -38,6 +44,12 @@ window.onload = function() {
         label: "2015-2016",
         data: [20, 39.5, 20, 8]
       }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Teaching 2014-2015'
+      }
     }
   })
 };
