@@ -20,5 +20,16 @@ window.onload = function() {
         data: [20, 26, 10, 16]
       }]
     }
+  });
+ var ctx3 = document.getElementById("myChart3");
+  var lineChart3 = new Chart(ctx3, {
+    type: 'polarArea',
+    data: {
+      labels: ["Electromagnetism", "Optics", "Python", "Signal processing"],
+      datasets: [{
+        label: "2015-2016",
+        data: [20, 39.5, 20, 8]
+      }]
+    }
   })
 };
