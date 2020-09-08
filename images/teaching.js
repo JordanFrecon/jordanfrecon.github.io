@@ -9,12 +9,6 @@ window.onload = function() {
         data: [20, 18]
       }]
     }
-    options: {
-        legend: {
-            display: true,
-            position: right
-        }
-    }
   });
   var ctx2 = document.getElementById("myChart2");
   var lineChart2 = new Chart(ctx2, {
