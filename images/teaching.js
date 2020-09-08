@@ -21,7 +21,7 @@ window.onload = function() {
       }]
     }
   });
- var ctx3 = document.getElementById("myChart3");
+  var ctx3 = document.getElementById("myChart3");
   var lineChart3 = new Chart(ctx3, {
     type: 'polarArea',
     data: {
