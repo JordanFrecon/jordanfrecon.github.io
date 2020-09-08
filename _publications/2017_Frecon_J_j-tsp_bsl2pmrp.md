@@ -8,10 +8,8 @@ doi:
 type: journal
 toolbox: https://github.com/JordanFrecon/TVL0_select
 project: piecewiseCstDenoising
+video: Yb7K4m_wfFw
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Yb7K4m_wfFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 
 
 
