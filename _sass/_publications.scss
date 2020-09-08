@@ -26,10 +26,14 @@
   margin-bottom: 3em
 }
 
-iframe {
-  max-width: 75%;
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto
-  border-style:none;
-}
+.videowrapper { 
+        float: none;
+        clear: both;
+        width: 700px;<-- Added-->
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+        margin: 0 auto;<-- Added-->
+        max-width: 100%;<-- Added-->
+    }
