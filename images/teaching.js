@@ -48,7 +48,7 @@ window.onload = function() {
     options: {
       title: {
         display: true,
-        text: 'Teaching 2014-2015'
+        text: 'Teaching 2015-2016'
       }
     }
   })
