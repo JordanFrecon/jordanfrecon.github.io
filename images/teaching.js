@@ -13,6 +13,7 @@ window.onload = function() {
     options: {
       title: {
         display: true,
+        fontSize: 15,
         text: 'Teaching 2013-2014'
       }
     }
@@ -31,6 +32,7 @@ window.onload = function() {
     options: {
       title: {
         display: true,
+        fontSize: 15,
         text: 'Teaching 2014-2015'
       }
     }
@@ -49,6 +51,7 @@ window.onload = function() {
     options: {
       title: {
         display: true,
+        fontSize: 15,
         text: 'Teaching 2015-2016'
       }
     }
