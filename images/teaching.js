@@ -3,7 +3,7 @@ window.onload = function() {
   var lineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-      labels: ["Electromagnetism","Agregation de Physique"],
+      labels: ["Electromagnetism (L1)","Agregation de Physique"],
       datasets: [{
         label: "2013-2014",
         backgroundColor: ["#e76f51", "#264653"],
@@ -21,7 +21,7 @@ window.onload = function() {
   var lineChart2 = new Chart(ctx2, {
     type: 'polarArea',
     data: {
-      labels: ["Electromagnetism", "Optics", "Complex systems", "Applied Statistics"],
+      labels: ["Electromagnetism (L1)", "Optics (L2)", "Complex systems (M2)", "Applied Statistics (L3)"],
       datasets: [{
         label: "2014-2015",
         backgroundColor: ["#e76f51", "#f4a261","#2a9d8f","#e9c46a"],
@@ -39,7 +39,7 @@ window.onload = function() {
   var lineChart3 = new Chart(ctx3, {
     type: 'polarArea',
     data: {
-      labels: ["Electromagnetism", "Optics", "Python", "Signal processing"],
+      labels: ["Electromagnetism (L1)", "Optics (L2)", "Python (L3)", "Signal processing (L3)"],
       datasets: [{
         label: "2015-2016",
         backgroundColor: ["#e76f51", "#f4a261","#40916c","#52b788"],
