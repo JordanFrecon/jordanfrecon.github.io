@@ -6,6 +6,7 @@ window.onload = function() {
       labels: ["Electromagnetism","Agregation de Physique"],
       datasets: [{
         label: "2013-2014",
+        backgroundColor: ["#e76f51", "#264653"],
         data: [20, 18]
       }]
     }
@@ -17,7 +18,7 @@ window.onload = function() {
       labels: ["Electromagnetism", "Optics", "Complex systems", "Applied Statistics"],
       datasets: [{
         label: "2014-2015",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+        backgroundColor: ["#e76f51", "#f4a261","#32a9d8f","#e9c46a"],
         data: [20, 26, 10, 16]
       }]
     },
