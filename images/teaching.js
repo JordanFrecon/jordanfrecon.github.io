@@ -14,7 +14,7 @@ window.onload = function() {
       title: {
         display: true,
         fontSize: 15,
-        text: 'Teaching 2013-2014'
+        text: '2013-2014'
       }
     }
   });
@@ -33,7 +33,7 @@ window.onload = function() {
       title: {
         display: true,
         fontSize: 15,
-        text: 'Teaching 2014-2015'
+        text: '2014-2015'
       }
     }
   });
@@ -52,7 +52,7 @@ window.onload = function() {
       title: {
         display: true,
         fontSize: 15,
-        text: 'Teaching 2015-2016'
+        text: '2015-2016'
       }
     }
   })
