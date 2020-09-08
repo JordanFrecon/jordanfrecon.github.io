@@ -24,7 +24,7 @@ window.onload = function() {
       labels: ["Electromagnetism", "Optics", "Complex systems", "Applied Statistics"],
       datasets: [{
         label: "2014-2015",
-        backgroundColor: ["#e76f51", "#f4a261","#32a9d8f","#e9c46a"],
+        backgroundColor: ["#e76f51", "#f4a261","#2a9d8f","#e9c46a"],
         data: [20, 26, 10, 16]
       }]
     },
@@ -42,6 +42,7 @@ window.onload = function() {
       labels: ["Electromagnetism", "Optics", "Python", "Signal processing"],
       datasets: [{
         label: "2015-2016",
+        backgroundColor: ["#e76f51", "#f4a261","#40916c","#52b788"],
         data: [20, 39.5, 20, 8]
       }]
     },
