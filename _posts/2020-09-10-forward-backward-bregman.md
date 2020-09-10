@@ -28,6 +28,10 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 Here is my theorem.
 ```
 
+{% danger %}
+Don't even *think* about putting a fork in the receptacle!
+{% enddanger %}
+
 {:.massage-box .alert-info}
 **Majorize-minimize surrogate conditions**
 The traditional conditions for $$h$$ to be a valid majorant are
