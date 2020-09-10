@@ -23,11 +23,11 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
-<div class="alert alert-block alert-warning">
-<b>Example:</b> These is the content of the box. Here is my list:
+<div class="alert alert-block alert-info">
+<b>Smoothness.</b> The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
+    <li>$$\mu\phi-f$$ is convex</li>
+    <li>$$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$</li>
 </ul>
 </div>
 
