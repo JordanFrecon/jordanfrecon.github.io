@@ -16,22 +16,14 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous functions. In additi
 {:.massage-box .alert-info}
 **Smoothness**
 The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
-<ul>
-    <li>$$\mu\phi-f$$ is convex</li>
-    <li>$$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$</li>
-</ul>
+> - $$\mu\phi-f$$ is convex</li>
+  - $$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$</li>
+
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
-<div class="alert alert-block alert-info">
-<b>Smoothness.</b> The function $f$ is said to be $\mu$-smooth with respect to $\phi$ if the following equivalent conditions are verified.
-<ul>
-    <li>$\mu\phi-f$ is convex</li>
-    <li>$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$</li>
-</ul>
-</div>
 
 
 {:.massage-box .alert-info}
