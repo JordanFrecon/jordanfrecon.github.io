@@ -30,3 +30,20 @@ Test paragraph with **bg-info** custom class.
 
 {:.bg-warning}
 Test paragraph with **bg-warning** custom class.
+
+
+{:.massage-box .alert-success}
+**Test Message alert success**
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a in, ullam.
+
+{:.massage-box .alert-info}
+**Test Message alert info**
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a in, ullam.
+
+{:.massage-box .alert-danger}
+**Test Message alert danger**
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a in, ullam.
+
+{:.massage-box .alert-warning}
+**Test Message alert warning**
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a in, ullam.
