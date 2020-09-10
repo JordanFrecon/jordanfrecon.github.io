@@ -31,6 +31,8 @@ def foo(x):<br>
 {{site.data.alerts.end}}
 
 
+{% include note.html content="This is my note. All the content I type here is treated as a single paragraph. <br/><br/> Now I'm typing on a  new line." %}
+
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 {:.massage-box .alert-info}
