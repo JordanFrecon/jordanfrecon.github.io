@@ -24,6 +24,9 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
+```{theorem}
+Here is my theorem.
+```
 
 {:.massage-box .alert-info}
 **Majorize-minimize surrogate conditions**
