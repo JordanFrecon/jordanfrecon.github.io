@@ -24,10 +24,10 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
 <div class="alert alert-block alert-info">
-<b>Smoothness.</b> The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
+<b>Smoothness.</b> The function $f$ is said to be $\mu$-smooth with respect to $\phi$ if the following equivalent conditions are verified.
 <ul>
-    <li>$$\mu\phi-f$$ is convex</li>
-    <li>$$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$</li>
+    <li>$\mu\phi-f$ is convex</li>
+    <li>$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$</li>
 </ul>
 </div>
 
