@@ -23,6 +23,15 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
+<div class="alert alert-block alert-warning">
+<b>Example:</b> These is the content of the box. Here is my list:
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+</ul>
+</div>
+
+
 {:.massage-box .alert-info}
 **Majorize-minimize surrogate conditions**
 The traditional conditions for $$h$$ to be a valid mar
