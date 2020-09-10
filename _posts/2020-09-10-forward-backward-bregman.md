@@ -16,9 +16,9 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous functions. In additi
 {:.massage-box .alert-info}
 **Smoothness**
 The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
-* Une puce
-* Une autre puce
-* Et encore une autre puce
+	* Une puce
+	* Une autre puce
+	{:.massage-box .alert-info}* Et encore une autre puce
 * $$\mu\phi-f$$ is convex
 * $$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$ 
 
