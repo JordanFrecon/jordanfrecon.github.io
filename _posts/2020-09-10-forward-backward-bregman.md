@@ -24,14 +24,6 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
-```{theorem}
-Here is my theorem.
-```
-
-{% danger %}
-Don't even *think* about putting a fork in the receptacle!
-{% enddanger %}
-
 {:.massage-box .alert-info}
 **Majorize-minimize surrogate conditions**
 The traditional conditions for $$h$$ to be a valid majorant are
