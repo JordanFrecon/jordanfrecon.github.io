@@ -23,15 +23,19 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
-
+::: .massage-box .alert-info
+. Touching: $$f(x_k) = h(x_k)$$
+. Tangency:  $$\nabla f(x_k) = \nabla h(x_k)$$
+. Global majorant:  $$f(x) \leq h(x)$$
+:::
 
 
 {:.massage-box .alert-info}
 **Majorize-minimize surrogate conditions**
 The traditional conditions for $$h$$ to be a valid majorant are
-- Touching: $$f(x_k) = h(x_k)$$
-- Tangency:  $$\nabla f(x_k) = \nabla h(x_k)$$
-- Global majorant:  $$f(x) \leq h(x)$$
+. Touching: $$f(x_k) = h(x_k)$$
+. Tangency:  $$\nabla f(x_k) = \nabla h(x_k)$$
+. Global majorant:  $$f(x) \leq h(x)$$
 
 {:.massage-box .alert-danger}
 **Test Message alert danger**
