@@ -16,8 +16,8 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous functions. In additi
 {:.massage-box .alert-info}
 **Smoothness**
 The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
-	- $$\mu\phi-f$$ is convex
-	- $$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$ 
+*   $$\mu\phi-f$$ is convex
+*   $$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$ 
 
 
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
@@ -25,8 +25,12 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
-
-
+{:.massage-box .alert-info}
+**Majorize-minimize surrogate conditions**
+The traditional conditions for $$h$$ to be a valid mar
+*   $$f(x_k) = h(x_k)$$
+*   $$f(x) \leq h(x)$$
+*   $$\nabla f(x_k) = \nabla h(x_k)$$
 
 {:.massage-box .alert-danger}
 **Test Message alert danger**
