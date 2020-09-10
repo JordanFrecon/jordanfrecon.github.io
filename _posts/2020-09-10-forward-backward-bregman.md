@@ -15,7 +15,6 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous functions. In additi
 
 {:.massage-box .alert-info}
 **Smoothness**
-
 - $$\mu\phi-f$$ is convex
 - $$(\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$ 
 
