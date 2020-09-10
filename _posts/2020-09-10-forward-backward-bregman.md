@@ -22,6 +22,14 @@ The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the 
 
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
+{{site.data.alerts.note}}
+<p>This is my note.</p>
+<pre>
+def foo(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x+1
+</pre>
+{{site.data.alerts.end}}
+
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 {:.massage-box .alert-info}
