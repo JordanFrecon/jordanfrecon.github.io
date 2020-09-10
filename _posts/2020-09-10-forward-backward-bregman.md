@@ -31,7 +31,10 @@ def foo(x):<br>
 {{site.data.alerts.end}}
 
 
-{% include note.html content="This is my note. All the content I type here is treated as a single paragraph. <br/><br/> Now I'm typing on a  new line." %}
+{% include note.html content="The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
+- \\({e}^{i\pi }+1=0\\)
+- $$\mu\phi-f$$ is convex
+- \\((\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)\\)" %}
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
