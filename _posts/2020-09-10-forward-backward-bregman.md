@@ -19,13 +19,14 @@ where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
+{:.bg-danger}
+Test paragraph with **bg-danger** custom class.
 
-! I test something
+{:.bg-success}
+Test paragraph with **bg-success** custom class.
 
-!! Lorem ipsum dolor sit amet, **consectetur adipiscing** elit. Mauris feugiat quam erat, ut iaculis diam posuere nec.
-!!
-!! * List item a
-!! * List item b
-!!
-!! orci dolor. Donec tristique volutpat ultricies. Nullam tempus, enim sit amet fringilla facilisis, ipsum ex
-!! tincidunt ipsum, v
+{:.bg-info}
+Test paragraph with **bg-info** custom class.
+
+{:.bg-warning}
+Test paragraph with **bg-warning** custom class.
