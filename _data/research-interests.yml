@@ -1,0 +1,11 @@
+- name: Machine Learning
+  percentage: 100
+  color: info
+
+- name: Optimization
+  percentage: 90
+  color: dark
+
+- name: Signal/Image Processing
+  percentage: 80
+  color: warning

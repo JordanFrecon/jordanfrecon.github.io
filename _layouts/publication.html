@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="page">
+  <h1 class="mt-4 publication-title">{{ page.title }}</h1>
+  <div class="publication-authors">
+    {{ page.authors }}
+  </div>
+  <div class="publication-info">
+    {{ page.publication }}, {{ page.year}}
+  </div>
+  {% if page.image %}
+  <img class="publication-teaser" src="/images/{{ page.slug }}.png" alt="project teaser"/>
+  {% endif %}
+  {% if page.video %}  
+<center><iframe src="https://www.youtube.com/embed/{{ page.video }}" width="560" height="315"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center></br>
+  {% endif %}
+  <h2 id="abstract">Abstract</h2>
+  {{ content }}
+  {% if page.type != 'unpublished' %}
+   <h2 id="downloads">Downloads</h2>
+   <p>
+     <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+     {% if page.supplementary %}
+     <a href="/download/{{ page.slug }}_supp.pdf"><i class="far fa-file-pdf"></i> Supplementary</a>&nbsp;&nbsp;
+     {% endif %}
+     {% if page.slides %}
+     <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
+     {% endif %}
+     <a href="/download/{{ page.slug }}.bib"><i class="fas fa-quote-left"></i> BibTex</a>&nbsp;&nbsp;
+     {% if page.doi %}
+     <a href="http://dx.doi.org/{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+     {% endif %}
+     {% if page.toolbox %}
+     <a href="{{ page.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+     {% endif %}
+   </p>
+  {% endif %}
+
+<p class="text-center">
+{% include elements/button-back.html text="Back" %}
+</p>
+</div>

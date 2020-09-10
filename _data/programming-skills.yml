@@ -1,0 +1,11 @@
+- name: Matlab
+  percentage: 100
+  color: danger
+
+- name: Python/Pytorch
+  percentage: 90
+  color: success
+
+- name: R
+  percentage: 70
+  color:
