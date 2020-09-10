@@ -6,4 +6,4 @@ color:
 description: How to ...
 ---
 
-$$ \hat{x} = \mathrm{argmin}_x f(x) + g(x) $$
+$$ \hat{x} = \underset{x}{\mathrm{argmin}} f(x) + g(x) $$
