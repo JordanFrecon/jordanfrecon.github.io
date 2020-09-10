@@ -18,7 +18,7 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
 - \\({e}^{i\pi }+1=0\\)
 - $$\mu\phi-f$$ is convex
-- \\((\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z))\\
+- \\((\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)\\)
 
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 
