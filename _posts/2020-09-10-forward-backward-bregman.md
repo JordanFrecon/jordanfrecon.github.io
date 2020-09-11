@@ -45,7 +45,7 @@ Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\tr
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-We are not left with solving each minimization problem. This boils down to finding $$x_{k+1}$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
+We are now left with solving each minimization problem. This boils down to finding $$x_{k+1}$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
 
 $$
 \begin{align}
@@ -63,5 +63,12 @@ $$
 \mathrm{prox}_{h}^\phi(y) = \underset{x}{\mathrm{argmin}}\; h(x) + D_\phi(x,y)
 $$
 "%}
+
+Finally, the overall procedure boils down to Forward-Backward algorithm with Bregman distances:
+$$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    x_{k+1} = \mathrm{prox}_{\tau g}^\phi (\nabla\phi(x_k) - \tau\nabla f(x_k))\\
+    \end{array}\right.$$
 
 
