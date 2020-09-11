@@ -60,6 +60,9 @@ collections:
   news:
     output: true
     permalink: /:collection/:name
+  bibliography:
+    output: true
+    permalink: /:collection/:name
 
 ### Disqus ###
 disqus: jfrecon                          # Your website Shortname on disqus
