@@ -31,11 +31,11 @@ layout: page
 {{ content }}
 
 <h2><b>References</b></h2>
-{$ for biblio in page.biblio %}
+{% for biblio in page.biblio %}
   {% for publi in site.data.bibliography %}
-    {% if {{biblio}} == {{publi.id}} %}
+    {%- if {{biblio}} == {{publi.id}} -%}
       {{ publi.title }}
-    {% endif %}
+    {%- endif -%}
   {% endfor %}
 {% endfor %}
 
