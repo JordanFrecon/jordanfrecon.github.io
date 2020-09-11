@@ -64,7 +64,8 @@ $$
 $$
 "%}
 
-Finally, the overall procedure boils down to Forward-Backward algorithm with Bregman distances:
+Finally, the overall procedure boils down to the ***Forward-Backward algorithm with Bregman distances***.
+
 $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
