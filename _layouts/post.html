@@ -32,9 +32,10 @@ layout: page
 
 <h2><b>References</b></h2>
 {% for biblio in page.biblio %}
-	publi = site.data.bibliography[2017_Bauschke_H_j-mor_dlblgc]
-  	{{ publi.title }}
+  {{ biblio }}
 {% endfor %}
+{% assign publi = site.data.bibliography[2017_Bauschke_H_j-mor_dlblgc] %}
+  {{ publi.title }}
 
 {% if page.comments %}
 <h2><b>Comments</b></h2>
