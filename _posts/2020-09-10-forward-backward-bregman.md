@@ -73,3 +73,4 @@ $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \end{array}\right.$$
 
 
+> In particular, when $$\phi=\frac{1}{2}\|\cdot\|^2$$ we recover the classical foward-backward algorithm.
