@@ -28,7 +28,7 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 > Actually, there are many equivalent formulations. The reader in invited to report to (Bolte, Proposition 1).
 
 
-The former condition is useful in practice in order to find the constant $$\mu$$ while the former permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the following.
+The former condition is useful in practice in order to find the constant $$\mu>0$$ while the latter permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the following.
 
 $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -47,10 +47,10 @@ Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\tr
 
 We are not left with solving each minimization problem. This boils down to finding $$x$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
 
-$$\begin{align}
+\begin{align}
 0&\in \left\{\nabla f(x_k) + \tau^{-1} \nabla\phi(x) - \tau^{-1}\nabla\phi(x_k)\right)\right\{ + \partial g (x) \\
 (\tau \partial g + \nabla \phi)(x) &\ni \nabla\phi(x_k) - \tau \nabla f(x_k) 
-\end{align}$$
+\end{align}
 
 
 
