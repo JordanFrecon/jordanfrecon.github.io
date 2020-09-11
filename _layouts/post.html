@@ -30,6 +30,10 @@ layout: page
 
 {{ content }}
 
+<h2><b>References</b></h2>
+{% for publi in site.data.bibliography %}
+  {{ publi.title }}
+{% endfor %}
 
 {% if page.comments %}
 <h2><b>Comments</b></h2>
