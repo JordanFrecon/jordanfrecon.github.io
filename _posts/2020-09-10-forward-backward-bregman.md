@@ -39,8 +39,8 @@ The former condition is useful in practice in order to find the constant $$\mu$$
 $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi \text{ is chosen arbitrarily}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_{k+1} = \underset{x}{\mathrm{argmin}} \mathcal{L}_k(x)\\
+    x_{k+1} = \underset{x}{\mathrm{argmin}}\; \mathcal{L}_k(x)\\
     \end{array}\right.$$
 
 
-The majorant $$\mathcal{L}_k(x)$$ is simply build as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$ for $$\tau\leq 1/\mu$$.
+The majorant $$\mathcal{L}_k(x)$$ is simply build as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ for $$\tau\leq 1/\mu$$.
