@@ -28,7 +28,15 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 > Actually, there are many equivalent formulations. The reader in invited to report to (Bolte, Proposition 1).
 
 
-The former condition is useful in practice in order to find the constant $$\mu$$ while the former permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate of the objective function. Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ for $$\tau\leq 1/\mu$$. We recall below the classical conditions for having a valid majorant. 
+The former condition is useful in practice in order to find the constant $$\mu$$ while the former permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the follwing
+$$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    x_{k+1} = \underset{x}{\mathrm{argmin}}\; \mathcal{L}_k(x)\\
+    \end{array}\right.$$
+
+
+Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ for $$\tau\leq 1/\mu$$. We recall below the classical conditions for having a valid majorant. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
@@ -36,10 +44,6 @@ The former condition is useful in practice in order to find the constant $$\mu$$
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-$$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
-    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
-    \left\lfloor\begin{array}{l}
-    x_{k+1} = \underset{x}{\mathrm{argmin}}\; \mathcal{L}_k(x)\\
-    \end{array}\right.$$
+
 
 
