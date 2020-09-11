@@ -12,7 +12,7 @@ biblio: [2017_Bauschke_H_j-mor_dlblgc]
 For this first post, I have chosen to shortly introduce the forward-backward algorithm with Bregman distances.
 
 
-The forward-backward algorithm is widely used in order to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms.
+The forward-backward algorithm is widely used first order method to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms.
 
 
 Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
@@ -49,7 +49,7 @@ $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \end{array}\right.$$
 
 
-Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ for $$\tau\leq 1/\mu$$. We recall below the classical conditions for having a valid majorant. 
+Here, the surrogate $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ is a majorant of $$f$$ for $$\tau^{-1}\geq mu$$. We recall below the classical conditions for having a valid majorant. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
