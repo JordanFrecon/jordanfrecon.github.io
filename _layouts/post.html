@@ -30,7 +30,7 @@ layout: page
 
 {{ content }}
 
-<h2><b>References</b></h2>
+## References
 <ul>
 {% for biblio in page.biblio %}
   {% for publi in site.data.bibliography %}
@@ -42,7 +42,6 @@ layout: page
 </ul>
 
 {% if page.comments %}
-<h2><b>Comments</b></h2>
 <div class="pt-5">
   {% include blog/disqus.html %}
 </div>
