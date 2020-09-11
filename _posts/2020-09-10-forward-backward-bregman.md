@@ -45,12 +45,13 @@ Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\tr
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-We are not left with solving each minimization problem. This boils down to finding $$x$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
+We are not left with solving each minimization problem. This boils down to finding $$x_{k+1}$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
 
 $$
 \begin{align}
-0&\in \{\nabla f(x_k) + \tau^{-1} \nabla\phi(x) - \tau^{-1}\nabla\phi(x_k)\} + \partial g (x)\\
-(\tau \partial g + \nabla \phi)(x) &\ni \nabla\phi(x_k) - \tau \nabla f(x_k)
+0&\in \{\nabla f(x_k) + \tau^{-1} \nabla\phi(x_{k+1}) - \tau^{-1}\nabla\phi(x_k)\} + \partial g (x_{k+1})\\
+(\tau \partial g + \nabla \phi)(x_{k+1}) &\ni \nabla\phi(x_k) - \tau \nabla f(x_k) \\
+x_{k+1} = (\tau \partial g + \nabla\phi)^{-1}(\nabla\phi(x_k) - \tau\nabla f(x_k))
 \end{align}
 $$
 
