@@ -9,7 +9,12 @@ biblio: [2017_Bauschke_H_j-mor_dlblgc]
 ---
 
 
-The Lipschitz continuous gradient condition (i.e., smoothness) is an important concept in convex optimization which is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change.
+For this first post, I have chosen to present a short introduction to convex optimization with Bregman distances. In particular, I will present the forward-backward algorithm with Bregman distances.
+
+
+The forward-backward algorithm is widely used in order to minimize the sum of two convex functions where one of them is non-smooth but has a simple proximity operator and the other one has a Lipschitz continuous gradient.
+The Lipschitz continuous gradient condition (i.e., smoothness) is an important concept in convex optimization which is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change and thus tells us how to select the largest step-size.
+
 Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
