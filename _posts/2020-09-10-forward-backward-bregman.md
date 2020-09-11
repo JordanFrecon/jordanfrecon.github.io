@@ -51,7 +51,7 @@ $$
 \begin{align}
 0&\in \{\nabla f(x_k) + \tau^{-1} \nabla\phi(x_{k+1}) - \tau^{-1}\nabla\phi(x_k)\} + \partial g (x_{k+1})\\
 (\tau \partial g + \nabla \phi)(x_{k+1}) &\ni \nabla\phi(x_k) - \tau \nabla f(x_k) \\
-x_{k+1} = (\tau \partial g + \nabla\phi)^{-1}(\nabla\phi(x_k) - \tau\nabla f(x_k))
+x_{k+1} &= (\tau \partial g + \nabla\phi)^{-1}(\nabla\phi(x_k) - \tau\nabla f(x_k))
 \end{align}
 $$
 
