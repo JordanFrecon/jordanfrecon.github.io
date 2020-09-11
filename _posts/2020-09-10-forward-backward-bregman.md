@@ -4,7 +4,6 @@ tags: [Optimization, Bregman]
 style: 
 color: 
 description: How to ...
-comments: True
 ---
 
 
