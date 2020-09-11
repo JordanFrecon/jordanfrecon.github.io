@@ -28,7 +28,7 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 > Actually, there are many equivalent formulations. The reader in invited to report to (Bolte, Proposition 1).
 
 
-The former condition is useful in practice in order to find the constant $$\mu$$ while the former to devise an algorithmic solution. Indeed, one can see it as a way to build a majorant of $$f$$ anchored at some point $$z$$. Thus, it paves the way to the design of a majorize-minimize algorithmic solution. We recall below the classical conditions for having a valid majorant. 
+The former condition is useful in practice in order to find the constant $$\mu$$ while the former to devise an algorithmic solution. The  underlying  idea behind the majorization-minimization algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate of the objective function. Indeed, one can see it as a way to build a majorant of $$f$$ anchored at some point $$z$$. Thus, it paves the way to the design of a majorize-minimize algorithmic solution. We recall below the classical conditions for having a valid majorant. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
@@ -36,7 +36,7 @@ The former condition is useful in practice in order to find the constant $$\mu$$
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-$$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi \text{ is chosen arbitrarily}\\
+$$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} = \underset{x}{\mathrm{argmin}}\; \mathcal{L}_k(x)\\
