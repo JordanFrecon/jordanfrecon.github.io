@@ -29,6 +29,7 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 
 
 The former condition is useful in practice in order to find the constant $$\mu$$ while the former permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem intoa sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the follwing
+
 $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
