@@ -9,7 +9,7 @@ biblio: [2017_Bauschke_H_j-mor_dlblgc]
 ---
 
 
-For this first post, I have chosen to present a short introduction to convex optimization with Bregman distances. In particular, I will present the forward-backward algorithm with Bregman distances.
+For this first post, I have chosen to shortly introduce the forward-backward algorithm with Bregman distances.
 
 
 The forward-backward algorithm is widely used in order to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms.
