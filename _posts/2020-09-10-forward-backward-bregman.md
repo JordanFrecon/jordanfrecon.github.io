@@ -6,6 +6,11 @@ color:
 description: How to ...
 ---
 
+
+An important concept in convex optimization, namely the Lipschitz continuous gradient condition, is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change.
+
+
+
 We consider the following generic optimization problem
 
 $$ \hat{x} = \underset{x}{\mathrm{argmin}}\; f(x) + g(x) $$
@@ -19,11 +24,13 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
 {% include definition.html title="Smoothness" content="The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
-- $$\mu\phi-f$$ is convex
+- $$\mu\phi-f$$ is convex on $$\mathrm{int} \mathrm{dom} \phi$$
 - \\((\forall x,z)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)\\)" %}
 
+> Actually, there are many equivalent formulations. The reader in invited to report to (Bolte, Proposition 1).
 
 
+The former condition is useful in practice in order to find the constant $$\mu$$ while the former to devise an algorithmic solution. Indeed, one can see it as a way to build a majorant of $$f$$ anchored at some point $$z$$. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
