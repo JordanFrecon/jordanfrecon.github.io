@@ -13,7 +13,7 @@ An important concept in convex optimization, namely the Lipschitz continuous gra
 
 We consider the following generic optimization problem
 
-$$ \hat{x} = \underset{x}{\mathrm{argmin}}\; \mathcal{L} = f(x) + g(x) $$
+$$ \underset{x}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq f(x) + g(x)\right\} $$
 
 where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In addition, we suppose that $$f$$ is $$\mu$$-smooth with respect to some Legendre function $$\phi$$. Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
 
@@ -38,6 +38,3 @@ The former condition is useful in practice in order to find the constant $$\mu$$
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-
-
-$$\begin{cases}
