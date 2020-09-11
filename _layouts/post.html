@@ -30,7 +30,25 @@ layout: page
 
 {{ content }}
 
+<h2><b>References</b></h2>
+{% for biblio in page.biblio %}
+ <li>
+ <div class="pubitem">
+   <div class="pubauthors">
+     {{ biblio.authors }},
+   </div>
+   <div class="pubtitle">
+     {{ biblio.title }},
+   </div>
+   <div class="pubinfo">
+     {{ biblio.publication }}, {{ pub.year}}.
+   </div>
+ </div>
+ </li>
+{% endfor %}
+
 {% if page.comments %}
+<h2><b>Comments</b></h2>
 <div class="pt-5">
   {% include blog/disqus.html %}
 </div>
