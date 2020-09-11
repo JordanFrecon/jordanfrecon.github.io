@@ -33,6 +33,7 @@ layout: page
 <h2><b>References</b></h2>
 {% for biblio in page.biblio %}
  {{biblio}}
+ {{site.bibliography.{{biblio}}}}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
