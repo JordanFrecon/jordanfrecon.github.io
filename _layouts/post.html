@@ -31,8 +31,7 @@ layout: page
 {{ content }}
 
 <h2><b>References</b></h2>
-{% for biblio in page.biblio %}
- {% assign pub = site.bibliography | where:"id", {{biblio}}  | first %}
+{% for biblio in page.biblio assign pub = site.bibliography.biblio %}
  {{ pub }}
  {{ pub.title }}
  <li>
