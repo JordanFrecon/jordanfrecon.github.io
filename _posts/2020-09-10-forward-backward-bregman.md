@@ -7,7 +7,7 @@ description: How to ...
 ---
 
 
-An important concept in convex optimization, namely the Lipschitz continuous gradient condition, is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change.
+The Lipschitz continuous gradient condition (i.e., smoothness) is an important concept in convex optimization which is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change.
 Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
@@ -36,3 +36,10 @@ The former condition is useful in practice in order to find the constant $$\mu$$
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
+$$\begin{cases}
+   x_0\in\mathcal{C} \text{ is chosen arbitrarily}\\
+    \text{for}\;q=0,1,\ldots,Q-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    x_{k+1} = \argmin_x \Big\{g(x;x_k) = g_k(x)\Big\}\\
+    \end{array}\right.
+    \end{cases}$$
