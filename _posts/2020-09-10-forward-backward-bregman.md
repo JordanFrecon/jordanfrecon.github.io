@@ -49,7 +49,7 @@ $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \end{array}\right.$$
 
 
-Here, the surrogate $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ is a majorant of $$f$$ for $$\tau^{-1}\geq mu$$. We recall below the classical conditions for having a valid majorant. 
+Here, the surrogate $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\triangleq h_k(x) + g(x)$$ where $$h_k(x) = f(x_k) + \nabla f(x_k)^\top(x-x_k) + \tau^{-1} D_\phi(x,x_k)$$ is a majorant of $$f$$ for $$\tau^{-1}\geq \mu$$. We recall below the classical conditions for having a valid majorant. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
