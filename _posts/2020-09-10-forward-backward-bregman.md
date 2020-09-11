@@ -19,7 +19,7 @@ Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use lea
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
 $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
-
+## 1. Optimization problem
 
 We consider the following generic optimization problem
 
@@ -35,7 +35,12 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 > Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%} 
 
 
-The former condition is useful in practice in order to find the constant $$\mu>0$$ while the latter permits to implement a majorization-minimization (MM) algorithm. The underlying idea behind the MM algorithm is to convert a hard optimization problem into a sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the following.
+The former condition is useful in practice in order to find the constant $$\mu>0$$ while the latter permits to implement a majorization-minimization (MM) algorithm presented in the next section.
+
+
+## 2. Algorithm
+
+The underlying idea behind the MM algorithm is to convert a hard optimization problem into a sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the following.
 
 $$ x_0\in\mathrm{int}\,\mathrm{dom}\,\phi\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
