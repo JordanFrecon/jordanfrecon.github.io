@@ -32,11 +32,11 @@ layout: page
 
 <h2><b>References</b></h2>
 {% for biblio in page.biblio %}
-{{ biblio }}
-{% assign publi = site.bibliography 
-    | where_exp:"publi", "publi.id == {{ biblio }} 
-    | first %}
-{{ publi.title }}
+  {{ biblio }}
+  {% assign publi = site.bibliography 
+      | where_exp:"publi", "publi.id == {{ biblio }}" 
+      | first %}
+  {{ publi.title }}
 {% endfor %}
 
 {% if page.comments %}
