@@ -47,10 +47,10 @@ Here, the majorant $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\tr
 
 We are not left with solving each minimization problem. This boils down to finding $$x$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
 
-\begin{align}
-0&\in \left\{\nabla f(x_k) + \tau^{-1} \nabla\phi(x) - \tau^{-1}\nabla\phi(x_k)\right)\right\{ + \partial g (x) \\
-(\tau \partial g + \nabla \phi)(x) &\ni \nabla\phi(x_k) - \tau \nabla f(x_k) 
-\end{align}
+$$\begin{eqnarray}
+0&\in& \left\{\nabla f(x_k) + \tau^{-1} \nabla\phi(x) - \tau^{-1}\nabla\phi(x_k)\right)\right\{ + \partial g (x) \\
+(\tau \partial g + \nabla \phi)(x) &\ni& \nabla\phi(x_k) - \tau \nabla f(x_k) 
+\end{eqnarray}$$
 
 
 
