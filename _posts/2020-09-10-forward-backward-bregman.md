@@ -8,6 +8,9 @@ description: How to ...
 
 
 An important concept in convex optimization, namely the Lipschitz continuous gradient condition, is essential to ensure the convergence of many gradient descent based algorithms. Intuitively, a Lipschitz continuous function is limited in how fast it can change.
+Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
+where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
+$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 
 
@@ -15,12 +18,7 @@ We consider the following generic optimization problem
 
 $$ \underset{x}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq f(x) + g(x)\right\} $$
 
-where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In addition, we suppose that $$f$$ is $$\mu$$-smooth with respect to some Legendre function $$\phi$$. Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
-
-
-where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
-$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
-
+where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In addition, we suppose that $$f$$ is $$\mu$$-smooth with respect to some Legendre function $$\phi$$. 
 
 
 {% include definition.html title="Smoothness" content="The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
@@ -30,7 +28,7 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 > Actually, there are many equivalent formulations. The reader in invited to report to (Bolte, Proposition 1).
 
 
-The former condition is useful in practice in order to find the constant $$\mu$$ while the former to devise an algorithmic solution. Indeed, one can see it as a way to build a majorant of $$f$$ anchored at some point $$z$$. 
+The former condition is useful in practice in order to find the constant $$\mu$$ while the former to devise an algorithmic solution. Indeed, one can see it as a way to build a majorant of $$f$$ anchored at some point $$z$$. Thus, it paves the way to the design of a majorize-minimize algorithmic solution. We recall below the classical conditions for having a valid majorant. 
 
 {% include definition.html title="Surrogate conditions" content="The traditional conditions for $$h_k$$ to be a valid majorant of $$f$$ anchored at $$x_k$$ are
 - Touching: $$f(x_k) = h_k(x_k)$$
