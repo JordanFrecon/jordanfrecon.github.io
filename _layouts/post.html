@@ -31,13 +31,15 @@ layout: page
 {{ content }}
 
 <h2><b>References</b></h2>
+<ul>
 {% for biblio in page.biblio %}
   {% for publi in site.data.bibliography %}
     {%- if {{biblio}} == {{publi.id}} -%}
-      {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})
+      <li> {{publi.cite}} {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})</li>
     {%- endif -%}
   {% endfor %}
 {% endfor %}
+</ul>
 
 {% if page.comments %}
 <h2><b>Comments</b></h2>
