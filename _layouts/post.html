@@ -35,7 +35,7 @@ layout: page
 {% for biblio in page.biblio %}
   {% for publi in site.data.bibliography %}
     {%- if {{biblio}} == {{publi.id}} -%}
-      <li> {{publi.cite}} {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})</li>
+      <li> <b>[{{publi.cite}}]</b>&nbsp; {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})</li>
     {%- endif -%}
   {% endfor %}
 {% endfor %}
