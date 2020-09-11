@@ -31,8 +31,12 @@ layout: page
 {{ content }}
 
 <h2><b>References</b></h2>
-{% for publi in site.data.bibliography %}
-  {{ publi.title }}
+{$ for biblio in page.biblio %}
+  {% for publi in site.data.bibliography %}
+    {% if {{biblio}} == {{publi.id}} %}
+      {{ publi.title }}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 
 {% if page.comments %}
