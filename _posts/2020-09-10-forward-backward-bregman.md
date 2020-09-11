@@ -1,9 +1,9 @@
 ---
 title: Forward-Backward with Bregman distances
 tags: [Optimization, Bregman]
-style: 
-color: 
-description: How to ...
+style: fill
+color: info
+description: A quick introduction to convex optimization with Bregman distances
 comments: true
 biblio: [2017_Bauschke_H_j-mor_dlblgc]
 ---
