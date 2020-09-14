@@ -30,7 +30,7 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 
 {% include definition.html title="Smoothness" content="The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
 - $$\mu\phi-f$$ is convex on $$\mathrm{int}\,\mathrm{dom}\,\phi$$
-- \\((\forall x\in\mathrm{dom}\,\phi,z\in\mathrm{int}\,\mathrm{dom}\,\phi)\quad f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)\\)" %}
+- $$(\forall x\in\mathrm{dom}\,\phi,z\in\mathrm{int}\,\mathrm{dom}\,\phi)$$ $$f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$" %}
 
 > Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%} 
 
