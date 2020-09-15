@@ -70,9 +70,9 @@ $$
 
 where in the last two-steps we encounted the proximity operator with Bregman distance.
 
-{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator of $$h$$ with respect to $$\phi$$ reads
+{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator (in Van Nguyen sense) of $$h$$ with respect to $$\phi$$ reads
 $$
-\mathrm{prox}_{h}^\phi(y) = \underset{x}{\mathrm{argmin}}\; h(x) + D_\phi(x,y)
+\mathrm{prox}_{h}^\phi(y) = \underset{x}{\mathrm{argmin}}\; h(x) + \phi(x) - \langle x,y\rangle
 $$
 "%}
 
