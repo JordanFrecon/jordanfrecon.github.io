@@ -2,10 +2,10 @@
 layout: publication
 title: Unveiling Groups of Related Tasks in Multi-Tasks Learning
 authors: J. Frecon, S. Salzo, and M. Pontil
-publication: Unpublished
+publication: International Conference on Pattern Recognition (ICPR)
 year: 2020
 doi:
-type: unpublished
+type: conference
 project: hyperparamOpt
 ---
 
