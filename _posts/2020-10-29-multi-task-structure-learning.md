@@ -146,7 +146,7 @@ The first work that initiated these approaches in the multi-task setting is {% i
 **Whom** {% include cite.html id="2011_Kang_Z_p-icml_lwwtsmtfl"%}. This method assumes that tasks form disjoint groups and the tasks parameters within each group lie in a low dimensional subspace.
 
 $$
-     \underset{W,\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda \sum_{l=1}^L \| W \sqrt{Q_l}\|_{\tr}^2 \quad
+     \underset{W,\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda \sum_{l=1}^L \| W \sqrt{Q_l}\|_{*}^2 \quad
      \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
 $$
 
@@ -163,5 +163,5 @@ $$
 \begin{align*}
 \underset{\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; &\sum_{t=1}^T \mathcal{L}(w_t(Q),\mathcal{D}_t^{(\mathrm{val})}) \quad \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
 \\
-W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \lambda \sum_{l=1}^L \| W Q_l\|_{\tr}
+W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \lambda \sum_{l=1}^L \| W Q_l\|_{*}
 \end{align*}
