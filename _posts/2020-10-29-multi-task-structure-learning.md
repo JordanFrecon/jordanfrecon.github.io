@@ -34,7 +34,7 @@ Since the model allow two tasks from different groups to overlap by having one o
 
 
 
-**ASAP-MT** \cite{2015_Barzilai_A_p-aistats_cmtl}.}~ The authors also assume that there are $$k < T$$ latent basis tasks, i.e., $$L\in\mathbb{R}^{d\times k}$$ and $$S\in\mathbb{R}^{k\times T}$$. They penalize the complexity of $$L$$ and enforce that the $$t$$-th column of the matrix $$S$$, denoted by $$s_t\in\mathbb{R}^k$$ associates task $$t$$ with one of the $$k$$ clusters. For example, if the $$k$$-th element of $$s_t$$ is one, and all other elements of $$s_t$$ are zero, we would say that $$t$$ is associated with cluster $$k$$.
+**ASAP-MT** {% include cite.html id="2015_Barzilai_A_p-aistats_cmtl"%} The authors also assume that there are $$k < T$$ latent basis tasks, i.e., $$L\in\mathbb{R}^{d\times k}$$ and $$S\in\mathbb{R}^{k\times T}$$. They penalize the complexity of $$L$$ and enforce that the $$t$$-th column of the matrix $$S$$, denoted by $$s_t\in\mathbb{R}^k$$ associates task $$t$$ with one of the $$k$$ clusters. For example, if the $$k$$-th element of $$s_t$$ is one, and all other elements of $$s_t$$ are zero, we would say that $$t$$ is associated with cluster $$k$$.
 
 $$
 \underset{L,S}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(L s_t,\mathcal{D}_t) + \lambda \|L\|^2_F\quad \text{s.t}\quad s_t\in\{0,1\}^K,\; \| s_t\|_2=1\;\text{for}\; t\in\{1,\ldots,T\} 
