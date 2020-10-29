@@ -9,7 +9,6 @@ biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-
 ---
 
 
-
 In the paradigm of multi-task learning, multiple related prediction tasks are learned jointly by sharing some information. This calls to specify when to share (i.e., decide when some tasks are related), what to share (i.e., determine the form through which sharing among the related tasks occur) and how to share (i.e., specify concrete ways to share knowledge among tasks). More formally, multi-task learning is defined as follows.
 
 {% include definition.html title="Multi-Task Learning" content="Let $$T$$ learning tasks $$\{\mathcal{T}_t\}_{t=1}^T$$ where each task $$\mathcal{T}_t$$ is associated to a  training set $$\mathcal{D}_t = \{x_{t,i},y_{t,i}\}_{i=1}^{n_t}$$, a model parameter $$w_t$$ which need to be learned, and a loss function $$\mathcal{L}(\cdot,\mathcal{D}_t)$$ evaluating the prediction performance of $$w_t$$ on the training set. In the following, we denote by $$W=[w_1\cdots w_T]$$ the collection of model parameters. Multi-task learning aims to help improve the learning of a model for $$\mathcal{T}_t$$ by using the knowledge contained in all or some of the $$T$$ tasks." %}
@@ -186,7 +185,7 @@ $$\begin{aligned}
 By adopting some convex relaxation technique, the convex objective function can be formulated as
 
 $$
-\underset{W,\Sigma}{\mathrm{minimize}}\; L(W) + \lambda \tr{(W 1 1^\top W^\top )} + \tr{( \tilde{W} \Sigma^{-1} \tilde{W}^\top )}\quad\text{s.t.}\quad \begin{cases}\tilde{W} = W (\mathbf{1}-11^\top / T),\\ \alpha \mathbf{1} \preceq \Sigma \preceq \beta \mathbf{1},\\ \tr{(\Sigma)} = \gamma\end{cases}
+\underset{W,\Sigma}{\mathrm{minimize}}\; L(W) + \lambda \mathrm{tr}{(W 1 1^\top W^\top )} + \mathrm{tr}{( \tilde{W} \Sigma^{-1} \tilde{W}^\top )}\quad\text{s.t.}\quad \begin{cases}\tilde{W} = W (\mathbf{1}-11^\top / T),\\ \alpha \mathbf{1} \preceq \Sigma \preceq \beta \mathbf{1},\\ \mathrm{tr}{(\Sigma)} = \gamma\end{cases}
 $$
 
 
