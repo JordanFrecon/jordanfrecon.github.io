@@ -21,6 +21,7 @@ $$
 Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms. For convex function one can derive the following equivalent definitions
 - $$\frac{\mu}{2} \|\cdot \|^2 - f$$ is convex
 - $$(\forall x,z)\; f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \frac{\mu}{2}\|x-z\|^2$$
+$\,$
 ## 1. Optimization problem
 
 We consider the following generic optimization problem
