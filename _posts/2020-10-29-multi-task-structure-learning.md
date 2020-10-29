@@ -165,3 +165,8 @@ $$\begin{aligned}
 \\
 W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \lambda \sum_{l=1}^L \| W Q_l\|_{*}
 \end{aligned}$$
+
+
+## 5. Graph-based regularized approaches
+
+Here we focus on a popular multi-task framework denoted as graph-based regularized framework. In this framework, task relations are represented as a graph whose nodes are the tasks and the weighted edges encode some knowledge over similarities between tasks. Here, the relationship between the tasks is usually modeled by a task covariance matrix $$\Sigma$$ or a task precision matrix $$\Omega=\Sigma^{-1}$$
