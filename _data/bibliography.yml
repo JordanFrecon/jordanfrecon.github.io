@@ -70,7 +70,6 @@
   publication: Proceedings of the Conference on Artificial Intelligence (AAAI)
   year: 2015
 
-
 - id: 2016_Lee_G_p-icml_amlbtrl
   cite: "Lee et al., 2016"
   year: 2016
@@ -91,3 +90,25 @@
   title: Robust Task Grouping with Representative Tasks for Clustered Multi-Task Learning
   authors: Y. Yao, J. Cao and H. Chen
   publication: Proceedings of the International Conference on Knowledge Discovery & Data Mining (KDD)
+
+- id: 2011_Kang_Z_p-icml_lwwtsmtfl
+  cite: Kang et al., 2011
+  year: 2011
+  title: Learning with Whom to Share in Multi-task Feature Learning
+  authors: Z. Kang, K. Grauman and F. Sha
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+
+- id: 2017_Kshirsagar_M_p-pkdd_ltcsgml
+  cite: Kshirsagar et al., 2017
+  year: 2017
+  title: Learning Task Clusters via Sparsity Grouped Multitask Learning
+  authors: M. Kshirsagar, E. Yang, A.C. Lozano
+  publication: Proceedings of the European Conference on Machine Learning and Knowledge Discovery in Databases (ECML PKDD)
+
+- id: 2020_Frecon_J_p-icpr_ugrtmtl
+  cite: Frecon et al., 2020
+  year: 2020
+  title: Unveiling groups of related tasks in multi-task learning
+  authors: J. Frecon, S. Salzo and M. Pontil
+  publication: Proceedings of the International Conference on Pattern Recognition (ICPR)
+

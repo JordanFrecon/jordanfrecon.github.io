@@ -5,7 +5,7 @@ style: fill
 color: secondary
 description: A short survey on various approaches to discover groups of related tasks
 comments: true
-biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl]
+biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl, 2011_Kang_Z_p-icml_lwwtsmtfl, 2017_Kshirsagar_M_p-pkdd_ltcsgml, 2020_Frecon_J_p-icpr_ugrtmtl]
 ---
 
 
@@ -37,3 +37,12 @@ In {% include cite.html id="2010_Jalali_A_p-nips_dmmtl"%} the authors proposes a
 In order to exploit the relationships between tasks, this kind of approaches writes the model parameter of each task $$w_t$$ as a linear combination of some representative tasks selected from the tasks pool or from the whole the tasks pool, i.e. $$w_t\approx W c_t$$, where $$C$$ is a $$T\times T$$ task correlation matrix and $$c_t$$ is the combination coefficients. The grouping structure of the tasks is embedded in $$C$$ meaning that tasks that select a common representative task are regarded as a group, and all tasks can be clustered into different groups based on their representative tasks.
 
 In {% include cite.html id="2016_Lee_G_p-icml_amlbtrl"%}, the authors proposed to represent each task by a sparse non-negative linear combination of all the other tasks. The method allow for asymmetric information transfer between the tasks, such that the amount of information transfer from a confident predictor to a less confident one is larger than the other way around. However, since the combination coefficients are restricted to be positive, this prevent negatively correlated tasks from being clustered together and hence from sharing information. To cope with this issue, {% include cite.html id="2017_Liu_S_p-ijcai_agsmtltl"%} relaxed the positive restriction so that the method can capture both positive and negative correlations amongst tasks. In addition, the correlation matrix was restricted to be block-diagonal with a trace Lasso norm penalty. More recently, {% include cite.html id="2019_Yao_Y_p-sigkdd_rtgrtcmtl"%} provides a more robust representation by applying the $$\ell_{1,2}$$-norm regularization twice: once to the representation difference $$W-WC$$ and once to the correlation matrix $$C$$ in order to select a few representative tasks.
+
+
+## 4. Indicators and Groupwise regularization approaches
+
+Another line of research to unveils groups of related tasks relies on the sum of $$L$$ penalties terms, each one of them applied to a different group of tasks. The $$L$$ groups are explicitly modeled by $$L$$ diagonal matrices $$Q_1,\ldots,Q_L$$ where $$Q_l\in\{0,1\}^{T\times T}$$ is the indicator matrix for the $$l$$-th group. The goal is then to estimate these indicator matrices so that the group-wise penalty best regularizes the parameter matrix.
+
+
+The first work that initiated these approaches in the multi-task setting is {% include cite.html id="2011_Kang_Z_p-icml_lwwtsmtfl"%} where the authors applied the trace norm squared groupwise in order that tasks parameters within each group lie in a low dimensional subspace. More recently, {% include cite.html id="2017_Kshirsagar_M_p-pkdd_ltcsgml"%} followed the same strategy but used the $$\ell_{1,2}$$ norm instead so that task relatedness is intended as shared sparsity, meaning that tasks in a group all have similar relevant features. Since in both cases the objective is smooth, its optimization is carried alternatively over the parameter matrix $$W$$ and a relaxed version $$\{Q_l\}_l$$'s. Departing from these methods, {% include cite.html id="2020_Frecon_J_p-icpr_ugrtmtl"%} considers the groupwise trace norm penalty and designed a smooth continuous bilevel scheme where the $$\{Q_l\}_l$$ are estimated at the upper-level so that the corresponding parameter matrix, estimated at the lower-level, generalizes well to unseen data.
+
