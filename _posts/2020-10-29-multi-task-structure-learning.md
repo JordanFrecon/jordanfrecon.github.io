@@ -5,7 +5,7 @@ style: fill
 color: secondary
 description: A short survey on various approaches to discover groups of related tasks
 comments: true
-biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl]
+biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl]
 ---
 
 
@@ -30,3 +30,10 @@ Another set of approaches called decomposition approaches assume that the parame
 
 
 In {% include cite.html id="2010_Jalali_A_p-nips_dmmtl"%} the authors proposes a dirty models with element-wise sparsity in $$W^{(1)}$$ and block-structured row-sparsity in $$W^{(2)}$$ so that the resulting sparsity patterns of the sum unveils the related tasks. On the clean side, the work of {% include cite.html id="2011_Chen_J_p-sigkdd_ilrgssrml"%} captures the relationship of multiple related tasks using a low-rank structure in $$W^{(1)}$$ while identifying the outlier tasks using a group-sparse structure in $$W^{(2)}$$. A multi-level decomposition is considered in {% include cite.html id="2015_Han_L_p-aaai_lmltgmtl"%} where a $$\ell_2$$ norm encourages the closeness of pairs of task at each level. A group structure can then be a posteriori recovered level-wise.
+
+
+## 3. Clustering based on representative tasks
+
+In order to exploit the relationships between tasks, this kind of approaches writes the model parameter of each task $$w_t$$ as a linear combination of some representative tasks selected from the tasks pool or from the whole the tasks pool, i.e. $$w_t\approx W c_t$$, where $$C$$ is a $$T\times T$$ task correlation matrix and $$c_t$$ is the combination coefficients. The grouping structure of the tasks is embedded in $$C$$ meaning that tasks that select a common representative task are regarded as a group, and all tasks can be clustered into different groups based on their representative tasks.
+
+In {% include cite.html id="2016_Lee_G_p-icml_amlbtrl"%}, the authors proposed to represent each task by a sparse non-negative linear combination of all the other tasks. The method allow for asymmetric information transfer between the tasks, such that the amount of information transfer from a confident predictor to a less confident one is larger than the other way around. However, since the combination coefficients are restricted to be positive, this prevent negatively correlated tasks from being clustered together and hence from sharing information. To cope with this issue, {% include cite.html id="2017_Liu_S_p-ijcai_agsmtltl"%} relaxed the positive restriction so that the method can capture both positive and negative correlations amongst tasks. In addition, the correlation matrix was restricted to be block-diagonal with a trace Lasso norm penalty. More recently, {% include cite.html id="2019_Yao_Y_p-sigkdd_rtgrtcmtl"%} provides a more robust representation by applying the $$\ell_{1,2}$$-norm regularization twice: once to the representation difference $$W-WC$$ and once to the correlation matrix $$C$$ in order to select a few representative tasks.

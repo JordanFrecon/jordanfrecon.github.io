@@ -69,3 +69,25 @@
   authors: L. Han Y. Zhang
   publication: Proceedings of the Conference on Artificial Intelligence (AAAI)
   year: 2015
+
+
+- id: 2016_Lee_G_p-icml_amlbtrl
+  cite: "Lee et al., 2016"
+  year: 2016
+  title: Asymmetric Multi-task Learning Based on Task Relatedness and Loss
+  authors: G. Lee, E. Yang and S. Hwang
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+
+- id: 2017_Liu_S_p-ijcai_agsmtltl
+  cite: "Liu and Pan, 2017"
+  year: 2017
+  title: Adaptive Group Sparse Multi-task Learning via Trace Lasso
+  authors: S. Liu and S.J. Pan
+  publication: Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)
+
+- id: 2019_Yao_Y_p-sigkdd_rtgrtcmtl
+  cite: "Yao et al., 2019"
+  year: 2019
+  title: Robust Task Grouping with Representative Tasks for Clustered Multi-Task Learning
+  authors: Y. Yao, J. Cao and H. Chen
+  publication: Proceedings of the International Conference on Knowledge Discovery & Data Mining (KDD)
