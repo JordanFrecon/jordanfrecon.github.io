@@ -24,6 +24,15 @@ One line of research relies on the assumption that the parameter matrix $$W$$ ca
 To the best of my knowledge, the work of {% include cite.html id="2012_Kumar_A_p-icml_ltgomtl"%} initiated these factorization techniques in multi-task learning by taking its inspiration from the low dimensional subspace assumption of {% include cite.html id="2008_Argyriou_A_j-ml_cmtfl"%} where it was achieved by imposing a trace-constraint, encouraging sparsity on the singular values of $$W$$. The same assumption is enforced there by factorizing $$W=LS$$ with a small number $$k$$ of latent basis tasks so that $$L$$ and $$S$$ are low-rank matrices. In addition, each linear combination is assumed to be sparse in the latent bases and the overlap in the sparsity patterns of two tasks controls the amount of sharing between them. A similar work has been conducted in {% include cite.html id="2013_Maurer_A_p-icml_scmtl"%} where the authors highlight the connection between such factorization technique and sparse coding. They additionally present a probabilistic analysis which complements well with the practical insights in the above work. The same factorization is found in {% include cite.html id="2015_Barzilai_A_p-aistats_cmtl"%} but the approach differs by the fact that each task is associated to a single latent basis task. Departing from these works, {% include cite.html id="2016_Zhong_S_j-n_fmtlltg"%} considers instead a full-rank assumption on $$L$$ along with a row-sparsity assumption on $$S$$ that encourages related tasks to share a subset of basis tasks. More recently, the work {% include cite.html id="2018_Jeong_J-Y_p-sigkdd_vstgmtl"%} brought the low-rank assumption up to date with sparsity assumptions between and within the rows of $$L$$ and the use of the $$k$$-support norm on columns of $$S$$ to impose sparsity while considering possible correlations.
 
 
+**GO-MTL** {% include cite.html id="2012_Kumar_A_p-icml_ltgomtl"%}. The authors assume that there are $$k < T$$ latent basis tasks, i.e., $$L\in\mathbb{R}^{d\times k}$$ and $$S\in\mathbb{R}^{k\times T}$$ are two low-rank matrices. In addition, they penalize the complexity of $$L$$ and assume that each task is represented by a sparse combination of the latent tasks. This results in the following optimization problem.
+
+$$
+\underset{L,S}{\minimize}\; \sum_{t=1}^T \mathcal{L}(Ls_t,\mathcal{D}_t) + \lambda \| L\|_F^2 + \mu \|S\|_1 
+$$
+
+Since the model allow two tasks from different groups to overlap by having one or more bases in common, it is called *Grouping and Overlap in Multi-Task Learning* by the authors.
+
+
 ## 2. Decomposition approaches and dirty models
 
 Another set of approaches called decomposition approaches assume that the parameter matrix can be decomposed as the sum of multiple component matrices, i.e., $$W=\sum_{h=1}^H W^{(h)}$$. Depending on the sparsity patterns or closeness of some components, groups of related tasks can be a posteriori discovered.
