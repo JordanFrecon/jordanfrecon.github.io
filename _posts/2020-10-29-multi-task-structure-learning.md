@@ -75,6 +75,35 @@ Another set of approaches called decomposition approaches assume that the parame
 
 In {% include cite.html id="2010_Jalali_A_p-nips_dmmtl"%} the authors proposes a dirty models with element-wise sparsity in $$W^{(1)}$$ and block-structured row-sparsity in $$W^{(2)}$$ so that the resulting sparsity patterns of the sum unveils the related tasks. On the clean side, the work of {% include cite.html id="2011_Chen_J_p-sigkdd_ilrgssrml"%} captures the relationship of multiple related tasks using a low-rank structure in $$W^{(1)}$$ while identifying the outlier tasks using a group-sparse structure in $$W^{(2)}$$. A multi-level decomposition is considered in {% include cite.html id="2015_Han_L_p-aaai_lmltgmtl"%} where a $$\ell_2$$ norm encourages the closeness of pairs of task at each level. A group structure can then be a posteriori recovered level-wise.
 
+**Dirty** {% include cite.html id="2010_Jalali_A_p-nips_dmmtl"%}. This work considers a model where features are assumed to be either active for all tasks, or inactive for most of the tasks. To do so, the parameter matrix is written as $$W = W^{(1)} + W^{(2)}$$ with different sparsity assumptions for each: element-wise sparsity in $$W^{(1)}$$ and block-structured row-sparsity in $$W^{(2)}$$.
+
+$$
+\underset{W^{(1)},W^{(2)}}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(w_t^{(1)}+ w_{t}^{(2)},\mathcal{D}_t) + \lambda_1 \|W^{(1)}\|_{1,1} + \lambda_2 \|W^{(2)}\|_{1,\infty}
+$$
+
+As a result, certain rows of $$W$$ would have many non-zero entries, corresponding to features shared by several tasks, while certain rows would be elementwise sparse, corresponding to those features which are relevant for some tasks but not all, while certain rows would have all zero entries, corresponding to those features that are not relevant to any task. On the contrary, a *clean* model would just use one type of sparsity assumption and not multiple. 
+
+
+
+
+**RMTL** {% include cite.html id="2011_Chen_J_p-sigkdd_ilrgssrml"%}. In the *Robust Multi-Task Learning* approach, the parameter matrix is written as $$W = W^{(1)} + W^{(2)}$$ where $$W^{(1)}$$ is supposed to be low-rank and $$W^{(2)}$$ is assumed to be group sparse. The corresponding optimization problem reads
+
+$$
+\underset{W^{(1)} + W^{(2)}}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(w_t^{(1)}+ w_{t}^{(2)}, \mathcal{D}_t) + \lambda_1 \|W^{(1)}\|_* + \lambda_2 \|W^{(2)}\|_{1,2}
+$$
+
+If the $$t$$-th task is from the related tasks group, $$w_t^{(2)}$$ is expected to be a zero-vector and hence $$w_t$$ obeys the specified low-rank structure constraint; on the other hand, if the $$t$$-th task is from the outlier tasks group, $$w_t^{(2)}$$ is expected to be non-zero.
+
+
+**MeTaG** {% include cite.html id="2015_Han_L_p-aaai_lmltgmtl"%}. The *Multi-level TAsk
+Grouping* method aims to learn the multi-level grouping structure instead of only one level among tasks.
+
+$$
+\underset{\{W^{(h)}\}_{h=1}^H}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}\left(\sum_{h=1}^H w_t^{(h)}, \mathcal{D}_t \right) + \sum_{h=1}^H \lambda_h \sum_{t<t'}^T \| w_{t}^{(h)} - w_{t'}^{(h)}\|_2
+$$
+
+The regularization imposes a $$\ell_2$$ norm on the pairwise difference among the column vectors in $$W_h$$, which encourages each pair of columns $$w_{t}^{(h)}$$ and $$w_{t'}^{(h)}$$ in $$W^{(h)}$$ to be identical. If this happens, then the $$t$$-th and $$t'$$-th tasks belong to a task group at the $$h$$-th level.
+
 
 ## 3. Clustering based on representative tasks
 
