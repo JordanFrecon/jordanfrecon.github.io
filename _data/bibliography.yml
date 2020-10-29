@@ -40,9 +40,11 @@
   title: Flexible multi-task learning with latent task grouping
   authors: S. Zhong, J. Pu, Y.-G. Jiang, R. Feng and X. Xue
   publication: Neurocomputing
+  year: 2016
 
 - id: 2018_Jeong_J-Y_p-sigkdd_vstgmtl
   cite: "Jeong and Jun, 2018"
   title: Variable Selection and Task Grouping for Multi-Task Learning
   authors: J.-Y. Jeong and C.-H. Jun
   publication: Proceedings of the International Conference on Knowledge Discovery & Data Mining (KDD)
+  year: 2018
