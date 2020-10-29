@@ -7,6 +7,13 @@
   year: 2017
   doi: 10.1287/moor.2016.0817
 
+- id: 2008_Argyriou_A_j-ml_cmtfl
+  cite: "Argyriou et al., 2008"
+  title: Convex multi-task feature learning
+  year: 2008
+  authors: A. Argyriou, T. Evgeniou M. Pontil
+  publication: Machine learning
+
 - id: 2012_Kumar_A_p-icml_ltgomtl
   cite: "Kumar and Daumé, 2012" 
   title: Learning Task Grouping and Overlap in Multi-Task Learning
