@@ -35,7 +35,10 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 - $$(\forall x\in\mathrm{dom}\,\phi,z\in\mathrm{int}\,\mathrm{dom}\,\phi)$$ $$f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$
 
 where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
-$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$" %}
+
+$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
+
+" %}
 
 > Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%} 
 
