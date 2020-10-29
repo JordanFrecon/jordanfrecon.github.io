@@ -57,7 +57,7 @@ Here, the surrogate $$\mathcal{L}_k(x)$$ is simply built as $$\mathcal{L}_k(x)\t
 - Global majorant:  $$f(x) \leq h_k(x)$$"%}
 
 
-We are now left with solving each minimization problem. This boils down to finding $$x_{k+1}$$ such that $$0\in\partial\mathcal{L}_k(x)$$, i.e.,
+We are now left with solving each minimization problem. This boils down to finding $$x_{k+1}$$ such that $$0\in\partial\mathcal{L}_k(x_{k+1})$$, i.e.,
 
 $$
 \begin{align}
