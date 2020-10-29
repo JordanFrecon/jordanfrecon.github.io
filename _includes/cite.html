@@ -1,5 +1,9 @@
-{% for publi in site.data.bibliography %}
-    {%- if {{include.id}} == {{publi.id}} -%}
-      [{{publi.cite}}]
-    {%- endif -%}
-{% endfor %}
+<div>
+  <p>
+    {% for publi in site.data.bibliography %}
+      {%- if {{include.id}} == {{publi.id}} -%}
+        [{{publi.cite}}]
+      {%- endif -%}
+    {% endfor %}
+  </p>
+</div>
