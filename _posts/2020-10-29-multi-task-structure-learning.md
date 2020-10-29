@@ -88,7 +88,7 @@ As a result, certain rows of $$W$$ would have many non-zero entries, correspondi
 **RMTL** {% include cite.html id="2011_Chen_J_p-sigkdd_ilrgssrml"%}. In the *Robust Multi-Task Learning* approach, the parameter matrix is written as $$W = W^{(1)} + W^{(2)}$$ where $$W^{(1)}$$ is supposed to be low-rank and $$W^{(2)}$$ is assumed to be group sparse. The corresponding optimization problem reads
 
 $$
-\underset{W^{(1)} + W^{(2)}}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(w_t^{(1)}+ w_{t}^{(2)}, \mathcal{D}_t) + \lambda_1 \|W^{(1)}\|_* + \lambda_2 \|W^{(2)}\|_{1,2}
+\underset{W^{(1)},W^{(2)}}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(w_t^{(1)}+ w_{t}^{(2)}, \mathcal{D}_t) + \lambda_1 \|W^{(1)}\|_* + \lambda_2 \|W^{(2)}\|_{1,2}
 $$
 
 If the $$t$$-th task is from the related tasks group, $$w_t^{(2)}$$ is expected to be a zero-vector and hence $$w_t$$ obeys the specified low-rank structure constraint; on the other hand, if the $$t$$-th task is from the outlier tasks group, $$w_t^{(2)}$$ is expected to be non-zero.
