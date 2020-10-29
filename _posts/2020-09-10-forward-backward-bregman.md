@@ -79,9 +79,9 @@ x_{k+1} &= \mathrm{prox}_{\tau g}^\phi (\nabla\phi(x_k) - \tau\nabla f(x_k))
 \end{align}
 $$
 
-where in the last two-steps we encounted the proximity operator with Bregman distance.
+where in the last two-steps we encounted the proximity operator with Bregman distance {% include cite.html id="2017_VanNguyen_Q_j-vjm_fbsbd"%}.
 
-{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator (in {% include cite.html id="2017_VanNguyen_Q_j-vjm_fbsbd"%} sense) of $$h$$ with respect to $$\phi$$ reads
+{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator (in Van Nguyen sense) of $$h$$ with respect to $$\phi$$ reads
 
 $$
 \mathrm{prox}_{h}^\phi(y) = \underset{x}{\mathrm{argmin}}\; h(x) + \phi(x) - \langle x,y\rangle
