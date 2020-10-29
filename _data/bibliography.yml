@@ -1,5 +1,5 @@
 - id: 2017_Bauschke_H_j-mor_dlblgc
-  cite: "HH. Bauschke et al, 2017"
+  cite: "Bauschke et al., 2017"
   title: A descent lemma beyond Lipschitz gradient continuity- first-order methods revisited and applications
   year: 2017
   authors: HH. Bauschke, J. Bolte and M. Teboulle
@@ -7,3 +7,35 @@
   year: 2017
   doi: 10.1287/moor.2016.0817
 
+- id: 2012_Kumar_A_p-icml_ltgomtl
+  cite: "Kumar and Daumé, 2012" 
+  title: Learning Task Grouping and Overlap in Multi-Task Learning
+  year: 2012
+  authors: A. Kumar and H. Daumé
+  publication: Proceedings of the International Conference on International Conference on Machine Learning (ICML)
+
+- id: 2013_Maurer_A_p-icml_scmtl
+  cite: "Maurer et al., 2013"
+  title: Sparse Coding for Multitask and Transfer Learning
+  authors: A. Maurer, M. Pontil and B. Romera-Paredes
+  year: 2013
+  publication: Proceedings of the International Conference on International Conference on Machine Learning (ICML)
+
+- id: 2015_Barzilai_A_p-aistats_cmtl
+  cite: "Barzilai and Crammer, 2015"
+  title: Convex Multi-Task Learning by Clustering
+  authors: A. Barzilai and K. Crammer
+  year: 2015
+  publication: Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS)
+
+- id: 2016_Zhong_S_j-n_fmtlltg
+  cite: "Zhong et al., 2016"
+  title: Flexible multi-task learning with latent task grouping
+  authors: S. Zhong, J. Pu, Y.-G. Jiang, R. Feng and X. Xue
+  publication: Neurocomputing
+
+- id: 2018_Jeong_J-Y_p-sigkdd_vstgmtl
+  cite: "Jeong and Jun, 2018"
+  title: Variable Selection and Task Grouping for Multi-Task Learning
+  authors: J.-Y. Jeong and C.-H. Jun
+  publication: Proceedings of the International Conference on Knowledge Discovery & Data Mining (KDD)
