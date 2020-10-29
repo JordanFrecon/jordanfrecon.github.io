@@ -32,7 +32,8 @@ layout: page
 
 <h2>References</h2>
 <ul>
-{% for biblio in page.biblio %}
+{% assign sortedBiblio = page.biblio | sort: 'id' %}
+{% for biblio in sortedBiblio  %}
   {% assign sortedPubli = site.data.bibliography | sort: 'id' %} 
   {% for publi in sortedPubli %}
     {%- if {{biblio}} == {{publi.id}} -%}
