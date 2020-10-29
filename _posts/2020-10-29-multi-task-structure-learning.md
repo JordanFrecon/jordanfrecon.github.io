@@ -170,7 +170,7 @@ W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}
 
 Here we focus on a popular multi-task framework denoted as graph-based regularized framework. In this framework, task relations are represented as a graph whose nodes are the tasks and the weighted edges encode some knowledge over similarities between tasks. Here, the relationship between the tasks is usually modeled by a task covariance matrix $$\Sigma$$ or a task precision matrix $$\Omega=\Sigma^{-1}$$.
 
-**Clustered-MTL** {% include cite.html id="2008_Laurent_J-p-nips_cmtlcf"%}. This work relies on the hypothesis that the parameters of tasks within a cluster lie close to each other in $$\ell_2$$ norm sense.  The penalties are made of three terms: $$\mathcal{R}_{\text{mean}}$$ which measures on average how large the weight vectors are, $$\mathcal{R}_{\text{between}}(W,\mathcal{G})$$ which quantifies how close to each other the different groups are, and $$\mathcal{R}_{\text{within}}(W,\mathcal{G})$$
+**Clustered-MTL** {% include cite.html id="2008_Jacob_J-p-nips_cmtlcf"%}. This work relies on the hypothesis that the parameters of tasks within a cluster lie close to each other in $$\ell_2$$ norm sense.  The penalties are made of three terms: $$\mathcal{R}_{\text{mean}}$$ which measures on average how large the weight vectors are, $$\mathcal{R}_{\text{between}}(W,\mathcal{G})$$ which quantifies how close to each other the different groups are, and $$\mathcal{R}_{\text{within}}(W,\mathcal{G})$$
 which measures the compactness of the groups
 
 $$\begin{aligned}

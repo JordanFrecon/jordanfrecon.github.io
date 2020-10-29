@@ -112,6 +112,13 @@
   authors: J. Frecon, S. Salzo and M. Pontil
   publication: Proceedings of the International Conference on Pattern Recognition (ICPR)
 
+- id: 2008_Jacob_J-p-nips_cmtlcf
+  cite: Jacob et al., 2009
+  year: 2009
+  title: Clustered Multi-Task Learning: A Convex Formulation
+  authors: L. Jacob, J.-P. Vert and F.R. Bach
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+
 - id: 2012_Fei_H_j-kis_sfstrimtl
   cite: Fei and Huan, 2012
   year: 2012
