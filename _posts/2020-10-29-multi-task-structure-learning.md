@@ -5,7 +5,7 @@ style: fill
 color: secondary
 description: A short survey on various approaches to discover groups of related tasks
 comments: true
-biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl, 2011_Kang_Z_p-icml_lwwtsmtfl, 2017_Kshirsagar_M_p-pkdd_ltcsgml, 2020_Frecon_J_p-icpr_ugrtmtl, 2009_Jacob_J-p-nips_cmtlcf, 2012_Fei_H_j-kis_sfstrimtl, 2014_Zhang_Y_j-tkdd_rattrml, 2014_Flamary_R_book_lctsgrml, 2016_Gongalves_A_j-mlr_mtsslgcm, 2019_Goncalves_A_j-bi_bmlrhpc, 2020_Alesiani_F_arxiv_timlbp]
+biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl, 2011_Kang_Z_p-icml_lwwtsmtfl, 2017_Kshirsagar_M_p-pkdd_ltcsgml, 2020_Frecon_J_p-icpr_ugrtmtl,2009_Jacob_J-p-nips_cmtlcf, 2012_Fei_H_j-kis_sfstrimtl, 2014_Zhang_Y_j-tkdd_rattrml, 2014_Flamary_R_book_lctsgrml, 2016_Gongalves_A_j-mlr_mtsslgcm, 2019_Goncalves_A_j-bi_bmlrhpc, 2020_Alesiani_F_arxiv_timlbp]
 ---
 
 
