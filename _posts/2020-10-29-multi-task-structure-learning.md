@@ -13,7 +13,7 @@ In the paradigm of multi-task learning, multiple related prediction tasks are le
 
 {% include definition.html title="Multi-Task Learning" content="Let $$T$$ learning tasks $$\{\mathcal{T}_t\}_{t=1}^T$$ where each task $$\mathcal{T}_t$$ is associated to a  training set $$\mathcal{D}_t = \{x_{t,i},y_{t,i}\}_{i=1}^{n_t}$$, a model parameter $$w_t\in\mathbb{R}^d$$ which need to be learned, and a loss function $$\mathcal{L}(\cdot,\mathcal{D}_t)$$ evaluating the prediction performance of $$w_t$$ on the training set. In the following, we denote by $$W=[w_1\cdots w_T]\in\mathbb{R}^{d\times T}$$ the collection of model parameters. Multi-task learning aims to help improve the learning of a model for $$\mathcal{T}_t$$ by using the knowledge contained in all or some of the $$T$$ tasks." %}
 
-A major challenge in multi-task learning consist in finding groups of related tasks in order to prevent that two unrelated tasks do not end up influencing each other, hence worsening the performance of both tasks.
+A major challenge in multi-task learning consist in finding groups of related tasks in order to prevent that two unrelated tasks do not end up influencing each other, hence worsening the performance of both tasks. In what follows, I will present various types of approaches addressing that challenge.
 
 ## 1. Factorization approaches and sparse coding techniques 
 
