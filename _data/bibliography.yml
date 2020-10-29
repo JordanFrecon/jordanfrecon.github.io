@@ -48,3 +48,24 @@
   authors: J.-Y. Jeong and C.-H. Jun
   publication: Proceedings of the International Conference on Knowledge Discovery & Data Mining (KDD)
   year: 2018
+
+- id: 2010_Jalali_A_p-nips_dmmtl
+  cite: Jalali et al., 2010
+  title: A Dirty Model for Multi-task Learning
+  authors: A. Jalali, S. Sujay, C. Ruan and P. Ravikumar
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  year: 2010
+
+- id: 2011_Chen_J_p-sigkdd_ilrgssrml
+  cite: "Chen et al., 2011"
+  title: Integrating low-rank and group-sparse structures for robust multi-task learning
+  authors: J. Chen, J. Zhou and J. Ye
+  publication: Proceedings of the International Conference on Knowledge discovery and data mining (KDD)
+  year: 2011
+
+- id: 2015_Han_L_p-aaai_lmltgmtl
+  cite: "Han and Zhang, 2015"
+  title: Learning multi-level task groups in multi-task learning
+  authors: L. Han Y. Zhang
+  publication: Proceedings of the Conference on Artificial Intelligence (AAAI)
+  year: 2015
