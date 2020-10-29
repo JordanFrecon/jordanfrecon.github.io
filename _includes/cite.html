@@ -1,5 +1,5 @@
 {% for publi in site.data.bibliography %}
     {%- if {{include.id}} == {{publi.id}} -%}
-      <div class=citation>[{{publi.cite}}]</div>
+      <div class="citation">[{{publi.cite}}]</div>
     {%- endif -%}
 {% endfor %}
