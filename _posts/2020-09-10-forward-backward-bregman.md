@@ -12,12 +12,16 @@ biblio: [2017_Bauschke_H_j-mor_dlblgc]
 For this first post, I have chosen to shortly introduce the forward-backward algorithm with Bregman distances.
 
 
-The forward-backward algorithm is widely used first order method to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms.
+The forward-backward algorithm is widely used first order method to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. More formally, a continously differentiable function $$f$$ is $$\mu$$-smooth if
 
+$$
+(\forall x,z)\, \| \nabla f(x) - \nabla f(z) \| \leq mu \| x - z\|. 
+$$
 
-Traditionally, the Euclidean function $$\phi=\frac{1}{2}\|\cdot\|^2$$ is use leading to ..
-where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
-$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
+Hence, the Lipschitz continuous gradient condition is essential to carefully design optimal step-sizes and ensure the convergence of many gradient descent based algorithms. For convex function one can derive the following equivalent definitions
+- $$\frac{1}{2} \|\cdot \|^2 - f$$ is convex
+- $$(\forall x,z)\, f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \frac{\mu}{2}\|x-z\|^2
+
 
 ## 1. Optimization problem
 
@@ -31,6 +35,8 @@ where both $$f$$ and $$g$$ are proper lower semi-continuous convex functions. In
 {% include definition.html title="Smoothness" content="The function $$f$$ is said to be $$\mu$$-smooth with respect to $$\phi$$ if the following equivalent conditions are verified.
 - $$\mu\phi-f$$ is convex on $$\mathrm{int}\,\mathrm{dom}\,\phi$$
 - $$(\forall x\in\mathrm{dom}\,\phi,z\in\mathrm{int}\,\mathrm{dom}\,\phi)$$ $$f(x) \leq f(z) + \nabla f(z)^\top(x-z) + \mu D_\phi(x,z)$$" %}
+where $$D_\phi$$ is the Bregman distance associated to $$\phi$$, i.e.,
+$$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 > Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%} 
 
