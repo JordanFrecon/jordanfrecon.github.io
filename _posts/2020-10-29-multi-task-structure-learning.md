@@ -58,6 +58,15 @@ $$
 $$
 
 
+**VSTG-MTL** {% include cite.html id="2018_Jeong_J-Y_p-sigkdd_vstgmtl"%}. The *Variable Selection and Task Grouping for Multi-Task Learning* method also assumes that $$L$$ and $$S$$ are low-rank matrices but differs from the regularization terms. It encourages the sparsities between and within the latent task vectors and relies on the k-support norm to induce less sparse weighting vector $$v_t$$ than that from the $$\ell_1$$ norm and similarly enhances the overlaps in the
+task groups.
+
+$$
+\underset{L,S}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(Ls_t,\mathcal{D}_t) + \lambda_1 \| L\|_1 + \lambda_2 \| L\|_{1,\infty} + \lambda_3 \sum_{t=1}^T\Big( \| s_t\|_k^{\mathrm{sp}} \Big)^2
+$$
+
+The group structure among tasks are decided by the sparsity patterns on the weighting vector $$s_t$$. Tasks with same sparsity patterns on the weighting vector $$s_t$$ belong to the same group, whereas those with the orthogonal ones belong to disjoint groups. Two groups are regard as being overlapped if their sparsity patterns are not orthogonal, i.e., they partially share the latent bases.
+
 
 ## 2. Decomposition approaches and dirty models
 
