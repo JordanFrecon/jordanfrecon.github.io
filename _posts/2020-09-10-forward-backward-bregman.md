@@ -41,10 +41,13 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 
 " %}
 
-> Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%} 
+> Actually, there are many equivalent formulations. The reader in invited to report to {% include cite.html id="2017_Bauschke_H_j-mor_dlblgc"%}. 
 
+> One recovers the classical definition of smoothness for $$\phi = \frac{1}{2}\|\cdot \|^2$$.
 
 The former condition is useful in practice in order to find the constant $$\mu>0$$ while the latter permits to implement a majorization-minimization (MM) algorithm presented in the next section.
+
+
 
 
 ## 2. Algorithm
