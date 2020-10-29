@@ -160,8 +160,8 @@ $$
     
 **BiGMTL** {% include cite.html id="2020_Frecon_J_p-icpr_ugrtmtl"%}. The *Bilevel Grouping in Multi-Task Learning* method decouples the learning of the groups and the parameter matrix in two levels. The upper-level problem optimize the groups so that the corresponding parameter matrix, learned at the lower-level problem, performs well on a validation set. This work also assumes tasks parameters within each group lie in a low dimensional subspace by using the trace norm penalty.
 
-&&
+\begin{align*}
 \underset{\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; &\sum_{t=1}^T \mathcal{L}(w_t(Q),\mathcal{D}_t^{(\mathrm{val})}) \quad \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
 \\
 W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \lambda \sum_{l=1}^L \| W Q_l\|_{\tr}
-&&
+\end{align*}
