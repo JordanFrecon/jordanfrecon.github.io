@@ -1,5 +1,7 @@
+<div class="citation">
 {% for publi in site.data.bibliography %}
     {%- if {{include.id}} == {{publi.id}} -%}
-      <div class="citation">[{{publi.cite}}]</div>
+      [{{publi.cite}}]
     {%- endif -%}
 {% endfor %}
+</div>
