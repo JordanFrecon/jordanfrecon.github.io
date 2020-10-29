@@ -170,15 +170,15 @@ W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}
 
 Here we focus on a popular multi-task framework denoted as graph-based regularized framework. In this framework, task relations are represented as a graph whose nodes are the tasks and the weighted edges encode some knowledge over similarities between tasks. Here, the relationship between the tasks is usually modeled by a task covariance matrix $$\Sigma$$ or a task precision matrix $$\Omega=\Sigma^{-1}$$.
 
-**Clustered-MTL** {% include cite.html id="2008_Laurent_J-p-nips_cmtlcf"%}. This work relies on the hypothesis that the parameters of tasks within a cluster lie close to each other in $$\ell_2$$ norm sense.  The penalties are made of three terms: $$\Omega_{\text{mean}}$$ which measures on average how large the weight vectors are, $$\Omega_{\text{between}}(W,\mathcal{G})$$ which quantifies how close to each other the different groups are, and $$\Omega_{\text{within}}(W,\mathcal{G})$$
+**Clustered-MTL** {% include cite.html id="2008_Laurent_J-p-nips_cmtlcf"%}. This work relies on the hypothesis that the parameters of tasks within a cluster lie close to each other in $$\ell_2$$ norm sense.  The penalties are made of three terms: $$\mathcal{R}_{\text{mean}}$$ which measures on average how large the weight vectors are, $$\mathcal{R}_{\text{between}}(W,\mathcal{G})$$ which quantifies how close to each other the different groups are, and $$\mathcal{R}_{\text{within}}(W,\mathcal{G})$$
 which measures the compactness of the groups
 
 $$\begin{aligned}
-        &\underset{W,\mathcal{G}}{\mathrm{minimize}}\; L(W) + \lambda_m \Omega_{\text{mean}}(W) + \lambda_b \Omega_{\text{between}}(W,\mathcal{G}) + \lambda_w \Omega_{\text{within}}(W,\mathcal{G})\\
+        &\underset{W,\mathcal{G}}{\mathrm{minimize}}\; L(W) + \lambda_m \mathcal{R}_{\text{mean}}(W) + \lambda_b \mathcal{R}_{\text{between}}(W,\mathcal{G}) + \lambda_w \mathcal{R}_{\text{within}}(W,\mathcal{G})\\
         &\text{where}\quad \begin{cases}
-        \Omega_{\text{mean}}(W) = \| \bar{w} \|^2, \quad&\text{with}\quad\bar{w}=(1 / T)\sum_{t=1}^T w_t\\
-        \Omega_{\text{between}}(W,\mathcal{G}) = \sum_{l=1}^L |\mathcal{G}_l| \| \bar{w}_l - \bar{w}\|^2,  \quad&\text{with}\quad \bar{w}_l = (1/|\mathcal{G}_l|)\sum_{t\in\mathcal{G}_l} w_t\\
-        \Omega_{\text{within}}(W,\mathcal{G}) = \sum_{l=1}^L \sum_{t\in\mathcal{G}_l} \| w_t - \bar{w}_l \|^2&
+        \mathcal{R}_{\text{mean}}(W) = \| \bar{w} \|^2, \quad&\text{with}\quad\bar{w}=(1 / T)\sum_{t=1}^T w_t\\
+        \mathcal{R}_{\text{between}}(W,\mathcal{G}) = \sum_{l=1}^L |\mathcal{G}_l| \| \bar{w}_l - \bar{w}\|^2,  \quad&\text{with}\quad \bar{w}_l = (1/|\mathcal{G}_l|)\sum_{t\in\mathcal{G}_l} w_t\\
+        \mathcal{R}_{\text{within}}(W,\mathcal{G}) = \sum_{l=1}^L \sum_{t\in\mathcal{G}_l} \| w_t - \bar{w}_l \|^2&
         \end{cases}
 \end{aligned}$$
 
