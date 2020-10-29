@@ -112,3 +112,44 @@
   authors: J. Frecon, S. Salzo and M. Pontil
   publication: Proceedings of the International Conference on Pattern Recognition (ICPR)
 
+- id: 2012_Fei_H_j-kis_sfstrimtl
+  cite: Fei and Huan, 2012
+  year: 2012
+  title: Structured feature selection and task relationship inference for multi-task learning
+  authors: H. Fei and J. Huan
+  publication: Knowledge and Information Systems (KAIS)
+
+- id: 2014_Zhang_Y_j-tkdd_rattrml
+  cite: Zhang and Yeung, 2014
+  year: 2014
+  title: A Regularization Approach to Learning Task Relationships in Multitask Learning
+  authors: Y. Zhang and D.-Y. Yeung
+  publication: ACM Transactions on Knowledge Discovery from Data (TKDD)
+
+- id: 2014_Flamary_R_book_lctsgrml
+  cite: Flamary et al., 2014
+  year: 2014
+  title: Learning Constrained Task Similarities in Graph-Regularized Multi-Task Learning
+  authors: R. Flamary, A. Rakotomamonjy and G. Gasso
+  publication: Regularization, Optimization, Kernels, and Support Vector Machines
+
+- id: 2016_Gongalves_A_j-mlr_mtsslgcm
+  cite: Gonçalves et al., 2016
+  year: 2016
+  title: Multi-task Sparse Structure Learning with Gaussian Copula Models
+  authors: A.R. Gonçalves, F.J. Von Zuben and A. Banerjee
+  publication: Journal of Machine Learning Research (JMLR)
+
+- id: 2019_Goncalves_A_j-bi_bmlrhpc
+  cite: Gonçalves et al., 2019
+  year: 2019
+  title: Bayesian multitask learning regression for heterogeneous patient cohorts
+  authors: A.R. Gonçalves, P. Ray, B. Soper, D. Widemann, M. Nygård, J.F. Nygård and A.P. Sales
+  publication: Journal of Biomedical Informatics (JBI)
+
+- id: 2020_Alesiani_F_arxiv_timlbp
+  cite: Alesiani et al., 2020
+  year: 2020
+  title: Towards Interpretable Multi-Task Learning Using Bilevel Programming
+  authors: F. Alesiani, S. Yu, A. Shaker and W. Yin
+  publication: ArXiv Computing Research Repository (CoRR)

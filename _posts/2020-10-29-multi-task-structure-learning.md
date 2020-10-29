@@ -5,7 +5,7 @@ style: fill
 color: secondary
 description: A short survey on various approaches to discover groups of related tasks
 comments: true
-biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl, 2011_Kang_Z_p-icml_lwwtsmtfl, 2017_Kshirsagar_M_p-pkdd_ltcsgml, 2020_Frecon_J_p-icpr_ugrtmtl]
+biblio: [2008_Argyriou_A_j-ml_cmtfl,2012_Kumar_A_p-icml_ltgomtl,2013_Maurer_A_p-icml_scmtl,2015_Barzilai_A_p-aistats_cmtl,2016_Zhong_S_j-n_fmtlltg,2018_Jeong_J-Y_p-sigkdd_vstgmtl,2010_Jalali_A_p-nips_dmmtl,2011_Chen_J_p-sigkdd_ilrgssrml,2015_Han_L_p-aaai_lmltgmtl, 2016_Lee_G_p-icml_amlbtrl, 2017_Liu_S_p-ijcai_agsmtltl, 2019_Yao_Y_p-sigkdd_rtgrtcmtl, 2011_Kang_Z_p-icml_lwwtsmtfl, 2017_Kshirsagar_M_p-pkdd_ltcsgml, 2020_Frecon_J_p-icpr_ugrtmtl, 2012_Fei_H_j-kis_sfstrimtl, 2014_Zhang_Y_j-tkdd_rattrml, 2014_Flamary_R_book_lctsgrml, 2016_Gongalves_A_j-mlr_mtsslgcm, 2019_Goncalves_A_j-bi_bmlrhpc, 2020_Alesiani_F_arxiv_timlbp]
 ---
 
 
@@ -169,4 +169,84 @@ W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}
 
 ## 5. Graph-based regularized approaches
 
-Here we focus on a popular multi-task framework denoted as graph-based regularized framework. In this framework, task relations are represented as a graph whose nodes are the tasks and the weighted edges encode some knowledge over similarities between tasks. Here, the relationship between the tasks is usually modeled by a task covariance matrix $$\Sigma$$ or a task precision matrix $$\Omega=\Sigma^{-1}$$
+Here we focus on a popular multi-task framework denoted as graph-based regularized framework. In this framework, task relations are represented as a graph whose nodes are the tasks and the weighted edges encode some knowledge over similarities between tasks. Here, the relationship between the tasks is usually modeled by a task covariance matrix $$\Sigma$$ or a task precision matrix $$\Omega=\Sigma^{-1}$$.
+
+**Clustered-MTL** {% include cite.html id="2008_Laurent_J-p-nips_cmtlcf"%}. This work relies on the hypothesis that the parameters of tasks within a cluster lie close to each other in $\ell_2$ norm sense.  The penalties are made of three terms: $\Omega_{\text{mean}}$ which measures on average how large the weight vectors are, $\Omega_{\text{between}}(W,\mathcal{G})$ which quantifies how close to each other the different groups are, and $\Omega_{\text{within}}(W,\mathcal{G})$
+which measures the compactness of the groups
+
+$$\begin{aligned}
+        &\underset{W,\mathcal{G}}{\mathrm{minimize}}\; L(W) + \lambda_m \Omega_{\text{mean}}(W) + \lambda_b \Omega_{\text{between}}(W,\mathcal{G}) + \lambda_w \Omega_{\text{within}}(W,\mathcal{G})\\
+        &\text{where}\quad \begin{cases}
+        \Omega_{\text{mean}}(W) = \| \bar{w} \|^2, \quad&\text{with}\quad\bar{w}=(1 / T)\sum_{t=1}^T w_t\\
+        \Omega_{\text{between}}(W,\mathcal{G}) = \sum_{l=1}^L |\mathcal{G}_l| \| \bar{w}_l - \bar{w}\|^2,  \quad&\text{with}\quad \bar{w}_l = (1/|\mathcal{G}_l|)\sum_{t\in\mathcal{G}_l} w_t\\
+        \Omega_{\text{within}}(W,\mathcal{G}) = \sum_{l=1}^L \sum_{t\in\mathcal{G}_l} \| w_t - \bar{w}_l \|^2&
+        \end{cases}
+\end{aligned}$$
+
+By adopting some convex relaxation technique, the convex objective function can be formulated as
+
+$$
+\underset{W,\Sigma}{\mathrm{minimize}}\; L(W) + \lambda \tr{(W 1 1^\top W^\top )} + \tr{( \tilde{W} \Sigma^{-1} \tilde{W}^\top )}\quad\text{s.t.}\quad \begin{cases}\tilde{W} = W (\mathbf{1}-11^\top / T),\\ \alpha \mathbf{1} \preceq \Sigma \preceq \beta \mathbf{1},\\ \tr{(\Sigma)} = \gamma\end{cases}
+$$
+
+
+
+**MTLapTR** {% include cite.html id="2012_Fei_H_j-kis_sfstrimtl"%}. The *Multi-Task Laplacian regularization with Task Relationship inference* method combines sparse regularization and task relationship modeling in the sense that the method selects a small subset of features and the feature sets of two closely related tasks have common features. To do so, the authors suggest the following objective function:
+
+$$
+\underset{W,\Sigma}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda_1\|W\|_1 + \frac{\lambda_2}{2} \mathrm{tr}(W^\top L W) + \frac{\lambda_3}{2}\mathrm{tr}(W\Sigma^{-1}W^\top)\quad\text{s.t.}\quad \begin{cases}
+    \Sigma \succeq 0 \\ \mathrm{tr}(\Sigma)=k
+    \end{cases}
+$$
+where $$\mathrm{tr}(W^\top LW)$$ is a Tikhonov regularization term conveniently
+written in matrix format in terms of the graph Laplacian $$L$$ matrix in order to impose smoothness across features meaning that the selected features tend to be connected in the feature graph. One down side is that $$L$$ should be specified *a priori*.
+
+
+**MTRL** {% include cite.html id="2014_Zhang_Y_j-tkdd_rattrml"%}. The *Multi-Task Relationship Learning* method estimates task dependence (in the form of a task covariance matrix) along with task specific coefficients. A convex relaxation is proposed to ease optimization.
+
+$$
+\underset{W,\Sigma}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \underbrace{\frac{\lambda_1}{2} \| W \|_F^2}_{\substack{\text{penalizes the}\\\text{ complexity of $W$}}} + \underbrace{\frac{\lambda_2}{2}\mathrm{tr}(W\Sigma^{-1} W^\top)}_{\substack{\text{measures the relationships}\\\text{between all tasks}}} \quad \text{s.t.}\quad     \underbrace{\begin{cases}
+    \Sigma \succeq 0 \\ \mathrm{tr}(\Sigma)=1
+    \end{cases}}_{\substack{\text{ensures that $\Sigma$ is}\\\text{a covariance matrix}}}
+$$
+
+
+**CoGraph-MTL** {% include cite.html id="2014_Flamary_R_book_lctsgrml"%}. The purpose of the *Constrained Graph-regularized Multi-Task Learning* method is to learn the adjacency matrix of the task relations graph, jointly with the task decision function parameters, while making the graph the more interpretable as possible. The interpretability of the adjacency matrix is achieved by incorporating some sparsity-inducing regularization $$\mathcal{R}$$. The authors consider a model that induces pairwise similarity between tasks. A bilevel framework for learning task similarities in multi-task learning problems is designed where the similarities are learned so as to optimize a proxy on the generalization errors of all tasks. The proposed optimization problem reads
+
+$$\begin{aligned}
+\underset{\lambda}{\minimize}\; &\sum_{t=1}^T \mathcal{L}(\hat{w}_t(\lambda),\mathcal{D}_t^{(\mathrm{val})}) + \mathcal{R}(\lambda)\\
+\hat{W}(\lambda) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \underbrace{\sum_{t=1}^T\frac{\lambda_t}{2} \|w_t\|^2  + \sum_{t,s} \lambda_{t,s} \| w_t - w_s\|^2}_{=\mathrm{tr}(W\Sigma(\lambda) W^\top)}
+\end{aligned}$$
+
+where $$\Sigma(\lambda) = \mathrm{Diag}( \{\lambda_t\}_{t=1}^T) + L(\lambda)$$ plays the role of a tasks covariance matrix (under some constraints which can be included in $$\mathcal{R}$$) with $$L(\lambda)$$ being the Laplacian matrix.
+
+
+
+
+**MSSL** {% include cite.html id="2016_Gongalves_A_j-mlr_mtsslgcm"%}. The *Multi-task Sparse Structure Learning* method assumes that i) the features across tasks (rows $$w_j$$ of the matrix $$W$$) follows a multivariate Gaussian distribution with zero mean and covariance matrix $$\Sigma$$, i.e., $$w_j \sim \mathcal{N}(0,\Sigma)$$, and that ii) $$W$$ and the precision matrix $$\Omega=\Sigma^{-1}$$ are sparse.
+
+$$
+\underset{W,\Omega\succ 0}{\minimize}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) - d \log |\Omega| + \lambda_1 \mathrm{tr}(W\Omega W^\top) + \lambda_2 \|W\|_1 + \lambda_3\|\Omega\|_1
+\]
+$$
+
+The authors also propose an extension to copulas.
+
+**BMSL** {% include cite.html id="2019_Goncalves_A_j-bi_bmlrhpc"%}. This work introduces the *Bayesian Multitask with Structure Learning* model and propose a Gibbs sampler for inference. Here the authors considers two types of priors on the precision matrix i) a diffuse Wishart prior so that all tasks are assumed to be equally related a priori and ii) a Bayesian graphical LASSO prior to impose sparsity in the task relatedness.
+
+
+
+**GGMTL** {% include cite.html id="2020_Alesiani_F_arxiv_timlbp"%}. The inner problem (model learning) aims at finding the optimal model for a given structure (i.e. graph or equivalently the adjency matrix $$e$$), while the outer problem (structure learning) aims at minimizing a cost function that includes two terms: (1) the learned model's accuracy on the validation data, and (2) the sparseness of the graph. The sparseness of the graph is captured with three terms: (a) the $$\ell_2^2$$ norm of the edge values, measuring the energy of the graph, (b) the $$\ell_1$$ norm measuring the sparseness of the edges, and (c) $$H(e)$$ measuring the entropy of the edges.
+
+$$\begin{aligned}
+\underset{e}{\mathrm{minimize}}\; &\sum_{t=1}^T \mathcal{L}(w_t(e),\mathcal{D}_t^{(\mathrm{val})}) + \zeta\|e\|_2^2 + \eta\|e\|_1 + \gamma H(e)\\
+W(e) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t(e),\mathcal{D}_t^{(\mathrm{trn})}) + \frac{\lambda}{2} \mathrm{tr}(W^\top L(e) W)
+\end{aligned}$$
+
+where $$L(e)$$ is the Laplacian matrix, so the regularization is the Dirichlet energy 
+
+$$
+\mathrm{tr}(W^\top L(e) W) = \sum_{i,j\in G} e_{i,j}\|w_i-w_j\|_2^2,
+$$
+
+and $$H(e)$$ is the un-normalized entropy of the edge values, i.e., $$H(e)=\sum_{i,j\in G} ( |e_{i,j}| \log |e_{i,j}| = |e_{i,j}|)$$.
