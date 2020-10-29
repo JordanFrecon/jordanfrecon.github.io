@@ -213,7 +213,7 @@ $$
 **CoGraph-MTL** {% include cite.html id="2014_Flamary_R_book_lctsgrml"%}. The purpose of the *Constrained Graph-regularized Multi-Task Learning* method is to learn the adjacency matrix of the task relations graph, jointly with the task decision function parameters, while making the graph the more interpretable as possible. The interpretability of the adjacency matrix is achieved by incorporating some sparsity-inducing regularization $$\mathcal{R}$$. The authors consider a model that induces pairwise similarity between tasks. A bilevel framework for learning task similarities in multi-task learning problems is designed where the similarities are learned so as to optimize a proxy on the generalization errors of all tasks. The proposed optimization problem reads
 
 $$\begin{aligned}
-\underset{\lambda}{\minimize}\; &\sum_{t=1}^T \mathcal{L}(\hat{w}_t(\lambda),\mathcal{D}_t^{(\mathrm{val})}) + \mathcal{R}(\lambda)\\
+\underset{\lambda}{\mathrm{minimize}}\; &\sum_{t=1}^T \mathcal{L}(\hat{w}_t(\lambda),\mathcal{D}_t^{(\mathrm{val})}) + \mathcal{R}(\lambda)\\
 \hat{W}(\lambda) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \underbrace{\sum_{t=1}^T\frac{\lambda_t}{2} \|w_t\|^2  + \sum_{t,s} \lambda_{t,s} \| w_t - w_s\|^2}_{=\mathrm{tr}(W\Sigma(\lambda) W^\top)}
 \end{aligned}$$
 
@@ -225,8 +225,7 @@ where $$\Sigma(\lambda) = \mathrm{Diag}( \{\lambda_t\}_{t=1}^T) + L(\lambda)$$ p
 **MSSL** {% include cite.html id="2016_Gongalves_A_j-mlr_mtsslgcm"%}. The *Multi-task Sparse Structure Learning* method assumes that i) the features across tasks (rows $$w_j$$ of the matrix $$W$$) follows a multivariate Gaussian distribution with zero mean and covariance matrix $$\Sigma$$, i.e., $$w_j \sim \mathcal{N}(0,\Sigma)$$, and that ii) $$W$$ and the precision matrix $$\Omega=\Sigma^{-1}$$ are sparse.
 
 $$
-\underset{W,\Omega\succ 0}{\minimize}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) - d \log |\Omega| + \lambda_1 \mathrm{tr}(W\Omega W^\top) + \lambda_2 \|W\|_1 + \lambda_3\|\Omega\|_1
-\]
+\underset{W,\Omega\succ 0}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) - d \log |\Omega| + \lambda_1 \mathrm{tr}(W\Omega W^\top) + \lambda_2 \|W\|_1 + \lambda_3\|\Omega\|_1
 $$
 
 The authors also propose an extension to copulas.
@@ -248,4 +247,5 @@ $$
 \mathrm{tr}(W^\top L(e) W) = \sum_{i,j\in G} e_{i,j}\|w_i-w_j\|_2^2,
 $$
 
-and $$H(e)$$ is the un-normalized entropy of the edge values, i.e., $$H(e)=\sum_{i,j\in G} ( |e_{i,j}| \log |e_{i,j}| = |e_{i,j}|)$$.
+and $$H(e)$$ is the un-normalized entropy of the edge values
+.
