@@ -33,7 +33,8 @@ layout: page
 <h2>References</h2>
 <ul>
 {% for biblio in page.biblio %}
-  {% for publi in site.data.bibliography %}
+  {% assign sortedPubli = site.data.bibliography | sort: 'id' %} 
+  {% for publi in sortedPubli %}
     {%- if {{biblio}} == {{publi.id}} -%}
       <a id={{publi.id}}><li><b>[{{publi.cite}}]</b>&nbsp; {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})</li></a>
     {%- endif -%}
