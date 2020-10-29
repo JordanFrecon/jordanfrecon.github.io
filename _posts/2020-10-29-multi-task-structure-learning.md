@@ -34,13 +34,30 @@ Since the model allow two tasks from different groups to overlap by having one o
 
 
 
-**ASAP-MT** {% include cite.html id="2015_Barzilai_A_p-aistats_cmtl"%} The authors also assume that there are $$k < T$$ latent basis tasks, i.e., $$L\in\mathbb{R}^{d\times k}$$ and $$S\in\mathbb{R}^{k\times T}$$. They penalize the complexity of $$L$$ and enforce that the $$t$$-th column of the matrix $$S$$, denoted by $$s_t\in\mathbb{R}^k$$ associates task $$t$$ with one of the $$k$$ clusters. For example, if the $$k$$-th element of $$s_t$$ is one, and all other elements of $$s_t$$ are zero, we would say that $$t$$ is associated with cluster $$k$$.
+**ASAP-MT** {% include cite.html id="2015_Barzilai_A_p-aistats_cmtl"%}. The authors also assume that there are $$k < T$$ latent basis tasks, i.e., $$L\in\mathbb{R}^{d\times k}$$ and $$S\in\mathbb{R}^{k\times T}$$. They penalize the complexity of $$L$$ and enforce that the $$t$$-th column of the matrix $$S$$, denoted by $$s_t\in\mathbb{R}^k$$ associates task $$t$$ with one of the $$k$$ clusters. For example, if the $$k$$-th element of $$s_t$$ is one, and all other elements of $$s_t$$ are zero, we would say that $$t$$ is associated with cluster $$k$$.
 
 $$
 \underset{L,S}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(L s_t,\mathcal{D}_t) + \lambda \|L\|^2_F\quad \text{s.t}\quad s_t\in\{0,1\}^K,\; \| s_t\|_2=1\;\text{for}\; t\in\{1,\ldots,T\} 
 $$
 
 Here the authors considers the hinge loss and logistic loss, and use some slack variables to optimize the objective. The optimization problem is then recast as *A SAddle Point convex optimization problem* which gives its name to the method.
+
+
+
+**FMTL** {% include cite.html id="2016_Zhong_S_j-n_fmtlltg"%}. Motivated by GO-MTL, the authors propose the *Flexible Multi-Task Learning* paradigm to identify the task grouping and overlap without imposing any specific structure assumptions, e.g., the number of latent basis tasks. Instead of predetermining the size of latent basis tasks and constraining the subspace to be low rank, the authors use a full rank subspace and introduce two regularization terms to the corresponding representation matrix $$S$$ of the learning tasks. The first is a $$\ell_{2,1}$$-norm regularization term, which introduces row-sparsity on $$S$$ that encourages related tasks to share a subset of basis tasks. The second term is column-orthogonality that prevents unrelated tasks
+from sharing common basis. The constraint ensure that the latent basis tasks are orthogonal and form a subspace in $$\mathbb{R}^d$$.
+
+$$
+\underset{L,S}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(Ls_t,\mathcal{D}_t) + \lambda_1 \| S \|_{2,1} + \lambda_2 \| S^\top S\|_F^2\quad \text{s.t.}\quad L^\top L = I_{d\times d} 
+$$
+
+Since $$L$$ is orthogonal and full rank, we can easily derive the representation matrix as $$S=L^{-1}W=L^\top W$$ and $$S^\top S = W^\top W$$. Thus we have
+
+$$
+\underset{L,W}{\mathrm{minimize}} \; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda_1 \| L^\top W \|_{2,1} + \lambda_2 \| W^\top W\|_F^2\quad \text{s.t.}\quad L^\top L = I_{d\times d} 
+$$
+
+
 
 ## 2. Decomposition approaches and dirty models
 
