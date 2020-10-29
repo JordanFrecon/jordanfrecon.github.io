@@ -174,7 +174,7 @@ Here we focus on a popular multi-task framework denoted as graph-based regulariz
 which measures the compactness of the groups
 
 $$\begin{aligned}
-        &\underset{W,\mathcal{G}}{\mathrm{minimize}}\; L(W) + \lambda_m \mathcal{R}_{\text{mean}}(W) + \lambda_b \mathcal{R}_{\text{between}}(W,\mathcal{G}) + \lambda_w \mathcal{R}_{\text{within}}(W,\mathcal{G})\\
+        &\underset{W,\mathcal{G}}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda_m \mathcal{R}_{\text{mean}}(W) + \lambda_b \mathcal{R}_{\text{between}}(W,\mathcal{G}) + \lambda_w \mathcal{R}_{\text{within}}(W,\mathcal{G})\\
         &\text{where}\quad \begin{cases}
         \mathcal{R}_{\text{mean}}(W) = \| \bar{w} \|^2, \quad&\text{with}\quad\bar{w}=(1 / T)\sum_{t=1}^T w_t\\
         \mathcal{R}_{\text{between}}(W,\mathcal{G}) = \sum_{l=1}^L |\mathcal{G}_l| \| \bar{w}_l - \bar{w}\|^2,  \quad&\text{with}\quad \bar{w}_l = (1/|\mathcal{G}_l|)\sum_{t\in\mathcal{G}_l} w_t\\
@@ -185,7 +185,7 @@ $$\begin{aligned}
 By adopting some convex relaxation technique, the convex objective function can be formulated as
 
 $$
-\underset{W,\Sigma}{\mathrm{minimize}}\; L(W) + \lambda \mathrm{tr}{(W 1 1^\top W^\top )} + \mathrm{tr}{( \tilde{W} \Sigma^{-1} \tilde{W}^\top )}\quad\text{s.t.}\quad \begin{cases}\tilde{W} = W (\mathbf{1}-11^\top / T),\\ \alpha \mathbf{1} \preceq \Sigma \preceq \beta \mathbf{1},\\ \mathrm{tr}{(\Sigma)} = \gamma\end{cases}
+\underset{W,\Sigma}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda \mathrm{tr}{(W 1 1^\top W^\top )} + \mathrm{tr}{( \tilde{W} \Sigma^{-1} \tilde{W}^\top )}\quad\text{s.t.}\quad \begin{cases}\tilde{W} = W (\mathbf{1}-11^\top / T),\\ \alpha \mathbf{1} \preceq \Sigma \preceq \beta \mathbf{1},\\ \mathrm{tr}{(\Sigma)} = \gamma\end{cases}
 $$
 
 
