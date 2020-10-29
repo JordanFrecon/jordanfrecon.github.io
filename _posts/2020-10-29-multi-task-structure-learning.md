@@ -112,6 +112,29 @@ In order to exploit the relationships between tasks, this kind of approaches wri
 In {% include cite.html id="2016_Lee_G_p-icml_amlbtrl"%}, the authors proposed to represent each task by a sparse non-negative linear combination of all the other tasks. The method allow for asymmetric information transfer between the tasks, such that the amount of information transfer from a confident predictor to a less confident one is larger than the other way around. However, since the combination coefficients are restricted to be positive, this prevent negatively correlated tasks from being clustered together and hence from sharing information. To cope with this issue, {% include cite.html id="2017_Liu_S_p-ijcai_agsmtltl"%} relaxed the positive restriction so that the method can capture both positive and negative correlations amongst tasks. In addition, the correlation matrix was restricted to be block-diagonal with a trace Lasso norm penalty. More recently, {% include cite.html id="2019_Yao_Y_p-sigkdd_rtgrtcmtl"%} provides a more robust representation by applying the $$\ell_{1,2}$$-norm regularization twice: once to the representation difference $$W-WC$$ and once to the correlation matrix $$C$$ in order to select a few representative tasks.
 
 
+**AMTL** {% include cite.html id="2016_Lee_G_p-icml_amlbtrl"%}. The *Asymmetric Multi-Task Learning* method relies on an asymmetric matrix $$C$$ (such that $$c_{t,t}=0$$) which allows for asymmetric information transfer between the tasks, such that the amount of information transfer from a confident predictor to a less confident one is larger than the other way around. The authors considers the following optimization problem
+
+$$
+\underset{W, C\geq 0}{\mathrm{minimize}}\; \sum_{t=1}^T \left(  \mathcal{L}(w_t, \mathcal{D}_t) + \lambda_1 \| \Lambda(W)  c_t \|_1 +   \lambda_2 \big\| w_t - W c_t \big\|_2^2\right)
+$$
+
+where $$\Lambda(W)=\mathrm{Diag}( \{\mathcal{L}(w_t, \mathcal{D}_t)\}_{t=1}^T)$$ so that the first regularization term enforces each task parameter to be reconstructed as a sparse combination of other tasks selected based on the task-wise loss.
+
+
+**GAMTL** {% include cite.html id="2017_Liu_S_p-ijcai_agsmtltl"%}. The *Group Adaptive Multi-Task Learning* method uses one  regularization term to enforce that each task is a linear combination of other tasks while the other term is the trace Lasso penalty imposed on the task relationship vectors $$\{c_t\}$$'s in $$C$$.
+
+$$
+\underset{W,C}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda_1 \sum_{t=1}^T \| w_t - W_{-t} c_t^{[-t]} \|_2^2 + \underbrace{\lambda_2 \sum_{t=1}^T \| W_{-t} \mathrm{Diag}(c_t^{[-t]}) \|_*}_{\text{Trace lasso penalty}}
+$$
+
+
+**RCMTL** {% include cite.html id="2019_Yao_Y_p-sigkdd_rtgrtcmtl"%}. The *Robust Clustered Multi-Task Learning* approach encourages only the relevant tasks to share common information with each other by using $$\ell_{1,2}$$ penalties. 
+
+$$
+\underset{W,C}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda_1 \|W\|_F^2 + \lambda_2 \underbrace{\|(W-WC)^\top \|_{1,2}}_{\substack{\text{chosen instead of $\ell_2$}\\\text{to be more robust to outliers}}} + \lambda_3 \|C\|_{1,2}
+$$
+
+
 ## 4. Indicators and Groupwise regularization approaches
 
 Another line of research to unveils groups of related tasks relies on the sum of $$L$$ penalties terms, each one of them applied to a different group of tasks. The $$L$$ groups are explicitly modeled by $$L$$ diagonal matrices $$Q_1,\ldots,Q_L$$ where $$Q_l\in\{0,1\}^{T\times T}$$ is the indicator matrix for the $$l$$-th group. The goal is then to estimate these indicator matrices so that the group-wise penalty best regularizes the parameter matrix.
