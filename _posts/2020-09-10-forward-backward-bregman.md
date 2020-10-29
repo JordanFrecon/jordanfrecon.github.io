@@ -5,7 +5,7 @@ style: fill
 color: info
 description: A quick introduction to convex optimization with Bregman distances
 comments: true
-biblio: [2017_Bauschke_H_j-mor_dlblgc]
+biblio: [2017_Bauschke_H_j-mor_dlblgc,2017_VanNguyen_Q_j-vjm_fbsbd]
 ---
 
 
@@ -49,8 +49,6 @@ $$D_\phi(x,z) = \phi(x) - \phi(z) - \langle \nabla\phi(z), x-z\rangle$$
 The former condition is useful in practice in order to find the constant $$\mu>0$$ while the latter permits to implement a majorization-minimization (MM) algorithm presented in the next section.
 
 
-
-
 ## 2. Algorithm
 
 The underlying idea behind the MM algorithm is to convert a hard optimization problem into a sequence of simpler ones. Its principle relies on iteratively minimizing a majorizing surrogate $$\mathcal{L}_k$$ of the objective function $$\mathcal{L}$$. The prototypal algorithm is the following.
@@ -83,10 +81,12 @@ $$
 
 where in the last two-steps we encounted the proximity operator with Bregman distance.
 
-{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator (in Van Nguyen sense) of $$h$$ with respect to $$\phi$$ reads
+{% include definition.html title="Proximity operator with Bregman distance" content="Let some Legendre function $$\phi$$ and a proper lower semi-continous convex function $$h$$. The proximity operator (in {% include cite.html id="2017_VanNguyen_Q_j-vjm_fbsbd"%} sense) of $$h$$ with respect to $$\phi$$ reads
+
 $$
 \mathrm{prox}_{h}^\phi(y) = \underset{x}{\mathrm{argmin}}\; h(x) + \phi(x) - \langle x,y\rangle
 $$
+
 "%}
 
 Finally, the overall procedure boils down to the ***Forward-Backward algorithm with Bregman distances***.

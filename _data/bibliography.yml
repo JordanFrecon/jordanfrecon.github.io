@@ -1,3 +1,11 @@
+- id: 2017_VanNguyen_Q_j-vjm_fbsbd
+  cite: "Van Nguyen, 2017"
+  title: Forward-Backward Splitting with Bregman Distances
+  year: 2017
+  authors: Q. Van Nguyen
+  publication: Vietnam Journal of Mathematics
+  year: 2017
+
 - id: 2017_Bauschke_H_j-mor_dlblgc
   cite: "Bauschke et al., 2017"
   title: A descent lemma beyond Lipschitz gradient continuity- first-order methods revisited and applications
