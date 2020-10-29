@@ -142,3 +142,26 @@ Another line of research to unveils groups of related tasks relies on the sum of
 
 The first work that initiated these approaches in the multi-task setting is {% include cite.html id="2011_Kang_Z_p-icml_lwwtsmtfl"%} where the authors applied the trace norm squared groupwise in order that tasks parameters within each group lie in a low dimensional subspace. More recently, {% include cite.html id="2017_Kshirsagar_M_p-pkdd_ltcsgml"%} followed the same strategy but used the $$\ell_{1,2}$$ norm instead so that task relatedness is intended as shared sparsity, meaning that tasks in a group all have similar relevant features. Since in both cases the objective is smooth, its optimization is carried alternatively over the parameter matrix $$W$$ and a relaxed version $$\{Q_l\}_l$$'s. Departing from these methods, {% include cite.html id="2020_Frecon_J_p-icpr_ugrtmtl"%} considers the groupwise trace norm penalty and designed a smooth continuous bilevel scheme where the $$\{Q_l\}_l$$ are estimated at the upper-level so that the corresponding parameter matrix, estimated at the lower-level, generalizes well to unseen data.
 
+
+**Whom** {% include cite.html id="2011_Kang_Z_p-icml_lwwtsmtfl"%}. This method assumes that tasks form disjoint groups and the tasks parameters within each group lie in a low dimensional subspace.
+
+$$
+     \underset{W,\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda \sum_{l=1}^L \| W \sqrt{Q_l}\|_{\tr}^2 \quad
+     \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
+$$
+
+
+**Group-MTL** {% include cite.html id="2017_Kshirsagar_M_p-pkdd_ltcsgml"%}. In this work, task relatedness is intended as shared sparsity, meaning that tasks in a group all have similar relevant features, i.e., the same zeros in their parameter vectors.
+
+$$
+        \underset{W,\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\;\sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t) + \lambda \sum_{l=1}^L \|W \sqrt{Q_l}\|_{1,2}^2\quad \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
+$$
+    
+    
+**BiGMTL** {% include cite.html id="2020_Frecon_J_p-icpr_ugrtmtl"%}. The *Bilevel Grouping in Multi-Task Learning* method decouples the learning of the groups and the parameter matrix in two levels. The upper-level problem optimize the groups so that the corresponding parameter matrix, learned at the lower-level problem, performs well on a validation set. This work also assumes tasks parameters within each group lie in a low dimensional subspace by using the trace norm penalty.
+
+&&
+\underset{\{Q_l\}_{l=1}^L}{\mathrm{minimize}}\; &\sum_{t=1}^T \mathcal{L}(w_t(Q),\mathcal{D}_t^{(\mathrm{val})}) \quad \text{s.t.}\quad \begin{cases} \sum_{l=1}^L Q_l = \mathbf{1},\\ 0\leq [Q_l]_{ij} \leq 1\end{cases}
+\\
+W(Q) = \underset{W}{\mathrm{argmin}}\;& \sum_{t=1}^T \mathcal{L}(w_t,\mathcal{D}_t^{(\mathrm{trn})}) + \lambda \sum_{l=1}^L \| W Q_l\|_{\tr}
+&&
