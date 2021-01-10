@@ -10,6 +10,6 @@ permalink: /
 
 <ul>
 {% for news in news_list %}
-<li><b>{{ news.date | date: '%B, %Y'}}:</b> {{ news.info }}</li>
+<li><b>{{ news.date | date: '%-d %B, %Y'}}:</b> {{ news.info }}</li>
 {% endfor %}
 </ul>
