@@ -2,7 +2,7 @@
 layout: publication
 title: Bilevel learning of deep representations
 authors: J. Frecon, S. Salzo, and M. Pontil
-publication: International Conference in Machine Learning (ICML) - Submitted
+publication: International Conference on Machine Learning (ICML) [Submitted]
 year: 2021
 doi:
 type: conference
