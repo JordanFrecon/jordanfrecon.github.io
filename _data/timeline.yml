@@ -1,11 +1,11 @@
-- title: Postdoc, INSA Rouen
+- title: Postdoc, LITIS, INSA Rouen
   from: 2020
   to: present
   description: <b>Supervisor:</b> S. Canu.<br>
                <b>Title:</b> Towards safe artificial intelligence in mobility.<br>
-               <b>Keywords:</b> Neural networks, self-driving cars, bilevel optimization.
+               <b>Keywords:</b> Deep learning, bilevel optimization, adversarial machine learning
 
-- title: Postdoc, Italian Institute of Technology
+- title: Postdoc, CSML, Italian Institute of Technology
   from: 2017
   to: 2020
   description: <b>Supervisor:</b> M. Pontil.<br>
@@ -13,7 +13,7 @@
                <b>Keywords:</b> Multi-task learning, bilevel optimization, hyperparameters selection.
 
 
-- title: PhD, Ecole Normale Superieure de Lyon
+- title: PhD, Sisyphe, Ecole Normale Superieure de Lyon
   from: 2013
   to: 2016
   description: <b>Supervisors:</b> P. Abry and N. Pustelnik.<br>
