@@ -5,7 +5,7 @@ permalink: /publications/
 weight: 2
 ---
 
-
+> If you don't see the publications, please turn off your ad blockers
 
 {% assign publications = site.publications | sort: "year" | reverse %}
 
