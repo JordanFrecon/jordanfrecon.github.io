@@ -1,5 +1,5 @@
 ---
 date: 2020-10-13
-info: I will give a talk for the <a href="https://team.inria.fr/parietal/" target="_blank">Parietal team</a> (Inria Saclay - CEA) - <a href="/download/2021_seminar_CVN.pdf"><i class="far fa-file-pdf"></i> slides</a>
+info: I will give a talk for the <a href="https://team.inria.fr/parietal/" target="_blank">Parietal team</a> (Inria Saclay - CEA)
 ---
 
