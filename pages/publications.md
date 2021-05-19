@@ -5,17 +5,6 @@ permalink: /publications/
 weight: 2
 ---
 
-function fileExists(url) {
-    if(url){
-        var req = new XMLHttpRequest();
-        req.open('GET', url, false);
-        req.send();
-        return req.status==200;
-    } else {
-        return false;
-    }
-}
-
 > Ad blockers may prevent the display of publications
 
 {% assign publications = site.publications | sort: "year" | reverse %}
@@ -121,7 +110,7 @@ function fileExists(url) {
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   if (fileExists(/download/{{ pub.slug}}.bib) {<a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;}
+   <a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
