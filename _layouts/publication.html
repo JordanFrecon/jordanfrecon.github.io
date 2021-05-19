@@ -28,7 +28,7 @@ layout: default
      {% if page.slides %}
      <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
      {% endif %}
-     {% if pub.nobib == False %}
+     {% if page.nobib == False %}
      <a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
      {% endif %}
      {% if page.doi %}
