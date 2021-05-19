@@ -5,6 +5,17 @@ permalink: /publications/
 weight: 2
 ---
 
+function fileExists(url) {
+    if(url){
+        var req = new XMLHttpRequest();
+        req.open('GET', url, false);
+        req.send();
+        return req.status==200;
+    } else {
+        return false;
+    }
+}
+
 > Ad blockers may prevent the display of publications
 
 {% assign publications = site.publications | sort: "year" | reverse %}
