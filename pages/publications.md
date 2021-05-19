@@ -110,7 +110,7 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   {% if pub.nobib == True %}
+   {% if pub.nobib == False %}
    <a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% endif %}
    {% if pub.toolbox %}
