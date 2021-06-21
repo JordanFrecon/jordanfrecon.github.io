@@ -53,8 +53,7 @@ window.onload = function() {
         display: true,
         fontSize: 15,
         text: '2015-2016'
-      },
-      customAngles: [82, 163, 82, 33]
+      }
     }
   })
 };
