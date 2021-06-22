@@ -78,7 +78,7 @@ where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils
 **DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
-\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}}\, f(x) 
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
 $$
 
 
@@ -104,7 +104,7 @@ $$
     &\left\lfloor\begin{array}{l}
     	\text{for each } x_i \text{ such that } x_i+\varepsilon \text{ is not an adversarial example }\\[0.4ex]
     	\left\lfloor\begin{array}{l}
-    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}}\, f(x_i) \\
+    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad C_f(x_i+\varepsilon+r) \neq C_f(x_i) \\
     	   	\varepsilon = \mathrm{Proj}_{\mathcal{B}}( \varepsilon + \Delta \varepsilon_i)
     	\end{array}\right.\\
     \end{array}\right.
