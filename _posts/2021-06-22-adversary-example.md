@@ -13,7 +13,11 @@ biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carli
 With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition). However,  their  high  representation  power  is  also a  weakness  that  some  adversary  might  exploit  to craft adversarial attacks which could potentially lead the  DNN  model  to  take  unwanted  actions. More  precisely, adversarial  attacks are almost imperceptible transformations aiming to modify an example well classified by a DNN into a new example, called adversarial, which is itself wrongly classified.
 
 
-## 1. Span of adversarial attacks
+## 1. Quick reminder about DNN
+
+<img class="publication-teaser" src="/images/posts/neuralnet.png" alt="project teaser"/>
+
+## 2. Span of adversarial attacks
 
 
 There exist multiple definition of adversarial examples depending on whether we enforce that the adversarial example yield a specific target predicted by the DNN $$f$$ or not.
@@ -38,7 +42,7 @@ The key question then becomes exactly how much distortion we must add to cause t
 - *Universal* if there exist $$\varepsilon$$ such that for every $$x\sim\mu$$, $$a=x+\varepsilon$$ is an adversarial example
 " %}
 
-## 2. Per-instance attacks
+## 3. Per-instance attacks
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$, i.e.,
@@ -83,7 +87,7 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 
 
 
-## 3. Universal and semi-universal attacks
+## 4. Universal and semi-universal attacks
 
 **UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%}. This work seeks for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
