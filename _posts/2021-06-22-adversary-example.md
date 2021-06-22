@@ -19,15 +19,23 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 There exist multiple definition of adversarial examples depending on whether we enforce that the adversarial example yield a specific target predicted by the DNN $$f$$ or not.
 
 {% include definition.html title="Untargeted and targeted attacks" content="Given some valid input instance $$x\in\mathcal{X}$$, the adversarial example $$a$$ is said to be
-- *Untargeted* if $$C_f(a)\neq C_f(x)$$
-- *Targeted*, with target $$t\neq C_f(x)$$, if $$C_f(a)=t$$
+- *Untargeted* if $$C_f(a)\neq C_f(x)$$.
+- *Targeted*, with target $$t\neq C_f(x)$$, if $$C_f(a)=t$$.
 " %}
 
-In addition, there exist two main ways of crafting such adversarial example
+In addition, there exist two main ways of crafting such adversarial example.
 
 {% include definition.html title="Perturbation and functional attacks" content="Given some valid input instance $$x\in\mathcal{X}$$, the adversarial example $$a$$ is said to be
-- *Pertubation-based* if $$a=x+\varepsilon$$ for some perturbation $$\varepsilon$$ small enough
-- *Functional-based* if $$a=h(x)$$ where $$h$$ models ...
+- *Pertubation-based* if $$a=x+\varepsilon$$ for some perturbation $$\varepsilon$$ small enough.
+- *Functional-based* if $$a=h(x)$$ where $$h$$ models a small degradation operator.
+" %}
+
+
+It should be noted that most common methods focus on perturbation-based attacks. Henceforth, it what follows we will solely consider those types of attacks. Finally, we will distinguish between per-instance and universal perturbations.
+
+{% include definition.html title="Per-instance and universal attacks" content="Given some data distribution $$\mu$$ on $$\mathcal{X}$$, we consider two types of perturbations, namely
+- *Per-instance* if for every $$x\sim\mu$$ there exist $$\varepsilon(x)$$ such that $$a=x+\varepsilon(x)$$ is an adversarial example.
+- *Universal* if there exist $$\varepsilon$$ such that for every $$x\sim\mu$$, $$a=x+\varepsilon$$ is an adversarial example
 " %}
 
 ## 2. Per-instance attacks
