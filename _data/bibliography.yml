@@ -168,3 +168,10 @@
   title: Towards Interpretable Multi-Task Learning Using Bilevel Programming
   authors: F. Alesiani, S. Yu, A. Shaker and W. Yin
   publication: ArXiv Computing Research Repository (CoRR)
+  
+- id: 2015_Goodfellow_I_p-iclr_ehae
+  cite: Goodfellow et al., 2015
+  year: 2015
+  title: Explaining and Harnessing Adversarial Examples
+  authors: I. Goodfellow, J. Shlens, C. Szegedy
+  publication: International Conference on Learning Representations (ICLR)
