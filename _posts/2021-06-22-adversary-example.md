@@ -32,7 +32,7 @@ $$
 $$
 \begin{align}
  &a = x\\
-    &\text{while } f \text{ predicts the label } y \text{ to } a}\\[0.4ex]
+    &\text{while } f \text{ predicts the label } y \text{ to } a\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
@@ -42,8 +42,8 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They suggest to find the adversarial perturbation $\varepsilon(x)$ as the solution of the following optimization problem
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They suggest to find the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
-\underset{\varepsilon}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
 $$
