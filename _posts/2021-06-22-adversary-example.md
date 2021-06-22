@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap]
 ---
 
 > In progress
@@ -15,7 +15,7 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 
 ## 1. Span of adversarial attacks
 
-## 2. Specific attacks
+## 2. Per-instance attacks
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$, i.e.,
@@ -51,10 +51,19 @@ $$
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} 
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A similar idea to CW is pursued by DeepFool by considering the fooling requirement as a constraint instead of a regularization.
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}} f(x) 
 $$
 
-## 3. Universal attacks
+## 3. Universal and semi-universal attacks
+
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%}
+
+**UAP v2** 
+
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{maximize}}\; \frac{1}{N}\sum_{i=1}^N H(f(x_i+\varepsilon,y))\quad\text{s.t.}\quad \|\varepsilon\|_p\leq \delta
+$$
+

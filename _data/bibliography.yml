@@ -198,9 +198,15 @@
   publication: IEEE Symposium on Security and Privacy
   
 - id: 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool
-  cite: Moosavi-Dezfooli et al., 2017
-  year: 2017
+  cite: Moosavi-Dezfooli et al., 2016
+  year: 2016
   title: Deepfool - A Simple and Accurate Method to Fool Deep Neural Networks
   authors: S.-M. Moosavi-Dezfooli, A. Fawzi and P. Frossard
   publication: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
   
+- id: 2017_MoosaviDezfooli_S-M_p-cvpr_uap
+  cite: Moosavi-Dezfooli et al., 2017
+  year: 2017
+  title: Universal Adversarial Perturbations
+  authors: S.-M. Moosavi-Dezfooli, A. Fawzi, O. Fawzi and P. Frossard
+  publication: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)  
