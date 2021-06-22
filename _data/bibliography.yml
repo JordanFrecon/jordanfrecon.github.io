@@ -210,3 +210,10 @@
   title: Universal Adversarial Perturbations
   authors: S.-M. Moosavi-Dezfooli, A. Fawzi, O. Fawzi and P. Frossard
   publication: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)  
+  
+- id: 2020_Shafahi_A_p-aaai_uat
+  cite: Shafahi et al., 2020
+  year: 2020
+  title: Universal Adversarial Training
+  authors: A. Shafahi, M. Najibi, Z. Xu, J. Dickerson, L.S. Davis, T. Goldstein
+  publication: Proceedings of the AAAI Conference on Artificial Intelligence
