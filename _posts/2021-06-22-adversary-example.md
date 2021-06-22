@@ -54,12 +54,12 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 **DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A similar idea to CW is pursued by DeepFool by considering the fooling requirement as a constraint instead of a regularization.
 
 $$
-\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}} f(x) 
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}}\, f(x) 
 $$
 
 ## 3. Universal and semi-universal attacks
 
-**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} This algorithmic solution relies on an inner loop which applies DeepFool to each training instance.
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} This work seeks for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
 $$
 \begin{align}
@@ -68,7 +68,7 @@ $$
     &\left\lfloor\begin{array}{l}
     	\text{for each } x_i \text{ such that } x_i+\varepsilon \text{ is not an adversarial example }\\[0.4ex]
     	\left\lfloor\begin{array}{l}
-    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}} f(x_i) \\
+    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}}\, f(x_i) \\
     	   	\varepsilon = \mathrm{Proj}_{\mathcal{B}}( \varepsilon + \Delta \varepsilon_i)
     	\end{array}\right.\\
     \end{array}\right.
