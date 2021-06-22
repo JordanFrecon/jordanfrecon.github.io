@@ -42,7 +42,7 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They suggest to find the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They have suggested to find the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
@@ -51,4 +51,8 @@ $$
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} 
+
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}} f(x) 
+$$
