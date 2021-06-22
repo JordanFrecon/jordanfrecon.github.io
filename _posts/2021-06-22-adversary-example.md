@@ -41,7 +41,7 @@ In addition, there exist two main ways of crafting such adversarial example.
 " %}
 
 
-The key question then becomes exactly how much distortion we must add to cause the classification to change. In each domain, the distance metric that we must use is different. In the space of images, many works suggest that $\ell_p$ norms are reasonable approximations of human perceptual distance. It should be noted that most common methods focus on perturbation-based attacks. Henceforth, it what follows we will solely consider those types of attacks. Finally, we will distinguish between per-instance and universal perturbations.
+The key question then becomes exactly how much distortion we must add to cause the classification to change. In each domain, the distance metric that we must use is different. In the space of images, many works suggest that $$\ell_p$$ norms are reasonable approximations of human perceptual distance. It should be noted that most common methods focus on perturbation-based attacks. Henceforth, it what follows we will solely consider those types of attacks. Finally, we will distinguish between per-instance and universal perturbations.
 
 {% include definition.html title="Per-instance and universal attacks" content="Given some data distribution $$\mu$$ on $$\mathcal{X}$$, we consider two types of perturbations, namely
 - *Per-instance* if for every $$x\sim\mu$$ there exist $$\varepsilon(x)$$ such that $$a=x+\varepsilon(x)$$ is an adversarial example.
