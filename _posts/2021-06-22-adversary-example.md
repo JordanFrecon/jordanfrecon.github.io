@@ -15,6 +15,12 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 
 ## 1. Span of adversarial attacks
 
+
+{% include definition.html title="(Un)-targeted attacks" content="Given some valid input instance $$x\in\mathcal{X}$$, the adversarial example $$a$$ is said to be
+- *Untargeted* if $$C_f(a)\neq C_f(x)$$
+- *Targeted*, with target $$t\neq C_f(x)$$, if $$C_f(a)=t$$
+" %}
+
 ## 2. Per-instance attacks
 
 
