@@ -2,7 +2,7 @@
 title: Adversarial Attacks
 tags: [Neural network, Robustness]
 style: border
-color: warning
+color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
 biblio: [2015_Goodfellow_I_p-iclr_ehae, 2018_Madry_A_p-iclr_tdlmaa]
@@ -26,11 +26,14 @@ $$
 
 
 
-**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} This technique is a multi-step variant of FGSM commonly called the *Projected Gradient Descent*. It improves upon FGSM by performing multiple updates until the adversarial example fool the DNN.
+**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This technique is a multi-step variant of FGSM commonly called the *Projected Gradient Descent*. It improves upon FGSM by performing multiple updates until the adversarial example fool the DNN.
 
-$$
-a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))
-$$
 
-Here, $\mathcal{B}$ denotes the space of allowed perturbations. It is commonly chosen as a $$\ell_2$$ ball of small radius.
+$$ a^{(0)} = x\\
+    \text{for}\;k=0,1,\ldots\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
+    \end{array}\right.$$
+
+Here, $$\mathcal{B}$$ denotes the space of allowed perturbations. It is commonly chosen as a $$\ell_2$$ ball of small radius.
 
