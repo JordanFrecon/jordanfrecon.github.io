@@ -59,7 +59,7 @@ $$
 
 ## 3. Universal and semi-universal attacks
 
-**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%}
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} This algorithmic solution relies on an inner loop which applies DeepFool to each training instance.
 
 $$
 \begin{align}
@@ -68,17 +68,20 @@ $$
     &\left\lfloor\begin{array}{l}
     	\text{for each } x_i \text{ such that } x_i+\varepsilon \text{ is not an adversarial example }\\[0.4ex]
     	\left\lfloor\begin{array}{l}
-    	   	\Delta \varepsilon_i &= \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}} f(x_i) \\
-    	   	\varepsilon &= \mathrm{Proj}_{\mathcal{B}}( \varepsilon + \Delta \varepsilon_i)
+    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}} f(x_i) \\
+    	   	\varepsilon = \mathrm{Proj}_{\mathcal{B}}( \varepsilon + \Delta \varepsilon_i)
     	\end{array}\right.\\
     \end{array}\right.
 \end{align}
 $$
 
 
-**UAP v2** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%} 
+**UAP-v2** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%} This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{maximize}}\; \frac{1}{N}\sum_{i=1}^N H(f(x_i+\varepsilon,y))\quad\text{s.t.}\quad \|\varepsilon\|_p\leq \delta
 $$
+
+Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
+
 
