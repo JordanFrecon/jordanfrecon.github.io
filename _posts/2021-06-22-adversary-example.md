@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn]
 ---
 
 > In progress
@@ -42,4 +42,8 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They suggest to find the adversarial perturbation $\varepsilon(x)$ as the solution of the following optimization problem
+
+$$
+\underset{\varepsilon}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
+$$
