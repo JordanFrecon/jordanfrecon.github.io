@@ -32,7 +32,7 @@ $$
 $$
 \begin{align}
  &a = x\\
-    &\text{while $$f$$ predicts the label $$y$$ to $$a$}\\[0.4ex]
+    &\text{while f predicts the label y to a}\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
