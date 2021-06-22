@@ -28,18 +28,13 @@ $$
 
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This technique is a multi-step variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
 
-$$ a^{(0)} = x\\
-    \text{for}\;k=0,1,\ldots\\[0.4ex]
-    \left\lfloor\begin{array}{l}
-    a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
-    \end{array}\right.$$
-    
+
 $$
 \begin{align}
- &a^{(0)} = x\\
-    &\text{for}\;k=0,1,\ldots\\[0.4ex]
+ &a = x\\
+    &\text{while $$f$$ predicts the label $$y$$ to $$a$}\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
+    a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
 \end{align}
 $$
