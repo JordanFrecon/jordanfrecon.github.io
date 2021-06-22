@@ -1,7 +1,7 @@
 ---
 title: Adversarial Attacks
 tags: [Neural network, Robustness]
-style: fill
+style: border
 color: warning
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
@@ -18,7 +18,8 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 ## 2. Specific attacks
 
 
-**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $\delta$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $x$, i.e.,
+**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $x$, i.e.,
+
 $$
 \varepsilon(x) = \delta \mathrm{sign}(\nabla_x H(f(x),y)).
 $$
