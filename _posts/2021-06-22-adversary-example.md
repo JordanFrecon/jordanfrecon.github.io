@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil]
 ---
 
 > In progress
@@ -59,7 +59,7 @@ $$
 
 ## 3. Universal and semi-universal attacks
 
-**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} This work seeks for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%}. This work seeks for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
 $$
 \begin{align}
@@ -76,12 +76,17 @@ $$
 $$
 
 
-**UAP-v2** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%} This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
+**UAP-v2** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%}. This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{maximize}}\; \frac{1}{N}\sum_{i=1}^N H(f(x_i+\varepsilon,y))\quad\text{s.t.}\quad \|\varepsilon\|_p\leq \delta
 $$
 
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
+
+
+**ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to aforementioned methods, this work is semi-universal as it craft each adversarial example as $$a_i = x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
+
+
 
 

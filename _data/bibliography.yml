@@ -217,3 +217,10 @@
   title: Universal Adversarial Training
   authors: A. Shafahi, M. Najibi, Z. Xu, J. Dickerson, L.S. Davis, T. Goldstein
   publication: Proceedings of the AAAI Conference on Artificial Intelligence
+  
+- id: 2021_Frecon_J_p-cap_adil
+  cite: Frecon et al., 2021
+  year: 2021
+  title: Adversarial Dictionary Learning
+  authors: J. Frecon, L. Anquetil, G. Gasso and S. Canu
+  publication: Conférence sur l'Apprentissage Automatique (CAp)
