@@ -56,3 +56,5 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}} f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}} f(x) 
 $$
+
+## 3. Universal attacks
