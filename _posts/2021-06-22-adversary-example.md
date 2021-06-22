@@ -1,6 +1,6 @@
 ---
 title: Adversarial Attacks
-tags: [Neural network, Robustness]
+tags: [Neural network, Attack]
 style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
