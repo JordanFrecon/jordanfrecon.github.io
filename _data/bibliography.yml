@@ -183,3 +183,11 @@
   authors: A. Madry, A. Makelov, L. Schmidt, D. Tsipras, A. Vladu
   publication: International Conference on Learning Representations (ICLR)
   
+- id: 2017_Kurakin_A_p-iclr-w_aepw
+  cite: Kurakin et al. 2017
+  year: 2017
+  title: Adversarial examples in the physical world
+  authors: A. Kurakin, I. Goodfellow, S. Bengio
+  publication: International Conference on Learning Representations (ICLR) - Workshop Track
+
+  

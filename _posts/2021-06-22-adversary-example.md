@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2018_Madry_A_p-iclr_tdlmaa]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw]
 ---
 
 > In progress
@@ -26,7 +26,7 @@ $$
 
 
 
-**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This technique is a multi-step variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
+**PGD** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%}. This technique is a multi-step variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
 
 
 $$
