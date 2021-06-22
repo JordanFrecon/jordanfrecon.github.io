@@ -173,27 +173,34 @@
   cite: Goodfellow et al., 2015
   year: 2015
   title: Explaining and Harnessing Adversarial Examples
-  authors: I. Goodfellow, J. Shlens, C. Szegedy
+  authors: I. Goodfellow, J. Shlens and C. Szegedy
   publication: International Conference on Learning Representations (ICLR)
   
 - id: 2018_Madry_A_p-iclr_tdlmaa
   cite: Madry et al., 2018
   year: 2018
   title: Towards Deep Learning Models Resistant to Adversarial Attacks
-  authors: A. Madry, A. Makelov, L. Schmidt, D. Tsipras, A. Vladu
+  authors: A. Madry, A. Makelov, L. Schmidt, D. Tsipras and A. Vladu
   publication: International Conference on Learning Representations (ICLR)
   
 - id: 2017_Kurakin_A_p-iclr-w_aepw
   cite: Kurakin et al., 2017
   year: 2017
   title: Adversarial examples in the physical world
-  authors: A. Kurakin, I. Goodfellow, S. Bengio
+  authors: A. Kurakin, I. Goodfellow and S. Bengio
   publication: International Conference on Learning Representations (ICLR) - Workshop Track
 
 - id: 2017_Carlini_N_p-sp_ternn
   cite: Carlini and Wagner, 2017
   year: 2017
   title: Towards Evaluating the Robustness of Neural Networks
-  authors: N. Carlini, D. Wagner
+  authors: N. Carlini and D. Wagner
   publication: IEEE Symposium on Security and Privacy
+  
+- id: 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool
+  cite: Moosavi-Dezfooli et al., 2017
+  year: 2017
+  title: Deepfool {:} A Simple and Accurate Method to Fool Deep Neural Networks
+  authors: S.-M. Moosavi-Dezfooli, A. Fawzi and P. Frossard
+  publication: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
   

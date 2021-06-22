@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool]
 ---
 
 > In progress
@@ -48,4 +48,7 @@ $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
 $$
 
-where the first term penalized the $$\ell_p$$-norm of the added perturbation and the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
+where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
+
+
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}
