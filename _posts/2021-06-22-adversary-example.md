@@ -23,6 +23,13 @@ There exist multiple definition of adversarial examples depending on whether we 
 - *Targeted*, with target $$t\neq C_f(x)$$, if $$C_f(a)=t$$
 " %}
 
+In addition, there exist two main ways of crafting such adversarial example
+
+{% include definition.html title="Perturbation and functional attacks" content="Given some valid input instance $$x\in\mathcal{X}$$, the adversarial example $$a$$ is said to be
+- *Pertubation-based* if $$a=x+\varepsilon$$ for some perturbation $$\varepsilon$$ small enough
+- *Functional-based* if $$a=h(x)$$ where $$h$$ models ...
+" %}
+
 ## 2. Per-instance attacks
 
 
