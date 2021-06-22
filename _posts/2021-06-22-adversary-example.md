@@ -75,14 +75,14 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
 $$
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}  A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
