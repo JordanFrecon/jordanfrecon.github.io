@@ -42,7 +42,14 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} A more elaborated, yet similar approach, have been developed by Carlini and Wagner. They have suggested to find the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}}\, f(x) 
+$$
+
+
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}  A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
@@ -51,11 +58,7 @@ $$
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} A similar idea to CW is pursued by DeepFool by considering the fooling requirement as a constraint instead of a regularization.
 
-$$
-\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad \underset{k}{\mathrm{argmax}}\, f(x+\varepsilon) \neq \underset{k}{\mathrm{argmax}}\, f(x) 
-$$
 
 ## 3. Universal and semi-universal attacks
 
@@ -91,5 +94,5 @@ $$
 \underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times N}}}{\mathrm{minimize}}\; \sum_{i=1}^N \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 + H(f(x_i+D v_i),t_i),
 $$
 
-where $$\mathcal{C}$$ encodes some constraints on $D$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters.
+where $$\mathcal{C}$$ encodes some constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters.
 
