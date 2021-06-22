@@ -65,7 +65,7 @@ $$
 $$
 \begin{align}
  &a = x\\
-    &\text{while } f \text{ predicts the label } y \text{ to } a\\[0.4ex]
+    &\text{while } C_f(a) = C_f(x)\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
