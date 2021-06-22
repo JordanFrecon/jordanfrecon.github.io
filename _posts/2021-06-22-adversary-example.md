@@ -26,6 +26,11 @@ $$
 
 
 
-**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} This technique is a multi-step variant of FGSM commonly called the *Projected Gradient Descent*. It improves upon FGSM ...
+**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} This technique is a multi-step variant of FGSM commonly called the *Projected Gradient Descent*. It improves upon FGSM by performing multiple updates until the adversarial example fool the DNN.
 
+$$
+a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))
+$$
+
+Here, $\mathcal{B}$ denotes the space of allowed perturbations. It is commonly chosen as a $$\ell_2$$ ball of small radius.
 
