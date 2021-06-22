@@ -47,3 +47,5 @@ where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
 $$
+
+where the first term penalized the $$\ell_p$$-norm of the added perturbation and the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
