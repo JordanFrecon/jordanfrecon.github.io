@@ -85,8 +85,14 @@ $$
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
 
 
-**ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to aforementioned methods, this work is semi-universal as it craft each adversarial example as $$a_i = x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
+**ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, this work is semi-universal as it crafts each adversarial example as $$a_i = x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
 
+$$
+\underset{\substack{D\in \mathcal{C}\\ V=[v_1\cdots v_N]\in\mathbb{R}^{M\times N}}}{\mathrm{minimize}}\; \sum_{i=1}^N \ell_i(D,v_i),
+$$
 
+where $\mathcal{C}$ encodes some constraints on $D$ and where the cost associated to each adversary attack reads
 
-
+$$
+\ell_i(D,v_i) = \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 + H(f(x_i+D v_i;\theta),t_i).
+$$
