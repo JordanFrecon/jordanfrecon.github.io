@@ -224,3 +224,9 @@
   title: Adversarial Dictionary Learning
   authors: J. Frecon, L. Anquetil, G. Gasso and S. Canu
   publication: Conférence sur l'Apprentissage Automatique (CAp)
+  
+- id: 2014_Szegedy_C_p-iclr_ipnn
+  cite: Szegedy et al., 2014
+  year: 2014
+  title: Intriguing properties of neural networks
+  authors: C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan and I.J. Goodfellow and R. Fergus
