@@ -13,14 +13,16 @@ biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carli
 With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition). However,  their  high  representation  power  is  also a  weakness  that  some  adversary  might  exploit  to craft adversarial attacks which could potentially lead the  DNN  model  to  take  unwanted  actions. More  precisely, adversarial  attacks are almost imperceptible transformations aiming to modify an example well classified by a DNN into a new example, called adversarial, which is itself wrongly classified.
 
 
-## 1. Quick reminder about DNN
+## 1. Quick reminder about classification based DNN
+
+
 
 <img class="publication-teaser" src="/images/posts/neuralnet.png" alt="project teaser"/>
 
 ## 2. Span of adversarial attacks
 
 
-There exist multiple definition of adversarial examples depending on whether we enforce that the adversarial example yield a specific target predicted by the DNN $$f$$ or not.
+There exist multiple definition of adversarial examples depending on whether we enforce that the adversarial example yields a specific target predicted by the DNN $$f$$ or not.
 
 {% include definition.html title="Untargeted and targeted attacks" content="Given some valid input instance $$x\in\mathcal{X}$$, the adversarial example $$a$$ is said to be
 - *Untargeted* if $$C_f(a)\neq C_f(x)$$.
