@@ -85,11 +85,11 @@ $$
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
 
 
-**ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, this work is semi-universal as it crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
+**ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, this work is semi-universal as it crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector. Given some adversarial targets $$\{t_1,\ldots,t_N\}$$, it solves
 
 $$
-\underset{\substack{D\in \mathcal{C}\\ V=[v_1\cdots v_N]\in\mathbb{R}^{M\times N}}}{\mathrm{minimize}}\; \sum_{i=1}^N \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 + H(f(x_i+D v_i;\theta),t_i),
+\underset{\substack{D\in \mathcal{C}\subsetq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times N}}}{\mathrm{minimize}}\; \sum_{i=1}^N \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 + H(f(x_i+D v_i),t_i),
 $$
 
-where $\mathcal{C}$ encodes some constraints on $D$ while $$\lambda_1>0$$ and $\lambda_2>0$$ are regularization parameters.
+where $$\mathcal{C}$$ encodes some constraints on $D$ while $$\lambda_1>0$$ and $\lambda_2>0$$ are regularization parameters.
 
