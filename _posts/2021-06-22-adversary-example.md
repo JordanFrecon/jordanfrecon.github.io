@@ -56,7 +56,7 @@ $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \lambda \|r\|_2 + H(f(x+\varepsilon,t))\quad\text{s.t.}\quad x+\varepsilon\in\mathcal{X}
 $$
 
-where the regularization parameter $$\lambda>0$$ is determined by line-search in order to ensure that $$C_f(x+\varepsilon)=t$$. The authors have considered the case where $$\mathcal{X}=[0,1]^P$$ so that the constraint enforces the $$P$ pixels to lie inside a box. In addition, they have promoted the use of a box-constrained L-BFGS solver, which hence gave its name to such adversarial crafting technique.
+where the regularization parameter $$\lambda>0$$ is determined by line-search in order to ensure that $$C_f(x+\varepsilon)=t$$. The authors have considered the case where $$\mathcal{X}=[0,1]^P$$ so that the constraint enforces the $$P$$ pixels to lie inside a box. In addition, they have promoted the use of a box-constrained L-BFGS solver, which hence gave its name to such adversarial crafting technique.
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$, i.e.,
