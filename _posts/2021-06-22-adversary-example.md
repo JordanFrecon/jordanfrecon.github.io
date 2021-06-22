@@ -33,6 +33,16 @@ $$ a^{(0)} = x\\
     \left\lfloor\begin{array}{l}
     a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
     \end{array}\right.$$
+    
+$$
+\begin{align}
+ &a^{(0)} = x\\
+    &\text{for}\;k=0,1,\ldots\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
+    \end{array}\right.
+\end{align}
+$$
 
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
