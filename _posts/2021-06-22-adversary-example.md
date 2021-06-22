@@ -26,8 +26,7 @@ $$
 
 
 
-**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This technique is a multi-step variant of FGSM commonly called the *Projected Gradient Descent*. It improves upon FGSM by performing multiple updates until the adversarial example fool the DNN.
-
+**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This technique is a multi-step variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
 
 $$ a^{(0)} = x\\
     \text{for}\;k=0,1,\ldots\\[0.4ex]
@@ -35,5 +34,6 @@ $$ a^{(0)} = x\\
     a^{(k+1)} = \mathrm{Proj}_{x+\mathcal{B}}( a^{(k)} + \delta\,\mathrm{sign}(\nabla_x H(f(a^{(k)}),y))\\
     \end{array}\right.$$
 
-Here, $$\mathcal{B}$$ denotes the space of allowed perturbations. It is commonly chosen as a $$\ell_2$$ ball of small radius.
+where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
+
 
