@@ -67,8 +67,8 @@ $$
     &\text{while the desired fooling rate is not achieved}\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     	\text{for each } x_i \text{ such that } x_i+\varepsilon \text{ is not an adversarial example }\\[0.4ex]
-    	\Delta \varepsilon_i = ...
     	\left\lfloor\begin{array}{l}
+    	   	\Delta \varepsilon_i = \underset{r\in\mathcal{X}}{\mathrm{argmin}}\; \|r\|_2\quad\text{s.t.}\quad f(x_i+\varepsilon+r) \neq \underset{k}{\mathrm{argmax}} f(x_i) 
     	\end{array}\right.\\
     \end{array}\right.
 \end{align}
