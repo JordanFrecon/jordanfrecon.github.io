@@ -15,7 +15,7 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 
 ## 1. Quick reminder about classification based DNN
 
-Given some trained DNN $$f$$, the predicted label of any input $$x\in\mathcal{X}$$ by $$f$$ is denoted as
+Given some trained DNN $$f$$, the predicted label of any input $$x\in\mathcal{X}\subseteq\mathbb{R}^P$$ by $$f$$ is denoted as
 
 $$
 C_f(x) = \underset{i\in\{1,\ldots,c\}}{\mathrm{argmax}}\, f_i(x)
