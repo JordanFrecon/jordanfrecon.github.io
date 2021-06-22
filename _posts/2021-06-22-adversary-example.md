@@ -32,7 +32,7 @@ $$
 $$
 \begin{align}
  &a = x\\
-    &\text{while f predicts the label y to a}\\[0.4ex]
+    &\text{while $$f$$ predicts the label $$y$$ to $$a$$}\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
@@ -42,3 +42,4 @@ $$
 where $$\mathcal{B}$$ denotes the space of allowed perturbations. Since it boils down to a *Projected Gradient Descent* algorithm, it is commonly called PGD.
 
 
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}
