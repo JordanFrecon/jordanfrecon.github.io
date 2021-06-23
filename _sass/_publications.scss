@@ -40,10 +40,10 @@
   bottom: 40%;
   left: 40%;
   z-index: 999;
-  visibility: hidden;
-  opacity: .25;
+  opacity: .4;
   pointer-events: none;
   transition: all 0.3s;
+  filter: alpha(opacity=40);
   &:target {
     visibility: visible;
     opacity: 1;
