@@ -34,16 +34,16 @@
 
 .pubmodal-window {
   position: fixed;
-  background-color: rgba(192, 192, 192, 0.35);
+  background-color: rgba(192, 192, 192, 0.45);
   top: 40%;
   right: 40%;
   bottom: 40%;
   left: 40%;
   z-index: 999;
+  visibility: hidden;
   opacity: .4;
   pointer-events: none;
   transition: all 0.3s;
-  filter: alpha(opacity=40);
   &:target {
     visibility: visible;
     opacity: 1;
