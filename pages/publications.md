@@ -29,7 +29,7 @@ weight: 2
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
 &nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'"><i class="fas fa-quote-left"></i> BibteX</a>
  </div>
- <div class="answer" id="{{ pub.idbib }}"><p><object type="text/plain" data="/download/{{ pub.slug}}.bib" ></object></p>
+ <div class="answer" id="{{ pub.idbib }}"><p><object type="text/plain" data="/download/{{ pub.slug}}.bib" width="500" style="height: 300px"></object></p>
  </div>
  </li>
  {% endif %}
