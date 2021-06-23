@@ -27,8 +27,8 @@ weight: 2
  </div>
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
- </div>&nbsp;&nbsp;<div class="question" id="q1">
-    <a class="publinks" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'">Bibtex</a>
+&nbsp;&nbsp;<a href="#" class="publinks" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'">Bibtex</a>
+     </div>
     <div class="answer" id="{{ pub.idbib }}">
         Here should appear the bib
     </div>
