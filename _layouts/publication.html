@@ -29,7 +29,7 @@ layout: default
      <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
      {% endif %}
      {% if page.nobib == False %}
-     <a style="color:#007bff;" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+     <a style="color:#007bff;" onClick="document.getElementById('{{ page.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
      {% endif %}
      {% if page.doi %}
      <a href="http://dx.doi.org/{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
@@ -38,7 +38,7 @@ layout: default
      <a href="{{ page.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
      {% endif %}
    </p>
-   <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+   <div class="answer" id="{{ page.slug }}"><p><iframe src="/download/{{ page.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
   {% endif %}
 
 <p class="text-center">
