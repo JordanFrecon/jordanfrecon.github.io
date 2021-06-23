@@ -23,6 +23,3 @@ function parse_tools(tools) {
   });
 }
 
-$('.toggle').click(function() {
-  $('#link-box').toggle('slow');
-});
