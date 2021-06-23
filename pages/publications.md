@@ -29,8 +29,7 @@ weight: 2
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
 &nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'">Bibtex</a>
  </div>
- <div class="answer" id="{{ pub.idbib }}">
-        Here should appear the bib
+ <div class="answer" id="{{ pub.idbib }}"><embed src="/download/{{ pub.idbib }}.bib">
  </div>
  </li>
  {% endif %}
