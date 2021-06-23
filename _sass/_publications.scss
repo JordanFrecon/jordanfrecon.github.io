@@ -26,11 +26,7 @@
   margin-bottom: 3em
 }
 
-.modal-dialog {
-  width: 20%;
-  max-height : 100px;
-}
 
-.modal .modal-body {
-    max-height: 100%;
+.modal .modal-body .modal-dialog{
+    max-height: 20%;
 }
