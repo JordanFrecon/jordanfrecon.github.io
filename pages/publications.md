@@ -29,8 +29,7 @@ weight: 2
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
 &nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibteX</a>
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p>
- </div>
+ <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
@@ -55,11 +54,12 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
+   <a href="#" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibTeX</a>
  </div>
+ <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p>
  </li>
  {% endif %}
 {% endfor %}
