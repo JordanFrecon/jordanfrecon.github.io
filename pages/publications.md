@@ -27,7 +27,7 @@ weight: 2
  </div>
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
-&nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'"><i class="fas fa-quote-left"></i> BibteX</a>
+&nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibteX</a>
  </div>
  <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p>
  </div>
