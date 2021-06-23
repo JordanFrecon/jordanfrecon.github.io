@@ -89,7 +89,7 @@
 
 .answer {
     display:none;
-    background-color: $primary;
+    background-color: rgba(var($primary), 0.8);
     padding:15px;
     border: 15px solid $primary
 }
