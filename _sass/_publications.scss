@@ -27,66 +27,6 @@
 }
 
 
-.modal .modal-body .modal-dialog{
-    max-height: 20%;
-}
-
-
-.pubmodal-window {
-  position: fixed;
-  background-color: rgba(192, 192, 192, 0.45);
-  top: 40%;
-  right: 40%;
-  bottom: 40%;
-  left: 40%;
-  z-index: 999;
-  visibility: hidden;
-  opacity: .4;
-  pointer-events: none;
-  transition: all 0.3s;
-  border-radius: 1rem;
-  &:target {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-    border-radius: 1rem;
-  }
-  & > div {
-    width: 20%;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    padding: 2em;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-  }
-  header {
-    font-weight: bold;
-  }
-  h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
-  }
-}
-
-
-.pubmodal-close {
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-  &:hover {
-    color: black;
-  }
-}
-
 .answer {
     display:none;
     background-color: rgba(var($primary), 0.8);
@@ -95,9 +35,4 @@
     border-radius: 10px;
 }
 
-.question {
-    background-color:#f5f5f5;
-    padding:15px;
-    border-radius:5px;
-    margin:7px;
-}
+
