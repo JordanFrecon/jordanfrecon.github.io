@@ -89,9 +89,9 @@
 
 .answer {
     display:none;
-    background-color:#e5e5ff;
+    background-color: $primary;
     padding:15px;
-    border: 15px solid primary
+    border: 15px solid $primary
 }
 
 .question {
