@@ -26,13 +26,13 @@ weight: 2
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<div class="question" id="q1">
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
+ </div>&nbsp;&nbsp;<div class="question" id="q1">
     Bibtex
     <button class="answerButton" onClick="document.getElementById('q1Answer').style.display='block'">Answer</button>
     <div class="answer" id="q1Answer">
         Here should appear the bib
     </div>
-</div>
  </div>
  </li>
  {% endif %}
