@@ -1,0 +1,12 @@
+@inproceedings{frecon:hal-01511907,
+  TITLE = {{Variation totale multivari{\'e}e pour la d{\'e}tection de changement du spectre multifractal}},
+  AUTHOR = {Frecon, Jordan and Pustelnik, Nelly and Wendt, Herwig and Abry, Patrice},
+  URL = {https://hal.archives-ouvertes.fr/hal-01511907},
+  BOOKTITLE = {{25eme Colloque Groupe de Recherche et d'Etudes du Traitement du Signal et des Images (GRETSI 2015)}},
+  ADDRESS = {Lyon, France},
+  PAGES = {pp. 1},
+  YEAR = {2015},
+  MONTH = Sep,
+  KEYWORDS = {Spectre multifractal}
+}
+
