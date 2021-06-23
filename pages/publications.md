@@ -82,7 +82,7 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   <a class="publinks" onClick="document.getElementById('{{ pub.slug }}').style.display='block'"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
