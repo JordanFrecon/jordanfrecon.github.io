@@ -27,7 +27,7 @@ weight: 2
  </div>
  <div id="{{ pub.idbib }}" class="pubmodal-window">
   <p>Thanks for clicking. That felt good.</p>
-  <a href="#" rel="pubmodal:close">Close</a>
+  <a href="#" rel="pubmodal:close" class="pubmodal-close">Close</a>
 </div>
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<a href="#{{ pub.idbib }}" rel="pubmodal:open">Open Modal</a>
