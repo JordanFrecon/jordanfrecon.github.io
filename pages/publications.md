@@ -25,7 +25,7 @@ weight: 2
      {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
- <div id="{{ pub.idbib }}" class="modal-dialog" style="display:table;">
+ <div id="{{ pub.idbib }}" class="modal">
   <p>Thanks for clicking. That felt good.</p>
   <a href="#" rel="modal:close">Close</a>
 </div>
