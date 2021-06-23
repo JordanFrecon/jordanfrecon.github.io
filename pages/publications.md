@@ -25,12 +25,12 @@ weight: 2
      {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
- <div id="{{ pub.idbib }}" class="pubmodal-window">
-  <p>Thanks for clicking. That felt good.</p>
-  <a href="#" rel="pubmodal:close" class="pubmodal-close">Close</a>
-</div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<a href="#{{ pub.idbib }}" rel="pubmodal:open">Open Modal</a>
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
+&nbsp;&nbsp;<a href="#" onClick="document.getElementById('{{ pub.idbib }}').style.display='block'">Bibtex</a>
+ </div>
+ <div class="answer" id="{{ pub.idbib }}">
+        Here should appear the bib
  </div>
  </li>
  {% endif %}
