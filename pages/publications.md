@@ -25,12 +25,12 @@ weight: 2
      {{ pub.publication }}, {{ pub.year}}.
    </div>
  </div>
- <div id="{{ pub }}" class="modal">
+ <div id="'{{ pub.title }}'" class="modal">
   <p>Thanks for clicking. That felt good.</p>
   <a href="#" rel="modal:close">Close</a>
 </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<a href="#{{ pub }}" rel="modal:open">Open Modal</a>
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<a href="#'{{ pub.title }}'" rel="modal:open">Open Modal</a>
  </div>
  </li>
  {% endif %}
