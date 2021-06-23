@@ -3,9 +3,9 @@
   color: danger
 
 - name: Python/Pytorch
-  percentage: 90
+  percentage: 100
   color: success
 
-- name: R
-  percentage: 70
+- name: C/C++
+  percentage: 90
   color:
