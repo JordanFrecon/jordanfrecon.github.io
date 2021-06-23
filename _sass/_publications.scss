@@ -44,6 +44,7 @@
   opacity: .4;
   pointer-events: none;
   transition: all 0.3s;
+  border-radius: 1rem;
   &:target {
     visibility: visible;
     opacity: 1;
