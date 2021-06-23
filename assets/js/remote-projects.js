@@ -22,3 +22,7 @@ function parse_tools(tools) {
     return span;
   });
 }
+
+$('.toggle').click(function() {
+  $('#link-box').toggle('slow');
+});
