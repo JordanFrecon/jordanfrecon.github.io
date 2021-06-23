@@ -59,7 +59,7 @@ weight: 2
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p>
+ <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
