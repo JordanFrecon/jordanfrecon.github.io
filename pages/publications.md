@@ -26,14 +26,7 @@ weight: 2
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;<button class="toggle">Open box at side</button>
-  <div id="link-box">
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-    </ul>
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a> 
  </div>
  </li>
  {% endif %}
