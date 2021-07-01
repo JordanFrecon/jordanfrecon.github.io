@@ -29,7 +29,7 @@ layout: default
      <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
      {% endif %}
      {% if page.nobib == False %}
-     <a style="color:#007bff;" onClick="ShowAndHide('{{ page.slug }}')"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+     <a style="color:#007bff;" onClick="ShowAndHide('{{ page.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
      {% endif %}
      {% if page.doi %}
      <a href="http://dx.doi.org/{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
