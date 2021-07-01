@@ -82,7 +82,7 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a style="color:#007bff;" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   <a href="#" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
@@ -113,7 +113,7 @@ weight: 2
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    {% if pub.nobib == False %}
-   <a style="color:#007bff;" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   <a href="#" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% endif %}
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
@@ -145,7 +145,7 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a style="color:#007bff;" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   <a href="#" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
