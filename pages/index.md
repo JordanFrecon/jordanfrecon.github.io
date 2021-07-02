@@ -11,7 +11,7 @@ permalink: /
 <ul>
 {% for news in news_list %}
   {% increment news_counter %}
-  {% if news_counter <= 5 %}
+  {% if news_counter < 5 %}
     <li><b>{{ news.date | date: '%-d %B, %Y'}}:</b> {{ news.info }}</li>
   {% endif %}
 {% endfor %}
