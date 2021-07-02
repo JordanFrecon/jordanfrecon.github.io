@@ -6,6 +6,8 @@ publication: Conférence sur l'Apprentissage Automatique (CAp)
 year: 2021
 type: workshop
 project: deepLearning
+slides: True
+poster: True
 nobib: True
 ---
 
