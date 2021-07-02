@@ -2,7 +2,7 @@
 layout: publication
 title: Adversarial Dictionary Learning
 authors: J. Frecon, L. Anquetil, G. Gasso and S. Canu
-publication: Accepted to Conférence sur l'Apprentissage Automatique (CAp)
+publication: Conférence sur l'Apprentissage Automatique (CAp)
 year: 2021
 type: workshop
 project: deepLearning

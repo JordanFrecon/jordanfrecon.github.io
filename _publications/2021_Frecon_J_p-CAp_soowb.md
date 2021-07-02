@@ -2,7 +2,7 @@
 layout: publication
 title: Smooth optimization of orthogonal wavelet basis
 authors: J. Frecon, R. Grazzi, S. Salzo and M. Pontil
-publication: Accepted to Conférence sur l'Apprentissage Automatique (CAp)
+publication: Conférence sur l'Apprentissage Automatique (CAp)
 year: 2021
 type: workshop
 project: hyperparamOpt
