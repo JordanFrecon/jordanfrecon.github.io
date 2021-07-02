@@ -4,6 +4,6 @@
                Gilles Gasso and
                St{\'e}phane Canu},
   title     = {Adversarial Dictionary Learning},
-  booktitle = {Conf{\'e}rence sur l' Apprentissage Automatique}, {CAp} 2021, Saint-Etienne, France, June 14-16, 2021},
+  booktitle = {Conf{\'e}rence sur l' Apprentissage Automatique} ({CAp}), Saint-Etienne, France, June 14-16, 2021},
   year      = {2021},
 }
