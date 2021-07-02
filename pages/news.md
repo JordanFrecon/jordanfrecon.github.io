@@ -4,7 +4,7 @@ permalink: /news/
 ---
 
 
-# **News**
+# Past News
 {% assign news_list = site.news | sort: "date" | reverse %}
 
 <ul>
