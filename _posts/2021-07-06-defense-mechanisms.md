@@ -60,7 +60,7 @@ where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the e
 ## 3. Noise Injection Mechanisms
 
 
-**RSE** {% include cite.html id="2018_Liu_X_p-eccv_trnnrse"%}. This paper introduces a defense algorithm called *Random Self-Ensemble* which adds a *noise layer* before each convolution layer in both training and prediction phases. In practice, at inference time, RSE peforms $$K$$ independent noisy forward pass, each yielding different prediction scores due to the noises, and then ensemble the results, i.e.,
+**RSE** {% include cite.html id="2018_Liu_X_p-eccv_trnnrse"%}. This paper introduces a defense algorithm called *Random Self-Ensemble* which adds a *noise layer* before each convolution layer in both training and prediction phases. In practice, at inference time, RSE peforms $$K$$ independent noisy forward pass, each yielding different prediction scores due to the noises, and then ensembles the results, i.e.,
 
 $$
 \bar{f}_\theta(x) = \sum_{k=1}^{K} f_\theta^k(x)
