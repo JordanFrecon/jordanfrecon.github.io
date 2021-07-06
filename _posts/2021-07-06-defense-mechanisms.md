@@ -25,7 +25,7 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 
 ## 2. Adversarially Robust Training
 
-Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of pertubation of the data. In the context of adversarial robustness, such perturbations are hence intended as adversarial perturbations. Formally, robust optimization can be framed as a min-max optimization problem as follows
+Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of pertubation of the data. In the context of adversarial robustness, such perturbations are hence intended as adversarial perturbations. Formally, adversarially robust training can be framed as a min-max optimization problem as follows.
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big]
@@ -46,7 +46,7 @@ where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the e
 
 {% include cite.html id="2016_Huang_R_arxiv_lsa"%}
 
-**RT-PGD** The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} showed that if the neural network is trained to be robust against PGD adversaries, then it will be robust againstall first-order adversaries.
+**ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
 
 
