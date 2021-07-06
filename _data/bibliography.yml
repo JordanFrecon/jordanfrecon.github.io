@@ -229,4 +229,17 @@
   cite: Szegedy et al., 2014
   year: 2014
   title: Intriguing properties of neural networks
-  authors: C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan and I.J. Goodfellow and R. Fergus
+  publication: International Conference on Learning Representations (ICLR)
+
+- id: 2016_Huang_R_arxiv_lsa
+  cite: Huang et al., 2016
+  year: 2016
+  title: Learning with a strong adversary
+  publication: ArXiv
+  
+- id: 2018_Shaham_U_j-nc_uatilssmro
+  cite: Shaham et al., 2018
+  year: 2018
+  title: Understanding adversarial training - Increasing local stability of supervised models through robust optimization
+  publication: Neurocomputing 
+  

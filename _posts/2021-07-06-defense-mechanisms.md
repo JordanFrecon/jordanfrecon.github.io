@@ -26,6 +26,13 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 ## 2. Adversarially Robust Training
 
 
+
+{% include cite.html id="2016_Huang_R_arxiv_lsa"%}
+
+{% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}
+
+
+
 The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} provided a min-max formulation encompassing much prior work on adversarial robustness. 
 
 $$
