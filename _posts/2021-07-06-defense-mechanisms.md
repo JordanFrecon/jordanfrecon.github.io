@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat]
 ---
 
 > In progress
