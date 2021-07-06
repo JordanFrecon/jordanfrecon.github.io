@@ -46,7 +46,7 @@ where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the e
 
 {% include cite.html id="2016_Huang_R_arxiv_lsa"%}
 
-The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} 
+**RT-PGD** The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} showed that if the neural network is trained to be robust against PGD adversaries, then it will be robust againstall first-order adversaries.
 
 
 
