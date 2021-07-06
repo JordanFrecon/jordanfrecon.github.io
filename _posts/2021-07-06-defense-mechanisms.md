@@ -43,8 +43,7 @@ $$
 where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the example $$x$$.
 
 
-
-{% include cite.html id="2016_Huang_R_arxiv_lsa"%}
+**LWA** {% include cite.html id="2016_Huang_R_arxiv_lsa"%}. The *Learning With an Adversary* method ..
 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
