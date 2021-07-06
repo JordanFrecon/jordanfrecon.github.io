@@ -25,7 +25,7 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 
 ## 2. Adversarially Robust Training
 
-
+Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of uncertainty of the data. In the context of adversarial robustness, the uncertainty corresponds to the allowed range of adversarial perturbations.
 
 **RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method suggested to replace the lower-objective by a surrogate obtained by linearizing the adversarial loss, i.e.,
 
