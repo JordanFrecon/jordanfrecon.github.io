@@ -249,3 +249,8 @@
   title: Robust Neural Networks using Randomized Adversarial Training
   publication: ArXiv
   
+- id: 2018_Liu_X_p-eccv_trnnrse
+  cite: Liu et al., 2018
+  year: 2018
+  title: Towards Robust Neural Networks via RandomSelf-ensemble
+  publication: Proceedings of the European Conference on Computer Vision (ECCV) 

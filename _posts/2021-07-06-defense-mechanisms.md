@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse]
 ---
 
 > In progress
@@ -23,7 +23,7 @@ $$
 where $$\varepsilon(x)$$ denotes an adversarial example crafted from $$x$$.
 
 
-**AT-FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The former idea was later popularized thanks to the efficient crafting of FGSM attacks. In addition, the authors considered a slighlty more formulation with a weight parameter $$\alpha\in]0,1[$$, i.e.,
+**AT-FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The former idea was later popularized thanks to the efficient crafting of FGSM attacks. In addition, the authors considered a slighlty more general formulation by adding a weight parameter $$\alpha\in]0,1[$$, i.e.,
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \alpha\mathcal{L}(f_\theta(x),y) + (1-\alpha)\mathcal{L}( f_\theta(\varepsilon^{\rm FGSM}(x)),y) \Big]
@@ -57,12 +57,8 @@ where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the e
 
 
 
-
-
-
-
 ## 3. Noise Injection Mechanisms
 
 
-
+**RSE** {% include cite.html id="2018_Liu_X_p-eccv_trnnrse"%}. This paper introduces a defense algorithm called *Random Self-Ensemble* which adds a *noise layer* before each convolution layer in both training and prediction phases.
 
