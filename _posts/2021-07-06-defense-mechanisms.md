@@ -12,11 +12,13 @@ biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p
 
 ## 1. Adversarial Training
 
-**AT** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%}. This work first showed that by training a neural network $$f_\theta$$ on a mixture of clean and adversarial examples, then $$f_\theta$$ can be somewhat regularized.
+**AT** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%}. This work first showed that by training a neural network $$f_\theta$$ on a mixture of clean and adversarial examples, then $$f_\theta$$ can be somewhat regularized. The corresponding training procedures amounts in solving
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y) + \mathcal{L}( f_\theta(\varepsilon(x)),y) \Big]
 $$
+
+where $$\varepsilon(x)$$ denotes an adversarial example crafted from $$x$$.
 
 
 **AT-FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The former idea was later popularized thanks to the efficient crafting of FGSM attacks. In addition, the authors considered a slighlty more formulation with a weight parameter $$\alpha\in]0,1[$$, i.e.,
