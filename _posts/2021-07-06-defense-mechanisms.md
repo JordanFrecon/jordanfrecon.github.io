@@ -51,7 +51,13 @@ $$
 where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the example $$x$$.
 
 
-**LWA** {% include cite.html id="2016_Huang_R_arxiv_lsa"%}. The *Learning With an Adversary* method ..
+**LWA** {% include cite.html id="2016_Huang_R_arxiv_lsa"%}. The *Learning With an Adversary* method considers the following peculiar setting
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\|\varepsilon\|\leq \delta}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big]
+$$
+
+and explores two surrogate approximations of the lower-level problem. The first one relies on a linearization technique similar to *RT* while the second one considers the misclassification rate in place of the loss function.
 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
