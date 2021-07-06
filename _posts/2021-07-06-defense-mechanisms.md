@@ -25,7 +25,14 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 
 ## 2. Adversarially Robust Training
 
-Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of uncertainty of the data. In the context of adversarial robustness, the uncertainty corresponds to the allowed range of adversarial perturbations.
+Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of pertubation of the data. In the context of adversarial robustness, such perturbations are hence intended as adversarial perturbations. Formally, robust optimization can be framed as a min-max optimization problem as follows
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big]
+$$
+
+The inner maximization problem aims to find an adversarial perturbation of a given data point $$x$$ that achieves a high loss while the goal of the outer minimization problem is to find model parameters so that the adversarial loss given by the inner attack problem is minimized. 
+
 
 **RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method suggested to replace the lower-objective by a surrogate obtained by linearizing the adversarial loss, i.e.,
 
@@ -33,19 +40,15 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}(x)}{\max} \mathcal{L}(f_\theta(x),y) + \langle \nabla \mathcal{L}(f_\theta(x),y),\varepsilon\rangle \Big]
 $$
 
-where $$\mathcal{S}(x)$$ denotes the uncertainty set corresponding to the example $$x$$.
+where $$\mathcal{S}(x)$$ denotes the set of allowed perturbations added to the example $$x$$.
 
 
 
 {% include cite.html id="2016_Huang_R_arxiv_lsa"%}
 
-The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} provided a min-max formulation encompassing much prior work on adversarial robustness. 
+The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} 
 
-$$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big]
-$$
 
-The inner maximization problem aims to find an adversarial perturbation of a given data point $$x$$ that achieves a high loss while the goal of the outer minimization problem is to find model parameters so that the adversarial loss given by the inner attack problem is minimized. This is precisely the problem of training a robust classifier using adversarial training techniques.
 
 
 
