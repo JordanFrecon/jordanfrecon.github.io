@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae]
 ---
 
 > In progress
@@ -20,6 +20,7 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \alpha\mathcal{L}(f_\theta(x),y) + (1-\alpha)\mathcal{L}( f_\theta(\varepsilon(x)),y) \Big]
 $$
 
+This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}, leading to the *AT-FGSM* mechanism, thanks to the efficient crafting of FGSM attacks.
 
 
 ## 2. Noise Injection Mechanisms
