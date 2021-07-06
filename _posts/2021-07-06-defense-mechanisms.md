@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa]
 ---
 
 > In progress
@@ -23,7 +23,12 @@ $$
 This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}, leading to the *AT-FGSM* mechanism, thanks to the efficient crafting of FGSM attacks.
 
 
-## 2. Noise Injection Mechanisms
+## 2. Adversarially Robust Training
+
+{% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}
+
+
+## 3. Noise Injection Mechanisms
 
 
 
