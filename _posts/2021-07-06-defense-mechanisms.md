@@ -27,11 +27,14 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 
 
 
-**RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method 
+**RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method suggested to replace the lower-objective by a surrogate obtained by linearizing the adversarial loss, i.e.,
 
 $$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \sum_{i=1}^N \Big( \underset{\varepsilon_i\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x_i),y_i) + \langle \nabla \mathcal{L}(f_\theta(x_i),y_i),\varepsilon_i\rangle \Big)
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}(x)}{\max} \mathcal{L}(f_\theta(x),y) + \langle \nabla \mathcal{L}(f_\theta(x),y),\varepsilon\rangle \Big]
 $$
+
+where $$\mathcal{S}(x)$$ denotes the uncertainty set corresponding to the example $$x$$.
+
 
 
 {% include cite.html id="2016_Huang_R_arxiv_lsa"%}
