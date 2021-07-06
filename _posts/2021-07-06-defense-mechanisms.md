@@ -27,11 +27,14 @@ This idea was later popularized by {% include cite.html id="2015_Goodfellow_I_p-
 
 
 
+**RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method 
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \sum_{i=1}^N \Big( \underset{\varepsilon_i\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x_i),y_i) + \langle \nabla \mathcal{L}(f_\theta(x_i),y_i),\varepsilon_i\rangle \Big)
+$$
+
+
 {% include cite.html id="2016_Huang_R_arxiv_lsa"%}
-
-{% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}
-
-
 
 The work of {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} provided a min-max formulation encompassing much prior work on adversarial robustness. 
 
