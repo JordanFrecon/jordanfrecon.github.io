@@ -243,3 +243,9 @@
   title: Understanding adversarial training - Increasing local stability of supervised models through robust optimization
   publication: Neurocomputing 
   
+- id: 2020_Araujo_A_arxiv_rnnurat
+  cite: Aurajo et al., 2020
+  year: 2020
+  title: Robust Neural Networks using Randomized Adversarial Training
+  publication: ArXiv
+  
