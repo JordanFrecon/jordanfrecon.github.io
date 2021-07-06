@@ -15,7 +15,7 @@ biblio: [2014_Szegedy_C_p-iclr_ipnn]
 {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} showed that by training on a mixture of clean and adversarial examples, a neural network can be somewhat regularized.
 
 $$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \mathbb{E}_{(x,y)\sim\mathcal{D}} \left[ \alpha\mathcal{L}(f_\theta(x),y) + (1-\alpha)\mathcal{L}( f_\theta(\varepsilon(x)),y) \right]
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \alpha\mathcal{L}(f_\theta(x),y) + (1-\alpha)\mathcal{L}( f_\theta(\varepsilon(x)),y) \Big]
 $$
 
 
