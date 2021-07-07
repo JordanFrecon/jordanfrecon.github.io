@@ -230,56 +230,56 @@
   year: 2014
   title: Intriguing properties of neural networks
   publication: International Conference on Learning Representations (ICLR)
-  author: C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfellow and R. Fergus
+  authors: C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfellow and R. Fergus
 
 - id: 2016_Huang_R_arxiv_lsa
   cite: Huang et al., 2016
   year: 2016
   title: Learning with a strong adversary
   publication: ArXiv
-  author: R. Huang, B. Xu, D. Schuurmans and C. Szepesvari
+  authors: R. Huang, B. Xu, D. Schuurmans and C. Szepesvari
   
 - id: 2018_Shaham_U_j-nc_uatilssmro
   cite: Shaham et al., 2018
   year: 2018
   title: Understanding adversarial training - Increasing local stability of supervised models through robust optimization
   publication: Neurocomputing 
-  author: U. Shaham, Y. Yamada and S. Negahban
+  authors: U. Shaham, Y. Yamada and S. Negahban
   
 - id: 2020_Araujo_A_arxiv_rnnurat
   cite: Aurajo et al., 2020
   year: 2020
   title: Robust Neural Networks using Randomized Adversarial Training
   publication: ArXiv
-  author: A. Araujo, L. Meunier, R. Pinot and B. Negrevergne
+  authors: A. Araujo, L. Meunier, R. Pinot and B. Negrevergne
   
 - id: 2018_Liu_X_p-eccv_trnnrse
   cite: Liu et al., 2018
   year: 2018
   title: Towards Robust Neural Networks via Random Self-ensemble
   publication: Proceedings of the European Conference on Computer Vision (ECCV)
-  author: X. Liu, M. Cheng, H. Zhang and C.-J. Hsieh
+  authors: X. Liu, M. Cheng, H. Zhang and C.-J. Hsieh
   
 - id: 2018_Komiyama_R_p-iconip_amtraae
   cite: Komiyama and Hattori, 2018
   year: 2018
   title: Adversarial Minimax Training for Robustness Against Adversarial Examples
   publication: International Conference on Neural Information Processing (ICONIP)
-  author: R. Komiyama and M. Hattori
+  authors: R. Komiyama and M. Hattori
   
 - id: 2019_He_Z_p-cvpr_pni
   cite: He et al., 2019
   year: 2019
   title: Parametric Noise Injection - Trainable Randomness to Improve Deep Neural Network Robustness Against Adversarial Attack
   publication: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
-  author: Z. He, A. S. Rakin and D. Fan
+  authors: Z. He, A. S. Rakin and D. Fan
   
 - id: 2021_Picot_M_arxiv_arfrr
   cite: Picot et al., 2021
   year: 2021
   title: Adversarial Robustness via Fisher-Rao Regularization
   publication: ArXiv
-  author: M. Picot, F. Messina, M. Boudiaf, F. Labeau, I. Ben Ayed and P. Piantanida
+  authors: M. Picot, F. Messina, M. Boudiaf, F. Labeau, I. Ben Ayed and P. Piantanida
   
 - id: 2019_Zhang_H_p-icml_tptora
   cite: Zhang et al., 2019

@@ -90,7 +90,7 @@ $$
 Let $$q_\theta(x,y)$$ denotes the probability, predicted by the DNN $$f_\theta$$, that $$x$$ belongs to class $$y$$. In most cases, $$f_\theta$$ already outputs probabilities. If not, a soft-max operation can be added in the last layer. In addition, we restrict to the peculiar case where $$\mathcal{L}$$ is the cross-entropy loss (note that in Pytorch, the cross-entropy function includes a soft-max operation).
 
 
-**TRADES**{% include cite.html id="2019_Zhang_H_p-icml_tptora"%}.
+**TRADES** {% include cite.html id="2019_Zhang_H_p-icml_tptora"%}.
 
 
 $$
