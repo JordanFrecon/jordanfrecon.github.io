@@ -89,7 +89,7 @@ $$
 them to evaluate the level of accuracy under attack of their method.
 
 
-**RandomizedSmoothing** {% include cite.html id="2019_Cohen_J_p-icml_carrs"%}.
+**RS** {% include cite.html id="2019_Cohen_J_p-icml_carrs"%}. The authors adopted the term of *Randomized Smoothing* to call adversarial defense techniques that transform any arbitrary base classifier into a new smoothed classifier that certifiably robust in $$\ell_2$$-norm.
 
 **StoBatch** {% include cite.html id="2020_Phan_H_p-icml_sdpcral"%}.
 
