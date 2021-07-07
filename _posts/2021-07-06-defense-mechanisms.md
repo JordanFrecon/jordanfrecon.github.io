@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora]
 ---
 
 > In progress
@@ -87,7 +87,16 @@ $$
 
 ## 4. Adversarial Robustness via Explicit Regularization
 
-Suppose that the DNN $$f_\theta$$ outputs probabilities and that $$\mathcal{L}$$ is the cross-entropy loss, 
+Let $$q_\theta(x,y)$$ denotes the probability, predicted by the DNN $$f_\theta$$, that $$x$$ belongs to class $$y$$. In most cases, $$f_\theta$$ already outputs probabilities. If not, a soft-max operation can be added in the last layer. In addition, we restrict to the peculiar case where $$\mathcal{L}$$ is the cross-entropy loss (note that in Pytorch, the cross-entropy function includes a soft-max operation).
+
+
+**TRADES**{% include cite.html id="2019_Zhang_H_p-icml_tptora"%}.
+
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x)}{\mathbb{E}}\Big[ \underset{x^\prime\colon \|x^\prime-x\|p\leq \delta}{\max} \mahtrm{KL}\left( q_\theta(\cdot|x) \| q_\theta(\cdot|x^\prime)\right)\Big]
+$$
+
 
 
 **FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}. The authors propose a new formulation of adversarial defense with a *FIsher-rao REgularizer*.
