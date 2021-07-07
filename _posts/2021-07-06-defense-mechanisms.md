@@ -35,7 +35,7 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{\nu\in\mathcal{V}}{\max}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y) + \mathcal{L}( f_\theta(x+g_\nu(x)),y) \Big]\quad\text{s.t.}\quad g_\nu(x)\in\mathcal{B}
 $$
 
-where $$\mathcal{B}$$ is a $$\ell_\infty$$-ball whose bounds are weirdly estimated as well. While the idea is interesting it lacks some mathematical background. Note that the method is also closely related to the adversarially robust training techniques discussed in the next section.
+where $$\mathcal{B}$$ is a $$\ell_\infty$$-ball whose radius is weirdly estimated as well. While the idea is interesting it lacks some mathematical background. Note that the method is also closely related to the adversarially robust training techniques discussed in the next section.
 
 **RAT** {% include cite.html id="2020_Araujo_A_arxiv_rnnurat"%}. The *Randomized Adversarial Training* method combines both adversarial training and noise injection mechanisms.
 
