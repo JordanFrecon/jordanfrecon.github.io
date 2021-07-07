@@ -323,3 +323,10 @@
   publication: International Conference on Learning Representations (ICLR)
   authors: C. Xie, J. Wang, Z. Zhang, Z. Ren, and A. Yuille
   
+- id: 2021_Cappelli_A_arxiv_ardacsg
+  cite: Capelli et al., 2021
+  year: 2021
+  title: Adversarial Robustness by Design through Analog Computing and Synthetic Gradients
+  publication: ArXiv
+  authors: A. Cappelli, R. Ohana, J. Launay, L. Meunier, I. Poli and F. Krzakala
+  
