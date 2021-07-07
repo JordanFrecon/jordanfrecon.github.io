@@ -127,5 +127,5 @@ where $$\lambda>0$$ controls the trade-off between natural accuracyand robustnes
 
 ## 5. Other Defenses
 
-**Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}.
+**Defensive Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}. Distillation is a training  procedure initially designed to train a DNN using knowledge transferred from a different DNN. 
 
