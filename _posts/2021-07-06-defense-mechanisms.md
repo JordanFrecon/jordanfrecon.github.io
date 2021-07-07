@@ -129,6 +129,6 @@ where $$\lambda>0$$ controls the trade-off between natural accuracyand robustnes
 
 **Defensive Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}. Distillation is a training procedure initially designed to train a DNN using knowledge transferred from a different DNN. The idea is to train two networks, namely the original network $$f_\theta$$ and the distilled network $$f^{\rm d}_\nu$$ with the same architecture. However, the distilled network is trained on the set $$\{x,f_\theta(x)\}$$. Such technique seems to prevent models from fitting too  tightly to the data, and contributes to a better generalization around training point.
 
-**Randomization** {% include cite.html id="2017_Xie_C_p-iclr_maetr"%}. This heuristic defense technique consists works at inference time. Any input image go through two randomization layers. The first applies random resizing while the second applies random padding. Then, a single modified image in selected randomly before being fed to the classification network.
+**Randomization** {% include cite.html id="2017_Xie_C_p-iclr_maetr"%}. This heuristic defense technique works at inference time. Any input image go through two randomization layers. The first applies random resizing while the second applies random padding. Then, a single modified image is selected randomly before being fed to the classification network.
 
 
