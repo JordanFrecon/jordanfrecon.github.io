@@ -266,4 +266,10 @@
   year: 2019
   title: Parametric Noise Injection - Trainable Randomness to Improve Deep Neural Network Robustness Against Adversarial Attack
   publication: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  
+- id: 2021_Picot_M_arxiv_arfrr
+  cite: Picot et al., 2021
+  year: 2021
+  title: Adversarial Robustness via Fisher-Rao Regularization
+  publication: ArXiv
 
