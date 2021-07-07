@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr]
 ---
 
 > In progress
@@ -127,5 +127,8 @@ where $$\lambda>0$$ controls the trade-off between natural accuracyand robustnes
 
 ## 5. Other Defenses
 
-**Defensive Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}. Distillation is a training  procedure initially designed to train a DNN using knowledge transferred from a different DNN. 
+**Defensive Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}. Distillation is a training procedure initially designed to train a DNN using knowledge transferred from a different DNN. The idea is to train two networks, namely the original network $$f_\theta$$ and the distilled network $$f^{\rm d}_\nu$$ with the same architecture. However, the distilled network is trained on the set $$\{x,f_\theta(x)\}$$. Such technique seems to prevent models from fitting too  tightly to the data, and contributes to a better generalization around training point.
+
+**Randomization** {% include cite.html id="2017_Xie_C_p-iclr_maetr"%}. This heuristic defense technique consists works at inference time. Any input image go through two randomization layers. The first applies random resizing while the second applies random padding. Then, a single modified image in selected randomly before being fed to the classification network.
+
 

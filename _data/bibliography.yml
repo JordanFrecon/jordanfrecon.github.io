@@ -316,3 +316,10 @@
   publication: IEEE Symposium on Security and Privacy (SP)
   authors: N. Papernot, P. McDaniel, X. Wu, S. Jha and A. Swami
   
+- id: 2017_Xie_C_p-iclr_maetr
+  cite: Xie et al., 2017
+  year: 2017
+  title: Mitigating Adversarial Effects Through Randomization
+  publication: International Conference on Learning Representations (ICLR)
+  authors: C. Xie, J. Wang, Z. Zhang, Z. Ren, and A. Yuille
+  
