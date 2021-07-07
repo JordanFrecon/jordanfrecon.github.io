@@ -122,7 +122,7 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x,x^\prime)}{\mathbb{E}}\Big[ d_{R,\mathcal{C}}^2\left( q_\theta(\cdot|x),q_\theta(\cdot|x^\prime)\right)\Big]
 $$
 
-where $$\lambda>0$$ controls the trade-off between natural accuracyand robustness to the adversary.
+where $$\lambda>0$$ controls the trade-off between natural accuracy and robustness to the adversary.
 
 
 ## 5. Other Defenses
