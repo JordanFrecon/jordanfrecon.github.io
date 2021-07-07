@@ -94,13 +94,14 @@ $$
 $$
 
 
-**TRADES** {% include cite.html id="2019_Zhang_H_p-icml_tptora"%}.
+**TRADES** {% include cite.html id="2019_Zhang_H_p-icml_tptora"%}. This work defined a new risk as the trade-off between natural and adversarial performances, controlled through an hyperparameter $$\lambda>0$$. Formally, it reads
 
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x)}{\mathbb{E}}\Big[ \underset{x^\prime\colon \|x^\prime-x\|p\leq \delta}{\max} \mathrm{KL}\left( q_\theta(\cdot|x) \| q_\theta(\cdot|x^\prime)\right)\Big]
 $$
 
+where the first term is the natural cross-entropy while the second term includes the Kullback-Leibler (KL) divergence between natural and adversarial probability distributions.
 
 
 **FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}. The authors propose a new formulation of adversarial defense with a *FIsher-rao REgularizer*.
