@@ -295,4 +295,10 @@
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: H. Phan, M. T. Thai, H. Hu, R. Jin, S. Ruoming, T. Sun, and D. Dou
   
+- id: 2019_Lecuyer_M_p-sp_craedp
+  cite: Lecuyer et al., 2019
+  year: 2019
+  title: Certified Robustness to Adversarial Examples with Differential Privacy
+  publication: IEEE Symposium on Security and Privacy (SP)
+  authors: M. Lecuyer, V. Atlidakis, R. Geambasu, D. Hsu and S. Jan
 

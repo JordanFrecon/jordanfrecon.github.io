@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp]
 ---
 
 > In progress
@@ -85,8 +85,11 @@ $$
 
 **PNI** {% include cite.html id="2019_He_Z_p-cvpr_pni"%}. The *Parametric Noise Injection* technique injects Gaussian noise to each component (e.g, input, weight, ...) of the DNN. In addition, the variance of the noise can be tuned layer-wise through a coefficient whose authors suggest to additionnally estimate during the training of the network. An adversarially robust training optimization is also considered to improve the defense.
 
-**StoBatch** {% include cite.html id="2020_Phan_H_p-icml_sdpcral"%}. In this work, the authors proposed a randomization method by exploiting the link between differential privacy and adversarial robustness. Their framework inherits some theoretical results from the differential privacy community allowing
+**PixelDP** {% include cite.html id="2019_Lecuyer_M_p-sp_craedp"%}. In this work, the authors proposed a randomization method by exploiting the link between differential privacy and adversarial robustness. Their framework inherits some theoretical results from the differential privacy community allowing
 them to evaluate the level of accuracy under attack of their method.
+
+
+**StoBatch** {% include cite.html id="2020_Phan_H_p-icml_sdpcral"%}.
 
 
 ## 4. Adversarial Robustness via Explicit Regularization
