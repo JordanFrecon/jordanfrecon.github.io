@@ -87,5 +87,8 @@ $$
 
 ## 4. Adversarial Robustness via Explicit Regularization
 
+Suppose that the DNN $$f_\theta$$ outputs probabilities and that $$\mathcal{L}$$ is the cross-entropy loss, i.e., $$\mathcal{L}(f_\theta(x),y) = - \mathbb{E}_{p(x,y)} \log f_\theta(x,y)$$.
+
+
 **FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}.
 
