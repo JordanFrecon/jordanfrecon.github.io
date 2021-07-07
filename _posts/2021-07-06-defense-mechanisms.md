@@ -114,7 +114,7 @@ $$
 
 where the first term is the natural cross-entropy while the second term includes the Kullback-Leibler (KL) divergence between natural and adversarial probability distributions.
 
-**MART** {% include cite.html id="2020_Wang_Y_p-iclr_iarrrme"%}. The *Misclassification Aware adveRsarial Training* method ...
+**MART** {% include cite.html id="2020_Wang_Y_p-iclr_iarrrme"%}. The *Misclassification Aware adveRsarial Training* method is a variant which hinges on boosted losses and whose regularizer treats differently the misclassified inputs.
 
 **FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}. The authors propose a new formulation of adversarial defense with a *FIsher-rao REgularizer*. Here, the Fisher-Rao distance $$d_{R,\mathcal{C}}^2$$ is used to capture the distance between probability distributions over the statistical manifold 
 $$\mathcal{C} = \{q_\theta(\cdot|x)\colon x\in\mathcal{X}\}$$ obtained by fixing the parameters of the DNN and changing its feature input in the manifold $$\mathcal{X}$$. The resulting optimization problem reads
