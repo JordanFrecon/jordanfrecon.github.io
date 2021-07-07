@@ -309,3 +309,10 @@
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: J. Cohen, E. Rosenfeld and Z. Kolter
   
+- id: 2016_Papernot_N_p-sp_ddapadnn
+  cite: Papernet et al., 2016
+  year: 2016
+  title: Distillation as a Defense to Adversarial Perturbations Against Deep Neural Networks
+  publication: IEEE Symposium on Security and Privacy (SP)
+  authors: N. Papernot, P. McDaniel, X. Wu, S. Jha and A. Swami
+  
