@@ -85,7 +85,7 @@ $$
 
 **PNI** {% include cite.html id="2019_He_Z_p-cvpr_pni"%}. The *Parametric Noise Injection* technique injects Gaussian noise to each component (e.g, input, weight, ...) of the DNN. In addition, the variance of the noise can be tuned layer-wise through a coefficient whose authors suggest to additionnally estimate during the training of the network. An adversarially robust training optimization is also considered to improve the defense.
 
-## 4. Adversarial Robustness Through Explicit Regularization
+## 4. Adversarial Robustness via Explicit Regularization
 
 **FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}.
 
