@@ -336,3 +336,11 @@
   title: Improving adversarial robustness requires revisiting misclassified examples
   publication: International Conference on Learning Representations (ICLR)
   authors: Y. Wang, D. Zou, J. Yi, J. Bailey, X. Ma, and Q. Gu
+  
+- id: 2020_Ding_GW_p-iclr_mma
+  cite: Ding et al., 2020
+  year: 2020
+  title: MMA Training - Direct Input Space Margin Maximization through Adversarial Training
+  publication: International Conference on Learning Representations (ICLR)
+  authors: G. W. Ding, Y. Sharma , K. Y.-C. Lui and R. Huang
+  
