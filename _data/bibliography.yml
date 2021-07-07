@@ -301,4 +301,11 @@
   title: Certified Robustness to Adversarial Examples with Differential Privacy
   publication: IEEE Symposium on Security and Privacy (SP)
   authors: M. Lecuyer, V. Atlidakis, R. Geambasu, D. Hsu and S. Jan
-
+  
+- id: 2019_Cohen_J_p-icml_carrs
+  cite: Cohen et al., 2019
+  year: 2019
+  title: Certified Adversarial Robustness via Randomized Smoothing
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: J. Cohen, E. Rosenfeld and Z. Kolter
+  
