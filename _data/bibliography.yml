@@ -254,3 +254,10 @@
   year: 2018
   title: Towards Robust Neural Networks via RandomSelf-ensemble
   publication: Proceedings of the European Conference on Computer Vision (ECCV) 
+  
+- id: 2018_Komiyama_R_p-iconip_amtraae
+  cite: Komiyama and Hattori, 2018
+  year: 2018
+  title: Adversarial Minimax Training for Robustness Against Adversarial Examples
+  publication: International Conference on Neural Information Processing (ICONIP)
+

@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae]
 ---
 
 > In progress
@@ -30,6 +30,15 @@ $$
 $$
 
 **RAT** {% include cite.html id="2020_Araujo_A_arxiv_rnnurat"%}. The *Randomized Adversarial Training* method combines both adversarial training and noise injection mechanisms.
+
+
+**AMT** {% include cite.html id="2018_Komiyama_R_p-iconip_amtraae"%}. Inspired by Generative Adversarial Networks (GANs), the *Adversarial Minimax Training* method uses two types of networks: a classiﬁer $$f_\theta$$ and a generator $$g_\nu$$ trained to craft noise for adversarial examples. 
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{\nu\in\mathcal{V}}{\max}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y) + \mathcal{L}( f_\theta(x+g_\nu(x)),y) \Big]\\
+$$
+
+
 
 ## 2. Adversarially Robust Training
 
@@ -60,7 +69,6 @@ $$
 and explores two surrogate approximations of the lower-level problem. The first one relies on a linearization technique similar to *RT* while the second one considers the misclassification rate in place of the loss function.
 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
-
 
 
 ## 3. Noise Injection Mechanisms
