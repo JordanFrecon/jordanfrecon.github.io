@@ -260,4 +260,10 @@
   year: 2018
   title: Adversarial Minimax Training for Robustness Against Adversarial Examples
   publication: International Conference on Neural Information Processing (ICONIP)
+  
+- id: 2019_He_Z_p-cvpr_pni
+  cite: He et al., 2019
+  year: 2019
+  title: Parametric Noise Injection - Trainable Randomness to Improve Deep Neural Network Robustness Against Adversarial Attack
+  publication: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
 

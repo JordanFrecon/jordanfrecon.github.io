@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni]
 ---
 
 > In progress
@@ -83,4 +83,5 @@ $$
 \bar{f}_\theta(x) = \sum_{k=1}^{K} f_\theta^k(x)
 $$
 
+**PNI** {% include cite.html id="2019_He_Z_p-cvpr_pni"%}. The *Parametric Noise Injection* technique injects Gaussian noise to each component (e.g, input, weight, ...) of the DNN. In addition, the variance of the noise can be tuned layer-wise through a coefficient whose authors suggest to additionnally estimate during the training of the network. An adversarially robust training optimization is also considered to improve the defense.
 
