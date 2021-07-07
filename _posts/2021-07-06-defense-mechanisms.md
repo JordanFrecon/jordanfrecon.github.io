@@ -90,7 +90,7 @@ $$
 Suppose that the DNN $$f_\theta$$ outputs probabilities and that $$\mathcal{L}$$ is the cross-entropy loss, 
 
 
-**FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}.
+**FIRE** {% include cite.html id="2021_Picot_M_arxiv_arfrr"%}. The authors propose a new formulation of adversarial defense with a *FIsher-rao REgularizer*.
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x,x^\prime)}{\mathbb{E}}\Big[ d_{R,\mathcal{C}}^2\left( q_\theta(\cdot|x),q_\theta(\cdot|x^\prime)\right)\Big]
