@@ -94,7 +94,7 @@ Let $$q_\theta(x,y)$$ denotes the probability, predicted by the DNN $$f_\theta$$
 
 
 $$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x)}{\mathbb{E}}\Big[ \underset{x^\prime\colon \|x^\prime-x\|p\leq \delta}{\max} \mahtrm{KL}\left( q_\theta(\cdot|x) \| q_\theta(\cdot|x^\prime)\right)\Big]
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{p(x,y)}{\mathbb{E}}\Big[ -\log q_\theta(y|x)\Big] + \lambda \underset{p(x)}{\mathbb{E}}\Big[ \underset{x^\prime\colon \|x^\prime-x\|p\leq \delta}{\max} \mathrm{KL}\left( q_\theta(\cdot|x) \| q_\theta(\cdot|x^\prime)\right)\Big]
 $$
 
 
