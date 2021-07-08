@@ -344,3 +344,10 @@
   publication: International Conference on Learning Representations (ICLR)
   authors: G. W. Ding, Y. Sharma , K. Y.-C. Lui and R. Huang
   
+- id: 2018_Wong_E_p-icml_pdaecoap
+  cite: Wong and Kolter, 2018
+  year: 2018
+  title: Provable Defenses against Adversarial Examples via the Convex Outer Adversarial Polytope
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: E. Wong and Z. Kolter
+  

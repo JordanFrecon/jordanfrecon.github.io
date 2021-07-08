@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma,2018_Wong_E_p-icml_pdaecoap]
 ---
 
 > In progress
@@ -73,6 +73,10 @@ and explores two surrogate approximations of the lower-level problem. The first 
 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
+
+**COAP** {% include cite.html id="2018_Wong_E_p-icml_pdaecoap"%}. This work propose a method to learn deep ReLU-based classifiers that are provably robust against $$\ell_\infty$$-norm bounded adversarial perturbations. To do so, the authors consider a *Convex Outer relaxation of the Adversarial Polytope allowing them to incorporate the theory from convex robust optimization and provide provable bounds on the potential adversarial error and loss of the classifier.
+
+<img class="post-img" src="/images/posts/2018_Wong_E_p-icml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
 
 ## 3. Noise Injection Mechanisms
 
