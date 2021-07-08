@@ -78,6 +78,8 @@ and explores two surrogate approximations of the lower-level problem. The first 
 
 <img class="post-img" src="/images/posts/2018_Wong_E_p-icml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
 
+
+
 ## 3. Noise Injection Mechanisms
 
 
