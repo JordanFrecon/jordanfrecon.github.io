@@ -74,9 +74,9 @@ and explores two surrogate approximations of the lower-level problem. The first 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
 
-**CAP** {% include cite.html id="2018_Wong_E_p-icml_pdaecoap"%}. This work propose a method to learn deep ReLU-based classifiers that are provably robust against $$\ell_\infty$$-norm bounded adversarial perturbations. To do so, the authors consider a *Convex outer relaxation of the Adversarial Polytope allowing them to incorporate the theory from convex robust optimization and provide provable bounds on the potential adversarial error and loss of the classifier.
+**CAP** {% include cite.html id="2018_Wong_E_p-icml_pdaecoap"%}. This work propose a method to learn deep ReLU-based classifiers that are provably robust against $$\ell_\infty$$-norm bounded adversarial perturbations. To do so, the authors consider a *Convex outer relaxation of the Adversarial Polytope* allowing them to incorporate the theory from convex robust optimization and provide provable bounds on the potential adversarial error and loss of the classifier.
 
-<img class="post-img" src="/images/posts/2018_Wong_E_picml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
+<img class="post-img" src="/images/posts/2018_Wong_E_p-icml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
 
 ## 3. Noise Injection Mechanisms
 
