@@ -10,6 +10,16 @@ biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p
 
 > In progress
 
+Usually, the parameters $$\theta\in\Theta$$ of a deep neural network (DNN) $$f_\theta$$ are trained by minimizing a loss $$\mathcal{L}$$ on a training set $$\{x,y\}\sim\mathcal{D}$$ as follows
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y).
+$$
+
+However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
+
+
+
 ## 1. Adversarial Training
 
 The idea of adversarial training relies in also training the neural network model on adversarial examples in order to correctly predict their label.
@@ -54,7 +64,7 @@ $$
 The inner maximization problem aims to find an adversarial perturbation of a given data point $$x$$ that achieves a high loss while the goal of the outer minimization problem is to find model parameters so that the adversarial loss given by the inner attack problem is minimized. 
 
 
-> This class of methods is commonly refered to as *Adversarial Training*. In that sense, the techniques reported in Section 1 can been seen as heuristics where the min-max problem is solved sequentially, i.e., adversarial examples are crafted by solving the inner maximization first, and then the model parameters are optimized based on the generated adversarial examples.
+> This class of methods is commonly refered to as *Adversarial Training*. In that sense, the techniques reported in Section 1 can been seen as heuristics where the min-max problem is solved sequentially, i.e., adversarial examples are crafted by (approximatively) solving the inner maximization, and then the model parameters are optimized based on the generated adversarial examples.
 
 
 **RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method suggested to replace the lower-objective by a surrogate obtained by linearizing the adversarial loss, i.e.,
@@ -90,6 +100,8 @@ Distributionally robust optimization seeks to robustify against unknown distribu
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)].
 $$
+
+
 
 
 **WRM** {% include cite.html id="2018_Sinha_A_p-iclr_csdrpatr"%}. The *Wasserstein Robust Method* considers a $$\rho$$-neighborhood of the distribution $$\mathcal{D}$$ under the Wasserstein metric, i.e., $$\mathcal{P} = \{ P\colon W_c(P,\mathcal{D}) \leq \rho \}$$. In addition, they consider a Lagrangian relaxation of the objective with fixed regularization parameter $$\lambda>0$$, thus resulting in the following optimization problem.
