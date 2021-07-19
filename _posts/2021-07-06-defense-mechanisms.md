@@ -98,11 +98,13 @@ $$
 \end{align}
 $$
 
-where
+with the robust surrogate
 
 $$
 \phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
 $$
+
+which contains the transport cost $$c$$.
 
 **ARKS** The *Adversarially Robust Kernel Smoothing* method solves the following minimax optimization problem
 
