@@ -43,7 +43,7 @@ where $$\mathcal{B}$$ is a $$\ell_\infty$$-ball whose radius is weirdly estimate
 
 
 
-## 2. Adversarially Robust Training
+## 2. Adversarial Robust Training
 
 Robust Optimization is an area of optimization theory aiming to obtain solutions which are stable under some level of pertubation of the data. In the context of adversarial robustness, such perturbations are hence intended as adversarial perturbations. Formally, adversarially robust training can be framed as a min-max optimization problem as follows.
 
@@ -77,20 +77,19 @@ and explores two surrogate approximations of the lower-level problem. The first 
 **ART** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. This work first properly considered the optimization of the original *Adversarial Robust Training* saddle-point problem. As such, the authors have addressed each lower maximization by crafting *PGD* adversaries (see post on adversarial examples). In addition, they have shown that if a neural network is trained to be robust against PGD adversaries, then it will be robust against all first-order adversaries.
 
 
-**CAP** {% include cite.html id="2018_Wong_E_p-icml_pdaecoap"%}. This work propose a method to learn deep ReLU-based classifiers that are provably robust against $$\ell_\infty$$-norm bounded adversarial perturbations. To do so, the authors consider a *Convex outer relaxation of the Adversarial Polytope* allowing them to incorporate the theory from convex robust optimization and provide provable bounds on the potential adversarial error and loss of the classifier. In additionm, they provide an algorithm for certifying the robustness.
+**CAP** {% include cite.html id="2018_Wong_E_p-icml_pdaecoap"%}. This work propose a method to learn deep ReLU-based classifiers that are provably robust against $$\ell_\infty$$-norm bounded adversarial perturbations. To do so, the authors consider a *Convex outer relaxation of the Adversarial Polytope* allowing them to incorporate the theory from convex robust optimization and provide provable bounds on the potential adversarial error and loss of the classifier. In addition, they provide an algorithm for certifying the robustness.
 
 <img class="post-img" src="/images/posts/2018_Wong_E_p-icml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
 
 **SDP** SemiDefinite Program
 
-## 3. Distributionally Robust Optimization with Adversarial Training
+## 3. Adversarial Distributionally Robust Training
 
 Distributionally robust optimization seeks to robustify against unknown distribution shift explicitly. To do so, related methods usually begin by postulating a class $$\mathcal{P}$$ of distributions around the data-generating distribution $$\mathcal{D}$$, and then consider
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)].
 $$
-
 
 
 **WRM** {% include cite.html id="2018_Sinha_A_p-iclr_csdrpatr"%}. The *Wasserstein Robust Method* considers a $$\rho$$-neighborhood of the distribution $$\mathcal{D}$$ under the Wasserstein metric, i.e., $$\mathcal{P} = \{ P\colon W_c(P,\mathcal{D}) \leq \rho \}$$. In addition, they consider a Lagrangian relaxation of the objective with fixed regularization parameter $$\lambda>0$$, thus resulting in the following optimization problem.
