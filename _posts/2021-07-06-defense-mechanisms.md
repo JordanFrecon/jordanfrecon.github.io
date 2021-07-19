@@ -16,7 +16,6 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y)\Big].
 $$
 
-<img class="post-img" src="/images/posts/neuralnet.png" alt="Classification based DNN"/>
 
 However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
 
