@@ -17,7 +17,9 @@ $$
 $$
 
 
-However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
+However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. 
+
+To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
 
 By elaborating on these heuristics, a theoretically grounded framework, called *Adversarial Robust Training* and based on robust optimization, has later emerged. There, a worst-case upper-bound of the objective, obtained by perturbing the data input $$x$$ in order to maximize the original loss, is minimized. The resulting training procedure reads (see Section 2)
 
