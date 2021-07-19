@@ -99,13 +99,13 @@ $$
 \end{align}
 $$
 
-with the robust surrogate being the Moreau-Yosida regularization of the original loss, i.e.,
+with the robust majorant surrogate being the Moreau-Yosida regularization of the original loss, i.e.,
 
 $$
 \phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
 $$
 
-where $$c$$ denotes the transport cost.
+where $$c$$ denotes the transport cost. In particular, when $$c$$ is the Euclidean distance, it boils down to the Pasch-Hausdorff envelope.
 
 **ARKS** {% include cite.html id="2021_Zhu_J_arxiv_arks"%}. The *Adversarially Robust Kernel Smoothing* method minimizes the following surrogate loss
 
@@ -118,6 +118,9 @@ where $$\ell^k(\theta;\{x,y\})$$ is the $$k$$-transform of the original loss $$\
 $$
 \ell^k(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \ell(\theta,\{x,y\}) k(\{x,y\},\{x_0,y_0\}).
 $$
+
+One may view *ARKS* with Gaussian RBF kernel as the analog to *WRM* with type-2 Wasserstein distance, Laplacian kernel type-1 WRM, and $$c$$-exponential kernel general *WRM* with transport cost $$c$$. The intuition of ARKS can also be viewed as using smooth kernels to model the distribution shift, then minimize the shifted risk.
+
 
 ## 4. Noise Injection Mechanisms
 
