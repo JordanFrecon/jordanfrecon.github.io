@@ -27,13 +27,19 @@ $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big].
 $$
 
-Now, if we let the family of distribution $$\mathcal{P}=\cup_{\varepsilon\in\mathcal{S}} P_\varepsilon$$ where $$P_\varepsilon=\{ \{x+\varepsilon,y\}\colon \{x,y\}\sim\mathcal{D}\}$$, then
+Now, if we let the family of distribution $$\mathcal{P}=\cup_{\varepsilon\in\mathcal{S}} P_\varepsilon$$ where $$P_\varepsilon=\{ \{x+\varepsilon,y\}\colon \{x,y\}\sim\mathcal{D}\}$$, then a weaker surrogate can be devised since
 
 $$
 \underset{P\in\mathcal{P}}{\sup}\; \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)] \leq \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big]
 $$
 
-More generally, various distribution family $$\mathcal{P}$$ could be used instead, thus leading the class of *Adversarial Distributionally Robust Training* methods (see Section 3).
+More generally, various distribution family $$\mathcal{P}$$ could be used instead, thus leading the class of *Adversarial Distributionally Robust Training* methods (see Section 3), i.e.,
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)].
+$$
+
+Departing from these techniques, one could also consider noise-injection mechanisms (see Section 4) to induce smoothness, regularization techniques (see Section 5) and various other strategies (see Section 6).
 
 ## 1. Adversarial Training
 
