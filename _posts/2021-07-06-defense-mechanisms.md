@@ -119,7 +119,7 @@ $$
 \ell^k(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \ell(\theta,\{x,y\}) k(\{x,y\},\{x_0,y_0\}).
 $$
 
-One may view *ARKS* with Gaussian RBF kernel as the analog to *WRM* with type-2 Wasserstein distance, Laplacian kernel type-1 WRM, and $$c$$-exponential kernel general *WRM* with transport cost $$c$$. The intuition of ARKS can also be viewed as using smooth kernels to model the distribution shift, then minimize the shifted risk.
+One may view *ARKS* with Gaussian RBF kernel as the analog to *WRM* with type-2 Wasserstein distance, Laplacian kernel type-1 WRM, and $$c$$-exponential kernel general *WRM* with transport cost $$c$$. The intuition of *ARKS* can also be viewed as using smooth kernels to model the distribution shift, then minimize the shifted risk.
 
 
 ## 4. Noise Injection Mechanisms
