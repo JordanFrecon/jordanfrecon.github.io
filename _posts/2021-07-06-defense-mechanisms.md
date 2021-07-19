@@ -107,16 +107,16 @@ $$
 
 which contains the transport cost $$c$$.
 
-**ARKS** {% include cite.html id="2021_Zhu_J_arxiv_arks"%}. The *Adversarially Robust Kernel Smoothing* method minimize the following surrogate loss
+**ARKS** {% include cite.html id="2021_Zhu_J_arxiv_arks"%}. The *Adversarially Robust Kernel Smoothing* method minimizes the following surrogate loss
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim \mathcal{D}}{\mathbb{E}}\Big[\ell^k(\theta;\{x,y\})\Big]
 $$
 
-where, $$\ell^k(\theta;\{x,y\})$$ is the $$k$$-transform of the original loss $$\ell(\theta,\{x,y\})=\mathcal{L}(f_\theta(x),y)$$ obtained for the kernel $$k$$, i.e.,
+where $$\ell^k(\theta;\{x,y\})$$ is the $$k$$-transform of the original loss $$\ell(\theta,\{x,y\})=\mathcal{L}(f_\theta(x),y)$$ obtained for some kernel $$k$$, i.e.,
 
 $$
-\ell^k(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \ell(\theta,\{x,y\}) k(\{x,y\},\{x_0,y_0\})
+\ell^k(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \ell(\theta,\{x,y\}) k(\{x,y\},\{x_0,y_0\}).
 $$
 
 ## 4. Noise Injection Mechanisms
