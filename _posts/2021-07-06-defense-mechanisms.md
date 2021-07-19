@@ -84,7 +84,9 @@ and explores two surrogate approximations of the lower-level problem. The first 
 
 Distributionally robust optimization seeks to robustify against unknown distribution shift explicitly. To do so, related methods usually begin by postulating a class $$\mathcal{P}$$ of distributions around the data-generating distribution $$\mathcal{D}$$, and then consider
 
+$$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)]
+$$
 
 
 **WRM** {% include cite.html id="2018_Sinha_A_p-iclr_csdrpatr"%}. The *Wasserstein Robust Method* considers a $$\rho$$-neighborhood of the distribution $$\mathcal{D}$$ under the Wasserstein metric, i.e., $$\mathcal{P} = \{ P\colon W_c(P,\mathcal{D}) \leq \rho \}$$. In addition, they consider a Lagrangian relaxation of the objective with fixed regularization parameter $$\lambda>0$$, thus resulting in the following optimization problem.
