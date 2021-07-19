@@ -92,7 +92,10 @@ $$
 **WRM** {% include cite.html id="2018_Sinha_A_p-iclr_csdrpatr"%}. The *Wasserstein Robust Method* considers a $$\rho$$-neighborhood of the distribution $$\mathcal{D}$$ under the Wasserstein metric, i.e., $$\mathcal{P} = \{ P\colon W_c(P,\mathcal{D}) \leq \rho \}$$. In addition, they consider a Lagrangian relaxation of the objective with fixed regularization parameter $$\lambda>0$$, thus resulting in the following optimization problem.
 
 $$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \left\{ \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)] - \lambda W_c(P,\mathcal{D}) \right\}
+\begin{align}
+&\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \left\{ \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)] - \lambda W_c(P,\mathcal{D}) \right\}\\
+\Leftrightarrow\quad &\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim \mathcal{D}}{\mathbb{E}}[\phi_\lambda(\theta;\{x,y\})]\quad\text{where}\quad \phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
+\end{align}
 $$
 
 
