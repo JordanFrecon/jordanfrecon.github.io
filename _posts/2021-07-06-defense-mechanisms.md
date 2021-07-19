@@ -54,6 +54,9 @@ $$
 The inner maximization problem aims to find an adversarial perturbation of a given data point $$x$$ that achieves a high loss while the goal of the outer minimization problem is to find model parameters so that the adversarial loss given by the inner attack problem is minimized. 
 
 
+> This class of methods is commonly refered to as *Adversarial Training*. In that sense, the techniques reported in Section 1 can been seen as heuristics where adversarial examples are used to approximate the inner-level worst-case objective.
+
+
 **RT** {% include cite.html id="2018_Shaham_U_j-nc_uatilssmro"%}. The *Robust Training* method suggested to replace the lower-objective by a surrogate obtained by linearizing the adversarial loss, i.e.,
 
 $$
