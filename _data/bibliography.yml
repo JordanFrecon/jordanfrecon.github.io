@@ -351,3 +351,10 @@
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: E. Wong and Z. Kolter
   
+- id: 2018_Sinha_A_p-iclr_csdrpatr
+  cite: Sinha et al., 2018
+  year: 2018
+  title: Certifying Some Distributional Robustness with Principled Adversarial Training
+  publication: International Conference on Learning Representations (ICLR)
+  authors: A. Sinha, H. Namkoong, J. Duchi
+  

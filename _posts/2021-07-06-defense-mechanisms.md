@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma,2018_Wong_E_p-icml_pdaecoap]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma,2018_Wong_E_p-icml_pdaecoap,2018_Sinha_A_p-iclr_csdrpatr]
 ---
 
 > In progress
@@ -78,9 +78,26 @@ and explores two surrogate approximations of the lower-level problem. The first 
 
 <img class="post-img" src="/images/posts/2018_Wong_E_p-icml_pdaecoap.png" alt="Non-convex adversarial polytope and its outer convex bound"/>
 
+**SDP** SemiDefinite Program
+
+## 3. Distributionally Robust Optimization with Adversarial Training
+
+Distributionally robust optimization seeks to robustify against unknown distribution shift explicitly. To do so, related methods usually begin by postulating a class $$\mathcal{P}$$ of distributions around the data-generating distribution $$\mathcal{D}$$.
+
+**WRM** {% include cite.html id="2018_Sinha_A_p-iclr_csdrpatr"%}. The *Wasserstein Robust Method* considers a $$\rho$$-neighborhood of the distribution $$\mathcal{D}$$ under the Wasserstein metric, i.e., $$\mathcal{P} = \{ P\colon W_c(P,\mathcal{D}) \leq \rho \}$$.
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \left\{ \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)] - \lambda W_c(P,\mathcal{D}) \right\}
+$$
 
 
-## 3. Noise Injection Mechanisms
+**ARKS** The *Adversarially Robust Kernel Smoothing* method solves the following minimax optimization problem
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\;
+$$
+
+## 4. Noise Injection Mechanisms
 
 
 **RSE** {% include cite.html id="2018_Liu_X_p-eccv_trnnrse"%}. This paper introduces a defense algorithm called *Random Self-Ensemble* which adds a Gaussian *noise layer* before each convolution layer in both training and prediction phases. In practice, at inference time, RSE peforms $$K$$ independent noisy forward pass, each yielding different prediction scores due to the noises, and then ensembles the results, i.e.,
@@ -102,7 +119,7 @@ them to evaluate the level of accuracy under attack of their method.
 
 
 
-## 4. Adversarial Robustness via Explicit Regularization
+## 5. Adversarial Robustness via Explicit Regularization
 
 Let $$q_\theta(x,y)$$ denotes the probability, predicted by the DNN $$f_\theta$$, that $$x$$ belongs to class $$y$$. In most cases, $$f_\theta$$ already outputs probabilities. If not, a soft-max operation can be added in the last layer. In addition, we restrict to the peculiar case where $$\mathcal{L}$$ is the cross-entropy loss (note that in Pytorch, the cross-entropy function includes a soft-max operation). Thus, we have that
 
@@ -136,7 +153,7 @@ $$
 where $$\lambda>0$$ controls the trade-off between natural accuracy and robustness to the adversary.
 
 
-## 5. Other Defenses
+## 6. Other Defenses
 
 **Defensive Distillation** {% include cite.html id="2016_Papernot_N_p-sp_ddapadnn"%}. Distillation is a training procedure initially designed to train a DNN using knowledge transferred from a different DNN. The idea is to train two networks, namely the original network $$f_\theta$$ and the distilled network $$f^{\rm d}_\nu$$ with the same architecture. However, the distilled network is trained on the set $$\{x,f_\theta(x)\}$$ where $$f_\theta(x)$$ is used in place of $$y$$. Such technique seems to prevent models from fitting too  tightly to the data, and contributes to a better generalization around training point.
 
