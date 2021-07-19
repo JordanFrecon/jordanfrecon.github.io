@@ -99,13 +99,13 @@ $$
 \end{align}
 $$
 
-with the robust surrogate
+with the robust surrogate being the Moreau-Yosida regularization of the original loss, i.e.,
 
 $$
 \phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
 $$
 
-which contains the transport cost $$c$$.
+where $$c$$ denotes the transport cost.
 
 **ARKS** {% include cite.html id="2021_Zhu_J_arxiv_arks"%}. The *Adversarially Robust Kernel Smoothing* method minimizes the following surrogate loss
 
