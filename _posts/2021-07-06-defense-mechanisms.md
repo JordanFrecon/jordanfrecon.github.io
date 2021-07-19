@@ -10,14 +10,19 @@ biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p
 
 > In progress
 
-Usually, the parameters $$\theta\in\Theta$$ of a deep neural network (DNN) $$f_\theta$$ are trained by minimizing a loss $$\mathcal{L}$$ on a training set $$\{x,y\}\sim\mathcal{D}$$ as follows
+Usually, the parameters $$\theta\in\Theta$$ of a deep neural network (DNN) $$f_\theta$$ are trained by minimizing a loss $$\mathcal{L}$$ on a training distribution $$\mathcal{D}$$ as follows
 
 $$
-\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y).
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \mathcal{L}(f_\theta(x),y)\Big].
 $$
 
 However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
 
+By elaborating on these heuristics, a theoretically grounded framework, called *Adversarial Robust Training* and based on robust optimization, has later emerged. There, a worst-case upper-bound of the objective, obtained by perturbing the data input $$x$$ in order to maximize the original loss, is minimized. The resulting training procedure reads
+
+$$
+\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}} \Big[ \underset{\varepsilon\in\mathcal{S}}{\max} \mathcal{L}(f_\theta(x+\varepsilon),y)\Big].
+$$
 
 
 ## 1. Adversarial Training
