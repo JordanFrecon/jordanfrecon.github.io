@@ -94,10 +94,15 @@ $$
 $$
 \begin{align}
 &\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{P\in\mathcal{P}}{\sup}\; \left\{ \underset{(x,y)\sim P}{\mathbb{E}}[\mathcal{L}(f_\theta(x),y)] - \lambda W_c(P,\mathcal{D}) \right\}\\
-\Leftrightarrow\quad &\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim \mathcal{D}}{\mathbb{E}}[\phi_\lambda(\theta;\{x,y\})]\quad\text{where}\quad \phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
+\Leftrightarrow\quad &\underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim \mathcal{D}}{\mathbb{E}}\Big[\phi_\lambda(\theta;\{x,y\})\Big]
 \end{align}
 $$
 
+where
+
+$$
+\phi_\lambda(\theta;\{x_0,y_0\}) = \underset{\{x,y\}}{\sup}\; \mathcal{L}(f_\theta(x),y) - \lambda c(\{x,y\},\{x_0,y_0\})
+$$
 
 **ARKS** The *Adversarially Robust Kernel Smoothing* method solves the following minimax optimization problem
 
