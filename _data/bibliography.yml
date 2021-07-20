@@ -364,3 +364,10 @@
   title: Adversarially Robust Kernel Smoothing
   publication: ArXiv
   authors: J.-J. Zhu, C. Kouridi, Y. Nemmour and B. Schölkopf
+  
+- id: 2017_Zantedeschi_V_p-wais_edaa
+  cite: Zantedeschi et al., 2017
+  year: 2017
+  title: Efficient Defenses Against Adversarial Attacks
+  publication: Proceedings of the ACM Workshop on Artificial Intelligence and Security
+  authors: V. Zantedeschi, M.-I. Nicolae and A. Rawat

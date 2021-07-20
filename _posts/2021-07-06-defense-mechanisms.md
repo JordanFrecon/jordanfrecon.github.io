@@ -5,7 +5,7 @@ style: border
 color: success
 description: Presentation of some defense mechanism to train robust neural networks
 comments: true
-biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma,2018_Wong_E_p-icml_pdaecoap,2018_Sinha_A_p-iclr_csdrpatr,2021_Zhu_J_arxiv_arks]
+biblio: [2014_Szegedy_C_p-iclr_ipnn,2015_Goodfellow_I_p-iclr_ehae,2018_Madry_A_p-iclr_tdlmaa,2016_Huang_R_arxiv_lsa,2018_Shaham_U_j-nc_uatilssmro,2020_Araujo_A_arxiv_rnnurat,2018_Liu_X_p-eccv_trnnrse,2018_Komiyama_R_p-iconip_amtraae,2019_He_Z_p-cvpr_pni,2021_Picot_M_arxiv_arfrr,2019_Zhang_H_p-icml_tptora,2020_Phan_H_p-icml_sdpcral,2019_Lecuyer_M_p-sp_craedp,2019_Cohen_J_p-icml_carrs,2016_Papernot_N_p-sp_ddapadnn,2017_Xie_C_p-iclr_maetr,2021_Cappelli_A_arxiv_ardacsg,2020_Wang_Y_p-iclr_iarrrme, 2020_Ding_GW_p-iclr_mma,2018_Wong_E_p-icml_pdaecoap,2018_Sinha_A_p-iclr_csdrpatr,2021_Zhu_J_arxiv_arks,2017_Zantedeschi_V_p-wais_edaa]
 ---
 
 > In progress
@@ -161,6 +161,7 @@ One may view *ARKS* with Gaussian RBF kernel as the analog to *WRM* with type-2 
 
 ## 4. Noise Injection Mechanisms
 
+**GDA** {% include cite.html id="2017_Zantedeschi_V_p-wais_edaa"%}. The *Gaussian Data Augmentation* technique ..
 
 **RSE** {% include cite.html id="2018_Liu_X_p-eccv_trnnrse"%}. This paper introduces a defense algorithm called *Random Self-Ensemble* which adds a Gaussian *noise layer* before each convolution layer in both training and prediction phases. In practice, at inference time, RSE peforms $$K$$ independent noisy forward pass, each yielding different prediction scores due to the noises, and then ensembles the results, i.e.,
 
