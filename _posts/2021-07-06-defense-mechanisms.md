@@ -161,7 +161,7 @@ One may view *ARKS* with Gaussian RBF kernel as the analog to *WRM* with type-2 
 
 ## 4. Noise Injection Mechanisms
 
-**GDA** {% include cite.html id="2017_Zantedeschi_V_p-wais_edaa"%}. The *Gaussian Data Augmentation* technique encourage the model to predict the same label for any input $$x$$ and its slightly perturbed versions obtained by adding random Gaussian noise. To do so, the authors consider the following optimization problem
+**GDA** {% include cite.html id="2017_Zantedeschi_V_p-wais_edaa"%}. The *Gaussian Data Augmentation* technique encourages the model to predict the same label for any input $$x$$ and its slightly perturbed versions obtained by adding random Gaussian noise. To do so, the authors consider the following optimization problem
 
 $$
 \underset{\theta\in\Theta}{\mathrm{minimize}}\; \underset{(x,y)\sim\mathcal{D}}{\mathbb{E}}\; \underset{\varepsilon\sim\mathcal{N}(0,\sigma^2)}{\mathbb{E}}\; \mathcal{L}(f_\theta(x+\varepsilon),y)
