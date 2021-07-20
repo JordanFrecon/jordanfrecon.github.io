@@ -371,3 +371,10 @@
   title: Efficient Defenses Against Adversarial Attacks
   publication: Proceedings of the ACM Workshop on Artificial Intelligence and Security
   authors: V. Zantedeschi, M.-I. Nicolae and A. Rawat
+  
+- id: 2019_Finlay_C_p-iccv_laa
+  cite: Finlay et al., 2019
+  year: 2019
+  title: The logbarrier adversarial attack - making effective use of decision boundary information
+  publication: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)
+  authors: C. Finlay, A.-A. Pooladian and A. Oberman

@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa]
 ---
 
 > In progress
@@ -103,8 +103,11 @@ $$
 
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
 
+**LogBarrier** {% include cite.html id="2019_Finlay_C_p-iccv_laa"%}. Let $$k=C_f(x)$$ be the predicted target of $$x$$ by the DNN $$f$$. If it is well trained then it should correspond to $$y$$. 
 
-
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \ell(\varepsilon) - \lambda \log\left( \max_{i\neq k} f_i(x+\varepsilon) - f_k(x+\varepsilon)\right)
+$$
 
 ## 4. Universal and semi-universal attacks
 
