@@ -103,7 +103,7 @@ $$
 
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
 
-**LogBarrier** {% include cite.html id="2019_Finlay_C_p-iccv_laa"%}. Let $$k=C_f(x)$$ be the predicted target of $$x$$ by the DNN $$f$$. If it is well trained then it should correspond to $$y$$. 
+**LogBarrier** {% include cite.html id="2019_Finlay_C_p-iccv_laa"%}. Let $$k=C_f(x)$$ be the predicted target of $$x$$ by the DNN $$f$$. If it is well trained then it should correspond to $$y$$. Thus, a necessary and sufficient condition for misclassification is to have $$\max_{i\neq k} f_i(x+\varepsilon) - f_k(x+\varepsilon)>0$$. In order to enforce the later constraint, one can consider a negative logarithm penalty (i.e., a logarithmic barrier) weighted by a regularization parameter $$\lambda>0$$. The resulting problem reads
 
 $$
 \underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \ell(\varepsilon) - \lambda \log\left( \max_{i\neq k} f_i(x+\varepsilon) - f_k(x+\varepsilon)\right)
