@@ -45,6 +45,8 @@ Departing from these techniques, one could also consider noise-injection mechani
 
 The idea of adversarial training relies in also training the neural network model on adversarial examples in order to correctly predict their label.
 
+> Such type of techniques is also commonly called *Adversarial Retraining* in order to further contrast with the methods discussed in the next section.
+
 **AT** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%}. This work first showed that by training a neural network $$f_\theta$$ on a mixture of clean and adversarial examples, then $$f_\theta$$ can be somewhat regularized. The corresponding training procedures amounts in solving
 
 $$
