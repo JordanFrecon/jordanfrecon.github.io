@@ -378,3 +378,11 @@
   title: The logbarrier adversarial attack - making effective use of decision boundary information
   publication: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)
   authors: C. Finlay, A.-A. Pooladian and A. Oberman
+  
+- id: 2020_Croce_F_p-icml_rearedpfa
+  cite: Croce and Hein, 2020
+  year: 2020
+  title: Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: F. Croce and M. Hein
+  
