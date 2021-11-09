@@ -435,3 +435,9 @@
   publication: Advances in Neural Information Processing Systems
   authors: S. Sra
   
+- id: 2017_Bonettini_S_j-ip_clbpgmno
+  cite: Bonettini et al., 2017
+  year: 2017
+  title: On the convergence of a linesearch based proximal-gradient method for nonconvex optimization
+  publication: Journal of Inverse Problems
+  authors: S. Bonettini, I. Loris, F. Porta, M. Prato and S. Rebegoldi
