@@ -428,3 +428,10 @@
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: S. Reddi, S. Sra, B. Poczos and A. Smola
   
+- id: 2012_Sra_S_p-nips_snips
+  cite: Sra, 2012
+  year: 2012
+  title: Scalable nonconvex inexact proximal splitting
+  publication: Advances in Neural Information Processing Systems
+  authors: S. Sra
+  
