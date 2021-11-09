@@ -441,3 +441,10 @@
   title: On the convergence of a linesearch based proximal-gradient method for nonconvex optimization
   publication: Journal of Inverse Problems
   authors: S. Bonettini, I. Loris, F. Porta, M. Prato and S. Rebegoldi
+  
+- id: 2019_Peng_W_j-ota_npiagmlc
+  cite: Peng et al., 2019
+  year: 2019
+  title: Nonconvex proximal incremental aggregated gradient method with linear convergence
+  publication: Journal of Optimization Theory and Applications
+  authors: W. Peng, H. Zhang and X. Zhang
