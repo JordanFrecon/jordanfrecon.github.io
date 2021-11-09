@@ -51,7 +51,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structur
 
 **PAM** {% include cite.html id="2010_Attouch_H_j-mor_pam"%}. The *Proximal Alternating Minimization* method
 
-$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \underset{x\in\mathbb{R}^{m_1}}{\mathrm{argmin}}\; \mathcal{L}(x,y_k) + \frac{1}{2\gamma_{1,k}} \| x - x_k \|^2\\
@@ -71,7 +71,7 @@ $$
 
 This results in the following PALM's iterations:
 
-$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( x_k - \gamma_{1,k} \nabla_x F(x_k,y_k) \right)\\
@@ -81,7 +81,7 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	
 **iPALM** {% include cite.html id="2016_Pock_T_j-is_ipalm"%}.
 
-$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	\tilde{x}_{k} = x_k + \alpha_{1,k}( x_k - x_{k-1})\\
@@ -94,7 +94,7 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	
 **GiPALM** {% include cite.html id="2019_Gao_X_j-go_gsipalmnop"%}. The *Gauss-Seidel type iPALM* ... 
 
-$$ (\bar{x}_0,\bar{y}_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+$$ (\bar{x}_0,\bar{y}_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( \bar{x}_k - \gamma_{1,k} \nabla_x F(\bar{x}_k,\bar{y}_k) \right)\\
@@ -105,7 +105,7 @@ $$ (\bar{x}_0,\bar{y}_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 
 **SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates formed using the gradients estimated on mini-batches.
 
-$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( x_k - \gamma_{1,k} \tilde{\nabla}_x F(x_k,y_k) \right)\\
