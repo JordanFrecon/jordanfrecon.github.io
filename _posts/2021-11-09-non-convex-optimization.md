@@ -13,6 +13,19 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 
 ## 1. Generic Optimization Problem
 
+We consider the following generic optimization problem
+
+$$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq J(x) + F(x) \right\} $$
+
+
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
+
+
+**ProxSVRG** {% include cite.html id=""%}
+
+
+**ProxSAGA** {% include cite.html id=""%}
+
 
 ## 2. Block-Structured Optimization Problem
 
@@ -31,9 +44,6 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structur
 " %}
 
 > No convexity assunption is imposed on any of the functions $$J$$, $$F_i$$, $$R$$. 
-
-
-### 2.1. Full-batch Algorithms
 
 
 **PAM** {% include cite.html id="2010_Attouch_H_j-mor_pam"%}. The *Proximal Alternating Minimization* method
@@ -68,7 +78,6 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	
 **iPALM** {% include cite.html id="2016_Pock_T_j-is_ipalm"%}.
 
-### 2.2. Mini-batch Algorithms
 
 **SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates formed using the gradients estimated on mini-batches.
 
