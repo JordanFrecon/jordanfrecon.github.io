@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for non-convex optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso]
 ---
 
 > In progress
@@ -21,10 +21,10 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
 
 
-**ProxSVRG** {% include cite.html id=""%}
+**ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}
 
 
-**ProxSAGA** {% include cite.html id=""%}
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}
 
 
 ## 2. Block-Structured Optimization Problem

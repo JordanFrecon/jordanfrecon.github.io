@@ -420,3 +420,11 @@
   title: Inertial Proximal Alternating Linearized Minimization (iPALM) for Nonconvex and Nonsmooth Problems
   publication: SIAM Journal on Imaging Sciences
   authors: T. Pock and S. Sabach
+  
+- id: 2016_Reddi_J_p-nips_psmnnfso
+  cite: Reddi et al., 2016
+  year: 2016
+  title: Proximal Stochastic Methods for Nonsmooth Nonconvex Finite-Sum Optimization
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: S. Reddi, S. Sra, B. Poczos and A. Smola
+  
