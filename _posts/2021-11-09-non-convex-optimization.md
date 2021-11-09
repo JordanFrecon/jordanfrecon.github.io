@@ -56,10 +56,11 @@ $$
 
 This results in the following PALM's iterations:
 
-$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_{k+1} \in {\mathrm{prox}_{\gamma_{1,k} J}\; \left( x_k - \gamma_{1,k} \nabla_x F(x_k,y_k) \right)\\
-	y_{k+1} \in {\mathrm{prox}_{\gamma_{2,k} R}\; \left( y_k - \gamma_{2,k} \nabla_y F(x_{k+1},y_k) \right)
+    x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( x_k - \gamma_{1,k} \nabla_x F(x_k,y_k) \right)\\
+	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( y_k - \gamma_{2,k} \nabla_y F(x_{k+1},y_k) \right)
     \end{array}\right.$$
+
 
