@@ -408,9 +408,16 @@
   authors: H. Attouch, J. Bolte, P. Redont and A. Soubeyran
   
 - id: 2021_Driggs_D_arxiv_spring
-  cite: Driggs et al, 2021
+  cite: Driggs et al., 2021
   year: 2021
   title: SPRING - A fast stochastic proximal alternating method for non-smooth non-convex optimization
   publication: ArXiv preprint
   authors: D. Driggs, J. Tanq, J. Liang, M. Davies and C.-B. Schönlieb
+  
+- id: 2016_Pock_T_j-is_ipalm
+  cite: Pock and Sabach, 2016
+  year: 2016
+  title: Inertial Proximal Alternating Linearized Minimization ({iPALM}) for Nonconvex and Nonsmooth Problems
+  publication: {SIAM} Journal on Imaging Sciences
+  authors: T. Pock and S. Sabach
   
