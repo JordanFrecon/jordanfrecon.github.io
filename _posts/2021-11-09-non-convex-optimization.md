@@ -80,7 +80,16 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	
 	
 **iPALM** {% include cite.html id="2016_Pock_T_j-is_ipalm"%}.
-
+$$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	\tilde{x}_{k} = x_k + \alpha_{1,k}( x_k - x_{k-1})\\
+	\bar{x}_k = x_k + \beta_{1,k}(x_k - x_{k-1})\\
+    x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( \tilde{x}_k - \gamma_{1,k} \nabla_x F(\bar{x|_k,y_k) \right)\\
+	\tilde{y}_{k} = y_k + \alpha_{2,k}( y_k - y_{k-1})\\
+	\bar{y}_k = y_k + \beta_{2,k}(y_k - y_{k-1})\\
+	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( \tilde{y}_k - \gamma_{2,k} \nabla_y F(x_{k+1},\bar{y}_k) \right)
+    \end{array}\right.$$
 
 **SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates formed using the gradients estimated on mini-batches.
 
