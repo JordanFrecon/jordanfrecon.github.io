@@ -417,7 +417,6 @@
 - id: 2016_Pock_T_j-is_ipalm
   cite: Pock and Sabach, 2016
   year: 2016
-  title: Inertial Proximal Alternating Linearized Minimization ({iPALM}) for Nonconvex and Nonsmooth Problems
-  publication: {SIAM} Journal on Imaging Sciences
+  title: Inertial Proximal Alternating Linearized Minimization (iPALM) for Nonconvex and Nonsmooth Problems
+  publication: SIAM Journal on Imaging Sciences
   authors: T. Pock and S. Sabach
-
