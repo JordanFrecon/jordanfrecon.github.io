@@ -11,9 +11,12 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 > In progress
 
 
-## 1. Optimization problem
+## 1. Generic Optimization Problem
 
-We consider the following generic optimization problem
+
+## 2. Block-Structured Optimization Problem
+
+We consider the following block-structured optimization problem
 
 $$ \underset{x\in\mathbb{R}^{m_1}, y\in\mathbb{R}^{m_2}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x,y) \triangleq J(x) + F(x,y) + R(y) \right\} $$
 
@@ -21,7 +24,7 @@ $$ \underset{x\in\mathbb{R}^{m_1}, y\in\mathbb{R}^{m_2}}{\mathrm{minimize}}\; \l
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structure, and functions $$J$$ and $$R$$ are possibly non-smooth functions.
 
 
-{% include definition.html title="Assumptions" content="Throughout this post, we consider the following assumptions.
+{% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
 - $$J\colon \mathbb{R}^{m_1} \to \mathbb{R}\cup \{+\infty\}$$ and $$R\colon \mathbb{R}^{m_1} \to \mathbb{R}\cup \{+\infty\}$$ are proper lower semi-continuous functions that are bounded from below. 
 - $$F_i\colon \mathbb{R}^{m_1} \times \mathbb{R}^{m_2} \to \mathbb{R}$$ are finite-valued, differentiable and their gradients are $$M$$-Lipschitz continuous on bounded sets of $$\mathbb{R}^{m_1} \times \mathbb{R}^{m_2}$$.
 - The objective $$\mathcal{L}$$ is bounded from below.
@@ -30,7 +33,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structur
 > No convexity assunption is imposed on any of the functions $$J$$, $$F_i$$, $$R$$. 
 
 
-## 2. Full-batch Algorithms
+### 2.1. Full-batch Algorithms
 
 
 **PAM** {% include cite.html id="2010_Attouch_H_j-mor_pam"%}. The *Proximal Alternating Minimization* method
@@ -65,7 +68,7 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	
 **iPALM** {% include cite.html id="2016_Pock_T_j-is_ipalm"%}.
 
-## Mini-batch Algorithms
+### 2.2. Mini-batch Algorithms
 
 **SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates formed using the gradients estimated on mini-batches.
 
