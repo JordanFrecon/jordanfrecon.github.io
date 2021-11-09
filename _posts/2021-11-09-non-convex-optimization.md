@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for non-convex optimization
 comments: true
-biblio: []
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2021_Driggs_D_arxiv_spring]
 ---
 
 > In progress
@@ -31,10 +31,10 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x,y)$$ has a finite-sum structur
 > No convexity assunption is imposed on any of the functions $$J$$, $$F_i$$, $$R$$. 
 
 
-## 2. Algorithm
+## 2. Full-batch Algorithms
 
 
-**PAM** {% include cite.html id=""%} The *Proximal Alternating Minimization* method
+**PAM** {% include cite.html id="2010_Attouch_H_j-mor_pam"%} The *Proximal Alternating Minimization* method
 
 $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -43,7 +43,7 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	y_{k+1} \in \underset{y\in\mathbb{R}^{m_2}}{\mathrm{argmin}}\; \mathcal{L}(x_{k+1},y) + \frac{1}{2\gamma_{2,k}} \| y - y_k \|^2
     \end{array}\right.$$
 
-**PALM** {% include cite.html id=""%} The *Proximal Alternating Linearized Minimization* method circumvent the limitation of PAM by replacing the subproblems with their proximal linearizations :
+**PALM** {% include cite.html id="2013_Bolte_J_j-mp_palmnnp"%} The *Proximal Alternating Linearized Minimization* method circumvent the limitation of PAM by replacing the subproblems with their proximal linearizations :
 
 $$
 \begin{align}
@@ -63,4 +63,7 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( y_k - \gamma_{2,k} \nabla_y F(x_{k+1},y_k) \right)
     \end{array}\right.$$
 
+## Mini-batch Algorithms
+
+**SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%} The *Stochastic PRoximal alternatING linearized minimization* algorithm ...
 

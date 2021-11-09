@@ -393,3 +393,24 @@
   publication: IEEE Transactions on Image Processing
   authors: Y. Zhang, X. Tian, Y. Li, X. Wang and D. Tao
   
+- id: 2013_Bolte_J_j-mp_palmnnp
+  cite: Bolte et al., 2013
+  year: 2013
+  title: Proximal alternating linearized minimization for nonconvex and nonsmooth problems
+  publication: Mathematical Programming
+  authors: J. Bolte, S. Sabach and M. Teboulle
+  
+- id: 2010_Attouch_H_j-mor_pam
+  cite: Attouch et al., 2010
+  year: 2010
+  title: Proximal alternating minimization and projection methods for nonconvex problems - An approach based on the Kurdyka-{\L}ojasiewicz inequality
+  publication: Mathematics of Operations Research
+  authors: H. Attouch, J. Bolte, P. Redont and A. Soubeyran
+  
+- id: 2021_Driggs_D_arxiv_spring
+  cite: Driggs et al, 2021
+  year: 2021
+  title: SPRING - A fast stochastic proximal alternating method for non-smooth non-convex optimization
+  publication: ArXiv preprint
+  authors: D. Driggs, J. Tanq, J. Liang, M. Davies and C.-B. Schönlieb
+  
