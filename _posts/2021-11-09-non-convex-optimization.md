@@ -97,9 +97,9 @@ $$ (x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
 $$ (\bar{x}_0,\bar{y}_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( \bar{x}_k - \gamma_{1,k} \nabla_x F(\bar{x}_k,y_k) \right)\\
+    x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( \bar{x}_k - \gamma_{1,k} \nabla_x F(\bar{x}_k,\bar{y}_k) \right)\\
 	\bar{x}_{k+1} = x_{k+1} + \rho_{1,k}(x_{k+1} - x_{k})\\
-	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( \bar{y}_k - \gamma_{2,k} \nabla_y F(x_{k+1},\bar{y}_k) \right)\\
+	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( \bar{y}_k - \gamma_{2,k} \nabla_y F(\bar{x}_{k+1},\bar{y}_k) \right)\\
 	\bar{y}_{k+1} = y_{k+1} + \rho_{2,k}(y_{k+1} - y_{k})\\
     \end{array}\right.$$
 
