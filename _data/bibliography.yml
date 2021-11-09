@@ -448,3 +448,10 @@
   title: Nonconvex proximal incremental aggregated gradient method with linear convergence
   publication: Journal of Optimization Theory and Applications
   authors: W. Peng, H. Zhang and X. Zhang
+  
+- id: 2019_Gao_X_j-go_gsipalmnop
+  cite: Gao et al., 2019
+  year: 2019
+  title: A Gauss-Seidel type inertial proximal alternating linearized minimization for a class of nonconvex optimization problems
+  publication: Journal of Global Optimization
+  authors: X. Gao, X. Cai and D. Han
