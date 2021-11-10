@@ -51,7 +51,7 @@ $$ x_0\in\mathbb{R}^{m}\
 $$ x_0\in\mathbb{R}^{m}\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-	\text{Uniformly pick batches $$I_k$$ and $$J_k$$ (with replacement) of size $$b$$}\\
+	\text{Uniformly pick batches } I_k \text{ and } J_k \text{ (with replacement) of size } b\\
     \end{array}\right.$$
 
 **VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
