@@ -469,3 +469,10 @@
   title: Adaptivity of stochastic gradient methods for nonconvex optimization
   publication: Annual Workshop on Optimization for Machine Learning (OPT)
   authors: S. Horváth, L. Lei, P. Richtárik and M.I. Jordan
+  
+- id: 2018_Zaheer_M_p-nips_amno
+  cite: Zaheer et al., 2018
+  year: 2018
+  title: Adaptive Methods for Nonconvex Optimization
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: M. Zaheer, S. Reddi, D. Sachan, S. Kale and S. Kumar
