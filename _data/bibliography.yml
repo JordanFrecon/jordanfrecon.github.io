@@ -463,3 +463,9 @@
   publication: Annual Allerton Conference on Communication, Control, and Computing
   authors: S. Reddi, S. Sra, B. Poczos and A. Smola
   
+- id: 2020_Hovath_S_w-opt_asgmno
+  cite: Hovath et al., 2020
+  year: 2020
+  title: Adaptivity of stochastic gradient methods for nonconvex optimization
+  publication: Annual Workshop on Optimization for Machine Learning (OPT)
+  authors: S. Horváth, L. Lei, P. Richtárik and M.I. Jordan
