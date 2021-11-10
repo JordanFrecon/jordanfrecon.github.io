@@ -455,3 +455,11 @@
   title: A Gauss-Seidel type inertial proximal alternating linearized minimization for a class of nonconvex optimization problems
   publication: Journal of Global Optimization
   authors: X. Gao, X. Cai and D. Han
+  
+- id: 2016_Reddi_S_p_allerton_sfmno
+  cite: Reddi et al., 2016
+  year: 2016
+  title: Stochastic Frank-Wolfe methods for nonconvex optimization
+  publication: Annual Allerton Conference on Communication, Control, and Computing
+  authors: S. Reddi, S. Sra, B. Poczos and A. Smola
+  

@@ -5,13 +5,23 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for non-convex optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2016_Reddi_S_p_allerton_sfmno]
 ---
 
-> In progress
+> In progress. Upcoming: convergence results and comparisons
 
 
-## 1. Generic Optimization Problem
+## 1. Constrained Smooth Optimization Problem
+
+We consider peculiar optimization problems of the form
+
+$$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) $$
+
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
+
+**SFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}.
+
+## 2. Generic Optimization Problem
 
 We consider the following generic optimization problem
 
@@ -36,7 +46,7 @@ $$ x_0\in\mathbb{R}^{m}\
 
 **PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}
 
-## 2. Block-Structured Optimization Problem
+## 3. Block-Structured Optimization Problem
 
 We consider the following block-structured optimization problem
 
