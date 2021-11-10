@@ -53,6 +53,7 @@ $$ x_0\in\mathbb{R}^{m}\
     \left\lfloor\begin{array}{l}
 	\text{Uniformly pick batches } I_k \text{ and } J_k \text{ (with replacement) of size } b\\
 	\bar{g}_k = \tilde{g}_k + \frac{1}{b}\sum_{i_k\in I_k} ( \nabla F_{i_k}(x_k) - \nabla F_{i_k}(\bar{x}_{k,i_k}))\\
+	x_{k+1} \in \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma \bar{g}_k\right)\\
     \end{array}\right.$$
 
 **VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
