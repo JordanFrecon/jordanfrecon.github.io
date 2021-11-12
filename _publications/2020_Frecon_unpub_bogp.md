@@ -3,7 +3,7 @@ layout: publication
 title: Bilevel Optimization of Groupwise Penalties
 authors: J. Frecon, S. Salzo, and M. Pontil
 publication: Unpublished
-year: 2020
+year: 2021
 doi:
 type: unpublished
 project: hyperparamOpt
