@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Semi-universal lp-adversarial attacks
-authors: J. Frecon, L. Anquetil, Y. Liu, G. Gasso and M. Pontil
+authors: J. Frecon, L. Anquetil, Y. Liu, G. Gasso and S. Canu
 publication: Unpublished
 year: 2021
 doi:
