@@ -30,7 +30,7 @@ $$ \begin{array}{l}
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
 		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
-		v^{(m)}_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m)}) - f_i(\tilde{x}_k) + \tilde{g}_k\right)\\
+		v^{(m)}_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m)}) - f_i(\tilde{x}_k) + \tilde{g}_k\right)\rangle\\
 		d_{k+1}^{(m)} = v_{k+1}^{(m)} - x_{k+1}^{(m)}\\
 		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} + \gamma_k d_{k+1}^{(m)}
 		\end{array}\right.
