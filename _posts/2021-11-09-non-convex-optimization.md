@@ -21,7 +21,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure 
 
 **SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. The *Stochastic Variance reduced Frank-Wolf* algorithm ...
 
-$$ x_0^{(M)}\in\Omega\
+$$ x_0^{(M)}\in\Omega\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     \tilde{x}_{k} = x_k^{(M)}\\
