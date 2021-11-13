@@ -21,7 +21,11 @@ and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
 ### 1.1. Stochastic setting
 
+We begin by presenting some exponential moving average based adaptive methods, which are very popular in the deep learning
+community.
+
 **ADAM** {% include cite.html id="2015_Kingma_D_p-iclr_adam"%}.
+
 $$
 \begin{array}{l}
 	x_0\in\mathbb{R}^{m}\\
