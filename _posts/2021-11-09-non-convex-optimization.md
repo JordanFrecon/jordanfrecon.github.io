@@ -19,7 +19,8 @@ $$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) $$
 
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
-**SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}.
+**SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}. As such, it is also epoch-based. At the end of each epoch, the full gradient is computed at the
+current iterate. This gradient is used for controlling the variance of the stochastic gradients in the inner loop.
 
 $$ \begin{array}{l}
 	x_0^{(M)}\in\Omega\\
