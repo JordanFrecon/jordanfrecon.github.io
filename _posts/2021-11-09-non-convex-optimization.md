@@ -15,9 +15,9 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 
 We consider peculiar optimization problems of the form
 
-$$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) $$
+$$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) \quad\text{with either}\quad \begin{cases} F(x)\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x) \quad \text{(finite-sum)}\\[0.4ex] F(x) \triangleq \mathbb{E}_{s\sim\mathbb{P}}\left[ f(x,s)\right]\quad \text{(stochastic)}\end{cases}$$
 
-where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
+and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
 **SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}. As such, it is also epoch-based. At the end of each epoch, the full gradient is computed at the
 current iterate. This gradient is used for controlling the variance of the stochastic gradients in the inner loop.
@@ -37,7 +37,7 @@ $$ \begin{array}{l}
     \end{array}\right.
 	\end{array}$$
 
-**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}.
+**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add.
 
 **Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}.
 
