@@ -483,3 +483,10 @@
   title: Variance-Reduced and Projection-Free Stochastic Optimization
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: E. Hazan and H. Luo
+  
+- id: 2015_Kingma_D_p-iclr_adam
+  cite: Kingma and Ba, 2015
+  year: 2015
+  title: Adam - A Method for Stochastic Optimization
+  publication: International Conference on Learning Representations (ICLR)
+  authors: D.P. Kingma and J. Ba
