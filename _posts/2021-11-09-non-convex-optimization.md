@@ -23,6 +23,18 @@ and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
 **YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add.
 
+$$
+\begin{array}{l}
+	x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	\text{Draw a sample } s_k \text{ from } \mathbb{P}\\
+	g_k = \nabla f(x_k,s_k)\\
+	m_k = \beta_1 m_{k-1} + (1-\beta_1) g_k\\
+	v_{k+1} = v_{k} - (1-\beta_2) \mathrm{sign}(v_k - g_k^2) g_k^2\\
+	x_{k+1} = x_k - \gamma_k \frac{m_k}{\sqrt{v_k} + \epsilon}
+    \end{array}\right.
+\end{array}$$
 
 
 ### 1.1. Finite-sum setting
