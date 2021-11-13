@@ -56,11 +56,14 @@ $$
 \end{array}$$
 
 
+We now turn to the general case where $$\Omega\subseteq\mathbb{R}^m$$.
+
 **SFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. The *Stochastic Frank-Wolf* algorithm ...
 
 $$ \begin{array}{l}
 	x_0^{(M)}\in\Omega\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
     	\text{Uniformly randomly pick samples} \{s_1,\ldots,s_{b_k}\} \text{ according to } \mathcal{P}\\
 		v_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_k}\sum_{i=1}^{b_k} \nabla f(x_k, s_i)\rangle\\
 		x_{k+1} = x_{k} + \rho_k (v_{k+1} - x_k)
