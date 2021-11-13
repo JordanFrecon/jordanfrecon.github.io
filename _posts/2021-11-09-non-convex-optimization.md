@@ -25,7 +25,7 @@ $$ x_0^{(M)}\in\Omega\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     \tilde{x}_{k} = x_k^{(M)}\\
-	\tilde{g}_k = \nabla F(\tilde{x}_k) = \frac{1}{n}\sum_{i=1}^n f(\tilde{x}_k)
+	\tilde{g}_k = \nabla F(\tilde{x}_k) = \frac{1}{n}\sum_{i=1}^n f(\tilde{x}_k)\\
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
 		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
