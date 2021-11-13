@@ -19,6 +19,14 @@ $$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) \quad\text{with either}\quad
 
 and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
+### 1.1. Stochastic setting
+
+**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add.
+
+
+
+### 1.1. Finite-sum setting
+
 **SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}. As such, it is also epoch-based. At the end of each epoch, the full gradient is computed at the
 current iterate. This gradient is used for controlling the variance of the stochastic gradients in the inner loop.
 
@@ -36,8 +44,6 @@ $$ \begin{array}{l}
 		\end{array}\right.
     \end{array}\right.
 	\end{array}$$
-
-**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add.
 
 **Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}.
 
