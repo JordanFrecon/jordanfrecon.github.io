@@ -56,6 +56,18 @@ $$
 \end{array}$$
 
 
+**SFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. The *Stochastic Frank-Wolf* algorithm ...
+
+$$ \begin{array}{l}
+	x_0^{(M)}\in\Omega\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    	\text{Uniformly randomly pick samples} \{s_1,\ldots,s_{b_k}\} \text{ according to } \mathcal{P}\\
+		v_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_k}\sum_{i=1}^{b_k} \nabla f(x_k, s_i)\rangle\\
+		x_{k+1} = x_{k} + \rho_k (v_{k+1} - x_k)
+    \end{array}\right.
+	\end{array}$$
+
+
 ### 1.1. Finite-sum setting
 
 **SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}. As such, it is also epoch-based. At the end of each epoch, the full gradient is computed at the
