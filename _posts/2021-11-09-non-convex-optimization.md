@@ -39,7 +39,8 @@ $$
     \end{array}\right.
 \end{array}$$
 
-**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add. It is a slight variant of ADAM where the magnitude of the difference of $$v_{k+1}$$ and $$v_k$$ in YOGI only depends on $$g_k^2$$ as opposed to dependence on both $$v_k$$ and $$g_k^2$$.
+**YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add. It is a slight variant of ADAM where the magnitude of the difference of $$v_{k+1}$$ and $$v_k$$ in YOGI only depends on $$g_k^2$$ as opposed to dependence on both $$v_k$$ and $$g_k^2$$. Henceforth, when $$v_k$$ is much larger than $$g_k^2$$, ADAM can rapidly increase the
+effective learning rate while YOGI does it in a controlled fashion.
 
 $$
 \begin{array}{l}
