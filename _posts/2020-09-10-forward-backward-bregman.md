@@ -12,7 +12,7 @@ biblio: [2017_Bauschke_H_j-mor_dlblgc,2017_VanNguyen_Q_j-vjm_fbsbd]
 For this first post, I have chosen to shortly introduce the forward-backward algorithm with Bregman distances.
 
 
-The forward-backward algorithm is widely used first order method to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. More formally, a continously differentiable function $$f$$ is $$\mu$$-smooth if
+The forward-backward algorithm is a widely used first order method to minimize the sum of two convex functions where one of them is smooth whereas the other one is non-smooth but has a simple proximity operator. The smoothness property is usually intended as the Lipschitz continuous gradient condition which intuitively states that the gradient is limited in how fast it can change. More formally, a continously differentiable function $$f$$ is $$\mu$$-smooth if
 
 $$
 (\forall x,z)\; \| \nabla f(x) - \nabla f(z) \| \leq \mu \| x - z\|. 
