@@ -27,14 +27,14 @@
   title: Learning Task Grouping and Overlap in Multi-Task Learning
   year: 2012
   authors: A. Kumar and H. Daumé
-  publication: Proceedings of the International Conference on International Conference on Machine Learning (ICML)
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
 
 - id: 2013_Maurer_A_p-icml_scmtl
   cite: "Maurer et al., 2013"
   title: Sparse Coding for Multitask and Transfer Learning
   authors: A. Maurer, M. Pontil and B. Romera-Paredes
   year: 2013
-  publication: Proceedings of the International Conference on International Conference on Machine Learning (ICML)
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
 
 - id: 2015_Barzilai_A_p-aistats_cmtl
   cite: "Barzilai and Crammer, 2015"
@@ -476,3 +476,10 @@
   title: Adaptive Methods for Nonconvex Optimization
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: M. Zaheer, S. Reddi, D. Sachan, S. Kale and S. Kumar
+  
+- id: 2016_Hazan_E_p-icml_vrpfso
+  cite: Hazan and Luo, 2016
+  year: 2016
+  title: Variance-Reduced and Projection-Free Stochastic Optimization
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: E. Hazan and H. Luo
