@@ -1,6 +1,6 @@
 ---
-title: Nonconvex Composite Optimization
-tags: [Non-convex, Optimization]
+title: Nonsmooth Nonconvex Composite Optimization
+tags: [Nonconvex, Nonsmooth, Optimization]
 style: fill
 color: info
 description: Presentation of efficient proximal solvers for nonconvex composite optimization

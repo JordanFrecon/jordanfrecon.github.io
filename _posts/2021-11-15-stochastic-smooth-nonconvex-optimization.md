@@ -1,6 +1,6 @@
 ---
 title: Stochastic Smooth Nonconvex Optimization
-tags: [Nonconvex, Optimization]
+tags: [Nonconvex, Smooth, Optimization]
 style: fill
 color: info
 description: Quick tour of recent stochastic algorithms for smooth nonconvex optimization
