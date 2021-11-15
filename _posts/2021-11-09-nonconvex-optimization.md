@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for nonconvex composite optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr,2020_Pham_N_j-mlr_proxsarah,2021_Metel_M_j-mlr_spmnncso]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr,2020_Pham_N_j-mlr_proxsarah,2021_Metel_M_j-mlr_spmnncso,2014_Defazio_A_p-nips_saga]
 ---
 
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
@@ -59,7 +59,7 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. 
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]

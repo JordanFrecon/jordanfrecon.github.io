@@ -553,3 +553,10 @@
   title: Stochastic Proximal Methods for Non-Smooth Non-Convex Constrained Sparse Optimization
   publication: Journal of Machine Learning Research (JMLR)
   authors: M.R. Metel and A. Takeda
+  
+- id: 2014_Defazio_A_p-nips_saga
+  cite: Defazio et al., 2014
+  year: 2014
+  title: SAGA - A Fast Incremental Gradient Method With Support for Non-Strongly Convex Composite Objectives
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: A. Defazio, F. Bach and S. Lacoste-Julien
