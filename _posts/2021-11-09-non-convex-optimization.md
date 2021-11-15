@@ -58,20 +58,21 @@ $$
     \end{array}\right.
 \end{array}$$
 
-**Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}. The *Geometrized stochastic recursive gradient* method, called *Geom-SARAH* is a double-loop procedure which can be seen as a combination of the SCSG method and the SARAH biased gradient estimator. Note that the *geometric distribution* $$Geom$$ is mainly used to simplify the analysis of the algorithm.
+**Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}. The *Geometrized stochastic recursive gradient* method, called *Geom-SARAH*, is a double-loop procedure which can be seen as a combination of the SCSG method and the SARAH biased gradient estimator. Note that, it exploits a randomization technique based on the
+*geometric distribution* which allows certain terms to telescope across the outer loop and the inner loop, hence simplifying the analysis of the algorithm.
 
 $$ \begin{array}{l}
 	x_0^{(M)}\in\Omega\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1}^{(0)} = \tilde{x}_{k}\\
-	\text{Sample a batch } J_k \text{ (with replacement) of size } b_k\\
+	\text{Sample a batch } J_k \text{ of size } b_k\\
 	v_{k+1}^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_{k+1}^{(0)})\\
 	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\quad\mathbb{E} M_k = m_k/b_k\\
 		\text{for}\;m=0,1,\ldots,M_k-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
 		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} - \gamma_k v_{k+1}^{(m)}\\
-		\text{Sample a batch } I_m \text{ (with replacement) of size } \tilde{b}_m\\
+		\text{Sample a batch } I_m \text{ of size } \tilde{b}_m\\
 		v^{(m+1)}_{k+1} = \frac{1}{\tilde{b}_m}\sum_{i\in I_m}\left( \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)})\right) + v_{k+1}^{(m+1)}\\
 		\end{array}\right.
     \end{array}\right.
