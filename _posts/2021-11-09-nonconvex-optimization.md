@@ -67,6 +67,23 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}.
 
+$$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	g_{k+1}^{(0)} = ... \\
+	x_{l+1}^{(0)} = \tilde{x}_k \\
+	\bar{x}_{k+1}^{(0)} = \mathrm{prox}_{\gamma_0 J}\left( x_{k+1}^{(0)} - \gamma_0 v_{k+1}^{(0)}\right)\\
+	x_{k+1}^{(0)} = (1-\rho_0) x_{k+1}^{(0)} + \rho_0 \bar{x}_0^{(0)}\\
+		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
+    	\left\lfloor\begin{array}{l}
+		\text{Randomly pick batches } I_m \text{ of size } b_m\\
+		{g}_{k+1}^{(m+1)} = g_{k+1}^{(m)} + \frac{1}{b_m}\sum_{i_m\in I_m} \left( \nabla F_{i_m}(x_{k+1}^{(m+1)}) - \nabla F_{i_m}(x_{k+1}^{(m)})\right)\\
+		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma_m J}\left( x_{k+1}^{(m)} - \gamma_k g_{k+1}^{(m+1)}\right)\\
+		x_{k+1}^{(m+1)} = (1-\rho_m) x_{k+1}^{(m)} + \rho_m \bar{x}_{k+1}^{(m+1)} 
+		\end{array}\right.\\
+	\tilde{x}_{k+1} = x_{k+1}^{(M)}
+    \end{array}\right.\end{array}$$
+
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
 
 ## 2. Block-Structured Optimization Problem
