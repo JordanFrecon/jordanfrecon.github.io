@@ -66,7 +66,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \left\lfloor\begin{array}{l}
 	\text{Uniformly pick batches } I_k \text{ and } J_k \text{ (with replacement) of size } b\\
 	\bar{g}_k = \tilde{g}_k + \frac{1}{b}\sum_{i_k\in I_k} ( \nabla F_{i_k}(x_k) - \nabla F_{i_k}(\bar{x}_{k,i_k}))\\
-	x_{k+1} \in \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma \bar{g}_k\right)\\
+	x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma \bar{g}_k\right)\\
 	\bar{x}_{k+1,j}=x_{k} \text{ for } j\in J_k \text{ and } \bar{x}_{k,j} \text{ otherwise}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
