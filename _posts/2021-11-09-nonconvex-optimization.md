@@ -29,17 +29,26 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 
 ### 1.1. Full-batch algorithms
 
-We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$.
+We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computation.
 
-**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts..
+**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to a nonconvex forward-backward algorithm.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} e(x_k) \right)
+    x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} \right)
     \end{array}\right.\end{array}$$
 
-**VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
+**VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}. The *Variable Metric Inexact Line-search Algorithm (new version)* ...
+
+$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    x_{k+1/2} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} \right)\\
+	x_{k+1} = (1-\rho_k) x_k + \rho_k x_{k+1/2}
+    \end{array}\right.\end{array}$$
+	
+The relaxation parameter $$\rho_k$$ is determined to yield a sufficient decrease in objective value.
 
 ### 1.2. Stochastic variance-reduced algorithms
 
