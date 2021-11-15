@@ -515,6 +515,6 @@
 - id: 2019_Wang_Z_p-nips_spiderboost
   cite: Wang et al., 2019
   year: 2019
-  title: {SpiderBoost and Momentum: Faster Variance Reduction Algorithms}
+  title: SpiderBoost and Momentum - Faster Variance Reduction Algorithms
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NeurIPS)
   authors: Z. Wang, K. Ji, Y. Zhou, Y. Liang and V. Tarokh
