@@ -71,13 +71,13 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	x_{k+1}^{(0)} = \tilde{x}_k \\
-	\text{Randomly pick batches } J_k \text{ of size } b \\
+	\text{Randomly pick batch } J_k \text{ of size } b \\
 	g_{k+1}^{(0)} = \frac{1}{b}\sum_{j\in J_k} \nabla F_{j}(x_{k+1}^{(0)}) \\
 	\bar{x}_{k+1}^{(0)} = \mathrm{prox}_{\gamma_0 J}\left( x_{k+1}^{(0)} - \gamma_0 g_{k+1}^{(0)}\right)\\
 	x_{k+1}^{(0)} = (1-\rho_0) x_{k+1}^{(0)} + \rho_0 \bar{x}_0^{(0)}\\
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
     	\left\lfloor\begin{array}{l}
-		\text{Randomly pick batches } I_m \text{ of size } b_m\\
+		\text{Randomly pick batch } I_m \text{ of size } b_m\\
 		{g}_{k+1}^{(m+1)} = g_{k+1}^{(m)} + \frac{1}{b_m}\sum_{i_m\in I_m} \left( \nabla F_{i_m}(x_{k+1}^{(m+1)}) - \nabla F_{i_m}(x_{k+1}^{(m)})\right)\\
 		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma_m J}\left( x_{k+1}^{(m)} - \gamma_k g_{k+1}^{(m+1)}\right)\\
 		x_{k+1}^{(m+1)} = (1-\rho_m) x_{k+1}^{(m)} + \rho_m \bar{x}_{k+1}^{(m+1)} 
