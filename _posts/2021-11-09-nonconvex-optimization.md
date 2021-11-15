@@ -27,6 +27,8 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
 
+We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$.
+
 **NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts..
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
@@ -34,6 +36,11 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} e(x_k) \right)
     \end{array}\right.\end{array}$$
+
+**VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
+
+
+We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
 fully incremental algorithm since it requires calculation of the full gradient once per epoch.
@@ -63,8 +70,6 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1,j}=x_{k} \text{ for } j\in J_k \text{ and } \bar{x}_{k,j} \text{ otherwise}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
-
-**VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
 
 **PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}
 
