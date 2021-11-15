@@ -29,6 +29,15 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
 
+{% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
+- A1 (bounded from below). $$\mathcal{L}$$ is bounded from below. Moreover $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
+- A2. $$R\colon\mathbb{R}^m\to\mathbb{R}\cup\{+\infty\}$$ is a proper lower semi-continuous and convex function..
+- A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient on $$\mathrm{dom}\;R$$
+- A3-ii ($$L$$-individual smoothness). Each $$F_i$$ has a L-Lipschitz continuous gradient
+- A3-iii ($$L$$-average smoothness).
+- A4 (Bounded variance) There exist $$\sigma\in(0,\infty)$$ such that $$\frac{1}{n}\sum_{i-1}^n \| \nabla F_i(x)-\nabla F(x)\|^2 \leq \sigma^2$$ for every $$x\in\mathrm{dom}\; F$$.
+" %}
+
 ### 1.1. Full-batch algorithms
 
 We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computations.
