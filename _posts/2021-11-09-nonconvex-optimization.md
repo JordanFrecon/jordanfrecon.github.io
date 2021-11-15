@@ -32,7 +32,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}.
 
-$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
+$$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	x_{k+1}^{(0)} = x_k^{(M)}\\
