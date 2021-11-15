@@ -59,6 +59,13 @@ $$
     \end{array}\right.
 \end{array}$$
 
+
+**SCGS** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex stochastically controlled stochastic gradient* method ..
+
+
+**SPIDER** {% include cite.html id="2018_Fang_C_p-nips_spider"%}.
+
+
 **Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}. The *Geometrized stochastic recursive gradient* method, called *Geom-SARAH*, is a double-loop procedure which can be seen as a combination of the SCSG method and the SARAH biased gradient estimator. Note that, it exploits a randomization technique based on the
 *geometric distribution* which allows certain terms to telescope across the outer loop and the inner loop, hence simplifying the analysis of the algorithm.
 
@@ -93,8 +100,6 @@ $$ \begin{array}{l}
 	\end{array}$$
 
 
-**SCGS** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex stochastically controlled stochastic gradient* method ..
-
 
 **SVFW** {% include cite.html id="2016_Reddi_S_p_allerton_sfmno"%}. This algorithm can be seen as a *non-convex* variant of the *Stochastic Variance Reduced Frank-Wolf* devised in {% include cite.html id="2016_Hazan_E_p-icml_vrpfso"%}. As such, it is also epoch-based. At the end of each epoch, the full gradient is computed at the
 current iterate. This gradient is used for controlling the variance of the stochastic gradients in the inner loop.
@@ -114,7 +119,6 @@ $$ \begin{array}{l}
     \end{array}\right.
 	\end{array}$$
 
-**SPIDER** {% include cite.html id="2018_Fang_C_p-nips_spider"%}.
 
 
 ## 2. Generic Optimization Problem
