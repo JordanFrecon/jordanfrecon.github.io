@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for nonconvex composite optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr]
 ---
 
 > In progress. Upcoming: full sets of assumptions, convergence results and comparisons
@@ -30,7 +30,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} e(x_k) \right)
     \end{array}\right.\end{array}$$
 
-**ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in (Xiao and Zhang 2014)
+**ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]

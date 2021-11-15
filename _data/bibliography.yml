@@ -532,3 +532,10 @@
   title: A Stochastic Gradient Method with an Exponential Convergence Rate for Finite Training Sets
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: N. Roux, M. Schmidt and F. Bach
+  
+- id: 2014_Xiao_L_j-jo_psgmpvr
+  cite: Xiao and Zhang, 2014
+  year: 2014
+  title: A proximal stochastic gradient method with progressive variance reduction
+  publication: SIAM Journal on Optimization
+  authors: L. Xiao and T. Zhang
