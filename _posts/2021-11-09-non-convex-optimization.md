@@ -225,7 +225,7 @@ $$ \begin{array}{l}(\bar{x}_0,\bar{y}_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_
 	\bar{y}_{k+1} = y_{k+1} + \rho_{2,k}(y_{k+1} - y_{k})\\
     \end{array}\right.\end{array}$$
 
-**SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates formed using the gradients estimated on mini-batches.
+**SPRING** {% include cite.html id="2021_Driggs_D_arxiv_spring"%}. The *Stochastic PRoximal alternatING linearized minimization* algorithm is a randomized version of PALM where the gradients are replaced by random estimates $$\tilde{\nabla} F$$ formed using the gradients estimated on mini-batches.
 
 $$ \begin{array}{l}(x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
