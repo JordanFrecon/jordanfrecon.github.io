@@ -32,6 +32,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
 - A1 (bounded from below). $$\mathcal{L}$$ is bounded from below and $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
 - A2. $$J\colon\mathbb{R}^m\to\mathbb{R}\cup\{+\infty\}$$ is a proper, convex and lower semi-continuous.
+- A3. ..
 	- A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient on $$\mathrm{dom}\;J$$
 	- A3-ii ($$L$$-individual smoothness). Each $$F_i$$ has a L-Lipschitz continuous gradient
 	- A3-iii ($$L$$-average smoothness).
