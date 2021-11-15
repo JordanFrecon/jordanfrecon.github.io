@@ -78,7 +78,7 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
     	\left\lfloor\begin{array}{l}
 		\text{Randomly pick batch } I_m \text{ of size } b_m\\
-		{g}_{k+1}^{(m+1)} = g_{k+1}^{(m)} + \frac{1}{b_m}\sum_{i_m\in I_m} \left( \nabla F_{i_m}(x_{k+1}^{(m+1)}) - \nabla F_{i_m}(x_{k+1}^{(m)})\right)\\
+		{g}_{k+1}^{(m+1)} = g_{k+1}^{(m)} + \frac{1}{b_m}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(x_{k+1}^{(m)})\right)\\
 		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma_m J}\left( x_{k+1}^{(m)} - \gamma_k g_{k+1}^{(m+1)}\right)\\
 		x_{k+1}^{(m+1)} = (1-\rho_m) x_{k+1}^{(m)} + \rho_m \bar{x}_{k+1}^{(m+1)} 
 		\end{array}\right.\\
