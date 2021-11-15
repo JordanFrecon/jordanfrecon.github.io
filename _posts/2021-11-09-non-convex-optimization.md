@@ -24,7 +24,7 @@ and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 We begin by presenting some exponential moving average based adaptive methods, which are very popular in the deep learning
 community. Note that they aim at solving a particular instance of the original problem where $$\Omega=\mathbb{R}^m$$. 
 
-**ADAM** {% include cite.html id="2015_Kingma_D_p-iclr_adam"%}.
+**ADAM** {% include cite.html id="2015_Kingma_D_p-iclr_adam"%}. The terms $$m_k$$ and $$v_k$$ are the exponential moving averages of the gradient and squared gradient, respectively. The parameter $$\epsilon$$, originally introduced to avoid precision issues...
 
 $$
 \begin{array}{l}
@@ -38,6 +38,9 @@ $$
 	x_{k+1} = x_k - \gamma_k \frac{m_k}{\sqrt{v_k} + \epsilon}
     \end{array}\right.
 \end{array}$$
+
+However, ADAM do not benefits from convergence guarantees. Even worse, non-convergence can be found in simple online convex settings with constant minibatch sizes (see work of Reddi, 2016)
+
 
 **YOGI** {% include cite.html id="2018_Zaheer_M_p-nips_amno"%}. The YOGI method gets its name the Sanskrit word yuj meaning to add. It is a slight variant of ADAM where the magnitude of the difference of $$v_{k+1}$$ and $$v_k$$ in YOGI only depends on $$g_k^2$$ as opposed to dependence on both $$v_k$$ and $$g_k^2$$. Henceforth, when $$v_k$$ is much larger than $$g_k^2$$, ADAM can rapidly increase the
 effective learning rate while YOGI does it in a controlled fashion.
@@ -93,6 +96,23 @@ $$ \begin{array}{l}
 
 **Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}.
 
+$$ \begin{array}{l}
+	x_0^{(M)}\in\Omega\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+    x_k^{(0)} = \tilde{x}_{k-1}\\
+	\text{Uniformly pick batch } J_k \text{ (with replacement) of size } b_k\\
+	v_k^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_k^{(0)})\\
+	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\mathbb{E} M_k = m_k/b_k\\
+		\text{for}\;m=0,1,\ldots,M_k-1\\[0.4ex]
+		\left\lfloor\begin{array}{l}
+		
+		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
+		v^{(m)}_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m)}) - f_i(\tilde{x}_k) + \tilde{g}_k\right)\rangle\\
+		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} + \rho_k (v_{k+1}^{(m)} - x_{k+1}^{(m)})
+		\end{array}\right.
+    \end{array}\right.
+	\end{array}$$
 
 
 ## 2. Generic Optimization Problem
