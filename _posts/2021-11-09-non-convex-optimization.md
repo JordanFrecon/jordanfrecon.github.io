@@ -103,12 +103,12 @@ $$ \begin{array}{l}
     x_{k+1}^{(0)} = \tilde{x}_{k}\\
 	\text{Uniformly pick batch } J_k \text{ (with replacement) of size } b_k\\
 	v_{k+1}^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_{k+1}^{(0)})\\
-	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\mathbb{E} M_k = m_k/b_k\\
+	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\quad\mathbb{E} M_k = m_k/b_k\\
 		\text{for}\;m=0,1,\ldots,M_k-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
 		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} - \gamma_k v_{k+1}^{(m)}\\
 		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
-		v^{(m+1)}_{k+1} = \frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)}) + v_{k+1}^{(m+1})\right)\\
+		v^{(m+1)}_{k+1} = \frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)})\right) + v_{k+1}^{(m+1)})\\
 		\end{array}\right.
     \end{array}\right.
 	\end{array}$$
