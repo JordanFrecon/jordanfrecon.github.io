@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Quick tour of recent stochastic algorithms for smooth nonconvex optimization
 comments: true
-biblio: [2016_Reddi_S_p_allerton_sfmno,2020_Hovath_S_w-opt_asgmno,2018_Zaheer_M_p-nips_amno,2016_Hazan_E_p-icml_vrpfso,2015_Kingma_D_p-iclr_adam,2017_Lei_L_p-nips_ncfsoscsgm,2021_Li_Z_p-icml_page,2018_Fang_C_p-nips_spider,2019_Wang_Z_p-nips_spiderboost,2017_Nguyen_L_p-icml_sarah]
+biblio: [2016_Reddi_S_p_allerton_sfmno,2020_Hovath_S_w-opt_asgmno,2018_Zaheer_M_p-nips_amno,2016_Hazan_E_p-icml_vrpfso,2015_Kingma_D_p-iclr_adam,2017_Lei_L_p-nips_ncfsoscsgm,2021_Li_Z_p-icml_page,2018_Fang_C_p-nips_spider,2019_Wang_Z_p-nips_spiderboost,2017_Nguyen_L_p-icml_sarah,2012_Roux_N_p-nips_sag]
 ---
 
 > In progress. Upcoming: full sets of assumptions, convergence results and comparisons
@@ -57,7 +57,8 @@ $$
     \end{array}\right.
 \end{array}$$
 
-
+**SAG** {% include cite.html id="2012_Roux_N_p-nips_sag"%}. The *Stochastic
+Average Gradient* method ..
 
 **SCSG** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex Stochastically Controlled Stochastic Gradient* method ..
 

@@ -525,3 +525,10 @@
   title: SARAH-  A Novel Method for Machine Learning Problems Using Stochastic Recursive Gradient
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: L.M. Nguyen, J. Liu, K. Scheinberg and M. Takáč
+  
+- id: 2012_Roux_N_p-nips_sag
+  cite: Roux et al, 2012
+  year: 2012
+  title: A Stochastic Gradient Method with an Exponential Convergence Rate for Finite Training Sets
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: N. Roux, M. Schmidt and F. Bach
