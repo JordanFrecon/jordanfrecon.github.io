@@ -86,6 +86,21 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
 
+$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	\text{if } \mathrm{mod}(k,q)=0 \text{ then }\\
+		\left\lfloor\begin{array}{l}
+		g_k = \nabla_F(x_k)
+		\end{array}\right.
+	\text{else}\\
+		\left\lfloor\begin{array}{l}
+		g_k = \frac{1}{b}\sum_{i\in I}\left( \nabla F_i(x_k) - \nabla F_i(x_{k-1}) + g_{k-1}\right)
+		\end{array}\right.
+	
+    x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k \right)
+    \end{array}\right.\end{array}$$
+
 **ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from SARAH by its additional proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.
 
 $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
