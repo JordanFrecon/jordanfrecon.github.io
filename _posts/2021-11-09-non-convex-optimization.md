@@ -107,8 +107,8 @@ $$ \begin{array}{l}
 		\text{for}\;m=0,1,\ldots,M_k-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
 		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} - \gamma_k v_{k+1}^{(m)}\\
-		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
-		v^{(m+1)}_{k+1} = \frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)})\right) + v_{k+1}^{(m+1)})\\
+		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } \tilde{b}_m\\
+		v^{(m+1)}_{k+1} = \frac{1}{\tilde{b}_m}\sum_{i\in I_m}\left( \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)})\right) + v_{k+1}^{(m+1)})\\
 		\end{array}\right.
     \end{array}\right.
 	\end{array}$$
