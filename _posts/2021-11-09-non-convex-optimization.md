@@ -21,7 +21,6 @@ $$ \underset{x\in\Omega}{\mathrm{minimize}}\;  F(x) \quad\text{with either}\quad
 
 and where $$\Omega\subseteq\mathbb{R}^{m}$$ is convex and compact.
 
-### 1.1. Stochastic setting
 
 We begin by presenting some exponential moving average based adaptive methods, which are very popular in the deep learning
 community. Note that they aim at solving a particular instance of the original problem where $$\Omega=\mathbb{R}^m$$. 
@@ -94,9 +93,6 @@ $$ \begin{array}{l}
 	\end{array}$$
 
 
-### 1.1. Finite-sum setting
-
-
 **SCGS** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex stochastically controlled stochastic gradient* method ..
 
 
@@ -118,7 +114,7 @@ $$ \begin{array}{l}
     \end{array}\right.
 	\end{array}$$
 
-
+**SPIDER** {% include cite.html id="2018_Fang_C_p-nips_spider"%}.
 
 
 ## 2. Generic Optimization Problem

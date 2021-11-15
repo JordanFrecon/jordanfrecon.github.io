@@ -497,3 +497,10 @@
   title: Non-convex Finite-Sum Optimization Via SCSG Methods
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: L. Lei, C. Ju, J. Chen and M.I. Jordan
+  
+- id: 2018_Fang_C_p-nips_spider
+  cite: Fang et al., 2018
+  year: 2018
+  title: SPIDER - Near-Optimal Non-Convex Optimization via Stochastic Path-Integrated Differential Estimator
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: C. Fang, C.J. Li, Z. Lin and T. Zhang
