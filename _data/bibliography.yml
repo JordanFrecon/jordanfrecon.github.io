@@ -539,3 +539,10 @@
   title: A proximal stochastic gradient method with progressive variance reduction
   publication: SIAM Journal on Optimization
   authors: L. Xiao and T. Zhang
+  
+- id: 2020_Pham_N_j-mlr_proxsarah
+  cite: Pham et al., 2020
+  year: 2020
+  title: ProxSARAH - An Efficient Algorithmic Framework for Stochastic Composite Nonconvex Optimization
+  publication: Journal of Machine Learning Research (JMLR)
+  authors: N.H. Pham, L.M. Nguyen, D.T. Phan and Q. Tran-Dinh

@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for nonconvex composite optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr,2020_Pham_N_j-mlr_proxsarah]
 ---
 
 > In progress. Upcoming: full sets of assumptions, convergence results and comparisons
@@ -64,6 +64,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 **PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}
 
 **Prox-SpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
+
+**Prox-SARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}.
 
 ## 2. Block-Structured Optimization Problem
 
