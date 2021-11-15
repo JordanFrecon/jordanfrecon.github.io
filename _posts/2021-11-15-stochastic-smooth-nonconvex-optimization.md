@@ -59,7 +59,7 @@ $$
 
 
 
-**SCGS** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex stochastically controlled stochastic gradient* method ..
+**SCSG** {% include cite.html id="2017_Lei_L_p-nips_ncfsoscsgm"%}. The *non-convex Stochastically Controlled Stochastic Gradient* method ..
 
 **SARAH** {% include cite.html id="2017_Nguyen_L_p-icml_sarah"%}. The *StochAstic Recursive grAdient algoritHm* ...
 
