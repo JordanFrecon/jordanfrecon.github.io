@@ -70,9 +70,10 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-	g_{k+1}^{(0)} = ... \\
-	x_{l+1}^{(0)} = \tilde{x}_k \\
-	\bar{x}_{k+1}^{(0)} = \mathrm{prox}_{\gamma_0 J}\left( x_{k+1}^{(0)} - \gamma_0 v_{k+1}^{(0)}\right)\\
+	x_{k+1}^{(0)} = \tilde{x}_k \\
+	\text{Randomly pick batches } J_k \text{ of size } b \\
+	g_{k+1}^{(0)} = \frac{1}{b}\sum_{j\in J_k} \nabla F_{j}(x_{k+1}^{(0)}) \\
+	\bar{x}_{k+1}^{(0)} = \mathrm{prox}_{\gamma_0 J}\left( x_{k+1}^{(0)} - \gamma_0 g_{k+1}^{(0)}\right)\\
 	x_{k+1}^{(0)} = (1-\rho_0) x_{k+1}^{(0)} + \rho_0 \bar{x}_0^{(0)}\\
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
     	\left\lfloor\begin{array}{l}
