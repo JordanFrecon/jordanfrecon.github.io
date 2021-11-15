@@ -65,7 +65,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
 
-**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from SARAH by it additional proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.
+**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from SARAH by its additional proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.
 
 $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
