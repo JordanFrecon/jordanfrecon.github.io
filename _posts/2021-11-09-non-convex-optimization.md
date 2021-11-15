@@ -62,10 +62,9 @@ $$
 *geometric distribution* which allows certain terms to telescope across the outer loop and the inner loop, hence simplifying the analysis of the algorithm.
 
 $$ \begin{array}{l}
-	x_0^{(M)}\in\Omega\\
+	x_0^{(0)}\in\mathbb{R}^m, \text{ expected inner-loop queries } \{m_k\} \\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_{k+1}^{(0)} = \tilde{x}_{k}\\
 	\text{Sample a batch } J_k \text{ of size } b_k\\
 	v_{k+1}^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_{k+1}^{(0)})\\
 	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\quad\mathbb{E} M_k = m_k/b_k\\
