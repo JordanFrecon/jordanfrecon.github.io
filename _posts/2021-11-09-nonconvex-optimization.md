@@ -13,7 +13,7 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 |  Notations | Meaning  | Type and range |
 | --- | --- | --- |
 | $$\gamma$$ | Step-size | positive real |
-| $$\rho$$ | Relaxation parameter | real in $$]0,1]$$ |
+| $$\rho$$ | Relaxation parameter | real in $$(0,1]$$ |
 | $$\alpha$$, $$\beta$$ | Inertial parameter | real in $$[0,1]$$ |
 | $$I$$, $$J$$| Mini-batch | finite set of integers |
 | $$b$$ | Size of mini-batch | positive integer |
