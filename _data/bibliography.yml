@@ -490,3 +490,10 @@
   title: Adam - A Method for Stochastic Optimization
   publication: International Conference on Learning Representations (ICLR)
   authors: D.P. Kingma and J. Ba
+  
+- id: 2017_Lei_L_p-nips_ncfsoscsgm
+  cite: Lei et al., 2017
+  year: 2017
+  title: Non-convex Finite-Sum Optimization Via SCSG Methods
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  authors: L. Lei, C. Ju, J. Chen and M.I. Jordan
