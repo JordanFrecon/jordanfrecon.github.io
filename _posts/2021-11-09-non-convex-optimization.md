@@ -65,7 +65,7 @@ $$
 
 **SPIDER** {% include cite.html id="2018_Fang_C_p-nips_spider"%}.
 
-**SPIDERBOOST** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
+**SpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
 
 **Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}. The *Geometrized stochastic recursive gradient* method, called *Geom-SARAH*, is a double-loop procedure which can be seen as a combination of the SCSG method and the SARAH biased gradient estimator. Note that, it exploits a randomization technique based on the
 *geometric distribution* which allows certain terms to telescope across the outer loop and the inner loop, hence simplifying the analysis of the algorithm.
@@ -158,6 +158,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 **VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
 
 **PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}
+
+**Prox-SpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
 
 ## 3. Block-Structured Optimization Problem
 
