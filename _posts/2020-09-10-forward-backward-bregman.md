@@ -1,6 +1,6 @@
 ---
 title: Forward-Backward with Bregman distances
-tags: [Optimization, Bregman]
+tags: [Convex, Optimization, Bregman]
 style: fill
 color: info
 description: A quick introduction to convex optimization with Bregman distances

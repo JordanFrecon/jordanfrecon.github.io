@@ -1,5 +1,5 @@
 ---
-title: Defense Mechanisms
+title: Adversarial Defenses
 tags: [Neural network, Defense]
 style: border
 color: success
