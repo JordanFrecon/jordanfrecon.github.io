@@ -30,7 +30,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} e(x_k) \right)
     \end{array}\right.\end{array}$$
 
-**ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}.
+**ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
+fully incremental algorithm since it requires calculation of the full gradient once per epoch.
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -46,7 +47,7 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. 
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
