@@ -97,8 +97,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 		\left\lfloor\begin{array}{l}
 		\text{Uniformly pick batch} I_k \text{ (with replacement) of size } b\\
 		g_k = \frac{1}{b}\sum_{i\in I_k}\left( \nabla F_i(x_k) - \nabla F_i(x_{k-1}) + g_{k-1}\right)
-		\end{array}\right.
-	
+		\end{array}\right.\\
     x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k \right)
     \end{array}\right.\end{array}$$
 
