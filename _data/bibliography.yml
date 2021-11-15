@@ -504,3 +504,10 @@
   title: SPIDER - Near-Optimal Non-Convex Optimization via Stochastic Path-Integrated Differential Estimator
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: C. Fang, C.J. Li, Z. Lin and T. Zhang
+  
+- id: 2021_Li_Z_p-icml_page
+  cite: Li et al., 2021
+  year: 2021
+  title: PAGE - A simple and optimal probabilistic gradient estimator for nonconvex optimization
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: Z. Li, H. Bao, X. Zhang and P. Richtárik
