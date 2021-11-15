@@ -100,16 +100,15 @@ $$ \begin{array}{l}
 	x_0^{(M)}\in\Omega\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-    x_k^{(0)} = \tilde{x}_{k-1}\\
+    x_{k+1}^{(0)} = \tilde{x}_{k}\\
 	\text{Uniformly pick batch } J_k \text{ (with replacement) of size } b_k\\
-	v_k^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_k^{(0)})\\
+	v_{k+1}^{(0)} = \frac{1}{b_k}\sum_{i\in J_k} \nabla f_i(x_{k+1}^{(0)})\\
 	\text{Sample } M_k\sim\mathrm{Geom}(\eta_k)\quad\text{s.t.}\mathbb{E} M_k = m_k/b_k\\
 		\text{for}\;m=0,1,\ldots,M_k-1\\[0.4ex]
 		\left\lfloor\begin{array}{l}
-		
+		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} - \gamma_k v_{k+1}^{(m)}\\
 		\text{Uniformly pick batch } I_m \text{ (with replacement) of size } b_m\\
-		v^{(m)}_{k+1} = \mathrm{arg}\;\max_{v\in\Omega} \langle v, -\frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m)}) - f_i(\tilde{x}_k) + \tilde{g}_k\right)\rangle\\
-		x_{k+1}^{(m+1)} = x_{k+1}^{(m)} + \rho_k (v_{k+1}^{(m)} - x_{k+1}^{(m)})
+		v^{(m+1)}_{k+1} = \frac{1}{b_m}\left(\sum_{i\in I_m} \nabla f_i(x_{k+1}^{(m+1)}) - f_i({x}_{k+1}^{(m)}) + v_{k+1}^{(m+1})\right)\\
 		\end{array}\right.
     \end{array}\right.
 	\end{array}$$
@@ -126,11 +125,11 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 
 **NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts..
 
-$$ x_0\in\mathbb{R}^{m}\
+$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
     x_{k+1} \in \mathrm{prox}_{\gamma_{k} J}\; \left( x_k - \gamma_{k} \nabla F(x_k) + \gamma_{k} e(x_k) \right)
-    \end{array}\right.$$
+    \end{array}\right.\end{array}$$
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}
 
