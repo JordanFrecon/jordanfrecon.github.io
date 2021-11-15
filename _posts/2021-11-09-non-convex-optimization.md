@@ -58,7 +58,7 @@ $$
     \end{array}\right.
 \end{array}$$
 
-**Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}.
+**Geom-SARAH** {% include cite.html id="2020_Hovath_S_w-opt_asgmno"%}. The *Geometrized stochastic recursive gradient* method, called *Geom-SARAH* is a double-loop procedure which can be seen as a combination of the SCSG method and the SARAH biased gradient estimator. Note that the *geometric distribution* $$Geom$$ is mainly used to simplify the analysis of the algorithm.
 
 $$ \begin{array}{l}
 	x_0^{(M)}\in\Omega\\
