@@ -76,7 +76,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
-	g_k = \sum_{i=1}^n \nabla F_i ( x_{k - \tau_{k,i})\\
+	g_k = \sum_{i=1}^n \nabla F_i ( x_{k - \tau_{k,i}})\\
+	x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k\right)
     \end{array}\right.\end{array}$$
 
 **ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
