@@ -10,8 +10,9 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
 
-**Notations**. Throughout this post, we denote by $$\gamma$$ the step-sizes.
-
+|  Notations | Meaning  | Type and range |
+| --- | --- | --- |
+| $$\gamma$$ | Step-size | positive real |
 
 ## 1. Generic Optimization Problem
 
