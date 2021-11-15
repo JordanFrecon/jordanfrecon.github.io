@@ -13,6 +13,9 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 |  Notations | Meaning  | Type and range |
 | --- | --- | --- |
 | $$\gamma$$ | Step-size | positive real |
+| I, J | Mini-batch | finite set of integers |
+| b | Batch-size | positive integer |
+
 
 ## 1. Generic Optimization Problem
 
