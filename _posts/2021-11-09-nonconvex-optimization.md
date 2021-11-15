@@ -30,7 +30,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 
 ### 1.1. Full-batch algorithms
 
-We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computation.
+We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computations.
 
 **NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to a nonconvex forward-backward algorithm.
 
@@ -84,21 +84,21 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
 
-**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
+**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. In addition, it updates the variable via a gradient descent step (same as SARAH), as opposed to the normalized gradient descent step taken by SPIDER.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	\text{if } \mathrm{mod}(k,q)=0 \text{ then }\\
 		\left\lfloor\begin{array}{l}
-		g_k = \nabla_F(x_k)
+		g_{k+1} = \nabla_F(x_k)
 		\end{array}\right.\\
 	\text{else}\\
 		\left\lfloor\begin{array}{l}
 		\text{Uniformly pick batch} I_k \text{ (with replacement) of size } b\\
-		g_k = \frac{1}{b}\sum_{i\in I_k}\left( \nabla F_i(x_k) - \nabla F_i(x_{k-1}) + g_{k-1}\right)
+		g_{k+1} = \frac{1}{b}\sum_{i\in I_k}\left( \nabla F_i(x_k) - \nabla F_i(x_{k-1}) + g_{k}\right)
 		\end{array}\right.\\
-    x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k \right)
+    x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_{k+1} \right)
     \end{array}\right.\end{array}$$
 
 **ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from SARAH by its additional proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.
