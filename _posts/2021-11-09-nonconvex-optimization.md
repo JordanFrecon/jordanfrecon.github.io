@@ -30,7 +30,7 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
 
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
-- A1 (bounded from below). $$\mathcal{L}$$ is bounded from below. Moreover $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
+- A1 (bounded from below). $$\mathcal{L}$$ is bounded from below and $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
 - A2. $$R\colon\mathbb{R}^m\to\mathbb{R}\cup\{+\infty\}$$ is a proper lower semi-continuous and convex function..
 - A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient on $$\mathrm{dom}\;R$$
 - A3-ii ($$L$$-individual smoothness). Each $$F_i$$ has a L-Lipschitz continuous gradient
