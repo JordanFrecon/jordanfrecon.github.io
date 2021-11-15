@@ -42,7 +42,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 		\text{Uniformly pick batches } I_m \text{ (with replacement) of size } b\\
 		\bar{g}_{k+1}^{(m)} = g_{k+1} + \frac{1}{b}\sum_{i_m\in I_m} \left( \nabla F_{i_m}(x_{k+1}^{(m)}) - \nabla F_{i_m}(\bar{x}_{k})\right)\\
 		x_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma J}\left( x_{k+1}^{(m)} - \gamma \bar{g}_{k+1}^{(m)})
-		\end{array}
+		\right.\end{array}
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
