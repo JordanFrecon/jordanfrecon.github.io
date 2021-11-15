@@ -546,3 +546,10 @@
   title: ProxSARAH - An Efficient Algorithmic Framework for Stochastic Composite Nonconvex Optimization
   publication: Journal of Machine Learning Research (JMLR)
   authors: N.H. Pham, L.M. Nguyen, D.T. Phan and Q. Tran-Dinh
+  
+- id: 2021_Metel_M_j-mlr_spmnncso
+  cite: Metel and Takeda, 2021
+  year: 2021
+  title: Stochastic Proximal Methods for Non-Smooth Non-Convex Constrained Sparse Optimization
+  publication: Journal of Machine Learning Research (JMLR)
+  authors: M.R. Metel and A. Takeda
