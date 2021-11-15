@@ -15,7 +15,7 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 | $$\gamma$$ | Step-size | positive real |
 | $$I$$, $$J$$| Mini-batch | finite set of integers |
 | $$b$$ | Size of mini-batch | positive integer |
-| $$g$$, $$\tilde{g}$$, $$\bar{g}$$ | Gradients (instant, average or approximation) | real matrices |
+| $$g$$, $$\tilde{g}$$, $$\bar{g}$$ | Gradient (instant, average or approximation) | real matrices |
 
 
 ## 1. Generic Optimization Problem
