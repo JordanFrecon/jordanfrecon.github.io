@@ -67,7 +67,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}.
 
-$$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
+$$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	x_{k+1}^{(0)} = \tilde{x}_k \\
