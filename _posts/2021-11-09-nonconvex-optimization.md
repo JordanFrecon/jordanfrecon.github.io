@@ -27,6 +27,8 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 
 where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
 
+### 1.1. Full-batch algorithms
+
 We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$.
 
 **NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts..
@@ -39,6 +41,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 **VMILAn** {% include cite.html id="2017_Bonettini_S_j-ip_clbpgmno"%}
 
+### 1.2. Stochastic variance-reduced algorithms
 
 We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
@@ -71,15 +74,6 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
 
-**PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}. The key idea of the *Proximal Incremental Aggregated Gradient* algorithm is to construct an *inexact gradient* to substitute for the full gradient at each iteration. This inexact gradient is devised by evaluating $$F$$ at past iterates $$x_{k - \tau_{k,i}}$$ where the time-varying delays $$\tau_{k,i}\in\{0,\ldots,\tau\}$$ for some maximum delay parameter $$\tau\in\mathbb{N}^+$$.
-
-$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
-    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
-    \left\lfloor\begin{array}{l}
-	g_k = \sum_{i=1}^n \nabla F_i ( x_{k - \tau_{k,i}})\\
-	x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k\right)
-    \end{array}\right.\end{array}$$
-
 **ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}.
 
 **ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from SARAH by its additional proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.
@@ -103,6 +97,17 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
     \end{array}\right.\end{array}$$
 
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
+
+### 1.3. Incremental algorithms
+
+**PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}. The key idea of the *Proximal Incremental Aggregated Gradient* algorithm is to construct an *inexact gradient* to substitute for the full gradient at each iteration. This inexact gradient is devised by evaluating $$F$$ at past iterates $$x_{k - \tau_{k,i}}$$ where the time-varying delays $$\tau_{k,i}\in\{0,\ldots,\tau\}$$ for some maximum delay parameter $$\tau\in\mathbb{N}^+$$.
+
+$$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	g_k = \sum_{i=1}^n \nabla F_i ( x_{k - \tau_{k,i}})\\
+	x_{k+1} = \mathrm{prox}_{\gamma J}\; \left( x_k - \gamma g_k\right)
+    \end{array}\right.\end{array}$$
 
 ## 2. Block-Structured Optimization Problem
 
