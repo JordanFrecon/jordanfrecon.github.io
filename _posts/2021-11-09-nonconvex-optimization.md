@@ -71,7 +71,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
 
-**PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}
+**PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}. The key idea of the *Proximal Incremental Aggregated Gradient* algorithm is to construct an *inexact gradient* to substitute for the full gradient at each iteration. It relies on bounded time-varying delays $$\tau_{k,i}\in\{0,\ldots,\tau\}$$ where $$\tau\mathbb{N}^+$$ is the maximum delay parameter.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
