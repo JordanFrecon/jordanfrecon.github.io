@@ -502,7 +502,7 @@
   cite: Fang et al., 2018
   year: 2018
   title: SPIDER - Near-Optimal Non-Convex Optimization via Stochastic Path-Integrated Differential Estimator
-  publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NeurIPS)
   authors: C. Fang, C.J. Li, Z. Lin and T. Zhang
   
 - id: 2021_Li_Z_p-icml_page
@@ -511,3 +511,10 @@
   title: PAGE - A simple and optimal probabilistic gradient estimator for nonconvex optimization
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: Z. Li, H. Bao, X. Zhang and P. Richtárik
+  
+- id: 2019_Wang_Z_p-nips_spiderboost
+  cite: Wang et al., 2019
+  year: 2019
+  title: {SpiderBoost and Momentum: Faster Variance Reduction Algorithms}
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NeurIPS)
+  authors: Z. Wang, K. Ji, Y. Zhou, Y. Liang and V. Tarokh
