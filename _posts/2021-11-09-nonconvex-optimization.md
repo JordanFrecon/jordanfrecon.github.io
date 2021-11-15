@@ -92,7 +92,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\text{if } \mathrm{mod}(k,q)=0 \text{ then }\\
 		\left\lfloor\begin{array}{l}
 		g_k = \nabla_F(x_k)
-		\end{array}\right.
+		\end{array}\right.\\
 	\text{else}\\
 		\left\lfloor\begin{array}{l}
 		\text{Uniformly pick batch} I_k \text{ (with replacement) of size } b\\
