@@ -10,6 +10,8 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 
 > In progress. Upcoming: full sets of assumptions, convergence results and comparisons
 
+**Notations**. Throughout this post, we denote by $$\gamma$$ the step-sizes.
+
 
 ## 1. Constrained Smooth Optimization Problem
 
