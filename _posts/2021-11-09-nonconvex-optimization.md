@@ -33,14 +33,14 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
 - A1. $$\mathcal{L}$$ is bounded from below and $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
 - A2. $$J\colon\mathbb{R}^m\to\mathbb{R}\cup\{+\infty\}$$ is a proper, convex and lower semi-continuous
-- A3. Each $$F_i\colon\mathbb{R}^m\to\mathbb{R}$$ is continuously differentiable on an open set $$\Omega\supset\overline{\mathrm{dom}\;J}$$. Moreover, there exist $$L\in(0,+\infty)$$ such that, on $$\mathrm{dom}\;J$$,
-	- A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient
-	- A3-ii ($$L$$-individual smoothness). Each $$F_i$$ has a L-Lipschitz continuous gradient
+- A3. Each $$F_i\colon\mathbb{R}^m\to\mathbb{R}$$ is continuously differentiable on an open set $$\Omega\supset\overline{\mathrm{dom}\;J}$$. Moreover, there exist $$L\in(0,+\infty)$$ such that, 
+	- A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient on $$\mathrm{dom}\;J$$
+	- A3-ii ($$L$$-individual smoothness). Each $$F_i$$ has a L-Lipschitz continuous gradient on $$\mathrm{dom}\;J$$
 	- A3-iii ($$L$$-average smoothness). $$\frac{1}{n}\sum_{i-1}^n \| \nabla F_i(x)-\nabla F(y)\|^2 \leq L^2 \| x - y\|^2$$.
 - A4 (Bounded variance) There exist $$\sigma\in(0,\infty)$$ such that $$\frac{1}{n}\sum_{i-1}^n \| \nabla F_i(x)-\nabla F(x)\|^2 \leq \sigma^2$$ for every $$x\in\mathrm{dom}\; F$$.
 " %}
 
-
+Assumptions A1 and A2 are basic assumptions usually used in optimization. A1 usually holds since $$F$$ and $$R$$ typically stand for a loss function and a regularizer, respectively. Hence, they are usually nonnegative or bounded from below, and the domain of $$R$$ intersects the domain of $$F$$. Also note that, most of convex regularizers popularly encountered also satisfy A2. The next assumption A3 deal with the smoothness of $$F$$ and its components.
 
 
 > Actually, in some works, slightly weaker assumptions may be required. However, the assumptions stated above are general enough to encapsulate many optimization problems at hand.
