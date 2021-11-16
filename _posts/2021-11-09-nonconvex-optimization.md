@@ -27,10 +27,11 @@ We consider the following generic optimization problem
 $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq J(x) + F(x) \right\} $$
 
 
-where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function.
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$J$$ is a possibly non-smooth simple function. Here, $$J$$ is said to be simple in the sense that its proximity operator has a closed form expression. Moreover, throughout this section, we will have recourse to the following assumptions.
+
 
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
-- A1 (bounded from below). $$\mathcal{L}$$ is bounded from below and $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
+- A1. $$\mathcal{L}$$ is bounded from below and $$\mathrm{dom}\;\mathcal{L}\neq \emptyset$$.
 - A2. $$J\colon\mathbb{R}^m\to\mathbb{R}\cup\{+\infty\}$$ is a proper, convex and lower semi-continuous.
 - A3. ..
 	- A3-i ($$L$$ smoothness). F has an $$L$$-Lipschitz continuous gradient on $$\mathrm{dom}\;J$$
@@ -38,6 +39,8 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 	- A3-iii ($$L$$-average smoothness).
 - A4 (Bounded variance) There exist $$\sigma\in(0,\infty)$$ such that $$\frac{1}{n}\sum_{i-1}^n \| \nabla F_i(x)-\nabla F(x)\|^2 \leq \sigma^2$$ for every $$x\in\mathrm{dom}\; F$$.
 " %}
+
+
 
 ### 1.1. Full-batch algorithms
 
