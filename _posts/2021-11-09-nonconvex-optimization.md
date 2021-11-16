@@ -40,7 +40,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 - A4 (Bounded variance) There exist $$\sigma\in(0,\infty)$$ such that $$\frac{1}{n}\sum_{i-1}^n \| \nabla F_i(x)-\nabla F(x)\|^2 \leq \sigma^2$$ for every $$x\in\mathrm{dom}\; F$$.
 " %}
 
-Assumptions A1 and A2 are basic assumptions usually used in optimization. A1 usually holds since $$F$$ and $$R$$ typically stand for a loss function and a regularizer, respectively. Hence, they are usually nonnegative or bounded from below, and the domain of $$R$$ intersects the domain of $$F$$. Also note that, most of convex regularizers popularly encountered also satisfy A2. The next assumption A3 deal with the smoothness of $$F$$ and its components.
+Assumptions A1 and A2 are basic assumptions used in optimization. A1 usually holds since $$F$$ and $$R$$ typically stand for a loss function and a regularizer, respectively. Hence, they are usually nonnegative or bounded from below, and the domain of $$R$$ intersects the domain of $$F$$. Also note that, most of convex regularizers popularly encountered also satisfy A2. The next assumption A3 deals with the smoothness of $$F$$ and its components. As such, full-batch algorithms will rely on A3-i while stochastic algorithms, which fully exploits the finite-sum nature of $$F$$, will typically rely on A3-ii. Note that some expections may rely on the weaker assumption A3-iii.
 
 
 > Actually, in some works, slightly weaker assumptions may be required. However, the assumptions stated above are general enough to encapsulate many optimization problems at hand.
