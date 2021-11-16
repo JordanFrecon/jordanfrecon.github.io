@@ -41,6 +41,8 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 " %}
 
 
+> Actually, in some works, slightly weaker assumptions may be required. However, the assumptions stated above are general enough to encapsulate many optimization problems at hand.
+
 
 ### 1.1. Full-batch algorithms
 
