@@ -55,5 +55,24 @@ window.onload = function() {
         text: '2015-2016'
       }
     }
+  });
+  var ctx4 = document.getElementById("teaching2021");
+  var chart4 = new Chart(ctx4, {
+    type: 'polarArea',
+    data: {
+      labels: ["Informatics (L1)", "Statistics (L2)"],
+      datasets: [{
+        label: "2021-2022",
+        backgroundColor: ["#6495ED", "#1434A4"],
+        data: [36, 21]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        fontSize: 15,
+        text: '2021-2022'
+      }
+    }
   })
 };
