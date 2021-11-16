@@ -10,15 +10,6 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
 
-|  Notations | Meaning  | Type and range |
-| --- | --- | --- |
-| $$\gamma$$ | Step-size | positive real |
-| $$\rho$$ | Relaxation parameter | real in $$(0,1]$$ |
-| $$\alpha$$, $$\beta$$ | Inertial parameter | real in $$[0,1]$$ |
-| $$I$$, $$J$$| Mini-batch | finite set of integers |
-| $$b$$ | Size of mini-batch | positive integer |
-| $$g$$, $$\tilde{g}$$, $$\bar{g}$$ | Gradient (instant, average or approximation) | real matrices |
-
 
 ## 1. Generic Optimization Problem
 
@@ -233,3 +224,15 @@ $$ \begin{array}{l}(x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} J}\; \left( x_k - \gamma_{1,k} \tilde{\nabla}_x F(x_k,y_k) \right)\\
 	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} R}\; \left( y_k - \gamma_{2,k} \tilde{\nabla}_y F(x_{k+1},y_k) \right)
     \end{array}\right.\end{array}$$
+	
+## Notations
+
+|  Notations | Meaning  | Type and range |
+| --- | --- | --- |
+| $$\gamma$$ | Step-size | positive real |
+| $$\rho$$ | Relaxation parameter | real in $$(0,1]$$ |
+| $$\alpha$$, $$\beta$$ | Inertial parameter | real in $$[0,1]$$ |
+| $$I$$, $$J$$| Mini-batch | finite set of integers |
+| $$b$$ | Size of mini-batch | positive integer |
+| $$g$$, $$\tilde{g}$$, $$\bar{g}$$ | Gradient (instant, average or approximation) | real matrices |
+
