@@ -132,6 +132,17 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
 
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
 
+
+Comparison of *Stochastic First-order Oracle* (SFO) complexity
+
+| Algorithms | SFO | Step-size |
+| --- | --- | --- |
+| ProxSVRG | $$\mathcal{O}(n+n^{2/3}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{nL})\to \mathcal{O}(\frac{1}{L})$$ |
+| ProxSAGA | $$\mathcal{O}(n+n^{2/3}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{nL})\to \mathcal{O}(\frac{1}{L})$$ |
+| ProxSpiderBoost | $$\mathcal{O}(n+n^{1/2}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{L})$$ |
+| ProxSpiderBoost | $$\mathcal{O}(n+n^{1/2}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{\sqrt{n}L})\to \mathcal{O}(\frac{1}{L})$$ |
+
+
 ### 1.3. Incremental algorithms
 
 **PIAG** {% include cite.html id="2019_Peng_W_j-ota_npiagmlc"%}. The key idea of the *Proximal Incremental Aggregated Gradient* algorithm is to construct an *inexact gradient* to substitute for the full gradient at each iteration. This inexact gradient is devised by evaluating $$F$$ at past iterates $$x_{k - \tau_{k,i}}$$ where the time-varying delays $$\tau_{k,i}\in\{0,\ldots,\tau\}$$ for some maximum delay parameter $$\tau\in\mathbb{N}^+$$.
