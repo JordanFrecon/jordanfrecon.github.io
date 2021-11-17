@@ -140,7 +140,7 @@ Comparison of *Stochastic First-order Oracle* (SFO) complexity
 | ProxSVRG | $$\mathcal{O}(n+n^{2/3}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{nL})\to \mathcal{O}(\frac{1}{L})$$ |
 | ProxSAGA | $$\mathcal{O}(n+n^{2/3}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{nL})\to \mathcal{O}(\frac{1}{L})$$ |
 | ProxSpiderBoost | $$\mathcal{O}(n+n^{1/2}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{L})$$ |
-| ProxSpiderBoost | $$\mathcal{O}(n+n^{1/2}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{\sqrt{n}L})\to \mathcal{O}(\frac{1}{L})$$ |
+| ProxSARAH | $$\mathcal{O}(n+n^{1/2}\epsilon^{-2})$$ | $$\mathcal{O}(\frac{1}{\sqrt{n}L})\to \mathcal{O}(\frac{1}{L})$$ |
 
 
 ### 1.3. Incremental algorithms
