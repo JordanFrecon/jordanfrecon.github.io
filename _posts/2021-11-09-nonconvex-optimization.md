@@ -160,10 +160,9 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and the nonsmooth part is divided into two terms $$R$$ and $$G$$ which are convex and nonconvex, respectively. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. 
 
 
-**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
+**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* .. Given some hyper-parameters $$\theta_1$$ and $$\theta_2$$, the authors suggest to set the number of inner-iterations $$M={\lceil N^\alpha_1\rceil}$$, the batch-size $$b=M^2$$ and the step-size $$\gamma=\frac{1}{6 L_\lambda}$$ with $$L_\lambda = L + 1/\lambda$$ where $$\lambda=({\lceil (...)\rceil}  M)^{-\theta_2}$$.
 
 $$ \begin{array}{l}
-	\text{Fix parameters } M={\lfloor N^\alpha\rfloor}\\
 	\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
@@ -172,8 +171,8 @@ $$ \begin{array}{l}
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
     	\left\lfloor\begin{array}{l}
 		\bar{x}_k^{(m)} \in \mathrm{prox}_{\lambda G}(x_{k+1}^{(m)})\\
-		\text{Uniformly pick batch } I_m \text{ of size } b_m\\
-		{g}_{k+1}^{(m+1)} = g_{k+1} + \frac{1}{\lambda}( x_k^{(m)} - \bar{x}_k^{(m)}) + \frac{1}{b_m}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(\tilde{x}_k)\right)\\
+		\text{Uniformly pick batch } I_m \text{ of size } b\\
+		{g}_{k+1}^{(m+1)} = g_{k+1} + \frac{1}{\lambda}( x_k^{(m)} - \bar{x}_k^{(m)}) + \frac{1}{b}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(\tilde{x}_k)\right)\\
 		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma R}\left( x_{k+1}^{(m)} - \gamma g_{k+1}^{(m+1)}\right)\\
 		\end{array}\right.\\
 	\tilde{x}_{k+1} = x_{k+1}^{(M)}
