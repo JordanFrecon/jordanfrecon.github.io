@@ -11,7 +11,7 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
 
 
-## 1. Generic Optimization Problem with Convex Nonsmooth Term
+## 1. Nonconvex Optimization Problem with Convex Nonsmooth Term
 
 We consider the following generic optimization problem
 
@@ -152,7 +152,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	x_{k+1} = \mathrm{prox}_{\gamma R}\; \left( x_k - \gamma g_k\right)
     \end{array}\right.\end{array}$$
 
-## 2. Generic Optimization Problem with Nonconvex Nonsmooth Term
+## 2. Nonconvex Optimization Problem with Nonconvex Nonsmooth Term
 
 We now consider a variant where the non-smooth part can be nonconvex. In particular, we consider optimization problems of the form
 
@@ -163,7 +163,7 @@ where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure,
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
 
 
-## 3. Block-Structured Optimization Problem
+## 3. Nonconvex Block-Structured Optimization Problem
 
 We consider the following block-structured optimization problem
 
