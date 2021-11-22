@@ -25,6 +25,14 @@ function ShowAndHide(id) {
         x.style.display = 'none';
     }
 }
+function ShowAndHideEq(id) {
+    var x = document.getElementById(id);
+    if (x.style.display == 'none') {
+        x.style.display = 'inline-block';
+    } else {
+        x.style.display = 'none';
+    }
+}
 </script>
 
 {% include head.html %}
