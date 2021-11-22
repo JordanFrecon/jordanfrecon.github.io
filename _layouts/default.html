@@ -25,6 +25,13 @@ function ShowAndHide(id) {
         x.style.display = 'none';
     }
 }
+function ShowAndHideAjax(id) {
+    if (x.style.display == 'none') {
+        $(id).css("display", "block");
+    } else {
+        $(id).css("display", "none");
+    }
+}
 </script>
 
 {% include head.html %}
