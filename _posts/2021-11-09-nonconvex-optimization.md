@@ -169,9 +169,9 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
 	g_{k+1} = \nabla F(\tilde{x}_k)\\
 		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
     	\left\lfloor\begin{array}{l}
-		\bar{x}_k^{(m)} \in \mathrm{prox}+{\lambda G}(x_{k+1}^{(m)})\\
+		\bar{x}_k^{(m)} \in \mathrm{prox}_{\lambda G}(x_{k+1}^{(m)})\\
 		\text{Uniformly pick batch } I_m \text{ of size } b_m\\
-		{g}_{k+1}^{(m+1)} = g_{k+1} + \frac{1}{\lambda}( x_k^{(m)} - \bar{x}_k^{(m)}) + \frac{1}{b_m}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(x_{k+1}^{(m)})\right)\\
+		{g}_{k+1}^{(m+1)} = g_{k+1} + \frac{1}{\lambda}( x_k^{(m)} - \bar{x}_k^{(m)}) + \frac{1}{b_m}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(\tilde{x}_k)\right)\\
 		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{R}\left( x_{k+1}^{(m)} - \gamma g_{k+1}^{(m+1)}\right)\\
 		\end{array}\right.\\
 	\tilde{x}_{k+1} = x_{k+1}^{(M)}
