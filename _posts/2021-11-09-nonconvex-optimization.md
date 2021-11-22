@@ -11,14 +11,14 @@ biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ip
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
 
 
-## 1. Generic Optimization Problem
+## 1. Generic Optimization Problem with Convex Nonsmooth Term
 
 We consider the following generic optimization problem
 
 $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq F(x)  + R(X) \right\} $$
 
 
-where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$R$$ is a possibly non-smooth simple function. Here, $$R$$ is said to be simple in the sense that its proximity operator has a closed form expression. Moreover, throughout this section, we will have recourse to the following assumptions.
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$R$$ is a possibly non-smooth simple convex function. Here, $$R$$ is said to be simple in the sense that its proximity operator has a closed form expression. Moreover, throughout this section, we will have recourse to the following assumptions.
 
 
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
@@ -130,8 +130,6 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
 	\tilde{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
-
 
 Comparison of *Stochastic First-order Oracle* (SFO) complexity
 
@@ -154,7 +152,18 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	x_{k+1} = \mathrm{prox}_{\gamma R}\; \left( x_k - \gamma g_k\right)
     \end{array}\right.\end{array}$$
 
-## 2. Block-Structured Optimization Problem
+## 2. Generic Optimization Problem with Nonconvex Nonsmooth Term
+
+We now consider a variant where the non-smooth part can be nonconvex. In particular, we consider optimization problems of the form
+
+$$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq F(x)  + G(X) + R(X) \right\} $$
+
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, the function $$R$$ is a possibly non-smooth simple convex function and $$G$$ is can be nonconvex and nonsmooth. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. Moreover, throughout this section, we will have recourse to the following assumptions...
+
+**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
+
+
+## 3. Block-Structured Optimization Problem
 
 We consider the following block-structured optimization problem
 
@@ -235,6 +244,7 @@ $$ \begin{array}{l}(x_0,y_0)\in\mathbb{R}^{m_1}\times \mathbb{R}^{m_2}\\
     x_{k+1} \in \mathrm{prox}_{\gamma_{1,k} R}\; \left( x_k - \gamma_{1,k} \tilde{\nabla}_x F(x_k,y_k) \right)\\
 	y_{k+1} \in \mathrm{prox}_{\gamma_{2,k} Q}\; \left( y_k - \gamma_{2,k} \tilde{\nabla}_y F(x_{k+1},y_k) \right)
     \end{array}\right.\end{array}$$
+
 	
 ## Notations
 
