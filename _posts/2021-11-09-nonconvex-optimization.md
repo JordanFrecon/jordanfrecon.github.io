@@ -161,7 +161,7 @@ where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finit
 
 
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* is a variant of MBSPA, devised by the same authors, which takes advantage of the finite-sum nature of $$F$$. Given some parameter $$\lambda>0$$, the algorithm reads as follows. <a onClick="ShowAndHideEq('vrspa')"><i class="fas fa-chalkboard"></i> Convergence results</a>.
-<div id="vrspa" style="display:none;">Given some hyper-parameters$$\theta_1\in\mathbb{R}$$and $$\theta_2\in\mathbb{R}$$, the authors suggest to set the number of inner-iterations $$M={\lceil N^\alpha_1\rceil}$$, the batch-size $$b=M^2$$ and the step-size $$\gamma=\frac{1}{6 L_\lambda}$$ with $$L_\lambda = L + 1/\lambda$$ where $$\lambda=({\lceil (...)\rceil}  M)^{-\theta_2}$$.</div>
+<div id="vrspa" style="display:none;">Given some hyper-parameters \(\theta_1\in\mathbb{R}\) and $$\theta_2\in\mathbb{R}$$, the authors suggest to set the number of inner-iterations $$M={\lceil N^\alpha_1\rceil}$$, the batch-size $$b=M^2$$ and the step-size $$\gamma=\frac{1}{6 L_\lambda}$$ with $$L_\lambda = L + 1/\lambda$$ where $$\lambda=({\lceil (...)\rceil}  M)^{-\theta_2}$$.</div>
 
 
 $$ \begin{array}{l}
