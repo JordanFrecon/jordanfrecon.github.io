@@ -153,14 +153,31 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 
 ## 2. Nonconvex Optimization Problem with Nonconvex Nonsmooth Term
 
-We now consider a variant where the non-smooth part can be nonconvex. In particular, we consider optimization problems of the form
+We now consider a variant where the nonsmooth part can be nonconvex. To this effect, we consider optimization problems of the form
 
 $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq F(x)  + G(X) + R(X) \right\} $$
 
-where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, the function $$R$$ is a possibly non-smooth simple convex function and $$G$$ is can be nonconvex and nonsmooth. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. Moreover, throughout this section, we will have recourse to the following assumptions...
+where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and the nonsmooth part is divided into two terms $$R$$ and $$G$$ which are convex and nonconvex, respectively. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. 
+
 
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
 
+$$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	x_{k+1}^{(0)} = \tilde{x}_k \\
+	g_{k+1} = \nabla F(\tilde{x}_k)\\
+	x_{k+1}^{(0)} = (1-\rho_0) x_{k+1}^{(0)} + \rho_0 \bar{x}_0^{(0)}\\
+		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
+    	\left\lfloor\begin{array}{l}
+		\bar{x}_k^{(m)} \in \mathrm{prox}+{\lambda G}(x_{k+1}^{(m)})
+		\text{Uniformly pick batch } I_m \text{ of size } b_m\\
+		{g}_{k+1}^{(m+1)} = g_{k+1} + \frac{1}{\lambda}( x_k^{(m)} - \bar{x}_k^{(m)}) + \frac{1}{b_m}\sum_{i\in I_m} \left( \nabla F_{i}(x_{k+1}^{(m+1)}) - \nabla F_{i}(x_{k+1}^{(m)})\right)\\
+		\bar{x}_{k+1}^{(m+1)} = \mathrm{prox}_{R}\left( x_{k+1}^{(m)} - \gammag_{k+1}^{(m+1)}\right)\\
+		\end{array}\right.\\
+	\tilde{x}_{k+1} = x_{k+1}^{(M)}
+    \end{array}\right.\end{array}$$
+	
 
 ## 3. Nonconvex Block-Structured Optimization Problem
 
