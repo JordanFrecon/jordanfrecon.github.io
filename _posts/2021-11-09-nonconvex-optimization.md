@@ -162,7 +162,9 @@ where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finit
 
 **VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm*
 
-$$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
+$$ \begin{array}{l}
+	\text{Fix parameters } M={\lfloor N^\alpha\rfloor}\\
+	\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	x_{k+1}^{(0)} = \tilde{x}_k \\
