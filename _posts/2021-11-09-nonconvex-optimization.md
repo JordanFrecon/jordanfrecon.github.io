@@ -166,7 +166,6 @@ where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finit
 
 $$ \begin{array}{l}
 	\tilde{x}_0 \in\mathbb{R}^{m}\\
-	K \sim \mathrm{Uniform}\{1,\ldots, K_\mathrm{max}\}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
 	x_{k+1}^{(0)} = \tilde{x}_k \\
