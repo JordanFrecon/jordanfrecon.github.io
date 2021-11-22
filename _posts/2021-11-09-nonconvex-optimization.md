@@ -65,7 +65,7 @@ The relaxation parameter $$\rho_k$$ is determined to yield a sufficient decrease
 We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
-fully incremental algorithm since it requires calculation of the full gradient once per epoch. <a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-chalkboard"></i> Convergence results</a>.
+fully incremental algorithm since it requires calculation of the full gradient once per epoch. <a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxsvrg" style="display:none;">For some batch-size \(b=1\) and step-size \(\gamma=1/3LN\)
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right)$$
@@ -168,7 +168,7 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and the nonsmooth part is divided into two terms $$R$$ and $$G$$ which are convex and nonconvex, respectively. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. 
 
 
-**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* is a variant of MBSPA, devised by the same authors, which takes advantage of the finite-sum nature of $$F$$. Given some parameter $$\lambda>0$$, the algorithm reads as follows. <a onClick="ShowAndHide('vrspa')"><i class="fas fa-chalkboard"></i> Convergence results</a>.
+**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* is a variant of MBSPA, devised by the same authors, which takes advantage of the finite-sum nature of $$F$$. Given some parameter $$\lambda>0$$, the algorithm reads as follows. <a onClick="ShowAndHide('vrspa')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="vrspa" style="display:none;">Given some hyper-parameters \(\theta_1\in\mathbb{R}\) and \(\theta_2\in\mathbb{R}\), the authors suggest to set the number of inner-iterations \(M={\lceil N^\alpha_1\rceil}\), the batch-size \(b=M^2\) and the step-size \(\gamma=\frac{1}{6 L_\lambda}\) with \(L_\lambda = L + 1/\lambda\) where \(\lambda=({\lceil (...)\rceil}  M)^{-\theta_2}\).</div>
 
 
