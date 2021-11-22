@@ -160,7 +160,7 @@ $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \tri
 where the smooth part $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure and the nonsmooth part is divided into two terms $$R$$ and $$G$$ which are convex and nonconvex, respectively. As in Section 1, we assume that both $$G$$ and $$R$$ have efficiently computable proximal operators. 
 
 
-**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* is a variant of MBSPA, devised by the same authors, which takes advantage of the finite-sum nature of $$F$$. Given some parameter $$\lambda>0$$, the algorithm reads as follows. <a onClick="ShowAndHide('vrspa')"><i class="fas fa-chalkboard"></i> Convergence result</a>
+**VRSPA** {% include cite.html id="2021_Metel_M_j-mlr_spmnncso"%}. The *Variance Reduced Stochastic Proximal Algorithm* is a variant of MBSPA, devised by the same authors, which takes advantage of the finite-sum nature of $$F$$. Given some parameter $$\lambda>0$$, the algorithm reads as follows. <a color=$primary onClick="ShowAndHide('vrspa')"><i class="fas fa-chalkboard"></i> Convergence result</a>
 <div id="vrspa" style="display:none;">
   I shall put the convergence result here
 </div>
