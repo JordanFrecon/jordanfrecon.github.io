@@ -18,7 +18,7 @@ We consider the following generic optimization problem
 $$ \underset{x\in\mathbb{R}^{m}}{\mathrm{minimize}}\; \left\{\mathcal{L}(x) \triangleq F(x)  + R(X) \right\} $$
 
 
-where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$R$$ is a possibly non-smooth simple convex function. Here, $$R$$ is said to be simple in the sense that its proximity operator has a closed form expression. Moreover, throughout this section, we will have recourse to the following assumptions.
+where $$F\triangleq \frac{1}{n}\sum_{i=1}^n F_i(x)$$ has a finite-sum structure, and the function $$R$$ is a possibly non-smooth simple convex function. Here, $$R$$ is said to be simple in the sense that its proximity operator has a closed form expression. Moreover, throughout this section, we will resort to the following assumptions.
 
 
 {% include definition.html title="Assumptions" content="Throughout this section, we consider the following assumptions.
