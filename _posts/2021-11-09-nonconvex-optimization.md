@@ -118,8 +118,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     x_{k+1} = \mathrm{prox}_{\gamma R}\; \left( x_k - \gamma g_{k+1} \right)
     \end{array}\right.\end{array}$$
 
-**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from the *StochAstic Recursive grAdient algoritHm* (SARAH) by its proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost.<a onClick="ShowAndHide('proxsarah')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
-<div id="proxsarah" style="display:none;">For fixed step-size \(\gamma=1/L\sqrt{\omega M}\) and \(\rho=2\sqrt{\omega M}/(4\sqrt{\omega M}+1)\), where \(\omega=3(n-\hat{b})/(2\hat{b}(n-1)\) for some \(b\in[1,\sqrt{n}]\), then
+**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from the *StochAstic Recursive grAdient algoritHm* (SARAH) by its proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost. <a onClick="ShowAndHide('proxsarah')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
+<div id="proxsarah" style="display:none;">Let us consider fixed mini-batch sizes \(b=n\) and \(b_m=\hat{b}\in[1,\sqrt{n}]\) for the outer and inner-loop, respectively. For fixed step-size \(\gamma=1/L\sqrt{\omega M}\) and \(\rho=2\sqrt{\omega M}/(4\sqrt{\omega M}+1)\), where \(\omega=3(n-\hat{b})/(2\hat{b}(n-1)\), then
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{16 \sqrt{3} L}{\sqrt{2n}} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
 
