@@ -108,7 +108,7 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \left\lfloor\begin{array}{l}
 	\text{if } \mathrm{mod}(k,q)=0 \text{ then }\\
 		\left\lfloor\begin{array}{l}
-		g_{k+1} = \nabla_F(x_k)
+		g_{k+1} = \nabla F(x_k)
 		\end{array}\right.\\
 	\text{else}\\
 		\left\lfloor\begin{array}{l}
