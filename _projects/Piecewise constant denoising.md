@@ -1,7 +1,7 @@
 ---
 name: Piecewise constant denoising
 tools: [Potts model, Total-variation, Online denoising, Regularization parameter, Multivariate denoising]
-image: /images/projects/piecewiseConstantDenoising_preview.jpg
+image: /images/projects/piecewiseConstantDenoising_preview.png
 description: Various contributions about piecewise constant denoising.
 layout: project
 keyword: piecewiseCstDenoising
