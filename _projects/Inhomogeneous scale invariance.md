@@ -1,13 +1,13 @@
 ---
 name: Inhomogenous Scale Invariance
 tools: [Multifractal, Segmentation, Textures]
-image: /images/projects/inhomogeneousScaleInvariance.png
+image: /images/projects/inhomogeneousScaleInvariance_preview.png
 description: This project deals with the case where the scale invariance properties are inhomogenous in time or in space.
 layout: project
 keyword: piecewiseMF
 ---
 
-![preview](/images/projects/inhomogeneousScaleInvariance_preview.png)
+![preview](/images/projects/inhomogeneousScaleInvariance.png)
 
 {:.image-caption}
 *Image Credit: NASA image courtesy LANCE/EOSDIS MODIS Rapid Response Team at NASA GSFC*
