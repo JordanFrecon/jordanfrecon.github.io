@@ -5,7 +5,7 @@ authors: J. Frecon, L. Anquetil, G. Gasso and S. Canu
 publication: Conférence sur l'Apprentissage Automatique (CAp)
 year: 2021
 type: workshop
-project: deepLearning
+project: adversarialLearning
 slides: True
 poster: True
 ---

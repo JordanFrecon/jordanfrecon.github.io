@@ -6,6 +6,6 @@ publication: Unpublished
 year: 2022
 doi:
 type: unpublished
-project: deepLearning
+project: adversarialLearning
 ---
 
