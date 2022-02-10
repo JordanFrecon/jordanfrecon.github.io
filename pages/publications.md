@@ -12,7 +12,7 @@ weight: 2
 # **Upcoming**
 <ol>
 {% for pub in publications %}
- {% if pub.type == 'unpublished' %}
+ {% if pub.type == 'unpublished' or pub.type == 'preprint' %}
  <li>
  <div class="pubitem">
    <div class="pubauthors">
@@ -26,7 +26,8 @@ weight: 2
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>
+   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>{% if pub.type == 'preprint' %}&nbsp;&nbsp;
+   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>{% endif %}
  </div>
  </li>
  {% endif %}

@@ -7,7 +7,7 @@ year: 2022
 doi:
 type: unpublished
 project: deepLearning
-idbib: 2022_Frecon_J_p-icml_bnn
+idbib: 2022_Frecon_J_hal_bnn
 ---
 
 
