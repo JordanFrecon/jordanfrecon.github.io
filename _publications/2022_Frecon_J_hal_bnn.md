@@ -5,7 +5,7 @@ authors: J. Frecon, S. Salzo, M. Pontil and G. Gasso
 publication: Submitted
 year: 2022
 doi:
-type: unpublished
+type: preprint
 project: deepLearning
 idbib: 2022_Frecon_J_hal_bnn
 ---
