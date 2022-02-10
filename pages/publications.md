@@ -9,7 +9,7 @@ weight: 2
 
 {% assign publications = site.publications | sort: "year" | reverse %}
 
-# **In Preparation**
+# **Upcoming**
 <ol>
 {% for pub in publications %}
  {% if pub.type == 'unpublished' %}
