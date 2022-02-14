@@ -1,11 +1,11 @@
 @unpublished{frecon:hal-03132512,
-  TITLE = {{Bilevel Learning of Deep Representations}},
-  AUTHOR = {Frecon, Jordan and Salzo, Saverio and Pontil, Massimiliano},
+  TITLE = {{Bregman Neural Networks}},
+  AUTHOR = {Frecon, Jordan and Salzo, Saverio and Pontil, Massimiliano and Gasso, Gilles},
   URL = {https://hal.archives-ouvertes.fr/hal-03132512},
   NOTE = {working paper or preprint},
-  YEAR = {2021},
+  YEAR = {2022},
   MONTH = Feb,
   HAL_ID = {hal-03132512},
-  HAL_VERSION = {v1},
+  HAL_VERSION = {v2},
 }
 
