@@ -565,11 +565,20 @@
   cite: Benz et al., 2021
   year: 2021
   title: Universal adversarial training with class-wise perturbations
-  publication: International Conference on Multimedia and Expo (ICME)
+  publication: Proceedings of the International Conference on Multimedia and Expo (ICME)
   authors: P. Benz, C. Zhang, A. Karjauv and I.-S. Kweon
   
 - id: 2020_Zhang_p-aaai_cduap
   cite: Zhang et al., 2020
   year: 2020
   title: CD-UAP - Class discriminative universal adversarial perturbation
+  publication: Proceedings of the Conference on Artificial Intelligence (AAAI)
   authors: C. Zhang, P. Benz, T. Imtiaz and I.-S. Kweon
+  
+- id: 2021_Dai_J_j-nc_fastuap
+  cite: Dai and Shu, 2021
+  year: 2021
+  title: Fast-UAP - An algorithm for expediting universal adversarial perturbation generation using the orientations of perturbation vectors
+  a
+  publication: Neurocomputing
+  authors: J. Dai and L. Shu
