@@ -143,6 +143,8 @@ $$
 
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
 
+**CD-UAP** {% include cite.html id="2020_Zhang_p-aaai_cduap"%}. The *Class discriminative UAP* (CD-UAP) is a variant of UAP where an universal perturbation is built for each of the class.
+
 
 **ADiL** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, this work is semi-universal as it crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector. Given some adversarial targets $$\{t_1,\ldots,t_N\}$$, it solves
 

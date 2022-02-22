@@ -560,3 +560,16 @@
   title: SAGA - A Fast Incremental Gradient Method With Support for Non-Strongly Convex Composite Objectives
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NIPS)
   authors: A. Defazio, F. Bach and S. Lacoste-Julien
+  
+- id: 2021_Benz_P_p-icme_uatcwp
+  cite: Benz et al., 2021
+  year: 2021
+  title: Universal adversarial training with class-wise perturbations
+  publication: International Conference on Multimedia and Expo (ICME)
+  authors: P. Benz, C. Zhang, A. Karjauv and I.-S. Kweon
+  
+- id: 2020_Zhang_p-aaai_cduap
+  cite: Zhang et al., 2020
+  year: 2020
+  title: CD-UAP - Class discriminative universal adversarial perturbation
+  authors: C. Zhang, P. Benz, T. Imtiaz and I.-S. Kweon
