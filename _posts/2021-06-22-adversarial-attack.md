@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap,2021_Benz_P_p-icme_uatcwp]
 ---
 
 > In progress
@@ -143,7 +143,10 @@ $$
 
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
 
-**CD-UAP** {% include cite.html id="2020_Zhang_p-aaai_cduap"%}. The *Class discriminative UAP* (CD-UAP) is a variant of UAP-PGD where an universal perturbation is built for each of the class.
+**CD-UAP** {% include cite.html id="2020_Zhang_p-aaai_cduap"%}. The *Class discriminative UAP* attack aims at generating a single perturbation that fools a network to misclassify only a chosen group of classes, while having limited influence on the remaining classes.
+
+**CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%}. The *Class-wise* UAP
+is variant of UAP-PGD where an universal perturbation is built for each of the class.
 
 **Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%}. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
 
