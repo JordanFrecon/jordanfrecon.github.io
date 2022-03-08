@@ -1,11 +1,12 @@
-@unpublished{preprint:hal-03601500,
+@unpublished{frecon:hal-03601509,
   TITLE = {{Adversarial Dictionary Learning}},
-  AUTHOR = {Preprint, A and Frecon, Jordan and Anquetil, Lucas and Liu, Yuan and Gasso, Gilles and Canu, St{\'e}phane},
-  URL = {https://hal.archives-ouvertes.fr/hal-03601500},
+  AUTHOR = {Frecon, Jordan and Anquetil, Lucas and Liu, Yuan and Gasso, Gilles and Canu, St{\'e}phane},
+  URL = {https://hal.archives-ouvertes.fr/hal-03601509},
   NOTE = {working paper or preprint},
   YEAR = {2022},
   MONTH = Mar,
-  HAL_ID = {hal-03601500},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03601509/file/2022_Frecon_J_hal_adil.pdf},
+  HAL_ID = {hal-03601509},
   HAL_VERSION = {v1},
 }
 
