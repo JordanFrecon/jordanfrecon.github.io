@@ -1,0 +1,13 @@
+@unpublished{frecon:hal-03615461,
+  TITLE = {{Semi-Universal Adversarial Perturbations}},
+  AUTHOR = {Frecon, Jordan and Gasso, Gilles and Canu, St{\'e}phane},
+  URL = {https://hal.archives-ouvertes.fr/hal-03615461},
+  NOTE = {working paper or preprint},
+  YEAR = {2022},
+  MONTH = Mar,
+  PDF = {https://hal.archives-ouvertes.fr/hal-03615461/file/2022_Frecon_J_hal_suap.pdf},
+  HAL_ID = {hal-03615461},
+  HAL_VERSION = {v1},
+}
+
+
