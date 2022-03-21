@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Semi-Universal Adversarial Perturbations
-authors: J. Freconm, G. Gasso and S. Canu
+authors: J. Frecon, G. Gasso and S. Canu
 publication: Submitted
 year: 2022
 doi:
