@@ -1,7 +1,7 @@
 window.onload = function() {
   var ctx = document.getElementById("teaching2014");
   var chart = new Chart(ctx, {
-    type: 'polarArea',
+    type: 'doughnut',
     data: {
       labels: ["Electromagnetism (L1)","Agregation de Physique"],
       datasets: [{
@@ -20,7 +20,7 @@ window.onload = function() {
   });
   var ctx2 = document.getElementById("teaching2015");
   var chart2 = new Chart(ctx2, {
-    type: 'polarArea',
+    type: 'doughnut',
     data: {
       labels: ["Electromagnetism (L1)", "Optics (L2)", "Complex systems (M2)", "Applied Statistics (L3)"],
       datasets: [{
@@ -39,7 +39,7 @@ window.onload = function() {
   });
   var ctx3 = document.getElementById("teaching2016");
   var chart3 = new Chart(ctx3, {
-    type: 'polarArea',
+    type: 'doughnut',
     data: {
       labels: ["Electromagnetism (L1)", "Optics (L2)", "Python (L3)", "Signal processing (L3)"],
       datasets: [{
