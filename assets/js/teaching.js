@@ -58,7 +58,7 @@ window.onload = function() {
   });
   var ctx4 = document.getElementById("teaching2021");
   var chart4 = new Chart(ctx4, {
-    type: 'polarArea',
+    type: 'doughnut',
     data: {
       labels: ["Informatics (L1)", "Data Science (L2)"],
       datasets: [{
