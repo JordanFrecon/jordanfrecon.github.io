@@ -3,7 +3,7 @@ window.onload = function() {
   var chart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ["Electromagnetism (L1)","Agregation de Physique"],
+      labels: ["Electromagnetism (L1)","Agrégation de Physique"],
       datasets: [{
         label: "2013-2014",
         backgroundColor: ["#e76f51", "#264653"],
@@ -22,7 +22,7 @@ window.onload = function() {
   var chart2 = new Chart(ctx2, {
     type: 'doughnut',
     data: {
-      labels: ["Electromagnetism (L1)", "Optics (L2)", "Complex systems (M2)", "Applied Statistics (L3)"],
+      labels: ["Electromagnetism (L1)", "Optics (L2)", "Complex Systems (M2)", "Applied Statistics (L3)"],
       datasets: [{
         label: "2014-2015",
         backgroundColor: ["#e76f51", "#f4a261","#2a9d8f","#e9c46a"],
@@ -41,7 +41,7 @@ window.onload = function() {
   var chart3 = new Chart(ctx3, {
     type: 'doughnut',
     data: {
-      labels: ["Electromagnetism (L1)", "Optics (L2)", "Experimental Physics (L3)", "Python (L3)", "Signal processing (L3)"],
+      labels: ["Electromagnetism (L1)", "Optics (L2)", "Experimental Physics (L3)", "Python (L3)", "Signal Processing (L3)"],
       datasets: [{
         label: "2015-2016",
         backgroundColor: ["#e76f51", "#f4a261"," #27ae60", "#40916c","#52b788"],
