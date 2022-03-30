@@ -5,6 +5,7 @@ authors: J. Frecon, G. Gasso and S. Canu
 publication: Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence
 year: 2022
 doi:
+image: True
 type: preprint
 project: adversarialLearning
 ---
