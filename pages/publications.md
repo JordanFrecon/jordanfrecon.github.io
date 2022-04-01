@@ -28,9 +28,8 @@ weight: 2
  <div class="publinks">
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>{% if pub.type == 'preprint' %}&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
+   <a href="#" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
