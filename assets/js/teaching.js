@@ -64,7 +64,7 @@ window.onload = function() {
       datasets: [{
         label: "2021-2022",
         backgroundColor: ["#6495ED", "#1434A4"],
-        data: [36, 26]
+        data: [36, 30]
       }]
     },
     options: {
