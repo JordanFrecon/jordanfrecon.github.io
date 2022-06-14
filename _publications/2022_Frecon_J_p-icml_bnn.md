@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Bregman Neural Networks
-authors: J. Frecon, S. Salzo, M. Pontil and G. Gasso
+authors: J. Frecon, G. Gasso, M. Pontil and S. Salzo
 publication: International Conference on Machine Learning (ICML)
 year: 2022
 doi:
