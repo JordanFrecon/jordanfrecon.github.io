@@ -85,6 +85,9 @@ weight: 2
    <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   {% if pub.spotlight %}
+   <a href="{{ pub.spotlight }}"><i class="fas fa-video"></i> Spotlight</a>&nbsp;&nbsp;
+   {% endif %}
    {% if pub.toolbox %}
    <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
