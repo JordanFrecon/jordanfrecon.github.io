@@ -6,6 +6,7 @@ publication: International Conference on Machine Learning (ICML)
 year: 2022
 doi:
 image: True
+slides: True
 type: conference
 project: deepLearning
 idbib: 2022_Frecon_J_hal_bnn
