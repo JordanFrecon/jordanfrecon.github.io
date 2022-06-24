@@ -21,7 +21,7 @@ In the context of developping and conducting experiments on a remote server, one
 
 1. **Requirements**: gathering the requirements
 2. **Design**: thinking of the experiments to conduct
-3. **Development**: implementing in Python the numerical experiments
+3. **Development**: implementing the numerical experiments
 4. **Testing**: checking faulty parts of the code and creation of a reproducible environment
 5. **Deployment**: running of the numerical experiments on remote computing services
 6. **Review**: retrieving and analyzing the experimental results
