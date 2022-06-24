@@ -1,8 +1,8 @@
 ---
 title: Agile Model for Remote Computing
-tags: [Programming]
+tags: [Workflow, GitHub, Python]
 style: fill
-color: info
+color: light
 description: A development model for conducting experiments on a remote server
 comments: true
 ---
@@ -108,7 +108,7 @@ Activate your environment by
 
 	source <path_to_environment>/bin/activate
 
-Install the requirements (see requirements file of ...)
+Install the requirements (see requirements file of [Section 1](#1.-requirements])
 
 	python -m pip install -r requirements.txt
 	
@@ -151,7 +151,6 @@ Note that if you have some issues, you can always *reset* your branch with the c
 In order to download external files (e.g., datasets) from the Internet, one can use the [Wget](http://www.gnu.org/software/wget/) program. Note that the latter is installed by default on the latest Ubuntu versions. In order to download a file located at `<url>`, the basic command reads:
 
 	wget <url>
-
 
 ### 5.3. Managing sessions
 
