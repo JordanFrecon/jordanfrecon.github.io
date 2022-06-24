@@ -131,9 +131,11 @@ where `<login>` denotes your user login and `<server_address>` is remote machine
 
 ### 5.2. Setting your experimental project
 
+Now that we are able to connect to the remote server, we can set our experimental project.
+
 #### 5.2.1. Download your files
 
-Now, from your remote server, you can create a *clone* of your repository by typing the following command in the command-line shell.
+From your remote server, you can create a *clone* of your repository by typing the following command in the command-line shell.
 
 	git clone https://<token>@github.com/<path_to_repository>.git
 	
