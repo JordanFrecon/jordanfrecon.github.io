@@ -13,7 +13,7 @@ This post is not supposed to be the most detailed, but serves a different purpos
 
 ## Development model
 
-Amongst the various popular software development models, I will focus on one of the most popular, namely *Agile*. 
+Amongst the various software development models, I will focus on one of the most popular, namely *Agile*. 
 
 <img class="post-img" src="/images/posts/agile.png" alt="Agile Model"/>
 
@@ -197,6 +197,19 @@ Concerning *scp*, aka *secure copy*, the commands for downloading a source file 
 	scp -r  <login>@<server_address>:<path_to_source_folder> <local_target_folder>
 
 
+
+## Conclusion
+
+Finally, you can repeat these sprints agile multiple times until you get the results expected. If you want to go further, you can check [SetupTools Development Mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) and [Docker](https://hub.docker.com/_/python).
+
+
+
+## Acknowledgments
+
+Thanks [Bamdad](https://github.com/bamdadsabbagh) for your precious comments. It is always a pleasure!
+
+
+
 ## Appendix: shell
 
 In computing, the interface permitting the human user to use the system services and programs is called the **shell**. Its name comes from the fact that it is the outermost layer around the operating system with which the user can interact.
@@ -215,19 +228,6 @@ In what follows, we will solely consider CLI in Unix systems and assume that you
 | cp *FIL1* *FIL2* | Copy file *FIL1* into *FIL2* |
 | mv *FIL1* *FIL2* | Move or rename file *FIL1* into *FIL2* |
 | rm *FIL* | Remove file *FIL* |
-
-
-## Conclusion
-
-Finally, you can repeat these sprints agile multiple times until you get the results expected. If you want to go further, you can check [SetupTools Development Mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) and [Docker](https://hub.docker.com/_/python).
-
-
-
-## Acknowledgments
-
-Thanks [Bamdad](https://github.com/bamdadsabbagh) for your precious comments. It is always a pleasure!
-
-
 
 
 
