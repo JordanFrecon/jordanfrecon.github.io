@@ -156,11 +156,14 @@ In order to download external files (e.g., datasets) from the Internet, one can 
 
 ### 5.3. Managing sessions
 
-A **Terminal Multiplexer** allows to efficiently manage multiple terminal sessions simultaneously in a single window. The most popular applications are [tmux](https://github.com/tmux/tmux/wiki) and [Screen](https://www.gnu.org/software/screen/). I personally use the two interchangeably with a preference for *Screen* since it is usually installed by default on all major Linux distributions. Hereafter, we will cover a nice feature of terminal multiplexers, namely the ability to detach and reattach sessions from a terminal. This feature comes particularly handy when you are running simulations on a remote server, as we will illustrate. In order to create a session, the command reads
+A **Terminal Multiplexer** allows to efficiently manage multiple terminal sessions simultaneously in a single window. The most popular applications are [tmux](https://github.com/tmux/tmux/wiki) and [Screen](https://www.gnu.org/software/screen/). I personally use the two interchangeably with a preference for *Screen* since it is usually installed by default on all major Linux distributions. 
+
+Hereafter, we will cover a nice feature of terminal multiplexers, namely the ability to detach and reattach sessions from a terminal. This feature comes particularly handy when you are running simulations on a remote server. In order to create a session, the command reads
 
 	screen -S <name_of_session>
 	
 where `<name_of_session>` is the name you wish to give to your session. I usually use a name that allows me to track what is the purpose and the specificity of the numerical simulation that will be running inside this session. After typing <kbd>Enter</kbd>, you should be prompt with the said new shell session. It is inside that session that you should run your experiment.
+
 If you wish to detach from the session, you can type <kbd>Ctrl + a</kbd> followed by <kbd>d</kbd>. Having the simulations run under screen means that the session does not terminate – only the now-defunct terminal gets detached – so the simulation is still running, and the applications don't even know the terminal has detached. The user can reattach the session by typing 
 
 	screen -r <name_of_session>
@@ -169,7 +172,7 @@ in order to continue checking upon the simulation. If you have multiple sessions
 
 ### 5.4. Runing your experiments
 
-Once inside the appropriate session, you can activate your Python environment as previously discussed in (...). You are thus left with running your Python experiment (e.g. `python <experiment_name>.py`).
+Once inside the appropriate session, you can activate your Python environment as previously discussed [here](#4-testing]). You are thus left with running your Python experiment (e.g. `python <experiment_name>.py`).
 
 
 ### 5.5. Monitoring processes and activities	
