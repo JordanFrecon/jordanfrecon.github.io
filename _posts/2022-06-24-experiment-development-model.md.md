@@ -13,7 +13,7 @@ This post is not supposed to be the most detailed, but serves a different purpos
 
 ## Development model
 
-Amongst the various software development models, I will focus on one of the most popular, namely *Agile*. 
+Amongst the various software development models, I will focus on one of the most popular, namely [Agile](https://en.wikipedia.org/wiki/Agile_software_development). 
 
 <img class="post-img" src="/images/posts/agile.png" alt="Agile Model"/>
 
@@ -108,7 +108,7 @@ Activate your environment by
 
 	source <path_to_environment>/bin/activate
 
-Install the requirements (see requirements file of [Section 1](#1.-requirements])
+Install the requirements (see requirements file previously disccused [here](#1-requirements]))
 
 	python -m pip install -r requirements.txt
 	
@@ -216,7 +216,7 @@ In computing, the interface permitting the human user to use the system services
 
 There are two types of shells. On the one hand, *graphical shells*, also referred to as graphical user interfaces (GUI), are the most widely known. They have been popularized by Apple in the early 80s and allow the user to simply interact through direct manipulations of icons, text fields, menus, etc. Basically, it is what you see when you start your personal computer. On the other hand, *command-line shells*, also called command-line interfaces (CLI), permit to interact by typing instructions on your keyboard. Popular instances are the *Command prompt* in Windows or *Terminal/Bash* in Unix systems.
 
-In what follows, we will solely consider CLI in Unix systems and assume that you know the basic instructions (see [Bash](https://www.gnu.org/software/bash/) command language) of Unix shell scripting. We recall below the essentials.
+In this post, I have assumed that you know the basic instructions (see [Bash](https://www.gnu.org/software/bash/) command language) of Unix shell scripting whose essentials are recalled below.
 
 | Command | Description | 
 | --- | --- | 
