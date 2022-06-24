@@ -221,7 +221,7 @@ In what follows, we will solely consider CLI in Unix systems and assume that you
 | Command | Description | 
 | --- | --- | 
 | ls | List directory contents  |
-| pwd | & Print working directory |
+| pwd | Print working directory |
 | cd *REP* | Change the working directory to *REP* |
 | mkdir *REP* | Make directory *REP* |
 | rmdir *REP* | Remove empty directory *REP* |
