@@ -35,7 +35,7 @@ In a nutshell, my work method is the following. I will always keep a copy locall
 
 It is almost certainly likely that your code relies on other codes, libraries, modules or packages to run properly. For instance, for deep learning experiments in Python, you might have to resort to Numpy, Pytorch or TensorFlow to name a few. Most importantly, your code might require some specific versions to function.
 
-The requirements text file is a simple text file precisely listing all the external requirements including their version.
+The **requirements text file** is a simple text file precisely listing all the external requirements including their version.
 
 The most common way you will find to automatically create the requirements text file is to [freeze](https://pip.pypa.io/en/stable/cli/pip_freeze/) your Python project with the command:
 	
@@ -69,16 +69,16 @@ Before reaching the optimal version of your software/experiments, you will certa
 I personally use [GitHub](https://github.com) for version control, but other solutions could be envisaged. It is based on [Git](https://git-scm.com/) and notably permits to host and manage files. I strongly advise checking all the opportunities offered by git, such as branching and merging. Here, I will keep it light and only work on a single *master* branch.
 
 
-In order to *add* all locally added/modified/deleted files in the current directory project (and all subdirectories) to the git index, one can type:
+In order to **add** all locally added/modified/deleted files in the current directory project (and all subdirectories) to the git index, one can type:
 
 	git add -A
 	
-Note that in order to add a single `<file>` or to add everything but omit the deletions, one can use `git add <file>` or `git add .`, respectively. The next step is to set a new checkpoint for keeping track of the changes. It is done through the *commit* command as follows:
+Note that in order to add a single `<file>` or to add everything but omit the deletions, one can use `git add <file>` or `git add .`, respectively. The next step is to set a new checkpoint for keeping track of the changes. It is done through the **commit** command as follows:
 
 	git commit -m "<commit_message>"
 
 There, the `<commit_message>` should be chosen appropriately to reflect the changes made.
-Now, after committing the changes, everything is set up to *push* the changes to GitHub by using
+Now, after committing the changes, everything is set up to **push** the changes to GitHub by using
 
 	git push https://<token>@github.com/<path_to_repository>.git
 
@@ -91,7 +91,7 @@ At this point, a new version of your code should be successfully updated to GitH
 
 Your code should now be ready for testing. A stage, staging or pre-production environment is an environment for testing that exactly resembles the one used for developping and the one that will be used for production.
 
-To date, there exist many ways to create virtual python environments. For instance, you can refer to the following packages, to name a few.
+To date, there exist many ways to create a **virtual python environment**. For instance, you can refer to the following packages, to name a few.
 - [venv](https://docs.python.org/3/library/venv.html)
 - [virtualenv](https://pypi.org/project/virtualenv/)
 - [pyenv](https://github.com/pyenv/pyenv)
@@ -135,15 +135,15 @@ Now that we are able to connect to the remote server, we can set our experimenta
 
 #### 5.2.1. Download your files
 
-From your remote server, you can create a *clone* of your repository by typing the following command in the command-line shell.
+From your remote server, you can create a **clone** of your repository by typing the following command in the command-line shell.
 
 	git clone https://<token>@github.com/<path_to_repository>.git
 	
-If the repository already exists, you only need to *pull* the changes as follows
+If the repository already exists, you only need to **pull** the changes as follows
 
 	git pull https://<token>@github.com/<path_to_repository>.git
 
-Note that if you have some issues, you can always *reset* your branch with the command:
+Note that if you have some issues, you can always **reset** your branch with the command:
 
 	git reset --hard HEAD
 	
