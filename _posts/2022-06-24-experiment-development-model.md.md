@@ -217,13 +217,15 @@ In what follows, we will solely consider CLI in Unix systems and assume that you
 | rm *FIL* | Remove file *FIL* |
 
 
+## Conclusion
+
+Finally, you can repeat these sprints agile multiple times until you get the results expected. If you want to go further, you can check [SetupTools Development Mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) and [Docker](https://hub.docker.com/_/python).
 
 
-## Acknowledgments and to go further
+
+## Acknowledgments
 
 Thanks [Bamdad](https://github.com/bamdadsabbagh) for your precious comments. It is always a pleasure!
-
-If you want to go further, you can check [SetupTools Development Mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) and [Docker](https://hub.docker.com/_/python).
 
 
 
