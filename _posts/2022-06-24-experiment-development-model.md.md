@@ -27,7 +27,7 @@ In the context of developping and conducting experiments on a remote server, one
 6. **Review**: retrieving and analyzing the experimental results
 
 
-In a nutshell, my work method is the following. I will always keep a copy locally on my computer to develop, prepare and test the experimental settings. All along, I will use GitHub to control the versions. Once all is set up, I will make update the latest toolbox to GitHub. Then, I will retrieve the toolbox from GitHub on all the remote servers that I am planning to use for performing the experiments. Finally, I will retrieve the results from the distant servers in order to be analyzed locally.
+In a nutshell, my work method is the following. I will always keep a copy locally on my computer to develop, prepare and test the experimental settings. All along, I will use GitHub to control the versions. Once all is set up, I will update the latest toolbox to GitHub. Then, I will retrieve the toolbox from GitHub on all the remote servers that I am planning to use for performing the experiments. Finally, I will retrieve the results from the distant servers in order to be analyzed locally.
 
 
 
