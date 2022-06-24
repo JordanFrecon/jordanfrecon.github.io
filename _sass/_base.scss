@@ -25,19 +25,3 @@ body {
     border: 2px solid $primary;
     border-radius: 10px;
 }
-
-.bg-light,
-.badge-light {
-  &,
-  * {
-    color: $text-black !important;
-  }
-}
-
-.bg-dark,
-.badge-dark {
-  &,
-  * {
-    color: $text-white !important;
-  }
-}

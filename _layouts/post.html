@@ -30,6 +30,18 @@ layout: page
 
 {{ content }}
 
+<h2>References</h2>
+<ul>
+{% assign sortedPubli = site.data.bibliography | sort: 'cite' %} 
+{% for publi in sortedPubli %}
+  {% for biblio in page.biblio   %}
+    {%- if {{biblio}} == {{publi.id}} -%}
+      <a id={{publi.id}}><li><b>[{{publi.cite}}]</b>&nbsp; {{ publi.authors }}. "{{ publi.title }}". {{ publi.publication }} ({{ publi.year }})</li></a>
+    {%- endif -%}
+  {% endfor %}
+{% endfor %}
+</ul>
+
 {% if page.comments %}
 <div class="pt-5">
   {% include blog/disqus.html %}
