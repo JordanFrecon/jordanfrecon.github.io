@@ -82,7 +82,7 @@ Now, after committing the changes, everything is set up to **push** the changes 
 
 	git push https://<token>@github.com/<path_to_repository>.git
 
-> Get your token at [https://github.com/settings/tokens]
+> You can get your token [here](https://github.com/settings/tokens).
 
 At this point, a new version of your code should be successfully updated to GitHub.
 
