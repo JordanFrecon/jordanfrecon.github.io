@@ -65,7 +65,7 @@ $$
 a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).
 $$
 
-{% include switch.html id='fgsm' content1='$$a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).$$' btn1="$$\ell_\infty$$" content2="test" btn2="$$\ell_2$$" %}
+{% include switch.html id='fgsm' content1="$$a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).$$" btn1="$$\ell_\infty$$" content2="test" btn2="$$\ell_2$$" %}
 
 
 
