@@ -61,10 +61,6 @@ where the regularization parameter $$\lambda>0$$ is determined by line-search in
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$, i.e.,
 
-$$
-a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).
-$$
-
 {% include switch.html id='fgsm' content1="$$a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).$$" btn1="$$\ell_\infty$$" content2="test" btn2="$$\ell_2$$" %}
 
 
