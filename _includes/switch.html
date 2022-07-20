@@ -13,13 +13,22 @@ function typeset(code) {
   return MathJax.startup.promise;
 }        
         
-function content(divSelector, value) {
+function content_notworking(divSelector, value) {
 	typeset(() => {
   		const math = document.querySelector(divSelector);
   		math.innerHTML = value;
  		return [math];
 	});
-}        
+}
+
+function content(divSelector, value) {
+	const node = document.querySelector(divSelector);
+	MathJax.typesetClear([node]);
+	node.innerHTML = value;
+	MathJax.typesetPromise([node]).then(() => {
+	  // the new content is has been typeset
+	});
+}  
 </script>
 
 <style>
