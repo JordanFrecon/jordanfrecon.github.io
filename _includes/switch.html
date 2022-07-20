@@ -22,11 +22,11 @@ function content_notworking(divSelector, value) {
 }
 
 function content(divSelector, value) {
-	const node = document.querySelector(divSelector);
+	const node = document.getElementById(divSelector);
 	MathJax.typesetClear([node]);
 	node.innerHTML = value;
 	MathJax.typesetPromise([node]).then(() => {
-	  value
+	  typeset(value)
 	});
 }  
 </script>
