@@ -1,8 +1,17 @@
 <script>
-function content(divSelector, value) {
+function content_old(divSelector, value) {
         document.querySelector(divSelector).innerHTML = value;
         MathJax.Hub.Queue(["Typeset",MathJax.Hub,divSelector]); 
         }
+        
+function content(divSelector, value) {
+	const node = document.getElementById(divSelector);
+	MathJax.typesetClear([node]);
+	node.innerHTML = new_html;
+	MathJax.typesetPromise([node]).then(() => {
+	  value
+	});
+}        
 </script>
 
 <style>
