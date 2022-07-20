@@ -48,6 +48,14 @@ The key question then becomes exactly how much distortion we must add to cause t
 - *Universal* if there exist $$\varepsilon$$ such that for every $$x\sim\mu$$, $$a=x+\varepsilon$$ is an adversarial example
 " %}
 
+
+{% include definition.html title="Performance criteria" content="Let some set $$\{x_i,a_i\}_{i=1}^n$$ made of $$n$$ instances and their adversarial examples crafted by means of some attack strategy. In order to judge upon the quality of the attack, the most common criteria are the following.
+- *Fooling rate:* the fraction of adversarial examples which do fool the classifier, i.e., $$\frac{1}{n} \sum_{i=1}^n \mathbb{1}_{C_f(x_i)\neq C_f(a_i)}$$. Note that in some cases where $$f$$ is not very accurate, some authors prefer to only considers the instances where $$C_f(x_i)$$ predicts the true label.
+- *Computational cost:* Complexity of the algorithm used to craft the adversarial examples.
+- $$\ell_p$$*-budget:* 
+" %}
+
+
 ## 3. Per-instance attacks
 
 ### 3.1. $$\ell_p$$-minimal perturbations
