@@ -153,3 +153,30 @@
     }
   }
 }
+
+.switch-box {
+    background: #EDEDED;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+
+.switch-toggle {
+  justify-content: right;
+  display: flex;
+}
+
+.switch-toggle .btn-holder {
+  border-radius: 8px;
+  background: white;
+  transition-duration: 0.4s;
+  float: left;
+  border: 1px solid green;
+}
+
+.switch-toggle .btn-holder:hover  {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
