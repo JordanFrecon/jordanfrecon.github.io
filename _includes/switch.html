@@ -1,7 +1,7 @@
-<script type="math/asciimath">
+<script>
 function content(divSelector, value) {
         document.querySelector(divSelector).innerHTML = value;
-	MathJax.Hub.Queue(["Typeset",MathJax.Hub,document.querySelector(divSelector)]); 
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,divSelector]); 
         }
         
 </script>
