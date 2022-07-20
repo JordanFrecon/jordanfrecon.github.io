@@ -37,7 +37,9 @@ function content(divSelector, value) {
 	var math = MathJax.Hub.getAllJax(divSelector)[0];
 	//MathJax.Hub.Queue(["Text",math,value]);
 	//var content = String.raw`${value}`
-	MathJax.Hub.Queue(["Text",math,r"{}".format(value.replace(/\$/g,''))]);
+	const content = String.raw`${value}`;
+
+	MathJax.Hub.Queue(["Text",math,content.replace(/\$/g,'')]);
 }
 </script>
 
