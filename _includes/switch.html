@@ -1,13 +1,7 @@
 <script>
 function content(divSelector, value) {
-        //document.querySelector(divSelector).innerHTML = value;
-        const node = document.getElementById('#fgsm');
-	MathJax.typesetClear([node]);
-	node.innerHTML = value;
-	MathJax.typesetPromise([node]).then(() => {
-	  // the new content is has been typeset
-	});
-	MathJax.Hub.Queue(["Typeset",MathJax.Hub,divSelector]); 
+        document.querySelector(divSelector).innerHTML = value;
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,document.querySelector(divSelector)]); 
         }
         
 </script>
