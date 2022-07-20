@@ -1,7 +1,7 @@
 <script>
 function content(divSelector, value) {
-        document.querySelector(divSelector).innerHTML = value;
-        const node = document.querySelector(divSelector);
+        //document.querySelector(divSelector).innerHTML = value;
+        const node = document.getElementById('fgsm');
 	MathJax.typesetClear([node]);
 	node.innerHTML = value;
 	MathJax.typesetPromise([node]).then(() => {
