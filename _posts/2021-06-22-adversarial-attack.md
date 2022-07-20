@@ -68,17 +68,27 @@ where the regularization parameter $$\lambda>0$$ is determined by line-search in
 **IFGSM** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%}. This technique is a multi-step iterative variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
 
 
+{% include switch.html id='fgsm' content1="
 $$
 \begin{align}
  &a = x\\
     &\text{while } C_f(a) = C_f(x)\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{x+\mathcal{B}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
+    a = \mathrm{Proj}_{\mathcal{X}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
     \end{array}\right.
 \end{align}
+$$" btn1="$$\ell_\infty\text{-attack}$$" content2="
 $$
+\begin{align}
+ &a = x\\
+    &\text{while } C_f(a) = C_f(x)\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    a = \mathrm{Proj}_{\mathcal{X}}( a + \delta\,\delta\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F})\\
+    \end{array}\right.
+\end{align}
+$$" btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\mathcal{B}$$ denotes the space of allowed perturbations. 
+where $$\mathcal{X}$$ denotes the space of admissible instances. 
 
 
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
