@@ -113,7 +113,7 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 
 **MI-FGSM** The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures.
 
-**NI-FGSM** The **Nesterov I-FGSM** attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
+**NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhance the momentum by
 not only memorizing all the past gradients during the itera-
