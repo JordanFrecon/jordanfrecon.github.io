@@ -115,8 +115,7 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 
 **NI-FGSM** The **Nesterov I-FGSM** attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
-**PI-FGSM** The *Pre-gradient guided mo-
-mentum Iterative FGSM* enhance the momentum by
+**PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhance the momentum by
 not only memorizing all the past gradients during the itera-
 tive process, but also accumulating the gradients of multiple
 sampled examples in the vicinity of the current data point.
