@@ -68,7 +68,7 @@ where the regularization parameter $$\lambda>0$$ is determined by line-search in
 **IFGSM** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%}. This technique is a multi-step iterative variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
 
 
-{% include switch.html id='fgsm' content1="
+{% include switch.html id='ifgsm' content1="
 $$
 \begin{align}
  &a = x\\
