@@ -65,6 +65,8 @@ $$
 a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).
 $$
 
+{% include switch.html id='fgsm' content1="$$a = x+\varepsilon(x) \quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y)).$$" btn1="$$\ell_\infty$$" content2="test" btn2="$$\ell_2$$" %}
+
 
 
 **IFGSM** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%}. This technique is a multi-step iterative variant of FGSM where the adversarial example is updated until it fools the DNN. More formally, it reads
