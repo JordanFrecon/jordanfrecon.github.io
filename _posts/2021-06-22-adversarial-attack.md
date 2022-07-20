@@ -50,6 +50,8 @@ The key question then becomes exactly how much distortion we must add to cause t
 
 ## 3. Per-instance attacks
 
+### 3.1. $$\ell_p$$-minimal perturbations
+
 **L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%}. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
 
 $$
@@ -57,6 +59,26 @@ $$
 $$
 
 where the regularization parameter $$\lambda>0$$ is determined by line-search in order to ensure that $$C_f(x+\varepsilon)=t$$. The authors have considered the case where $$\mathcal{X}=[0,1]^P$$ so that the constraint enforces the $$P$$ pixels to lie inside a box. In addition, they have promoted the use of a box-constrained L-BFGS solver, which hence gave its name to such adversarial crafting technique.
+
+
+
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
+$$
+
+
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
+
+$$
+\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
+$$
+
+where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
+
+
+### 3.2. $$\ell_p$$-constrained perturbations
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon(x)$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
@@ -94,28 +116,11 @@ where $$\mathcal{X}$$ denotes the space of admissible instances.
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
 
-
-
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
-
-$$
-\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
-$$
-
-
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
-
-$$
-\underset{\varepsilon\in\mathcal{X}}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
-$$
-
-where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
-
 **MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures.
 
 **NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
-**PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhance the momentum by
+**PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
 
 **LogBarrier** {% include cite.html id="2019_Finlay_C_p-iccv_laa"%}. Let $$k=C_f(x)$$ be the predicted target of $$x$$ by the DNN $$f$$. If it is well trained then it should correspond to the label $$y$$. Thus, a necessary and sufficient condition for a misclassified adversarial example $$x+\varepsilon$$ is to have $$\max_{i\neq k} f_i(x+\varepsilon) - f_k(x+\varepsilon)>0$$ with $$\varepsilon$$ small. On the one hand, a small perturbation $$\varepsilon$$ can be found by minimizing a criterion $$\ell$$. One the other hand, the misclassication constraint can be enforced through a negative logarithm penalty (i.e., a logarithmic barrier) weighted by a regularization parameter $$\lambda>0$$. The resulting problem reads
