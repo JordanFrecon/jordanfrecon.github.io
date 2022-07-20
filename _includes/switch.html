@@ -4,41 +4,10 @@
 </script>
 </head>
 <script>
-function content_old(divSelector, value) {
-        document.querySelector(divSelector).innerHTML = value;
-	MathJax.Hub.Queue(["Typeset",MathJax.Hub,divSelector]); 
-        }
-        
-        
-let promise = Promise.resolve();  // Used to hold chain of typesetting calls
-
-function typeset(code) {
-  promise = promise.then(() => MathJax.typesetPromise(code()))
-                   .catch((err) => console.log('Typeset failed: ' + err.message));
-  return promise;
-}
-
-function content_old2(divSelector, value) {
-code = () => {
-  const math = document.querySelector(divSelector);
-  math.innerHTML = value;
-  return [math];
-};
-typeset(code);
-}
-
-function content_old3(divSelector, value) {
-	var math = document.getElementById(divSelector);
-	document.querySelector(divSelector).innerHTML = value;
-	MathJax.Hub.Queue(["Text",MathJax.Hub,math]);
-}
 
 function content(divSelector, value) {
 	var math = MathJax.Hub.getAllJax(divSelector)[0];
-	//MathJax.Hub.Queue(["Text",math,value]);
-	//var content = String.raw`${value}`
 	const content = String.raw`${value}`;
-
 	MathJax.Hub.Queue(["Text",math,content.replace(/\$/g,'')]);
 }
 </script>
@@ -77,7 +46,7 @@ function content(divSelector, value) {
 </div>
 <div class="switch-toggle">
 <button type="button" class="btn-holder" onclick="content('{{ include.id }}',String.raw`{{ include.content1 }}`)">{{ include.btn1 }}</button>
-<button type="button" class="btn-holder" onclick="content('{{ include.id }}','{{ include.content2 }}')">{{ include.btn2 }}</button>
+<button type="button" class="btn-holder" onclick="content('{{ include.id }}',String.raw`{{ include.content2 }}`)">{{ include.btn2 }}</button>
 </div>
 
 
