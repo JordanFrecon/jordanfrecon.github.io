@@ -36,8 +36,7 @@ function content_old3(divSelector, value) {
 function content(divSelector, value) {
 	var math = MathJax.Hub.getAllJax(divSelector)[0];
 	//MathJax.Hub.Queue(["Text",math,value]);
-	let content = String.raw`${value}`;
-	MathJax.Hub.Queue(["Text",math,content]);
+	MathJax.Hub.Queue(["Text",math,value]);
 }
 </script>
 
