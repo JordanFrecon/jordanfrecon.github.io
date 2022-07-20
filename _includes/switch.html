@@ -36,7 +36,7 @@ function content_old3(divSelector, value) {
 function content(divSelector, value) {
 	var math = MathJax.Hub.getAllJax(divSelector)[0];
 	//MathJax.Hub.Queue(["Text",math,value]);
-	MathJax.Hub.Queue(["Text",math,value]);
+	MathJax.Hub.Queue(["Text",math,value.replace('$','')]);
 }
 </script>
 
@@ -70,7 +70,7 @@ function content(divSelector, value) {
 </style>
 
 <div class="switch-box">
-<div id="{{ include.id }}">$$x+1$$</div>
+<div id="{{ include.id }}">{{ include.btn1 }}</div>
 </div>
 <div class="switch-toggle">
 <button type="button" class="btn-holder" onclick="content('{{ include.id }}',{{ include.content1 }})">{{ include.btn1 }}</button>
