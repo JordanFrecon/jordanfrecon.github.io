@@ -49,11 +49,25 @@ The key question then becomes exactly how much distortion we must add to cause t
 " %}
 
 
-{% include definition.html title="Performance criteria" content="Let some set $$\{x_i,a_i\}_{i=1}^n$$ made of $$n$$ instances $$x_i$$ and their adversarial examples $$a_i$$ crafted by means of some attack model. In order to judge upon the quality of the attack, the most common criteria are the following.
+{% include definition.html title="Performance criteria" content="Let some set $$\{x_i,a_i\}_{i=1}^n$$ made of $$n$$ instances $$x_i$$ and their adversarial examples $$a_i$$ crafted by means of some attack strategy on the neural network $$f$$. In order to judge upon the quality of the attack, the most common criteria are the following.
 - *Fooling rate:* the fraction of adversarial examples which do fool the classifier, i.e., $$\frac{1}{n} \sum_{i=1}^n \mathbb{1}_{C_f(x_i)\neq C_f(a_i)}$$. Note that in some cases where $$f$$ is not very accurate, some authors prefer to solely consider the instances where $$C_f(x_i)$$ correctly predicts the true label.
 - *Computational cost:* Complexity of the algorithm used to craft the adversarial examples.
 - $$\ell_p$$*-budget:* the amount of distortion/perturbation measured in terms of mean $$\ell_p$$-norm, i.e., $$\frac{1}{n}\sum_{i=1}^n \|a_i-x_i\|_p$$.
+- *Transferability:* the fooling rate obtained on a neural network $$f^\prime$$ different from $$f$$.
 " %}
+
+Every attack will necessarily face a trade-off between some or all these performance criteria. On the one hand, it is fair to say that the computational cost and the transferability of the attack are mostly related to the algorithmic solution devised. On the other hand, the trade-off between fooling rate and $$\ell_p$$-budget is rather impacted by the choice of the attack model. Actually, this is way more subtle. Indeed, as we will see, finding an adversarial example amounts in solving a non-convex optimization problem. Hence, ...
+
+Hereafter, we will make the distinction between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial given some trade-off or constraint on the fooling rate. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
+
+
+<!---
+Some strategies precisely aim at finding the smallest $$\ell_p$$-budgeted adversarial example which do fool the classifier. As such, these methods generally suffer from high $$\ell_p$$-budgets.)
+For instance, one shot per-instance attacks like FGSM benefits from a low computational cost at the cost of a relatively poor fooling rate. 
+-->
+
+Some methods fix a maximal $$\ell_p$$-budget $$\delta>0$$ and look
+
 
 
 ## 3. Per-instance attacks
