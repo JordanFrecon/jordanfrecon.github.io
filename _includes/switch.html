@@ -4,12 +4,19 @@ function content_old(divSelector, value) {
         MathJax.Hub.Queue(["Typeset",MathJax.Hub,divSelector]); 
         }
         
+let promise = Promise.resolve();  // Used to hold chain of typesetting calls
+
+function typeset(code) {
+  promise = promise.then(() => MathJax.typesetPromise(code()))
+                   .catch((err) => console.log('Typeset failed: ' + err.message));
+  return promise;
+}        
+        
 function content(divSelector, value) {
-	const node = document.getElementById(divSelector);
-	MathJax.typesetClear([node]);
-	node.innerHTML = value;
-	MathJax.typesetPromise([node]).then(() => {
-	  value
+	typeset(() => {
+  		const math = document.querySelector(divSelector);
+  		math.innerHTML = value;
+ 		return [math];
 	});
 }        
 </script>
