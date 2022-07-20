@@ -582,3 +582,10 @@
   publication: Neurocomputing
   authors: J. Dai and L. Shu
   
+- id: 2018_Dong_Y_p-cvpr_baam
+  cite: Dong et al., 2018
+  year: 2018
+  title: Boosting adversarial attacks with momentum
+  publication: Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)
+  authors: Y. Dong, F. Liao, T. Pang, H. Su, J. Zhu, X. Hu and J. Li
+  
