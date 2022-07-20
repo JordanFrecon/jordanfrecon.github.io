@@ -26,7 +26,7 @@ function content(divSelector, value) {
 	MathJax.typesetClear([node]);
 	node.innerHTML = value;
 	MathJax.typesetPromise([node]).then(() => {
-	  // the new content is has been typeset
+	  value
 	});
 }  
 </script>
