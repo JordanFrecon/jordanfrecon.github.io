@@ -27,11 +27,12 @@ typeset(code);
 }
 
 function content(divSelector, value) {
-	MathJax.typesetPromise().then(() => {
-	   	math = document.querySelector(divSelector);
-  		math.innerHTML = value;
-	  MathJax.typesetPromise();
-	}).catch((err) => console.log(err.message));
+	const node = document.getElementById(divSelector);
+	MathJax.typesetClear([node]);
+	node.innerHTML = value;
+	MathJax.typesetPromise([node]).then(() => {
+	  // the new content is has been typeset
+	});
 }
 </script>
 
