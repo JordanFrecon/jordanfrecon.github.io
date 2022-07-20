@@ -17,13 +17,21 @@ function typeset(code) {
   return promise;
 }
 
-function content(divSelector, value) {
+function content_old2(divSelector, value) {
 code = () => {
   const math = document.querySelector(divSelector);
   math.innerHTML = value;
   return [math];
 };
 typeset(code);
+}
+
+function content(divSelector, value) {
+	MathJax.typesetPromise().then(() => {
+	   	math = document.querySelector(divSelector);
+  		math.innerHTML = value;
+	  MathJax.typesetPromise();
+	}).catch((err) => console.log(err.message));
 }
 </script>
 
