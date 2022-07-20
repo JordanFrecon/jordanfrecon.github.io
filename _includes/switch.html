@@ -1,6 +1,6 @@
 <script>
 function content(divSelector, value) {
-        //document.querySelector(divSelector).innerHTML = value;
+        document.querySelector(divSelector).innerHTML = value;
         const node = document.querySelector(divSelector);
 	MathJax.typesetClear([node]);
 	node.innerHTML = value;
