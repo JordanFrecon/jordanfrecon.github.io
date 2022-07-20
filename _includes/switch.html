@@ -27,12 +27,9 @@ typeset(code);
 }
 
 function content(divSelector, value) {
-	const node = document.getElementById(divSelector);
-	MathJax.typesetClear([node]);
-	node.innerHTML = value;
-	MathJax.typesetPromise([node]).then(() => {
-	  // the new content is has been typeset
-	});
+	var math = document.getElementById(divSelector);
+	document.querySelector(divSelector).innerHTML = value;
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,math]);
 }
 </script>
 
