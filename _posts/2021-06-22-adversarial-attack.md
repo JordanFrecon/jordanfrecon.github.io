@@ -74,7 +74,7 @@ $$
  &a = x\\
     &\text{while } C_f(a) = C_f(x)\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{\mathcal{X}}( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y))\\
+    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
     \end{array}\right.
 \end{align}
 $$" btn1="$$\ell_\infty\text{-attack}$$" content2="
@@ -83,7 +83,7 @@ $$
  &a = x\\
     &\text{while } C_f(a) = C_f(x)\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{\mathcal{X}}( a + \delta\,\delta\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F})\\
+    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \delta\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F}\Big)\\
     \end{array}\right.
 \end{align}
 $$" btn2="$$\ell_2\text{-attack}$$" %}
