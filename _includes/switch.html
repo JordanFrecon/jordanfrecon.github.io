@@ -70,10 +70,10 @@ function content(divSelector, value) {
 </style>
 
 <div class="switch-box">
-<div id="{{ include.id }}">{{ include.btn1 }}</div>
+<div id="{{ include.id }}">{{ include.content1 }}</div>
 </div>
 <div class="switch-toggle">
-<button type="button" class="btn-holder" onclick="content('{{ include.id }}',{{ include.content1 }})">{{ include.btn1 }}</button>
+<button type="button" class="btn-holder" onclick="content('{{ include.id }}','{{ include.content1 }}')">{{ include.btn1 }}</button>
 <button type="button" class="btn-holder" onclick="content('{{ include.id }}','{{ include.content2 }}')">{{ include.btn2 }}</button>
 </div>
 
