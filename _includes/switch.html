@@ -39,8 +39,8 @@ function content(divSelector, value) {
 <div id="{{ include.id }}">{{ include.content1 }}</div>
 </div>
 <div class="switch-toggle">
-<button type="button" class="btn-holder" onclick="content('#{{ include.id }}','{{ include.content1 }}')">{{ include.btn1 }}</button>
-<button type="button" class="btn-holder" onclick="content('#{{ include.id }}','{{ include.content2 }}')">{{ include.btn2 }}</button>
+<button type="button" class="btn-holder" onclick="content('#{{ include.id }}',{{ include.content1 }})">{{ include.btn1 }}</button>
+<button type="button" class="btn-holder" onclick="content('#{{ include.id }}',{{ include.content2 }})">{{ include.btn2 }}</button>
 </div>
 
 
