@@ -29,18 +29,8 @@ function content(divSelector, value) {
   display: flex;
 }
 
-.switch-toggle .btn-holder {
-  font-size: 10px;
-  /*border-radius: 8px;*/
-  background: white;
-  transition-duration: 0.4s;
-  float: left;
-  border: 1px solid green;
-  margin-top: 0em;
-  margin-bottom: 0em;
-}
 
-.switch-toggle .square_btn {
+.switch-toggle .btn-holder {
     font-size: 10px;
     /*position: relative;*/
     /*display: inline-block;*/
@@ -58,7 +48,7 @@ function content(divSelector, value) {
 }
 
 .switch-toggle .btn-holder:hover  {
-  background-color: #4CAF50; /* Green */
+  background-color: #007bff; /* Green */
   color: white;
 }
 </style>
@@ -67,8 +57,8 @@ function content(divSelector, value) {
 <div id="{{ include.id }}">{{ include.content1 }}</div>
 </div>
 <div class="switch-toggle">
-<button type="button" class="square_btn" onclick="content('{{ include.id }}',String.raw`{{ include.content1 }}`)">{{ include.btn1 }}</button>
-<button type="button" class="square_btn" onclick="content('{{ include.id }}',String.raw`{{ include.content2 }}`)">{{ include.btn2 }}</button>
+<button type="button" class="btn-holder" onclick="content('{{ include.id }}',String.raw`{{ include.content1 }}`)">{{ include.btn1 }}</button>
+<button type="button" class="btn-holder" onclick="content('{{ include.id }}',String.raw`{{ include.content2 }}`)">{{ include.btn2 }}</button>
 </div>
 
 
