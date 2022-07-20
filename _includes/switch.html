@@ -26,10 +26,15 @@ code = () => {
 typeset(code);
 }
 
-function content(divSelector, value) {
+function content_old3(divSelector, value) {
 	var math = document.getElementById(divSelector);
 	document.querySelector(divSelector).innerHTML = value;
 	MathJax.Hub.Queue(["Text",MathJax.Hub,math]);
+}
+
+function content(divSelector, value) {
+	var math = MathJax.Hub.getAllJax(divSelector)[0];
+	MathJax.Hub.Queue(["Text",math,value]);
 }
 </script>
 
