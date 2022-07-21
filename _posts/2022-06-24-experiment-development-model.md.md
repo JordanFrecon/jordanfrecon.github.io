@@ -7,9 +7,7 @@ description: A development model for conducting experiments on a remote server
 comments: true
 ---
 
-> In progress
-
-This post is not supposed to be the most detailed, but serves a different purpose: to give pointers to the uninitiated reader in order to be readily and quickly able to run Python-based simulations on a remote server.
+In this post, I present the basics for conducting Python-based simulations on a remote server. This post is not supposed to be the most detailed, but serves a different purpose: to give pointers to the uninitiated reader in order to be readily and quickly operational. In order to review all the different concepts, I have chosen as a narrative arc to follow the Agile development model.
 
 ## Development model
 
