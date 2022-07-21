@@ -134,8 +134,9 @@ Most of the attacks presented in this section intend to craft the adversarial pe
 
 {% include switch.html id='lpconstrained' content1="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{maximize}}\, H(f(x+\varepsilon),y)$$" btn1="untargeted" content2="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{minimize}}\, H(f(x+\varepsilon),t)\quad\text{with}\quad t\neq C_f(x)$$" btn2="targeted" %}
 
-The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\varepsilon)$$, i.e., by projecting the perturbed example into the space of admissible instances. In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
+The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\varepsilon)$$, i.e., by projecting the perturbed example into the space of admissible instances.
 
+> In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
