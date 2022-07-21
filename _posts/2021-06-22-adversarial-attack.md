@@ -237,6 +237,34 @@ The authors also suggest to use $$\alpha=\delta/K$$ and to omit every projection
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
 
+{% include switch.html id='pifgsm' content1="
+$$
+\begin{align}
+ &\tilde{g}=0,\, g = 0,\,a = x\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+	\tilde{a} = a + \alpha \mu \tilde{g}\\
+	\tilde{g} = \nabla_a H(f(\tilde{a}),y) \\
+    g = \mu g + \frac{\tilde{g}}{\|\tilde{g}\|_1}\\
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_\infty(x,\delta)}\Big(a + \alpha\,\mathrm{sign}(g)\big)
+    \end{array}\right.\\
+\end{align}
+$$"
+btn1="$$\ell_\infty\text{-attack}$$" content2="
+$$
+\begin{align}
+ &\tilde{g}=0,\, g = 0,\,a = x\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    \tilde{a} = a + \alpha \mu \tilde{g}\\
+	\tilde{g} = \nabla_a H(f(\tilde{a}),y) \\
+    g = \mu g + \frac{\tilde{g}}{\|\tilde{g}\|_1}\\
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big(a + \alpha\,\frac{g}{\|g\|_2}\big)
+    \end{array}\right.\\
+\end{align}
+$$"
+btn2="$$\ell_2\text{-attack}$$" %}
+
 **APGD** {% include cite.html id="2020_Croce_F_p-icml_rearedpfa"%}. The *Auto*-PGD is a variant of *PGD* with momentum where the step-size is selected according to some heuristic depending on the allowed budget and on the progress of the optimization. The overall idea is to gradually transit from exploring the whole feasible set to a local optimization.
 
 **PCAE** {% include cite.html id="2020_Zhang_Y_j-tsp_pcae"%}. The *Principal Component Adversarial Example* technique ..
