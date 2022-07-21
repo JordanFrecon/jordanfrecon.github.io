@@ -58,8 +58,6 @@ The key question then becomes exactly how much distortion we must add to cause t
 
 Every attack will necessarily face a trade-off between some or all these performance criteria. On the one hand, it is fair to say that the computational cost and the transferability of the attack are mostly related to the algorithmic solution devised. On the other hand, the trade-off between fooling rate and $$\ell_p$$-budget is rather impacted by the choice of the attack model. Actually, this discrimination is over-simplistic. The reality is way more subtle. Indeed, as we will see, finding an adversarial example amounts in solving a non-convex optimization problem. Hence, the choice of the algorithmic solution will also play a significant role on both the achieved fooling rate and the $$\ell_p$$-budget.
 
-Hereafter, we will make the distinction between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial given some trade-off or constraint on the fooling rate. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
-
 
 <!---
 Some strategies precisely aim at finding the smallest $$\ell_p$$-budgeted adversarial example which do fool the classifier. As such, these methods generally suffer from high $$\ell_p$$-budgets.)
@@ -68,6 +66,10 @@ For instance, one shot per-instance attacks like FGSM benefits from a low comput
 
 
 ## 3. Per-instance attacks
+
+In this section, we present the most common per-instance attacks. 
+In addition, below, we distinguish between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial given some trade-off or constraint on the fooling rate. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
+
 
 ### 3.1. $$\ell_p$$-minimal perturbations
 
