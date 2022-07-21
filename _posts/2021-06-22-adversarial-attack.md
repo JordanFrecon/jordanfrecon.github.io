@@ -16,7 +16,7 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 ## 1. Quick reminder about classification based DNN
 
 
-
+Before presentating adversarial attacks, we report a quick reminder about classification based deep neural networks.
 
 Let some dataset $$\mathcal{D}=\{x_i,y_i\}_{i=1}^n$$ made of $$n$$ samples $$x_i\in\mathcal{X}\subseteq\mathbb{R}^P$$ and $$y_i\in\mathbb{R}^c$$. In addition, let some neural network $$f\colon\mathcal{X}\to \mathbb{R}^c$$ mapping each input $$x\in\mathcal{X}$$ to its probabilities $$f(x)\in\mathbb{R}^c$$ to belong to each of the $$c$$ classes. Then, the usual way to train $$f$$ on $$\mathcal{D}$$ consists in solving
 
@@ -39,7 +39,7 @@ $$
 
 ## 2. Span of adversarial attacks
 
-Although DNN have shown a great success to predict various complex tasks, some concerns have been raised about their safety and more particularly for the safety of the user since the pioneer work of ... . which has shown the existence of adversarial attacks. The most striking example is probably that of automated vehicles where malicious attacks could lead the car to take unwanted action with dramatic consequences.
+Although DNN have shown a great success to predict various complex tasks, some concerns have been raised about their safety and more particularly for the safety of the user since the pioneer work of {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} which has shown the existence of adversarial attacks. The most striking example is probably that of automated vehicles where malicious attacks could lead the car to take unwanted action with dramatic consequences.
 
 <img class="post-img" src="/images/posts/adversarial.png" alt="Adversarial attack"/>
 
