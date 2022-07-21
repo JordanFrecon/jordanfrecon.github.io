@@ -134,7 +134,7 @@ Most of the attacks presented in this section intend to craft the adversarial pe
 
 {% include switch.html id='lpconstrained' content1="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{maximize}}\, H(f(x+\varepsilon),y)$$" btn1="untargeted" content2="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{minimize}}\, H(f(x+\varepsilon),t)\quad\text{with}\quad t\neq C_f(x)$$" btn2="targeted" %}
 
-The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\varepsilon)$$. In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
+The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\varepsilon)$$, i.e., by projecting the perturbed example into the space of admissible instances. In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
 
 
 
