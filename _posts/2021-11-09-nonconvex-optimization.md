@@ -101,7 +101,12 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
     \end{array}\right.\end{array}$$
 
-**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. 
+**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. <a onClick="ShowAndHide('proxspiderboost')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
+<div id="proxspiderboost" style="display:none;">For $$q=\sqrt{n}$$, some batch-size \(b=\sqrt{n}\) and step-size \(\gamma=1/2L\), then
+
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq L \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
+
+</div>
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
