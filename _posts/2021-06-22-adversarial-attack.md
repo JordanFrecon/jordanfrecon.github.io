@@ -373,7 +373,7 @@ $$
 
 
 **CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%} <span class="badge badge-pill text-success border border-success">$$\ell_p$$</span>. The *Class-wise* UAP
-is variant of UAP-PGD where an universal perturbation is built for each of the class.
+is variant of UAP-PGD where an universal perturbation is built for each of the class. Let $$n_j$$ be the number of training samples of the $$j$$-th class, then CW-UAP aims at solving
 
 $$
 \underset{\{\varepsilon_j\in\mathbb{R}^P\}_{j=1}^c}{\mathrm{maximize}}\; \sum_{j=1}^c \frac{1}{n_j}\sum_{\substack{i=1\\ y_i=j}}^{n_j} H(f(x_i+\varepsilon_j,y_i))\quad\text{s.t.}\quad (\forall j\in\{1,\ldots,c\}),\;\|\varepsilon_j\|_p\leq \delta
