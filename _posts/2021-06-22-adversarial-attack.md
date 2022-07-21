@@ -170,7 +170,7 @@ $$
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb{R}^P\,\mid \|u-x\|_p\leq \delta\}$$ denotes the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$. Note that for $$\alpha=\frac{\delta}{K}$$, each iterate lies inside the $$\ell_p$$ and thus one only requires to project onto $$\mathcal{X}$$.
+where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb{R}^P\,\mid \|u-x\|_p\leq \delta\}$$ denotes the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$. Note that for $$\alpha=\delta/K$$, each iterate lies inside the $$\ell_p$$ and thus one only requires to project onto $$\mathcal{X}$$.
 
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
@@ -204,7 +204,7 @@ $$
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\mu>0$$ is some decay factor.
+where $$\mu>0$$ is some decay factor. Note that because of the choice of the step-size, the $$\ell_p$$ constraint is automatically satisfied. I would also like to stress that the implemented version in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch) is slightly different. Indeed, it is made for any step-size $$\alpha$$ and additionally projects $$a$$ on $$\mathcal{X}\cap\mathcal{B}_2(x,\delta)$$ at each iteration.
 
 **NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
