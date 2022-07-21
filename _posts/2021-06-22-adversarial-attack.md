@@ -156,7 +156,8 @@ $$
     a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_{\infty}(x,\delta)}\Big( a + \alpha\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
     \end{array}\right.
 \end{align}
-$$" btn1="$$\ell_\infty\text{-attack}$$" content2="
+$$"
+btn1="$$\ell_\infty\text{-attack}$$" content2="
 $$
 \begin{align}
  &a = x\\
@@ -165,7 +166,8 @@ $$
     a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big( a + \alpha\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F}\Big)\\
     \end{array}\right.
 \end{align}
-$$" btn2="$$\ell_2\text{-attack}$$" %}
+$$"
+btn2="$$\ell_2\text{-attack}$$" %}
 
 where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb{R}^P\,|\, \|u-x\|_p\leq \delta\}$$ denotes the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$. Note that for $$\alpha=\frac{\delta}{K}$$, each iterate lies inside the $$\ell_p$$ and thus one only requires to project onto $$\mathcal{X}$$.
 
