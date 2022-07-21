@@ -202,9 +202,9 @@ $$
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\mu>0$$ is some decay factor. In the original paper, the authors choose $$\alpha=\delta/K$$ in order to avoids the projection onto the $$\ell_p$$-ball. In addition, they omit every projection onto $$\mathcal{X}$$. However, here we follow the general setting implemented in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch).
+where $$\mu>0$$ is some decay factor. In the original paper, the authors choose $$\alpha=\delta/K$$ in order to avoid the projection step onto the $$\ell_p$$-ball. In addition, they omit every projection onto $$\mathcal{X}$$. However, here we follow the setting implemented in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch) for the sake of generality.
 
-**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, the algorithm solution is the following
+**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, the algorithmic solution is the following
 
 {% include switch.html id='nifgsm' content1="
 $$
@@ -232,7 +232,7 @@ $$
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-The authors also suggest to use $$\alpha=\delta/K$$ and also omit every projection step onto $$\mathcal{X}$$.
+The authors also suggest to use $$\alpha=\delta/K$$ and to omit every projection step onto $$\mathcal{X}$$.
 
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
