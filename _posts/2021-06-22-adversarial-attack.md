@@ -23,6 +23,10 @@ $$
 
 <img class="post-img" src="/images/posts/neuralnet.png" alt="Classification based DNN"/>
 
+$$
+\text{minimize}_{f} \sum_{i=1}^n H(f(x_i),y_i)
+$$
+
 ## 2. Span of adversarial attacks
 
 
@@ -68,7 +72,7 @@ For instance, one shot per-instance attacks like FGSM benefits from a low comput
 ## 3. Per-instance attacks
 
 In this section, we present the most common per-instance attacks. 
-In addition, below, we distinguish between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial given some trade-off or constraint on the fooling rate. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
+In addition, below, we distinguish between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial example given some trade-off or constraint on its fooling ability. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
 
 
 ### 3.1. $$\ell_p$$-minimal perturbations
