@@ -357,10 +357,10 @@ Contrary to the original UAP, it benefits from more efficient solvers since it c
 ## 5. Semi-universal attacks
 
 
-**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, the *Sparse Coding of ADversarial Attacks* model belongs to the class of semi-universal attacks. This attack crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector. Given some adversarial targets $$\{t_1,\ldots,t_n\}$$, it solves
+**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, the *Sparse Coding of ADversarial Attacks* model belongs to the class of semi-universal attacks. This attack crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
 
 $$
-\underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 + H(f(x_i+D v_i),t_i),
+\underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 - H(f(x_i+D v_i),y_i),
 $$
 
 where $$\mathcal{C}$$ encodes some constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters.
