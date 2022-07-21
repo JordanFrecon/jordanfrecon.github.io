@@ -313,7 +313,9 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 ## 4. Universal attacks
 
-We now turn to universal attacks. As before, we differentiate between the two main categories of attacks.
+We now turn to universal perturbations. Contrary to per-instance perturbations, one solely need to learn a single perturbation $$\varepsilon$$ once on a given dataset $$\{x_i,y_i\}_{i=1}^n$$. Then, an adversarial attack $$a^\prime$$ to any unseen example $$x^\prime$$ can be devised as $$a^\prime=\mathcal{P}_{\mathcal{X}}(x^\prime+\varepsilon)$$.
+
+As before, we differentiate between the two main categories of attacks.
 
 ### 4.1. $$\ell_p$$-minimal universal perturbations
 
