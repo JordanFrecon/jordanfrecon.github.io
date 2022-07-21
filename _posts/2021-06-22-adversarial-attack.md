@@ -9,11 +9,11 @@ biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carli
 ---
 
 
-![l2](https://img.shields.io/badge/atk-L2-critical.svg)
+<div>![l2](https://img.shields.io/badge/atk-L2-critical.svg)</div>
+![l2](https://img.shields.io/badge/atk-Lp-success.svg)
 
 
-
-With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition). 
+With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition). <span class="badge badge-success">test</span>
 
 However,  their  high  representation  power  is  also a  weakness  that  some  adversary  might  exploit  to craft adversarial attacks which could potentially lead the  DNN  model  to  take  unwanted  actions. More  precisely, adversarial  attacks are almost imperceptible transformations aiming to modify an example well classified by a DNN into a new example, called adversarial, which is itself wrongly classified. From a fast one-shot method {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%} to the first iterative procedures {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%} {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}, the crafting of adversarial perturbations has lately received a lot of attention from the machine learning community. In this post, I try to review some of the latest developments.
 
@@ -29,7 +29,7 @@ $$
 \underset{f}{\text{minimize}} \sum_{i=1}^n H(f(x_i),y_i)
 $$
 
-where $$H$$ is some similarity measure typically chosen as the cross-entropy. There, the minimization over $$f$$ is intended over the parameters (weights and biases) of the neural network $$f$$.![l2](https://img.shields.io/badge/atk-Lp-success.svg)
+where $$H$$ is some similarity measure typically chosen as the cross-entropy. There, the minimization over $$f$$ is intended over the parameters (weights and biases) of the neural network $$f$$.
 
 Once $$f$$ is properly trained, the predicted label of any input $$x\in\mathcal{X}$$ by $$f$$ is denoted as
 
