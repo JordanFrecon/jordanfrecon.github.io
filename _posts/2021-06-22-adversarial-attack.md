@@ -174,7 +174,20 @@ where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
 
-**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures.
+**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures. Given some step-size $$\alpha=\delta/K$$, the algorithmic solution reads
+
+$$
+\begin{align}
+ &a = x\\
+ &g = 0\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    g = \mu g + \frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_1}\\
+	a = a + \alpha \mathrm{sign}(g)
+    \end{array}\right.\\
+& a = \mathcal{P}_{\mathcal{X}}(a)
+\end{align}
+$$
 
 **NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
