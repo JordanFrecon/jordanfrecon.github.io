@@ -9,11 +9,7 @@ biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carli
 ---
 
 
-<div>![l2](https://img.shields.io/badge/atk-L2-critical.svg)</div>
-![l2](https://img.shields.io/badge/atk-Lp-success.svg)
-
-
-With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition). <span class="badge badge-success">test</span>
+With  recent  technological  advances,  the  use  of  deep neural networks (DNN) have widespread to numerous applications ranging from biomedical imaging to the design of autonomous vehicle. The reasons of their prosperity strongly rely on the increasingly large datasets becoming available, their high expressiveness  and  their empirical  successes in  various tasks (e.g.  computer vision, natural language processing or speech recognition).
 
 However,  their  high  representation  power  is  also a  weakness  that  some  adversary  might  exploit  to craft adversarial attacks which could potentially lead the  DNN  model  to  take  unwanted  actions. More  precisely, adversarial  attacks are almost imperceptible transformations aiming to modify an example well classified by a DNN into a new example, called adversarial, which is itself wrongly classified. From a fast one-shot method {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%} to the first iterative procedures {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%} {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}, the crafting of adversarial perturbations has lately received a lot of attention from the machine learning community. In this post, I try to review some of the latest developments.
 
@@ -99,7 +95,7 @@ In addition, below, we differentiate between two categories. The first, called *
 
 ### 3.1. $$\ell_p$$-minimal perturbations
 
-**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%}. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
+**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-warning">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \lambda \|\varepsilon\|_2 + H(f(x+\varepsilon,t))\quad\text{s.t.}\quad x+\varepsilon\in\mathcal{X}
@@ -109,14 +105,14 @@ where the regularization parameter $$\lambda>0$$ is determined by line-search in
 
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%}. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} <span class="badge badge-warning">$$\ell_2$$</span>. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
 $$
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%}. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} <span class="badge badge-warning">$$\ell_2$$</span>. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
@@ -143,13 +139,13 @@ The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\vare
 > In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
 
 
-**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
+**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
 
 {% include switch.html id='fgsm' content1="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big)\quad\text{where}\quad\varepsilon  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y))$$" btn1="$$\ell_\infty\text{-attack}$$" content2="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big) \quad\text{where}\quad\varepsilon  = \delta\,\frac{\nabla_x H(f(x),y)}{\|\nabla_x H(f(x),y)\|_F}$$" btn2="$$\ell_2\text{-attack}$$" %}
 
 
 
-**IFGSM** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%}. This technique is a multi-step iterative variant of FGSM where the adversarial example is updated $$K$$ times. More formally, it reads
+**IFGSM** {% include cite.html id="2017_Kurakin_A_p-iclr-w_aepw"%} <span class="badge badge-success">$$\ell_p$$</span>. This technique is a multi-step iterative variant of FGSM where the adversarial example is updated $$K$$ times. More formally, it reads
 
 
 {% include switch.html id='ifgsm' content1="
@@ -176,10 +172,10 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb{R}^P\,\mid \|u-x\|_p\leq \delta\}$$ denotes the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$. Note that for $$\alpha=\delta/K$$, each iterate lies inside the $$\ell_p$$ and thus one only requires to project onto $$\mathcal{X}$$.
 
-**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
+**PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%} <span class="badge badge-success">$$\ell_p$$</span>. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
 
-**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to stabilize the update direction
+**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to stabilize the update direction
 and escape from poor local maxima. In practice, it shows a higher transferability of the attacks to other neural networks architectures. Given some step-size $$\alpha>0$$, the algorithmic solution reads
 
 
@@ -209,7 +205,7 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 where $$\mu>0$$ is some decay factor. In the original paper, the authors choose $$\alpha=\delta/K$$ in order to avoid the projection step onto the $$\ell_p$$-ball. In addition, they omit every projection onto $$\mathcal{X}$$. However, here we follow the setting implemented in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch) for the sake of generality.
 
-**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead. Hence, NI-FGSM looks ahead by accumulating the gradient after adding momentum to the current data point so as to
+**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead. Hence, NI-FGSM looks ahead by accumulating the gradient after adding momentum to the current data point so as to
 converge faster. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, the algorithmic solution is the following
 
 {% include switch.html id='nifgsm' content1="
@@ -240,7 +236,7 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 The authors also suggest to use $$\alpha=\delta/K$$ and to omit every projection step onto $$\mathcal{X}$$.
 
-**PI-FGSM** {% include cite.html id="2021_Wang_X_p-bmcv_batrem"%}. The *Pre-gradient guided momentum Iterative FGSM* is a variation of NI-FGSM which looks ahead by the gradient of the previous iteration. Specifically, it accumulates the gradient of data point obtained by adding the previous gradient to the current data point at each iteration. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, it reads:
+**PI-FGSM** {% include cite.html id="2021_Wang_X_p-bmcv_batrem"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Pre-gradient guided momentum Iterative FGSM* is a variation of NI-FGSM which looks ahead by the gradient of the previous iteration. Specifically, it accumulates the gradient of data point obtained by adding the previous gradient to the current data point at each iteration. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, it reads:
 
 {% include switch.html id='pifgsm' content1="
 $$
@@ -270,7 +266,7 @@ $$
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-**EMI-FGSM** {% include cite.html id="2021_Wang_X_p-bmcv_batrem"%}. The *Enhanced Momentum Iterative FGSM* attack enhance the momentum by not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple
+**EMI-FGSM** {% include cite.html id="2021_Wang_X_p-bmcv_batrem"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Enhanced Momentum Iterative FGSM* attack enhance the momentum by not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple
 sampled examples in the vicinity of the current data point. Given some step-size $$\alpha>0$$, decay factor $$\mu>0$$, bound $$\eta>0$$ and a number of samples $$n\in\mathbb{N}_+$$, the algorithmic solution reads:
 
 {% include switch.html id='emifgsm' content1="
@@ -310,7 +306,7 @@ $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
 
-**APGD** {% include cite.html id="2020_Croce_F_p-icml_rearedpfa"%}. The *Auto*-PGD is a variant of *PGD* with momentum where the step-size is selected according to some heuristic depending on the allowed budget and on the progress of the optimization. The overall idea is to gradually transit from exploring the whole feasible set to a local optimization.
+**APGD** {% include cite.html id="2020_Croce_F_p-icml_rearedpfa"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Auto*-PGD is a variant of *PGD* with momentum where the step-size is selected according to some heuristic depending on the allowed budget and on the progress of the optimization. The overall idea is to gradually transit from exploring the whole feasible set to a local optimization.
 
 **PCAE** {% include cite.html id="2020_Zhang_Y_j-tsp_pcae"%}. The *Principal Component Adversarial Example* technique ..
 
@@ -323,7 +319,7 @@ In what follows, we also differentiate between the two main categories of attack
 
 ### 4.1. $$\ell_p$$-minimal universal perturbations
 
-**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%}. This work is the first one to seek for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} <span class="badge badge-warning">$$\ell_2$$</span>. This work is the first one to seek for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
 $$
 \begin{align}
@@ -340,13 +336,13 @@ $$
 $$
 
 
-**Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%}. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
+**Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%} <span class="badge badge-warning">$$\ell_2$$</span>. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
 
 
 ### 4.2. $$\ell_p$$-constrained universal perturbations
 
 
-**UAP-PGD** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%}. This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
+**UAP-PGD** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%} <span class="badge badge-success">$$\ell_p$$</span>. This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{maximize}}\; \frac{1}{n}\sum_{i=1}^n H(f(x_i+\varepsilon,y_i))\quad\text{s.t.}\quad \|\varepsilon\|_p\leq \delta
@@ -354,7 +350,7 @@ $$
 
 Contrary to the original UAP, it benefits from more efficient solvers since it can be solved using gradient ascent based methods.
 
-**CD-UAP** {% include cite.html id="2020_Zhang_p-aaai_cduap"%}. The *Class discriminative UAP* attack aims at generating a single perturbation that fools a network to misclassify only a chosen group of classes, while having limited influence on the remaining classes.
+**CD-UAP** {% include cite.html id="2020_Zhang_p-aaai_cduap"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Class discriminative UAP* attack aims at generating a single perturbation that fools a network to misclassify only a chosen group of classes, while having limited influence on the remaining classes.
 
 
 
@@ -363,7 +359,7 @@ Contrary to the original UAP, it benefits from more efficient solvers since it c
 Finally, we close this list with semi-universal perturbations. Similarly to universal perturbations, one needs to learn multiple semi-universal perturbations on a given dataset $$\{x_i,y_i\}_{i=1}^n$$ once. The main difference is how to attack unseen example $$x^\prime$$. In the following, we provide the related details on a case-by-case basis
 
 
-**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. The *Sparse Coding of ADversarial Attacks* model suggested to craft each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance sparse coding vector. In order to learn the shared dictionary, one solves
+**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%} <span class="badge badge-warning">$$\ell_2$$</span>. The *Sparse Coding of ADversarial Attacks* model suggested to craft each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance sparse coding vector. In order to learn the shared dictionary, one solves
 
 $$
 \underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 - H(f(x_i+D v_i),y_i),
@@ -376,7 +372,7 @@ $$
 $$
 
 
-**CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%}. The *Class-wise* UAP
+**CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Class-wise* UAP
 is variant of UAP-PGD where an universal perturbation is built for each of the class.
 
 $$
@@ -385,7 +381,7 @@ $$
 
 Then, the adversarial example built from an unseen example $$x^\prime$$ reads $$a^\prime = \mathcal{P}_{\mathcal{X}}\Big(x^\prime + \varepsilon_{y^\prime}\Big)$$.
 
-**SUAP** {% include cite.html id="2022_Frecon_J_j-pami_suap"%}. The *Semi-Universal Adversarial Perturbation* jointly learn $$m\in\mathbb{N}_+$$ universal adversarial perturbations $$\{\varepsilon_1,\ldots,\varepsilon_m\}$$ as follows
+**SUAP** {% include cite.html id="2022_Frecon_J_j-pami_suap"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Semi-Universal Adversarial Perturbation* jointly learn $$m\in\mathbb{N}_+$$ universal adversarial perturbations $$\{\varepsilon_1,\ldots,\varepsilon_m\}$$ as follows
 
 $$
 \underset{\{\varepsilon_j\in\mathbb{R}^P\}_{j=1}^m}{\mathrm{maximize}}\;\sum_{i=1}^{n} \max_{j\in\{1,\ldots,m\}}\, H(f(x_i+\varepsilon_j,y_i))\quad\text{s.t.}\quad (\forall j\in\{1,\ldots,m\}),\;\|\varepsilon_j\|_p\leq \delta
