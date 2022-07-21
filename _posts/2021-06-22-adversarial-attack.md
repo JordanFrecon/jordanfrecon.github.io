@@ -208,6 +208,33 @@ where $$\mu>0$$ is some decay factor. Note that because of the choice of the ste
 
 **NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
+{% include switch.html id='nifgsm' content1="
+$$
+\begin{align}
+ &g = 0,\,a = x\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+	\tilde{a} = a + \alpha \mu g\\
+    g = \mu g + \frac{\nabla_a H(f(\tilde{a}),y)}{\|\nabla_a H(f(\tilde{a}),y)\|_1}\\
+	a = a + \alpha\,\mathrm{sign}(g)
+    \end{array}\right.\\
+& a = \mathcal{P}_{\mathcal{X}}(a)
+\end{align}
+$$"
+btn1="$$\ell_\infty\text{-attack}$$" content2="
+$$
+\begin{align}
+ &g = 0,\,a = x\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    \tilde{a} = a + \alpha \mu g\\
+    g = \mu g + \frac{\nabla_a H(f(\tilde{a}),y)}{\|\nabla_a H(f(\tilde{a}),y)\|_1}\\
+	a = a + \alpha\,\frac{g}{\|g\|_2}
+    \end{array}\right.\\
+& a = \mathcal{P}_{\mathcal{X}}(a)
+\end{align}
+$$"
+btn2="$$\ell_2\text{-attack}$$" %}
 
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
