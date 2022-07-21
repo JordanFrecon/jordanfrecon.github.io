@@ -588,4 +588,11 @@
   title: Boosting adversarial attacks with momentum
   publication: Proceedings of the Conference on Computer Vision and Pattern Recognition (CVPR)
   authors: Y. Dong, F. Liao, T. Pang, H. Su, J. Zhu, X. Hu and J. Li
-  
+
+- id: 2020_Lin_J_p-iclr_nagsiaa
+  cite: Lin et al., 2020
+  year: 2020
+  title: Nesterov accelerated gradient and scale invariance for adversarial attacks
+  publication: Proceedings of the International Conference on Learning Representations (ICLR)
+  authors: J. Lin, C. Song, K. He, L. Wang and J. E. Hopcroft
+

@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap,2021_Benz_P_p-icme_uatcwp,2018_Dong_Y_p-cvpr_baam]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap,2021_Benz_P_p-icme_uatcwp,2018_Dong_Y_p-cvpr_baam,2020_Lin_J_p-iclr_nagsiaa]
 ---
 
 
@@ -206,7 +206,8 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 where $$\mu>0$$ is some decay factor. Note that because of the choice of the step-size, the $$\ell_p$$ constraint is automatically satisfied. I would also like to stress that the implemented version in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch) is slightly different. Indeed, it is made for any step-size $$\alpha$$ and additionally projects $$a$$ on $$\mathcal{X}\cap\mathcal{B}_2(x,\delta)$$ at each iteration.
 
-**NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
+**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
+
 
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
