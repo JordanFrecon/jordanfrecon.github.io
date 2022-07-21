@@ -595,4 +595,11 @@
   title: Nesterov accelerated gradient and scale invariance for adversarial attacks
   publication: Proceedings of the International Conference on Learning Representations (ICLR)
   authors: J. Lin, C. Song, K. He, L. Wang and J. E. Hopcroft
-
+  
+- id: 2021_Wang_X_p-bmcv_batrem
+  cite: Wang et al., 2021
+  year: 2021
+  title: Boosting adversarial transferability through enhanced momentum
+  publication: Proceedings of the British Machine Vision Conference (BMCV)
+  authors: X. Wang, J. Lin, H. Hu, J. Wang and K. He
+ 
