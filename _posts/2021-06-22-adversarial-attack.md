@@ -45,23 +45,25 @@ In addition, there exist two main ways of crafting such adversarial example.
 " %}
 
 
-The key question then becomes exactly how much distortion we must add to cause the classification to change. In each domain, the distance metric that we must use is different. In the space of images, many works suggest that $$\ell_p$$ norms are reasonable approximations of human perceptual distance. It should be noted that most common methods focus on perturbation-based attacks. Henceforth, it what follows we will solely consider those types of attacks. Finally, we will distinguish between per-instance and universal perturbations.
+The key question then becomes exactly how much distortion we must add to cause the classification to change. In each domain, the distance metric that we must use is different. In the space of images, many works suggest that $$\ell_p$$ norms are reasonable approximations of human perceptual distance. It should be noted that most common methods focus on perturbation-based attacks. Henceforth, it what follows we will solely consider those types of attacks. Furthemore, we will distinguish between per-instance and universal perturbations.
 
 {% include definition.html title="Per-instance and universal attacks" content="Given some data distribution $$\mu$$ on $$\mathcal{X}$$, we consider two types of perturbations, namely
 - *Per-instance* if for every $$x\sim\mu$$ there exist $$\varepsilon(x)$$ such that $$a=x+\varepsilon(x)$$ is an adversarial example.
 - *Universal* if there exist $$\varepsilon$$ such that for every $$x\sim\mu$$, $$a=x+\varepsilon$$ is an adversarial example
 " %}
 
+Equipped with these definitions, we now report the performance criteria used to evaluate the quality of the attacks.
 
 {% include definition.html title="Performance criteria" content="Let some set $$\{x_i,a_i\}_{i=1}^n$$ made of $$n$$ instances $$x_i$$ and their adversarial examples $$a_i$$ crafted by means of some attack strategy on the neural network $$f$$. In order to judge upon the quality of the attack, the most common criteria are the following.
 - *Fooling rate:* the fraction of adversarial examples which do fool the classifier, i.e., $$\frac{1}{n} \sum_{i=1}^n \mathbb{1}_{C_f(x_i)\neq C_f(a_i)}$$. Note that in some cases where $$f$$ is not very accurate, some authors prefer to solely consider the instances where $$C_f(x_i)$$ correctly predicts the true label.
-- *Computational cost:* Complexity of the algorithm used to craft the adversarial examples.
+- *Computational complexity:* Cost of the algorithm used to craft adversarial examples.
 - $$\ell_p$$*-budget:* the amount of distortion/perturbation measured in terms of mean $$\ell_p$$-norm, i.e., $$\frac{1}{n}\sum_{i=1}^n \|a_i-x_i\|_p$$.
 - *Transferability:* the fooling rate obtained on a neural network $$f^\prime$$ different from $$f$$.
 " %}
 
 Every attack will necessarily face a trade-off between some or all these performance criteria. On the one hand, it is fair to say that the computational cost and the transferability of the attack are mostly related to the algorithmic solution devised. On the other hand, the trade-off between fooling rate and $$\ell_p$$-budget is rather impacted by the choice of the attack model. Actually, this discrimination is over-simplistic. The reality is way more subtle. Indeed, as we will see, finding an adversarial example amounts in solving a non-convex optimization problem. Hence, the choice of the algorithmic solution will also play a significant role on both the achieved fooling rate and the $$\ell_p$$-budget.
 
+Let us note that the computational complexity of universal attacks is of $$\mathcal{O}(1)$$ since, once the universal perturbation $$\varepsilon$$ is found, an adversarial attack $$a^\prime$$ to an unseen example $$x^\prime$$ is built simply by adding $$\varepsilon$$, i.e., $$a^\prime=x^\prime+\varepsilon$$.
 
 <!---
 Some strategies precisely aim at finding the smallest $$\ell_p$$-budgeted adversarial example which do fool the classifier. As such, these methods generally suffer from high $$\ell_p$$-budgets.)
@@ -72,7 +74,7 @@ For instance, one shot per-instance attacks like FGSM benefits from a low comput
 ## 3. Per-instance attacks
 
 In this section, we present the most common per-instance attacks. 
-In addition, below, we distinguish between two categories of attacks. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial example given some trade-off or constraint on its fooling ability. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
+In addition, below, we differentiate between two categories. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial example given some trade-off or constraint on its fooling ability. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
 
 
 ### 3.1. $$\ell_p$$-minimal perturbations
