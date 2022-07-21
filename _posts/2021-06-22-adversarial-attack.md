@@ -116,7 +116,7 @@ $$
 **CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
 
 $$
-\underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
+\underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_2 + \lambda g(x+\varepsilon)
 $$
 
 where the first term penalizes the $$\ell_p$$-norm of the added perturbation while the second term enforces the fooling of the DNN classifier $$f$$ by means of the function $$g$$.
