@@ -367,3 +367,6 @@ where $$\mathcal{C}$$ encodes some constraints on $$D$$ while $$\lambda_1>0$$ an
 **CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%}. The *Class-wise* UAP
 is variant of UAP-PGD where an universal perturbation is built for each of the class.
 
+$$
+\underset{\{\varepsilon_j\in\mathbb{R}^P\}_{j=1}^c}{\mathrm{maximize}}\; \sum_{j=1}^c \frac{1}{n_j}\sum_{i=1}^{n_j} H(f(x_i+\varepsilon,y))\quad\text{s.t.}\quad (\forall j\in\{1,\ldots,c\}),\;\|\varepsilon_j\|_p\leq \delta
+$$
