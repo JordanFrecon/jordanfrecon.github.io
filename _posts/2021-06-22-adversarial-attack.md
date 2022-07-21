@@ -115,9 +115,9 @@ where the first term penalizes the $$\ell_p$$-norm of the added perturbation whi
 $$
 \begin{align}
  &a = x\\
-    &\text{while } C_f(a) = C_f(x)\\[0.4ex]
+    &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \delta\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
+    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \frac{\delta}{K}\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
     \end{array}\right.
 \end{align}
 $$" btn1="$$\ell_\infty\text{-attack}$$" content2="
