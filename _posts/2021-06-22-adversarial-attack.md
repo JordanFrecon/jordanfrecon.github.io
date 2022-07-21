@@ -27,7 +27,7 @@ $$
 
 where $$H$$ is some similarity measure typically chosen as the cross-entropy. There, the minimization over $$f$$ is intended over the parameters (weights and biases) of the neural network $$f$$.
 
-Once $$f$$ is properly trained, the predicted label of any input $$x\in\mathcal{X}\subseteq\mathbb{R}^P$$ by $$f$$ is denoted as
+Once $$f$$ is properly trained, the predicted label of any input $$x\in\mathcal{X}$$ by $$f$$ is denoted as
 
 $$
 C_f(x) = \underset{i\in\{1,\ldots,c\}}{\mathrm{argmax}}\, f_i(x).
@@ -129,6 +129,9 @@ $$
 $$
 
 ### 3.2. $$\ell_p$$-constrained perturbations
+
+{% include switch.html id='lpconstrained' content1="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{maximize}}\, H(f(x),y)$$" btn1="untargeted" content2="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{minimize}}\, H(f(x),t)\quad\text{with}\quad t\neq C_f(x)$$" btn2=targeted" %}
+
 
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon(x)$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
