@@ -17,7 +17,7 @@ However,  their  high  representation  power  is  also a  weakness  that  some  
 ## 1. Quick reminder about classification based DNN
 
 
-Before presentating adversarial attacks, we report a quick reminder about classification based deep neural networks.
+Before introducing adversarial attacks, we report a quick reminder about classification based deep neural networks.
 
 Let some dataset $$\mathcal{D}=\{x_i,y_i\}_{i=1}^n$$ made of $$n$$ samples $$x_i\in\mathcal{X}\subseteq\mathbb{R}^P$$ and $$y_i\in\mathbb{R}^c$$. In addition, let some neural network $$f\colon\mathcal{X}\to \mathbb{R}^c$$ mapping each input $$x\in\mathcal{X}$$ to its probabilities $$f(x)\in\mathbb{R}^c$$ to belong to each of the $$c$$ classes. Then, the usual way to train $$f$$ on $$\mathcal{D}$$ consists in solving
 
