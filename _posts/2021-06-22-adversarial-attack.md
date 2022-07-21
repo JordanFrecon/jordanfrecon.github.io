@@ -24,7 +24,7 @@ $$
 \underset{f}{\text{minimize}} \sum_{i=1}^n H(f(x_i),y_i)
 $$
 
-where $$H$$ is some similarity measure (e.g., cross-entropy). There, the minimization over $$f$$ is intended over the parameters (weights and biases) of the neural network $$f$$.
+where $$H$$ is some similarity measure typically chosen as the cross-entropy. There, the minimization over $$f$$ is intended over the parameters (weights and biases) of the neural network $$f$$.
 
 Once $$f$$ is properly trained, the predicted label of any input $$x\in\mathcal{X}\subseteq\mathbb{R}^P$$ by $$f$$ is denoted as
 
@@ -39,9 +39,9 @@ $$
 
 ## 2. Span of adversarial attacks
 
-Although DNN have shown a great success to predict various complex tasks, some concerns have been raised about their safety and more particularly for the safety of the user since the pioneer work of ... . The later has shown the existence of adversarial attacks. Most of adversarial attacks are quasi negligible perturbations which, added to examples correctly predicted, manage to fool the prediction of the neural network. The most striking example is that of automated vehicles where malicious attacks could lead the car to take unwanted action with dramatic consequences.
+Although DNN have shown a great success to predict various complex tasks, some concerns have been raised about their safety and more particularly for the safety of the user since the pioneer work of ... . which has shown the existence of adversarial attacks. The most striking example is probably that of automated vehicles where malicious attacks could lead the car to take unwanted action with dramatic consequences.
 
-<img class="post-img" src="/images/posts/adversarial.png" alt="Classification based DNN"/>
+<img class="post-img" src="/images/posts/adversarial.png" alt="Adversarial attack"/>
 
 
 
