@@ -176,18 +176,34 @@ where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb
 
 **MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures. Given some step-size $$\alpha=\delta/K$$, the algorithmic solution reads
 
+
+{% include switch.html id='mifgsm' content1="
 $$
 \begin{align}
- &a = x\\
- &g = 0\\
+ &g = 0,\,a = x\\
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     g = \mu g + \frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_1}\\
-	a = a + \alpha \mathrm{sign}(g)
+	a = a + \alpha\,\mathrm{sign}(g)
     \end{array}\right.\\
 & a = \mathcal{P}_{\mathcal{X}}(a)
 \end{align}
+$$"
+btn1="$$\ell_\infty\text{-attack}$$" content2="
 $$
+\begin{align}
+ &g = 0,\,a = x\\
+    &\text{for } k=1\ldots K\\[0.4ex]
+    &\left\lfloor\begin{array}{l}
+    g = \mu g + \frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_1}\\
+	a = a + \alpha\,\frac{g}{\|g\|_2}
+    \end{array}\right.\\
+& a = \mathcal{P}_{\mathcal{X}}(a)
+\end{align}
+$$"
+btn2="$$\ell_2\text{-attack}$$" %}
+
+where $$\mu>0$$ is some decay factor.
 
 **NI-FGSM** The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
 
