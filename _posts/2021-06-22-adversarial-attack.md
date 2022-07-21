@@ -5,7 +5,7 @@ style: border
 color: danger
 description: An overview of the most common techniques to craft adversarial attacks fooling neural networks based classification models
 comments: true
-biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap,2021_Benz_P_p-icme_uatcwp,2018_Dong_Y_p-cvpr_baam,2020_Lin_J_p-iclr_nagsiaa,2021_Wang_X_p-bmcv_batrem]
+biblio: [2015_Goodfellow_I_p-iclr_ehae, 2017_Kurakin_A_p-iclr-w_aepw, 2017_Carlini_N_p-sp_ternn, 2016_MoosaviDezfooli_S-M_p-cvpr_deepfool,2017_MoosaviDezfooli_S-M_p-cvpr_uap, 2020_Shafahi_A_p-aaai_uat,2021_Frecon_J_p-cap_adil,2014_Szegedy_C_p-iclr_ipnn,2018_Madry_A_p-iclr_tdlmaa,2019_Finlay_C_p-iccv_laa,2020_Croce_F_p-icml_rearedpfa,2020_Zhang_Y_j-tsp_pcae,2021_Dai_J_j-nc_fastuap,2020_Zhang_p-aaai_cduap,2021_Benz_P_p-icme_uatcwp,2018_Dong_Y_p-cvpr_baam,2020_Lin_J_p-iclr_nagsiaa,2021_Wang_X_p-bmcv_batrem,2022_Frecon_J_j-pami_suap]
 ---
 
 
@@ -370,3 +370,10 @@ is variant of UAP-PGD where an universal perturbation is built for each of the c
 $$
 \underset{\{\varepsilon_j\in\mathbb{R}^P\}_{j=1}^c}{\mathrm{maximize}}\; \sum_{j=1}^c \frac{1}{n_j}\sum_{\substack{i=1\\ y_i=j}}^{n_j} H(f(x_i+\varepsilon_j,y_i))\quad\text{s.t.}\quad (\forall j\in\{1,\ldots,c\}),\;\|\varepsilon_j\|_p\leq \delta
 $$
+
+**SUAP** {% include cite.html id="2022_Frecon_J_j-pami_suap"%}. The *Semi-Universal Adversarial Perturbation* jointly learn $$m\in\mathbb{N}_+$$ universal adversarial perturbations $$\{\varepsilon_1,\ldots,\varepsilon_m\}$$ as follows
+
+$$
+\underset{\{\varepsilon_j\in\mathbb{R}^P\}_{j=1}^m}{\mathrm{maximize}}\;\sum_{i=1}^{n} \max_{j\in\{1,\ldots,m\}}\, H(f(x_i+\varepsilon_j,y_i))\quad\text{s.t.}\quad (\forall j\in\{1,\ldots,m\}),\;\|\varepsilon_j\|_p\leq \delta
+$$
+

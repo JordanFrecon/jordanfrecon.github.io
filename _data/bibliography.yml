@@ -603,3 +603,10 @@
   publication: Proceedings of the British Machine Vision Conference (BMCV)
   authors: X. Wang, J. Lin, H. Hu, J. Wang and K. He
  
+- id: 2022_Frecon_J_j-pami_suap
+  cite: Frecon et al., 2022
+  year: 2022
+  title: Semi-universal adversarial perturbations
+  publication: Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence
+  authors: J. Frecon, G. Gasso and S. Canu
+  
