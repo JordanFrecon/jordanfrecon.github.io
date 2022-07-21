@@ -267,7 +267,7 @@ $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
 **EMI-FGSM** {% include cite.html id="2021_Wang_X_p-bmcv_batrem"%}. The *Enhanced Momentum Iterative FGSM* attack enhance the momentum by not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple
-sampled examples in the vicinity of the current data point.
+sampled examples in the vicinity of the current data point. Given some step-size $$\alpha>0$$, decay factor $$\mu>0$$, bound $$\eta>0$$ and a number of samples $$n\in\mathbb{N}_+$$, the algorithmic solution reads:
 
 {% include switch.html id='emifgsm' content1="
 $$
@@ -292,8 +292,12 @@ $$
  &\tilde{g}=0,\, g = 0,\,a = x\\
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    \tilde{a} = a + \alpha \mu \tilde{g}\\
-	\tilde{g} = \nabla_a H(f(\tilde{a}),y) \\
+		\text{for } i=1\ldots n\\[0.4ex]
+		\left\lfloor\begin{array}{l}
+			c_i \sim [-\eta,\eta]\\
+			\tilde{a}^{(i)} = a + c_i \tilde{g}
+		\end{array}\right.\\
+	\tilde{g} = \frac{1}{n}\sum_{i=1}^n \nabla_a H(f(\tilde{a}^{(i)}),y)\\
     g = \mu g + \frac{\tilde{g}}{\|\tilde{g}\|_1}\\
 	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big(a + \alpha\,\frac{g}{\|g\|_2}\big)
     \end{array}\right.\\
