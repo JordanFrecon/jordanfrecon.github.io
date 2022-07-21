@@ -356,6 +356,8 @@ Contrary to the original UAP, it benefits from more efficient solvers since it c
 
 ## 5. Semi-universal attacks
 
+Finally, we close this list with semi-universal perturbations. Similarly to universal perturbations, one needs to learn multiple semi-universal perturbations on a given dataset $$\{x_i,y_i\}_{i=1}^n$$ once. The main difference is how to attack unseen example $$x^\prime$$. In the following, we provide the related details on a case-by-case basis
+
 
 **SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, the *Sparse Coding of ADversarial Attacks* model belongs to the class of semi-universal attacks. This attack crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
 
