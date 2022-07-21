@@ -308,7 +308,7 @@ btn2="$$\ell_2\text{-attack}$$" %}
 
 **APGD** {% include cite.html id="2020_Croce_F_p-icml_rearedpfa"%} <span class="badge badge-pill text-success border border-success">$$\ell_p$$</span>. The *Auto*-PGD is a variant of *PGD* with momentum where the step-size is selected according to some heuristic depending on the allowed budget and on the progress of the optimization. The overall idea is to gradually transit from exploring the whole feasible set to a local optimization.
 
-**PCAE** {% include cite.html id="2020_Zhang_Y_j-tsp_pcae"%} <span class="badge badge-pill text-success border border-success">$$\ell_p$$</span>. The *Principal Component Adversarial Example* technique ..
+**PCAE** {% include cite.html id="2020_Zhang_Y_j-tsp_pcae"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. The *Principal Component Adversarial Example* is a target-free adversarial example generation algorithm using PCA. It relies on the novel notion of adversarial region which is independent of the classification model.
 
 
 ## 4. Universal attacks
