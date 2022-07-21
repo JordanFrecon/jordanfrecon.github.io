@@ -11,11 +11,11 @@ In this post, I present the basics for conducting Python-based simulations on a 
 
 ## Development model
 
-Amongst the various software development models, I will focus on one of the most popular, namely [Agile](https://en.wikipedia.org/wiki/Agile_software_development). 
+Amongst the various software development models, I will focus on one of the most popular, namely [Agile](https://en.wikipedia.org/wiki/Agile_software_development). An Agile *sprint* is made of 6 steps illustrated below.
 
 <img class="post-img" src="/images/posts/agile.png" alt="Agile Model"/>
 
-In the context of developping and conducting experiments on a remote server, one can interpret each step as follows.
+During the development of the experiments, you will go through multiple successive sprints until the final results are satisfactory. In the context of developping and conducting experiments on a remote server, one can interpret each step of the sprint as follows.
 
 1. **Requirements**: gathering the requirements
 2. **Design**: thinking of the experiments to conduct
