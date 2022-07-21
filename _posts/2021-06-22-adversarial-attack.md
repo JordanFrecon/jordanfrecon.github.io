@@ -153,7 +153,7 @@ $$
  &a = x\\
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \frac{\delta}{K}\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
+    a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_{\infty}(x,\delta)}\Big( a + \alpha\,\mathrm{sign}(\nabla_a H(f(a,y)\Big)\\
     \end{array}\right.
 \end{align}
 $$" btn1="$$\ell_\infty\text{-attack}$$" content2="
@@ -162,13 +162,12 @@ $$
  &a = x\\
     &\text{while } C_f(a) = C_f(x)\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-    a = \mathrm{Proj}_{\mathcal{X}}\Big( a + \delta\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F}\Big)\\
+    a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big( a + \alpha\,\frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_F}\Big)\\
     \end{array}\right.
 \end{align}
 $$" btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\mathcal{X}$$ denotes the space of admissible instances. 
-
+where $$K$$ is the maximimum number of iterations, $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb{R}^P\,|\, \|u-x\|_p\leq \delta\}$$ denotes the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$. Note that for $$\alpha=\frac{\delta}{K}$$, each iterate lies inside the $$\ell_p$$ and thus one only requires to project onto $$\mathcal{X}$$.
 
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
