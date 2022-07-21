@@ -96,7 +96,7 @@ In addition, below, we differentiate between two categories. The first, called *
 ### 3.1. $$\ell_p$$-minimal perturbations
 
 
-**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-pill text-warning border border-warning">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
+**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \lambda \|\varepsilon\|_2 + H(f(x+\varepsilon,t))\quad\text{s.t.}\quad x+\varepsilon\in\mathcal{X}
@@ -113,7 +113,7 @@ $$
 $$
 
 
-**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} <span class="badge badge-warning">$$\ell_2$$</span>. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
+**CW** {% include cite.html id="2017_Carlini_N_p-sp_ternn"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. A similar idea to DeepFool is pursued by Carlini and Wagner by considering the fooling requirement as a regularization instead of a constraint, i.e.,
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_p + \lambda g(x+\varepsilon)
@@ -140,7 +140,7 @@ The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\vare
 > In what follows, we restrict to untargeted attacks. Their targeted counterpart can easily be found by replacing $$H(\cdot,y)$$ with $$-H(\cdot,t)$$.
 
 
-**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%} <span class="badge badge-success">$$\ell_p$$</span>. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
+**FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%} <span class="badge badge-pill text-success border border-success">$$\ell_p$$</span>. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
 
 {% include switch.html id='fgsm' content1="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big)\quad\text{where}\quad\varepsilon  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y))$$" btn1="$$\ell_\infty\text{-attack}$$" content2="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big) \quad\text{where}\quad\varepsilon  = \delta\,\frac{\nabla_x H(f(x),y)}{\|\nabla_x H(f(x),y)\|_F}$$" btn2="$$\ell_2\text{-attack}$$" %}
 
@@ -320,7 +320,7 @@ In what follows, we also differentiate between the two main categories of attack
 
 ### 4.1. $$\ell_p$$-minimal universal perturbations
 
-**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} <span class="badge badge-warning">$$\ell_2$$</span>. This work is the first one to seek for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
+**UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work is the first one to seek for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
 $$
 \begin{align}
@@ -337,7 +337,7 @@ $$
 $$
 
 
-**Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%} <span class="badge badge-warning">$$\ell_2$$</span>. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
+**Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
 
 
 ### 4.2. $$\ell_p$$-constrained universal perturbations
@@ -360,7 +360,7 @@ Contrary to the original UAP, it benefits from more efficient solvers since it c
 Finally, we close this list with semi-universal perturbations. Similarly to universal perturbations, one needs to learn multiple semi-universal perturbations on a given dataset $$\{x_i,y_i\}_{i=1}^n$$ once. The main difference is how to attack unseen example $$x^\prime$$. In the following, we provide the related details on a case-by-case basis
 
 
-**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%} <span class="badge badge-warning">$$\ell_2$$</span>. The *Sparse Coding of ADversarial Attacks* model suggested to craft each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance sparse coding vector. In order to learn the shared dictionary, one solves
+**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. The *Sparse Coding of ADversarial Attacks* model suggested to craft each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance sparse coding vector. In order to learn the shared dictionary, one solves
 
 $$
 \underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 - H(f(x_i+D v_i),y_i),
