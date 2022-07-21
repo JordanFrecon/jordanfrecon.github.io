@@ -95,7 +95,8 @@ In addition, below, we differentiate between two categories. The first, called *
 
 ### 3.1. $$\ell_p$$-minimal perturbations
 
-**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-pill badge-warning">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
+
+**L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-pill text-warning border border-warning">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \lambda \|\varepsilon\|_2 + H(f(x+\varepsilon,t))\quad\text{s.t.}\quad x+\varepsilon\in\mathcal{X}
@@ -105,7 +106,7 @@ where the regularization parameter $$\lambda>0$$ is determined by line-search in
 
 
 
-**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} <span class="badge badge-warning">$$\ell_2$$</span>. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
+**DeepFool** {% include cite.html id="2016_MoosaviDezfooli_S-M_p-cvpr_deepfool"%} <span class="tag badge badge-pill text-warning border border-warning">$$\ell_2$$</span>. A more elaborated, yet similar approach, consists in finding the adversarial perturbation $$\varepsilon(x)$$ as the solution of the following optimization problem
 
 $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_2\quad\text{s.t.}\quad C_f(x+\varepsilon) \neq C_f(x) 
