@@ -17,7 +17,7 @@ $$
 $$
 
 
-However, as discussed in the previous blog post, the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. 
+However, as discussed in the [previous blog post](https://jordan-frecon.com/blog/adversarial-attack), the resulting trained DNN is vulnerable to adversarial attacks able to fool the DNN. 
 
 To mitigate the impact of adversarial examples, early works have suggested to train DNN on mixtures of clean and adverarial examples, thus leading to *Adversarial Training* techniques (see Section 1).
 
