@@ -140,7 +140,7 @@ The adversarial example is then defined as $$a=\mathcal{P}_{\mathcal{X}}(x+\vare
 
 **FGSM** {% include cite.html id="2015_Goodfellow_I_p-iclr_ehae"%}. The *Fast Gradient Sign Method* is one of the first effective technique to craft an adversarial perturbation. The underlined idea is to perform a single $$\delta$$ step in the direction given by the sign of the gradient of the training loss with respect to the input image $$x$$. Note that since solely the sign of the gradient is used, the adversarial perturbation added $$\varepsilon(x)$$ lies inside a $$\ell_{\infty}$$-ball of radius $$\delta$$. Similarly, a variant can be devised for $$\ell_2$$-constrained adversarial perturbations.
 
-{% include switch.html id='fgsm' content1="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon(x)\Big)\quad\text{where}\quad\varepsilon(x)  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y))$$" btn1="$$\ell_\infty\text{-attack}$$" content2="$$\mathcal{P}_{\mathcal{X}}\Big(a = x+\varepsilon(x)\Big) \quad\text{where}\quad\varepsilon(x)  = \delta\,\frac{\nabla_x H(f(x),y)}{\|\nabla_x H(f(x),y)\|_F}$$" btn2="$$\ell_2\text{-attack}$$" %}
+{% include switch.html id='fgsm' content1="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big)\quad\text{where}\quad\varepsilon  = \delta\,\mathrm{sign}(\nabla_x H(f(x),y))$$" btn1="$$\ell_\infty\text{-attack}$$" content2="$$a = \mathcal{P}_{\mathcal{X}}\Big(x+\varepsilon\Big) \quad\text{where}\quad\varepsilon  = \delta\,\frac{\nabla_x H(f(x),y)}{\|\nabla_x H(f(x),y)\|_F}$$" btn2="$$\ell_2\text{-attack}$$" %}
 
 
 
