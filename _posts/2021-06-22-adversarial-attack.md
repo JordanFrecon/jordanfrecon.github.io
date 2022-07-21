@@ -175,7 +175,7 @@ where $$\alpha>0$$ is some step-size and $$\mathcal{B}_p(x,\delta)=\{u\in\mathbb
 **PGD** {% include cite.html id="2018_Madry_A_p-iclr_tdlmaa"%}. The same previous idea was also conducted by different authors who termed the method *PGD* since it boils down to a *Projected Gradient Descent* algorithm. The only difference lies in the initial point. While for IFGSM, the initial point is $$x$$, there the initial point is randomly sampled in a ball centered in $$x$$.
 
 
-**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures. Given some step-size $$\alpha=\delta/K$$, the algorithmic solution reads
+**MI-FGSM** {% include cite.html id="2018_Dong_Y_p-cvpr_baam"%}. The *Momentum Iterative FSGM* proposed to accumulate the gradient with momentum to achieve a higher transferability of the attacks to other neural networks architectures. Given some step-size $$\alpha>0$$, the algorithmic solution reads
 
 
 {% include switch.html id='mifgsm' content1="
@@ -185,9 +185,8 @@ $$
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     g = \mu g + \frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_1}\\
-	a = a + \alpha\,\mathrm{sign}(g)
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_\infty(x,\delta)}\Big(a + \alpha\,\mathrm{sign}(g)\big)
     \end{array}\right.\\
-& a = \mathcal{P}_{\mathcal{X}}(a)
 \end{align}
 $$"
 btn1="$$\ell_\infty\text{-attack}$$" content2="
@@ -197,16 +196,15 @@ $$
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
     g = \mu g + \frac{\nabla_a H(f(a),y)}{\|\nabla_a H(f(a),y)\|_1}\\
-	a = a + \alpha\,\frac{g}{\|g\|_2}
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big(a + \alpha\,\frac{g}{\|g\|_2}\big)
     \end{array}\right.\\
-& a = \mathcal{P}_{\mathcal{X}}(a)
 \end{align}
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
 
-where $$\mu>0$$ is some decay factor. Note that because of the choice of the step-size, the $$\ell_p$$ constraint is automatically satisfied. I would also like to stress that the implemented version in the [Torchattacks package](https://github.com/Harry24k/adversarial-attacks-pytorch) is slightly different. Indeed, it is made for any step-size $$\alpha$$ and additionally projects $$a$$ on $$\mathcal{X}\cap\mathcal{B}_2(x,\delta)$$ at each iteration.
+where $$\mu>0$$ is some decay factor. In the original paper, the authors choose $$\alpha=\delta/K$$ in order to avoids the projection onto the $$\ell_p$$-ball. In addition, they omit every projection onto $$\mathcal{X}$$. 
 
-**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead.
+**NI-FGSM** {% include cite.html id="2020_Lin_J_p-iclr_nagsiaa"%}. The *Nesterov Iterative FGSM* attack is similar to MI-FGSM but iteratively builds the adversarial attacks by adding Nesterov's accelerated gradient, instead. Given some step-size $$\alpha>0$$ and some decay factor $$\mu>0$$, the algorithm solution is the following
 
 {% include switch.html id='nifgsm' content1="
 $$
@@ -216,9 +214,8 @@ $$
     &\left\lfloor\begin{array}{l}
 	\tilde{a} = a + \alpha \mu g\\
     g = \mu g + \frac{\nabla_a H(f(\tilde{a}),y)}{\|\nabla_a H(f(\tilde{a}),y)\|_1}\\
-	a = a + \alpha\,\mathrm{sign}(g)
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_\infty(x,\delta)}\Big(a + \alpha\,\mathrm{sign}(g)\big)
     \end{array}\right.\\
-& a = \mathcal{P}_{\mathcal{X}}(a)
 \end{align}
 $$"
 btn1="$$\ell_\infty\text{-attack}$$" content2="
@@ -229,12 +226,13 @@ $$
     &\left\lfloor\begin{array}{l}
     \tilde{a} = a + \alpha \mu g\\
     g = \mu g + \frac{\nabla_a H(f(\tilde{a}),y)}{\|\nabla_a H(f(\tilde{a}),y)\|_1}\\
-	a = a + \alpha\,\frac{g}{\|g\|_2}
+	a = \mathrm{Proj}_{\mathcal{X}\cap\mathcal{B}_2(x,\delta)}\Big(a + \alpha\,\frac{g}{\|g\|_2}\big)
     \end{array}\right.\\
-& a = \mathcal{P}_{\mathcal{X}}(a)
 \end{align}
 $$"
 btn2="$$\ell_2\text{-attack}$$" %}
+
+The authors also suggest to use $$\alpha=\delta/K$$ and also omit every projection step onto $$\mathcal{X}$$.
 
 **PI-FGSM** The *Pre-gradient guided momentum Iterative FGSM* enhances the momentum by
 not only memorizing all the past gradients during the iterative process, but also accumulating the gradients of multiple sampled examples in the vicinity of the current data point.
