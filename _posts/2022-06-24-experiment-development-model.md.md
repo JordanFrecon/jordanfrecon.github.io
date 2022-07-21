@@ -48,6 +48,8 @@ Instead, I have found a nice package, named [pipreqs](https://pypi.org/project/p
 	pipreqs <path_to_project>
 
 
+<img class="post-img" src="/images/posts/pip-help.png" alt="Pip help"/>
+
 
 ## 2. Design
 
@@ -85,6 +87,8 @@ Now, after committing the changes, everything is set up to **push** the changes 
 > You can get your token [here](https://github.com/settings/tokens).
 
 At this point, a new version of your code should be successfully updated to GitHub.
+
+<img class="post-img" src="/images/posts/git-help.png" alt="Git help"/>
 
 
 ## 4. Testing
@@ -179,14 +183,20 @@ Once inside the appropriate session, you can activate your Python environment as
 
 Monitoring your numerical simulation activity is essential to make sure that it properly uses all the available resources at their maximum capacity. In order to list all processes running and their CPU usage, one can use the Unix program `htop`. It will notably come handy to check if your simulation uniformly uses all cores or if another process is currently running.
 
+<img class="post-img" src="/images/posts/htop.png" alt="htop example"/>
+
 If you are lucky enough, you may have some high-end GPUs which will be used to run your experiments. In order to check the GPU usage, you can use the `nvtop` program (available [here](https://github.com/Syllo/nvtop)). Nvtop stands for *Neat Videocard TOP* and acts as a htop like task monitor for both AMD and NVIDIA GPUs.
+
+<img class="post-img" src="/images/posts/nvtop.png" alt="nvtop example"/>
 
 However, you might not have the appropriate rights to install such program. Nevertheless, all is not lost. Chances are that your server will have some NVIDIA GPUs. In that case, you can also resort to the [NVIDIA System Management Interface](https://developer.nvidia.com/nvidia-system-management-interface) through the command `nvidia-smi`. In order to have a *real-time* monitoring, you can use the `watch` bash command, for instance:
 
 	watch -n0.1 nvidia-smi
 	
 will update the display of the GPU usage every 0.1 seconds.
-	
+
+<img class="post-img" src="/images/posts/nvidia-smi.png" alt="nvidia-smi example"/>
+
 
 ## 6. Review
 
