@@ -19,12 +19,15 @@ With  recent  technological  advances,  the  use  of  deep neural networks (DNN)
 
 
 Let some dataset $$\mathcal{D}=\{x_i,y_i\}_{i=1}^n$$ made of $$n$$ samples $$x_i\in\mathcal{X}\subseteq\mathbb{R}^P$$ and $$y_i\in\mathbb{R}^c$$. In addition, let some neural network $$f\colon\mathcal{X}\to \mathbb{R}^c$$ mapping each input $$x\in\mathcal{X}$$ to its probabilities $$f(x)\in\mathbb{R}^c$$ to belong to each of the $$c$$ classes. Then, the usual way to train $$f$$ on $$\mathcal{D}$$ consists in solving
+
 $$
 \underset{f}{\text{minimize}} \sum_{i=1}^n H(f(x_i),y_i)
 $$
+
 where $$H$$ is some similarity measure (e.g., cross-entropy).
 
 Once $$f$$ is properly trained, the predicted label of any input $$x\in\mathcal{X}\subseteq\mathbb{R}^P$$ by $$f$$ is denoted as
+
 $$
 C_f(x) = \underset{i\in\{1,\ldots,c\}}{\mathrm{argmax}}\, f_i(x).
 $$
