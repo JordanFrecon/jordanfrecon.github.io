@@ -365,10 +365,10 @@ $$
 \underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 - H(f(x_i+D v_i),y_i),
 $$
 
-where $$\mathcal{C}$$ encodes some normalization constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters. Given a new example $$x^\prime$$, the corresponding adversarial example is defined as $$a^\prime = \mathcal{P}_{\mathcal{X}}\Big(x^\prime + Dv^\prime\Big)$$ where $$v^\prime$$ solves
+where $$\mathcal{C}$$ encodes some normalization constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters. Given a new example $$x^\prime$$, the corresponding adversarial example is crafted as $$a^\prime = \mathcal{P}_{\mathcal{X}}\Big(x^\prime + Dv^\prime\Big)$$ where $$v^\prime$$ solves
 
 $$
-\underset{v^{M\times 1}}}{\mathrm{minimize}}\; \lambda_1 \| v\|_1 + \lambda_2 \|Dv\|_2^2 - H(f(x^\prime+D v),y).
+\underset{v^{M\times 1}}{\mathrm{minimize}}\; \lambda_1 \| v\|_1 + \lambda_2 \|Dv\|_2^2 - H(f(x^\prime+D v),y).
 $$
 
 
