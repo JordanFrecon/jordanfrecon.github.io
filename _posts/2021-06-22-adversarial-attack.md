@@ -90,10 +90,10 @@ For instance, one shot per-instance attacks like FGSM benefits from a low comput
 ## 3. Per-instance attacks
 
 In this section, we present the most common per-instance attacks. 
-In addition, below, we differentiate between two categories. The first, called *$$\ell_p$$-minimal attack*, aims at finding the smallest $$\ell_p$$-budgeted adversarial example given some trade-off or constraint on its fooling ability. The second, named *$$\ell_p$$-budgeted attacks*, assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
+In addition, below, we differentiate between two categories. The first aims at finding the smallest $$\ell_p$$-budgeted perturbation given some trade-off or constraint on its fooling ability. The second assumes a maximal $$\ell_p$$-budget $$\delta>0$$ and looks for an adversarial example inside the $$\ell_p$$ ball of radius $$\delta$$ centered in $$x$$.
 
 
-### 3.1. $$\ell_p$$-minimal perturbations
+### 3.1. Minimum norm and regularization-based perturbations
 
 
 **L-BFGS** {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work is the first that noticed the existence of adversarial examples for image classification. Given some adversarial target $$t\neq C_f(x)$$, solve
@@ -129,7 +129,7 @@ $$
 \underset{\varepsilon\in\mathbb{R}^P}{\mathrm{minimize}}\; \|\varepsilon\|_p - \lambda \log\left( \max_{i\neq k} f_i(x+\varepsilon) - f_k(x+\varepsilon)\right)
 $$
 
-### 3.2. $$\ell_p$$-constrained perturbations
+### 3.2. Maximum allowable perturbations
 
 Most of the attacks presented in this section intend to craft the adversarial perturbation $$\varepsilon$$ by efficiently or approximatively solving the following optimization problem.
 
@@ -317,7 +317,7 @@ We now turn to universal perturbations. Contrary to per-instance perturbations, 
 
 In what follows, we also differentiate between the two main categories of attacks.
 
-### 4.1. $$\ell_p$$-minimal universal perturbations
+### 4.1. Minimum norm universal perturbations
 
 **UAP** {% include cite.html id="2017_MoosaviDezfooli_S-M_p-cvpr_uap"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work is the first one to seek for a *Universal Attack Perturbation* that fools the classifier on almost all training points. To do so, the authors have designed an algorithmic solution which relies on an inner loop applying DeepFool to each training instance.
 
@@ -339,7 +339,7 @@ $$
 **Fast-UAP** {% include cite.html id="2021_Dai_J_j-nc_fastuap"%} <span class="badge badge-pill text-danger border border-danger">$$\ell_2$$</span>. This work improves upon UAP by additionally exploiting the orientations of the perturbation vectors.
 
 
-### 4.2. $$\ell_p$$-constrained universal perturbations
+### 4.2. Maximum allowable universal perturbations
 
 
 **UAP-PGD** {% include cite.html id="2020_Shafahi_A_p-aaai_uat"%} <span class="badge badge-pill text-success border border-success">$$\ell_p$$</span>. This method frames the crafting of universarial perturbations as an optimization problem, i.e.,
