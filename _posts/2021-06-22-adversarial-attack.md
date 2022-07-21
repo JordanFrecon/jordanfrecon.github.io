@@ -130,7 +130,9 @@ $$
 
 ### 3.2. $$\ell_p$$-constrained perturbations
 
-{% include switch.html id='lpconstrained' content1="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{maximize}}\, H(f(x),y)$$" btn1="untargeted" content2="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{minimize}}\, H(f(x),t)\quad\text{with}\quad t\neq C_f(x)$$" btn2=targeted" %}
+All attacks presented in this section intends to efficiently or approximatively solve the following optimization problem
+
+{% include switch.html id='lpconstrained' content1="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{maximize}}\, H(f(x+\varepsilon),y)$$" btn1="untargeted" content2="$$\underset{\varepsilon\in\mathbb{R}^P}{\text{minimize}}\, H(f(x+\varepsilon),t)\quad\text{with}\quad t\neq C_f(x)$$" btn2=targeted" %}
 
 
 
