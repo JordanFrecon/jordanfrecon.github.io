@@ -359,13 +359,17 @@ Contrary to the original UAP, it benefits from more efficient solvers since it c
 Finally, we close this list with semi-universal perturbations. Similarly to universal perturbations, one needs to learn multiple semi-universal perturbations on a given dataset $$\{x_i,y_i\}_{i=1}^n$$ once. The main difference is how to attack unseen example $$x^\prime$$. In the following, we provide the related details on a case-by-case basis
 
 
-**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. Contrary to all aforementioned methods, the *Sparse Coding of ADversarial Attacks* model belongs to the class of semi-universal attacks. This attack crafts each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance coding vector.
+**SCADA** {% include cite.html id="2021_Frecon_J_p-cap_adil"%}. The *Sparse Coding of ADversarial Attacks* model suggested to craft each adversarial example as $$a(x_i)= x_i + \varepsilon(x_i)$$ with $$\varepsilon(x_i)=D v_i$$ where $$D$$ is a universal dictionary while $$v_i$$ is a per-instance sparse coding vector. 
 
 $$
 \underset{\substack{D\in \mathcal{C}\subseteq \mathbb{R}^{P\times M}\\ [v_1\cdots v_N]\in\mathbb{R}^{M\times n}}}{\mathrm{minimize}}\; \sum_{i=1}^n \lambda_1 \| v_i\|_1 + \lambda_2 \|Dv_i\|_2^2 - H(f(x_i+D v_i),y_i),
 $$
 
-where $$\mathcal{C}$$ encodes some constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters.
+where $$\mathcal{C}$$ encodes some normalization constraints on $$D$$ while $$\lambda_1>0$$ and $$\lambda_2>0$$ are regularization parameters. Given a new example $$x^\prime$$, the corresponding adversarial example is defined as $$a^\prime = \mathcal{P}_{\mathcal{X}}\Big(x^\prime + Dv^\prime\Big)$$ where $$v^\prime$$ solves
+
+$$
+\underset{v^{M\times 1}}}{\mathrm{minimize}}\; \lambda_1 \| v\|_1 + \lambda_2 \|Dv\|_2^2 - H(f(x^\prime+D v),y).
+$$
 
 
 **CW-UAP** {% include cite.html id="2021_Benz_P_p-icme_uatcwp"%}. The *Class-wise* UAP
