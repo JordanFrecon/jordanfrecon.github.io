@@ -275,9 +275,9 @@ $$
  &\tilde{g}=0,\, g = 0,\,a = x\\
     &\text{for } k=1\ldots K\\[0.4ex]
     &\left\lfloor\begin{array}{l}
-		&\text{for } i=1\ldots n\\[0.4ex]
-		&\left\lfloor\begin{array}{l}
-			c_i \sim [-eta,eta]\\
+		\text{for } i=1\ldots n\\[0.4ex]
+		\left\lfloor\begin{array}{l}
+			c_i \sim [-\eta,\eta]\\
 			\tilde{a}^{(i)} = a + c_i \tilde{g}
 		\end{array}\right.\\
 	\tilde{g} = \frac{1}{n}\sum_{i=1}^n \nabla_a H(f(\tilde{a}^{(i)}),y)\\
