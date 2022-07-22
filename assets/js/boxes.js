@@ -1,11 +1,11 @@
-export function toggleIcon(id) {
+window.onload = function toggleIcon(id) {
   var x = document.getElementById(id);
   x.classList.toggle("fa-angle-double-up");
   x.classList.toggle("fa-angle-double-down");
   console.log(x.classList);
 }
 
-export function ShowAndHide(id) {
+window.onload =  function ShowAndHide(id) {
     var x = document.getElementById(id);
     if (x.style.display == 'none') {
         x.style.display = 'block';
