@@ -75,7 +75,7 @@ We now present a variety of proximal variance reduction stochastic gradient algo
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
 fully incremental algorithm since it requires calculation of the full gradient once per epoch. <a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxsvrg" style="display:none;">
-Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}}\}_{m=0}^{M-1} \).
+Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}}\}_{m=0}^{M-1}\).
 
 For some batch-size \(b=1\) and step-size \(\gamma=1/3Ln\)
 
