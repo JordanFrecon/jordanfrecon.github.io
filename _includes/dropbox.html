@@ -2,8 +2,10 @@
 /*$('#showhide').click(function() {
     $(this).toggleClass('fas fa-angle-double-up');
 });*/
-function myFunction(x) {
+function myFunction(id) {
+  x = document.getElementById(id);
   x.classList.toggle("fas fa-angle-double-up");
+  x.classList.toggle("fas fa-angle-double-down");
 };
 </script>
 
