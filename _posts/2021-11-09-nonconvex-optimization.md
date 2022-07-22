@@ -49,7 +49,7 @@ Note that in the peculiar case where $$R\equiv 0$$, the gradient mapping boils d
 
 We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computations.
 
-**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to the following nonconvex forward-backward algorithm. {% include dropbox.html id="nips" btn="convergence results" content='test test'%}
+**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to the following nonconvex forward-backward algorithm.
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -73,11 +73,11 @@ The relaxation parameter $$\rho_k$$ is determined to yield a sufficient decrease
 We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
-fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrgnew" btn="convergence results" content="For some batch-size $$b=1$$ and step-size $$\gamma=1/3Ln$$
+fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrgnew" btn="convergence results" content="For some batch-size \(b=1\) and step-size \(gamma=1/3Ln\)
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right)$$
 
-For some batch-size $$b=n^{2/3}$$, step-size $$\gamma=1/3L$$ and $$M=n^{1/3}$$
+For some batch-size \(b=n^{2/3}\), step-size \(\gamma=1/3L\) and \(M=n^{1/3}\)
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}} $$"%}
 
