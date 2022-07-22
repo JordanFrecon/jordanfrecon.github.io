@@ -13,3 +13,5 @@ function ShowAndHide(id) {
         x.style.display = 'none';
     }
 }
+
+export { toggleIcon, ShowAndHide }
