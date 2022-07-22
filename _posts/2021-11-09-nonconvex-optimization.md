@@ -82,22 +82,6 @@ For some batch-size $$b=n^{2/3}$$, step-size $$\gamma=1/3L$$ and $$M=n^{1/3}$$
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}} $$"%}
 
 
-
-
-
-<a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
-<div id="proxsvrg" style="display:none;">
-Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\).<br>
-
-For some batch-size \(b=1\) and step-size \(\gamma=1/3Ln\)
-
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right)$$
-
-For some batch-size \(b=n^{2/3}\), step-size \(\gamma=1/3L\) and \(M=n^{1/3}\)
-
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}} $$
-</div>
-
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
