@@ -10,7 +10,7 @@ function myFunction(id) {
 };
 </script>
 
-{% block css %}
+
 <style>
 .switch-box {
     box-sizing: border-box;
@@ -50,7 +50,6 @@ function myFunction(id) {
   color: white;
 }
 </style>
-{% endblock %}
 <body>
 <a onClick="ShowAndHide('{{ include.id }}');myFunction('icon-{{ include.id }}')"><i id="icon-{{ include.id }}" class="fas fa-angle-double-down"></i> {{ include.btn }}</a>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
