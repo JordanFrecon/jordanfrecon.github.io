@@ -14,4 +14,4 @@ function ShowAndHide(id) {
     }
 }
 
-export { toggleIcon, ShowAndHide }
+module.exports = { toggleIcon, ShowAndHide }
