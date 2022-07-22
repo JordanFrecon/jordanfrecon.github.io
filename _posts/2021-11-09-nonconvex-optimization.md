@@ -104,7 +104,7 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 <div id="proxsvrg+" style="display:none;">
 Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\).<br>
 
-For some batch-size \(b=\sqrt{n}\), step-size \(\gamma=1/6L\)
+For \(M=\sqrt{b}\) inner iterations and some fixed step-size \(\gamma=1/6L\), then
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{KM} + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
 </div>
