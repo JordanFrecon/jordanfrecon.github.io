@@ -2,6 +2,10 @@
 $('#showhide').click(function() {
     $(this).toggleClass('fas fa-angle-double-up');
 });
+
+function myFunction(x) {
+  x.classList.toggle("fas fa-angle-double-up");
+}
 </script>
 
 <style>
@@ -42,12 +46,9 @@ $('#showhide').click(function() {
   background-color: #007bff;
   color: white;
 }
-
-
-
 </style>
 
-<span onClick="ShowAndHide('{{ include.id }}')"><i id="showhide" class="fas fa-angle-double-down"></i>{{ include.btn }}</span>.
+<span onClick="ShowAndHide('{{ include.id }}')"><i onclick="myFunction(this)" class="fas fa-angle-double-down"></i> {{ include.btn }}</span>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
 
 
