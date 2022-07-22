@@ -5,7 +5,7 @@ style: fill
 color: info
 description: Presentation of efficient proximal solvers for nonconvex composite optimization
 comments: true
-biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr,2020_Pham_N_j-mlr_proxsarah,2021_Metel_M_j-mlr_spmnncso,2014_Defazio_A_p-nips_saga]
+biblio: [2010_Attouch_H_j-mor_pam,2013_Bolte_J_j-mp_palmnnp, 2016_Pock_T_j-is_ipalm,2021_Driggs_D_arxiv_spring,2016_Reddi_J_p-nips_psmnnfso,2012_Sra_S_p-nips_snips,2017_Bonettini_S_j-ip_clbpgmno,2019_Peng_W_j-ota_npiagmlc,2019_Gao_X_j-go_gsipalmnop,2019_Wang_Z_p-nips_spiderboost,2014_Xiao_L_j-jo_psgmpvr,2020_Pham_N_j-mlr_proxsarah,2021_Metel_M_j-mlr_spmnncso,2014_Defazio_A_p-nips_saga,2018_Li_Z_p-neurips_spsgmnno]
 ---
 
 > In progress. Upcoming: Uniformization of notations, full sets of assumptions, convergence results and comparisons
@@ -99,6 +99,24 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 		\end{array}\right.\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
+
+**ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$.
+
+$$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
+    \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
+    \left\lfloor\begin{array}{l}
+	x_{k+1}^{(0)} = x_k^{(M)}\\
+	\text{Uniformly pick batches } J_k \text{ (with replacement) of size } b^\prime\\
+	g_{k+1} = \frac{1}{b^\prime}\sum_{j_k\in J_k} \nabla F_{j_k}(\bar{x}_k)\\
+		\text{for}\;m=0,1,\ldots,M-1\\[0.4ex]
+    	\left\lfloor\begin{array}{l}
+		\text{Uniformly pick batches } I_m \text{ (with replacement) of size } b\\
+		\bar{g}_{k+1}^{(m)} = g_{k+1} + \frac{1}{b}\sum_{i_m\in I_m} \left( \nabla F_{i_m}(x_{k+1}^{(m)}) - \nabla F_{i_m}(\bar{x}_{k})\right)\\
+		x_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma R}\left( x_{k+1}^{(m)} - \gamma \bar{g}_{k+1}^{(m)}\right)
+		\end{array}\right.\\
+	\bar{x}_{k+1} = x_{k+1}^{(M)}
+    \end{array}\right.\end{array}$$
+
 
 **ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.<a onClick="ShowAndHide('proxsaga')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxsaga" style="display:none;">

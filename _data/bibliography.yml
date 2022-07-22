@@ -610,3 +610,10 @@
   publication: Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence
   authors: J. Frecon, G. Gasso and S. Canu
   
+- id: 2018_Li_Z_p-neurips_spsgmnno
+  cite: Li and Li, 2018
+  year: 2018
+  title: A Simple Proximal Stochastic Gradient Method for Nonsmooth Nonconvex Optimization
+  publication: Proceedings of the International Conference on Neural Information Processing Systems (NeurIPS)
+  authors: Z. Li and J. Li
+  
