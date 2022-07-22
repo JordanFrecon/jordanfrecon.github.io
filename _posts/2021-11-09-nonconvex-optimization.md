@@ -100,7 +100,7 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.<a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.<a onClick="ShowAndHide('proxsaga')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxsaga" style="display:none;">
 Let \(x_a\) uniformly chosen at random from \(\{x_k\}_{k=0}^{K-1}\).<br>
 
