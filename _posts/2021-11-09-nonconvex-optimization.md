@@ -36,6 +36,12 @@ Assumptions A1 and A2 are basic assumptions used in optimization. A1 usually hol
 
 > Actually, in some works, slightly weaker assumptions may be required. However, the assumptions stated above are general enough to encapsulate many optimization problems.
 
+Typically, for convex problems, the optimality gap $$\mathcal{L}(x)-\mathcal{L}(x^\star)$$ is used as a criterion to analyze the convergence. However, it becomes intractable for nonconvex problems. One the one hand, for smooth nonconvex problems, it makes sense to measure the stationnary by resorting to $$\nabla\mathcal{L}$$. On the other hand, for nonsmooth convex problems, an alternative is the gradient mapping defined as follows for some $$\gamma>0$$
+
+$$
+\mathcal{G}_\gamma(x) = \frac{1}{\gamma}\Big( x - \mathrm{prox}_{\gamma R}(x - \gamma\nabla F(x))\Big)
+$$
+
 
 ### 1.1. Full-batch algorithms
 
