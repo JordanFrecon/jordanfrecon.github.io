@@ -51,6 +51,8 @@ We begin by presenting some algorithms which do not take into account the finite
 
 **NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to the following nonconvex forward-backward algorithm. {% include dropbox.html id="nips" btn="convergence results" content='test test'%}
 
+<div class="switch-box">othertest</div>
+
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
     \left\lfloor\begin{array}{l}
