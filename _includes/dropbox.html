@@ -2,8 +2,8 @@
 /*$('#showhide').click(function() {
     $(this).toggleClass('fas fa-angle-double-up');
 });*/
-function myFunction(id) {
-  x = document.getElementById(id);
+function myFunction(x) {
+  /*x = document.getElementById(id);*/
   x.classList.toggle("fas fa-angle-double-up");
   x.classList.toggle("fas fa-angle-double-down");
 };
@@ -49,7 +49,7 @@ function myFunction(id) {
 }
 </style>
 <body>
-<span onClick="ShowAndHide('{{ include.id }}');myFunction('icon')"><i id='icon' class="fas fa-angle-double-down"></i> {{ include.btn }}</span>.
+<span onClick="ShowAndHide('{{ include.id }}');myFunction('icon')"><i onclick="myFunction(this)" class="fas fa-angle-double-down"></i> {{ include.btn }}</span>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
 </body>
 
