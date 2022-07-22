@@ -100,7 +100,14 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$.
+**ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$. <a onClick="ShowAndHide('proxsvrg+')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
+<div id="proxsvrg+" style="display:none;">
+Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\).<br>
+
+For some batch-size \(b=\sqrt{n}\), step-size \(\gamma=1/6L\)
+
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{KM} + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
+</div>
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
