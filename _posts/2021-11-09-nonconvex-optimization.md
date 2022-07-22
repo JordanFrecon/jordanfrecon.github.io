@@ -108,7 +108,7 @@ For \(M=\sqrt{b}\) inner iterations and some fixed step-size \(\gamma=1/6L\), th
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
 
-For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}{6ML}\}\)
+For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}}{6ML}\}\)
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
 </div>
