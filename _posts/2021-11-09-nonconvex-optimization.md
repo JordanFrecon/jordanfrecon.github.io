@@ -106,7 +106,11 @@ Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0
 
 For \(M=\sqrt{b}\) inner iterations and some fixed step-size \(\gamma=1/6L\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{KM} + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
+
+For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}{6ML}\}\)
+
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
 </div>
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
