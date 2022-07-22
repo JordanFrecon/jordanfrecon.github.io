@@ -43,7 +43,7 @@ $$
 \mathcal{G}_\gamma(x) = \frac{1}{\gamma}\Big( x - \mathrm{prox}_{\gamma R}(x - \gamma\nabla F(x))\Big).
 $$
 
-Note that in the peculiar case where $$R\equiv 0$$, the gradient mapping boils down to $$\mathcal{G}_\gamma(x)=\nabla F(x)$.
+Note that in the peculiar case where $$R\equiv 0$$, the gradient mapping boils down to $$\mathcal{G}_\gamma(x)=\nabla F(x)$$.
 
 ### 1.1. Full-batch algorithms
 
@@ -100,7 +100,18 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
     \end{array}\right.\end{array}$$
 
-**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.<a onClick="ShowAndHide('proxsvrg')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
+<div id="proxsaga" style="display:none;">
+Let \(x_a\) uniformly chosen at random from \(\{x_k\}_{k=0}^{K-1}\).<br>
+
+For some batch-size \(b=1\) and step-size \(\gamma=1/5Ln\)
+
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 Ln^2}{5n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
+
+For some batch-size \(b=n^{2/3}\) and step-size \(\gamma=1/5L\) 
+
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 L}{3} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
+</div>
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
