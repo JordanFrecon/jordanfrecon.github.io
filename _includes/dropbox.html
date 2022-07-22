@@ -1,0 +1,65 @@
+<head>
+<!-- MathJax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<script>
+
+function content(divSelector, value) {
+	var math = MathJax.Hub.getAllJax(divSelector)[0];
+	const content = String.raw`${value}`;
+	MathJax.Hub.Queue(["Text",math,content.replace(/\$/g,'')]);
+}
+</script>
+
+<style>
+.switch-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border:1px dashed grey;
+    border-radius: 8px;
+    position: relative;
+}
+
+.switch-toggle {
+  justify-content: right;
+  display: flex;
+  padding-right: 8px;
+}
+
+
+.switch-toggle .btn-holder {
+    font-size: 10px;
+    display: inline-block;
+    text-decoration: none;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    transition: .4s;
+    box-shadow: none;
+    background: none;
+    -webkit-appearance: none;
+    vertical-align: top;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.switch-toggle .btn-holder:hover  {
+  background-color: #007bff;
+  color: white;
+}
+</style>
+
+
+<a onClick="ShowAndHide('{{ include.id }}')"><i class="fas fa-angle-double-down"></i> {{ include.btn }}</a>.
+<div class="switch-box" id="{{ include.id }}" style="display:none;">
+{{ include.content }}
+</div>
+
+
+
+
+
+
