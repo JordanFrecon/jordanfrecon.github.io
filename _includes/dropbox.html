@@ -48,10 +48,10 @@ function myFunction(id) {
   color: white;
 }
 </style>
-
+<body>
 <span onClick="ShowAndHide('{{ include.id }}');myFunction('icon')"><i id='icon' class="fas fa-angle-double-down"></i> {{ include.btn }}</span>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
-
+</body>
 
 
 
