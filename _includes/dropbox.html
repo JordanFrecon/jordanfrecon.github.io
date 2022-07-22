@@ -2,12 +2,13 @@
 /*$('#showhide').click(function() {
     $(this).toggleClass('fas fa-angle-double-up');
 });*/
-function myFunction(id) {
+/*
+function toggleIcon(id) {
   x = document.getElementById(id);
   x.classList.toggle("fa-angle-double-up");
   x.classList.toggle("fa-angle-double-down");
   console.log(x.classList)
-};
+};*/
 </script>
 <style>
 .switch-box {
@@ -48,7 +49,7 @@ function myFunction(id) {
   color: white;
 }
 </style>
-<span><a onClick="ShowAndHide('{{ include.id }}');myFunction('icon-{{ include.id }}')"><i id="icon-{{ include.id }}" class="fas fa-angle-double-down"></i> {{ include.btn }}</a>.</span>
+<a onClick="ShowAndHide('{{ include.id }}');toggleIcon('icon-{{ include.id }}')"><i id="icon-{{ include.id }}" class="fas fa-angle-double-down"></i> {{ include.btn }}</a>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
 
 
