@@ -49,7 +49,7 @@ Note that in the peculiar case where $$R\equiv 0$$, the gradient mapping boils d
 
 We begin by presenting some algorithms which do not take into account the finite-sum nature of $$F$$. In their original forms, they allow for inexact gradient computations and/or inexact computations of the proximal points. However, here, for the sake of simplicity, we will not show such aspects and solely deal with exact computations.
 
-**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to the following nonconvex forward-backward algorithm. {% include dropbox.html id="nips" btn="convergence results" content="test test"%}
+**NIPS** {% include cite.html id="2012_Sra_S_p-nips_snips"%}. The *Nonconvex Inexact Proximal Splitting* method hinges on the splitting into smooth and nonsmooth parts. Without inexact gradient computation, it boils down to the following nonconvex forward-backward algorithm.{% include "dropbox.html" id="nips" btn="convergence results" content="test test"%}
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
