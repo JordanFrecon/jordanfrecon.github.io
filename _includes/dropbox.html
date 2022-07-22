@@ -50,7 +50,7 @@ function myFunction(id) {
 }
 </style>
 <body>
-{% include head.html %}
+{% include "header.html" %}
 <span onClick="ShowAndHide('{{ include.id }}');myFunction('icon-{{ include.id }}')"><i id="icon-{{ include.id }}" class="fas fa-angle-double-down"></i> {{ include.btn }}</span>.
 <div class="switch-box" id="{{ include.id }}" style="display:none;">{{ include.content }}</div>
 </body>
