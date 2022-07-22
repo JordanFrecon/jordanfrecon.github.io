@@ -73,13 +73,11 @@ The relaxation parameter $$\rho_k$$ is determined to yield a sufficient decrease
 We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
-fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrgnew" btn="convergence results" content="Let \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\).<br>
-
-For some batch-size \(b=1\) and step-size \(\gamma=1/3Ln\)
+fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrgnew" btn="convergence results" content="For some batch-size $$b=1$$ and step-size $$\gamma=1/3Ln$$
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right)$$
 
-For some batch-size \(b=n^{2/3}\), step-size \(\gamma=1/3L\) and \(M=n^{1/3}\)
+For some batch-size $$b=n^{2/3}$$, step-size $$\gamma=1/3L$$ and $$M=n^{1/3}$$
 
 $$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}} $$"%}
 
@@ -112,7 +110,9 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 		x_{k+1}^{(m+1)} = \mathrm{prox}_{\gamma R}\left( x_{k+1}^{(m)} - \gamma \bar{g}_{k+1}^{(m)}\right)
 		\end{array}\right.\\
 	\bar{x}_{k+1} = x_{k+1}^{(M)}
-    \end{array}\right.\end{array}$$
+    \end{array}\right.\\
+	x_a \text{ uniformly chosen at random from } \{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}
+\end{array}$$
 
 **ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$. <a onClick="ShowAndHide('proxsvrg+')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxsvrg+" style="display:none;">
