@@ -3,7 +3,7 @@ function toggleIcon(id) {
   x.classList.toggle("fa-angle-double-up");
   x.classList.toggle("fa-angle-double-down");
   console.log(x.classList)
-};
+}
 
 function ShowAndHide(id) {
     var x = document.getElementById(id);
@@ -12,4 +12,4 @@ function ShowAndHide(id) {
     } else {
         x.style.display = 'none';
     }
-};
+}
