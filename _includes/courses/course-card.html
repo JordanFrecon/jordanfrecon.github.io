@@ -1,0 +1,49 @@
+{%- comment -%} Default Styles {%- endcomment -%}
+{%- assign card_style  = '' -%}
+{%- assign text_style  = 'text-themed' -%}
+{%- assign badge_style = 'badge-dark' -%}
+
+{%- comment -%} Update Styles {%- endcomment -%}
+{%- if course.style == 'fill' -%}
+  {%- assign card_style = course.color | prepend: 'bg-' -%}
+  {%- if course.color != 'light' -%}
+    {%- assign text_style  = 'text-white' -%}
+    {%- assign badge_style = 'badge-light text-' -%}
+    {%- assign badge_style = badge_style | append: course.color -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign card_style = course.color | prepend: 'border border-' -%}
+  {%- if post.color -%}
+    {%- assign badge_style =  course.color | prepend: 'badge-' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Determine Post URL {%- endcomment -%}
+{%- if course.external_url -%}
+  {%- assign course_url = course.external_url -%}
+{%- else -%}
+  {%- assign course_url = course.url | relative_url -%}
+{%- endif -%}
+    
+<div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
+  <a href="{{ course_url }}" class="post card {{ card_style }}">
+    <div class="card-body {{ text_style }}">
+      <h3 class="card-title">{{ course.title }}</h3>
+      <p class="card-text">
+        {% for tag in course.tags %}
+        <span class="badge {{ badge_style }}">{{ tag }}</span>
+        {% endfor %}
+      </p>
+      <p class="card-text">
+        {%- if course.description -%}
+        {{ post.description }}
+        {%- else -%}
+        {{ course.content | truncatewords: 25, "<small><i>  read more...</i></small>" }}
+        {%- endif -%}
+      </p>
+    </div>
+    <div class="card-footer {{ text_style }}">
+      {{ course.date | date_to_long_string }}
+    </div>
+  </a>
+</div>
