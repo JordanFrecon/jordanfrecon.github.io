@@ -6,9 +6,29 @@ weight: 3
 ---
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script src="/assets/js/teaching.js"></script>
+
+<style>
+green {
+ color: #40916c;
+}
+red {
+ color: #e76f51;
+}
+blue {
+ color: #0047AB;
+}
+</style>
+</head>
+
+
+<body>
+
+<h1>Courses</h1>
+
 {% capture list_items %}
-Google,https://www.google.com
-GitHub,https://www.github.com
 {% for course in site.courses %}
 {%- if course.external_url -%}
   {%- assign course_url = course.external_url -%}
@@ -21,3 +41,34 @@ GitHub,https://www.github.com
 {% include elements/list.html title="Telecom Saint-Etienne Courses" %}
 
 
+<h1>MATh.en.JEANS</h1>
+The organization <a href="https://www.mathenjeans.fr/" target="_blank">MATh.en.JEANS</a> aims to bring mathematics to life for young people, according to the principles of mathematical research. It allows young students to meet researchers and practice an authentic scientific approach in schools, from its theoretical to applied dimensions and if possible in touch with current research themes. Since 2020, I have been invited to collaborate and animate weekly workshops with the <a href="https://www.europeanschoolthehague.nl/" target="_blank">European School The Hague</a> and the <a href="https://lfvvg.com/" target="_blank">French Lycée Vincent-Van-Gogh</a>. 
+
+For the 2020-2021 edition, I have proposed subjects about card tricks and autonomous vehicles. Throughout the year, students have acquired knowledge ranging from numeral systems and object-oriented programming to deep Q-learning.
+
+During 2021-2022, I have suggested research projects on face recognition, robust coding systems and fairness in machine learning.
+
+
+<h1>Teaching Activities</h1>
+
+Since 2021, I do teaching vacations at <blue>INSA Rouen Normandie</blue>.
+<div style="width:100%">
+<canvas id="teaching2021"></canvas>
+</div>
+
+</br>
+From 2013 to 2016, I benefited from a teaching activity grant. I gave tutorial classes, oral exercices and supervised of practical exercices at <red>Université Claude Bernard Lyon 1</red> and <green>Ecole Normale Supérieure de Lyon</green>.
+</br>
+<div style="width:100%" margin-bottom: 10%>
+<canvas id="teaching2016"></canvas>
+</div>
+</br></br>
+<div style="width:100%" margin-bottom: 10%>
+<canvas id="teaching2015"></canvas>
+</div>
+</br></br>
+<div style="width:100%">
+<canvas id="teaching2014"></canvas>
+</div>
+
+</body>
