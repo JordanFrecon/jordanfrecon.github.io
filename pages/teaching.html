@@ -51,16 +51,20 @@ blue {
 
 
 <div class="list-group list-group-light">
-  <a class="list-group-item list-group-item-action" href="#about">About</a>
-  <a class="list-group-item list-group-item-action"href="#services">Services</a>
-  <button class="list-group-item list-group-item-action">Dropdown 
-  </button>
-  <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#about">About</a>
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="about">
+    test pas blabla
+    </div> 
   </div>
-  <a href="#contact">Search</a>
+  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#services">Services</a>
+  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#dropdown">Dropdown 
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="dropdown">
+    test blabla
+    </div> 
+  </div>
+  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#contact">Search</a>
 </div>
 
 
