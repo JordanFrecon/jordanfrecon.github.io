@@ -5,7 +5,7 @@ tags: [Convex, Optimization]
 style: fill
 color: info
 id: datascience
-description: Telecom Saint-Etienne
+description: This is a short description of the data science course
 ---
 
 test
