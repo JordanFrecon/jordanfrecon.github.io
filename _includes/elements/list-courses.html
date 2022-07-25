@@ -23,13 +23,13 @@
         {%- assign item_object = item | split: ',' -%}
         {% if counter==0 %}
 	 <div class="tab-pane fade show active" id="{{ item_object[1] }}">
-	<b>Program:</b> {{ item_object[2] }}.program<br>
-        {{ item_object[2].description }}.description
+	<b>Program:</b> {{ item_object[2] }}m<br>
+        {{ item_object[3]}}
         </div>
         {% else %}
         <div class="tab-pane fade" id="{{ item_object[1] }}">
-        <b>Program:</b> {{ item_object[2] }}.program<br>
-        {{ item_object[2] }}.description
+        <b>Program:</b> {{ item_object[2] }}<br>
+        {{ item_object[3] }}
         </div>
         {% endif %}
 	{% assign counter = counter | plus:1 %}
