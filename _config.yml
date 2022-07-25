@@ -47,8 +47,6 @@ author:
 ### Posts ###
 permalink: /blog/:title
 
-### Courses ###
-permalink: /courses/:title
 
 ### Collections ###
 collections:
@@ -64,6 +62,9 @@ collections:
   bibliography:
     output: true
     permalink: /bibliography/:name
+  courses:
+    output: true
+    permalink: /:collection/:name
 
 ### Disqus ###
 disqus: jfrecon                          # Your website Shortname on disqus
