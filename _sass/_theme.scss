@@ -8,6 +8,16 @@
   }
 }
 
+@mixin themed-img() {
+  [data-theme="light"] & {
+    #{filter}: invert(0);
+  }
+
+  [data-theme="dark"] & {
+    #{filter}: invert(1);
+  }
+}
+
 #theme-toggler:before {
   @include themed(content, "🌙", "🌞");
 }
@@ -36,4 +46,8 @@ W
   @include themed(color, $text-black, $text-white);
 }
 
+
+.post-img-themed {
+  @include themed()
+}
 
