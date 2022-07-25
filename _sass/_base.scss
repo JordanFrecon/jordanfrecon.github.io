@@ -10,6 +10,21 @@ body {
   font-weight: 500;
 }
 
+.bg-light,
+.badge-light {
+  &,
+  * {
+    color: $text-black !important;
+  }
+}
+
+.bg-dark,
+.badge-dark {
+  &,
+  * {
+    color: $text-white !important;
+  }
+}
 
 .image-caption {
   display: block;
