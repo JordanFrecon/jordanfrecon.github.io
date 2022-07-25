@@ -39,6 +39,7 @@ W
 
 
 .post-img-themed {
-  @include themed(filter, invert(0), invert(1))
+  @include themed(filter, invert(0), invert(1));
+  @include themed(background-color, $light, $dark);
 }
 
