@@ -8,7 +8,7 @@
       {% for item in items %}
 	 {%- assign item_object = item | split: ',' -%}
 	 {% if counter==0 %}
-	   <a class="list-group-item list-group-item-action active disabled text-white" data-toggle="tab" href="#{{ item_object[1] }}">{{ item_object[0] }}</a>
+	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% else %}
 	    <a class="list-group-item list-group-item-action" data-toggle="tab" href="#{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% endif %}
