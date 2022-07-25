@@ -4,15 +4,15 @@
 <div class="row">
   <div class="col-4">
     <div class="list-group list-group-light" id="list-tab" role="tablist">
-      {%- assign increment = 0 -%}
+      {% assign counter = 0 %}
       {% for item in items %}
 	 {%- assign item_object = item | split: ',' -%}
-	 {% if increment==0 %}
+	 {% if counter==0 %}
 	   <a class="list-group-item list-group-item-action active" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% else %}
 	    <a class="list-group-item list-group-item-action" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% endif %}
-	   {%- assign increment = increment+1 -%}
+	   {% assign counter = counter | plus:1 %}
       {% endfor %}
     </div>
   </div>
