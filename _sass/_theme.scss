@@ -31,3 +31,7 @@
   @include themed(background-color, $light, $dark);
 }
 
+
+.switch-toggle .btn-holder {
+  @include themed(color, $text-black, $text-white);
+}
