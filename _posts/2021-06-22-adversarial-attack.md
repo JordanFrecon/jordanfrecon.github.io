@@ -33,9 +33,7 @@ $$
 C_f(x) = \underset{i\in\{1,\ldots,c\}}{\mathrm{argmax}}\, f_i(x).
 $$
 
-<picture>
 <img class="post-img" src="/images/posts/neuralnet.png" alt="Classification based DNN"/>
-</picture>
 
 
 ## 2. Span of adversarial attacks
