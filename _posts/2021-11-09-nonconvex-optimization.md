@@ -73,13 +73,13 @@ The relaxation parameter $$\rho_k$$ is determined to yield a sufficient decrease
 We now present a variety of proximal variance reduction stochastic gradient algorithms.
 
 **ProxSVRG** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. This algorithm is a nonconvex variant of the *Proximal Stochastic Variance Reduced Gradient* method devised in {% include cite.html id="2014_Xiao_L_j-jo_psgmpvr"%}. Note that ProxSVRG is not a
-fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrg" btn="convergence results" content="For some batch-size \(b=1\) and step-size \(\gamma=1/3Ln\)
+fully incremental algorithm since it requires calculation of the full gradient once per epoch. {% include dropbox.html id="proxsvrg" btn="convergence results" content="For some batch-size \(b=1\) and step-size \(\gamma=1/3Ln\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right)$$
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{18 Ln^2}{3n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K M} \right).$$
 
-For some batch-size \(b=n^{2/3}\), step-size \(\gamma=1/3L\) and \(M=n^{1/3}\)
+For some batch-size \(b=n^{2/3}\), step-size \(\gamma=1/3L\) and \(M=n^{1/3}\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}} $$"%}
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{18L \left(\mathcal{L}(x_0) - \mathcal{L}(x^\star)\right)}{K n^{1/3}}.$$"%}
 
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
@@ -100,11 +100,11 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 
 **ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$. {% include dropbox.html id="proxsvrg+" btn="convergence results" content="For \(M=\sqrt{b}\) inner iterations and some fixed step-size \(\gamma=1/6L\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$.
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n}.$$
 
 For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}}{6ML}\}\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$." %}
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n}. $$" %}
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -125,11 +125,11 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 
 **ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows. {% include dropbox.html id="proxsaga" btn="convergence results" content="For some batch-size \(b=1\) and step-size \(\gamma=1/5Ln\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 Ln^2}{5n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$.
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 Ln^2}{5n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right).$$
 
 For some batch-size \(b=n^{2/3}\) and step-size \(\gamma=1/5L\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 L}{3} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$.
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 L}{3} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right).$$
 "%}
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
@@ -143,13 +143,11 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \end{array}\right.\\
 	x_a \text{ uniformly chosen at random from }\{x_k\}_{k=0}^{K-1}\end{array}$$
 
-**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. <a onClick="ShowAndHide('proxspiderboost')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
-<div id="proxspiderboost" style="display:none;">Let \(x_a\) uniformly chosen at random from \(\{x_k\}_{k=0}^{K-1}\).<br>
-For \(q=\sqrt{n}\), some batch-size \(b=\sqrt{n}\) and step-size \(\gamma=1/2L\), then
+**ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. {% include dropbox.html id="proxspiderboost" btn="convergence results" content="For \(q=\sqrt{n}\), some batch-size \(b=\sqrt{n}\) and step-size \(\gamma=1/2L\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq 40 L \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq 40 L \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right).$$"%}
 
-</div>
+
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -164,14 +162,13 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 		g_{k+1} = \frac{1}{b}\sum_{i\in I_k}\left( \nabla F_i(x_k) - \nabla F_i(x_{k-1}) + g_{k}\right)
 		\end{array}\right.\\
     x_{k+1} = \mathrm{prox}_{\gamma R}\; \left( x_k - \gamma g_{k+1} \right)
-    \end{array}\right.\end{array}$$
+    \end{array}\right.\\
+	x_a \text{ uniformly chosen at random from }\{x_k\}_{k=0}^{K-1}\end{array}$$
 
-**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from the *StochAstic Recursive grAdient algoritHm* (SARAH) by its proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost. <a onClick="ShowAndHide('proxsarah')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
-<div id="proxsarah" style="display:none;">Let us consider fixed mini-batch sizes \(b=n\) and \(b_m=\hat{b}\in[1,\sqrt{n}]\) for the outer and inner-loop, respectively. For fixed step-size \(\gamma=1/L\sqrt{\omega M}\) and \(\rho=2\sqrt{\omega M}/(4\sqrt{\omega M}+1)\), where \(\omega=3(n-\hat{b})/(2\hat{b}(n-1)\), then for \(x_a\) uniformly chosen at random from \(\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\)
+**ProxSARAH** {% include cite.html id="2020_Pham_N_j-mlr_proxsarah"%}. The ProxSARAH algorithm differs from the *StochAstic Recursive grAdient algoritHm* (SARAH) by its proximal step followed by an additional averaging step. Note that, for $$\rho_m=1$$, it boils down to the vanilla proximal SARAH which is similar to ProxSVRG and ProxSpiderBoost. {% include dropbox.html id="proxsarah" btn="convergence results" content="Let us consider fixed mini-batch sizes \(b=n\) and \(b_m=\hat{b}\in[1,\sqrt{n}]\) for the outer and inner-loop, respectively. For fixed step-size \(\gamma=1/L\sqrt{\omega M}\) and \(\rho=2\sqrt{\omega M}/(4\sqrt{\omega M}+1)\), where \(\omega=3(n-\hat{b})/(2\hat{b}(n-1)\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{16 \sqrt{3} L}{\sqrt{2n}} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$.
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{16 \sqrt{3} L}{\sqrt{2n}} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right).$$"%}
 
-</div>
 
 $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -189,7 +186,8 @@ $$ \begin{array}{l}\tilde{x}_0 \in\mathbb{R}^{m}\\
 		x_{k+1}^{(m+1)} = (1-\rho_m) x_{k+1}^{(m)} + \rho_m \bar{x}_{k+1}^{(m+1)} 
 		\end{array}\right.\\
 	\tilde{x}_{k+1} = x_{k+1}^{(M)}
-    \end{array}\right.\end{array}$$
+    \end{array}\right.\\
+	x_a \text{ uniformly chosen at random from }\{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\end{array}$$
 
 
 Comparison of *Stochastic First-order Oracle* (SFO) complexity
