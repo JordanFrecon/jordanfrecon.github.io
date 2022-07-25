@@ -4,7 +4,7 @@ layout: course
 tags: [Convex, Optimization]
 style: fill
 color: info
-id: datascience
+shortid: datastruct
 description: This is a short description of the algorithmic course
 ---
 

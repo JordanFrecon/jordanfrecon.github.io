@@ -4,7 +4,7 @@ layout: course
 tags: [Convex, Optimization]
 style: fill
 color: info
-id: datascience
+shortid: datascience
 description: This is a short description of the data science course
 ---
 

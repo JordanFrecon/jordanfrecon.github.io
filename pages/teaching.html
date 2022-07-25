@@ -44,7 +44,7 @@ blue {
 {% capture list_courses %}
 {% for course in site.courses %}
   {%- assign course_url = course.url | relative_url -%}
-    {{course.title}}, {{course.id}},{{course.description}}
+    {{course.title}}, {{course.shortid}},{{course.description}}
 {% endfor %}
 {% endcapture %}
 {% include elements/list-courses.html%}
