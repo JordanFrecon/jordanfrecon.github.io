@@ -40,7 +40,7 @@ $$
 
 Although DNN have shown a great success to predict various complex tasks, some concerns have been raised about their safety and more particularly for the safety of the user since the pioneer work of {% include cite.html id="2014_Szegedy_C_p-iclr_ipnn"%} which has shown the existence of adversarial attacks. The most striking example is probably that of automated vehicles where malicious attacks could lead the car to take unwanted action with dramatic consequences.
 
-<img class="post-img-themed" src="/images/posts/adversarial.png" alt="Adversarial attack"/>
+<img class="post-img" src="/images/posts/adversarial.png" alt="Adversarial attack"/>
 
 
 
