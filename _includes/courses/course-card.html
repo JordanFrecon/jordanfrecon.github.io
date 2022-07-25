@@ -13,12 +13,12 @@
   {%- endif -%}
 {%- else -%}
   {%- assign card_style = course.color | prepend: 'border border-' -%}
-  {%- if post.color -%}
+  {%- if course.color -%}
     {%- assign badge_style =  course.color | prepend: 'badge-' -%}
   {%- endif -%}
 {%- endif -%}
 
-{%- comment -%} Determine Post URL {%- endcomment -%}
+{%- comment -%} Determine course URL {%- endcomment -%}
 {%- if course.external_url -%}
   {%- assign course_url = course.external_url -%}
 {%- else -%}
@@ -36,7 +36,7 @@
       </p>
       <p class="card-text">
         {%- if course.description -%}
-        {{ post.description }}
+        {{ course.description }}
         {%- else -%}
         {{ course.content | truncatewords: 25, "<small><i>  read more...</i></small>" }}
         {%- endif -%}
