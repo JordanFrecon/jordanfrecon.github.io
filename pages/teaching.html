@@ -41,14 +41,10 @@ blue {
 {% include elements/list.html title="Telecom Saint-Etienne Courses" %}
 
 
-{% capture list_items_courses %}
+{% capture list_courses %}
 {% for course in site.courses %}
-{%- if course.external_url -%}
-  {%- assign course_url = course.external_url -%}
-{%- else -%}
   {%- assign course_url = course.url | relative_url -%}
-{%- endif -%}
-    {{course.title}},{{course.title}},{{course_url}}
+    {{course.title}},{{course.id}},{{course_url}},{{course.description}}
 {% endfor %}
 {% endcapture %}
 {% include elements/list_courses.html%}
