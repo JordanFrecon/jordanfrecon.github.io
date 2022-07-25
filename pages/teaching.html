@@ -36,7 +36,7 @@ GitHub,https://www.github.com
 {%- else -%}
   {%- assign course_url = course.url | relative_url -%}
 {%- endif -%}
-    {{course.title}},course_url
+    {{course.title}},{{course_url}}
 {% endfor %}
 {% endcapture %}
 {% include elements/list.html title="Telecom Saint-Etienne Courses" %}
