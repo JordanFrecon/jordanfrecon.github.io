@@ -100,11 +100,11 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 
 **ProxSVRG+** {% include cite.html id="2018_Li_Z_p-neurips_spsgmnno"%}. This algorithm is a variant of ProxSVRG which uses less proximal oracle calls. The major difference is that it avoids the computation of the full gradient at the beginning of each epoch, i.e., $$b^\prime$$ may not equal to $$n$$. {% include dropbox.html id="proxsvrg+" btn="convergence results" content="For \(M=\sqrt{b}\) inner iterations and some fixed step-size \(\gamma=1/6L\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq   \frac{36L}{\sqrt{b}} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$.
 
-For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}}{6ML}\}\)
+For \(\gamma=\min\{\frac{1}{6L},\frac{\sqrt{b}}{6ML}\}\), then
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$" %}
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq  \frac{6}{\gamma} \left(\frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{KM}\right) + \frac{6\sigma^2}{b^\prime} \mathbb{1}_{b^\prime < n} $$." %}
 
 $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -123,18 +123,14 @@ $$ \begin{array}{l}\bar{x}_0 = x_0^{(M)}=x_0\in\mathbb{R}^{m}\\
 	x_a \text{ uniformly chosen at random from } \{\{x_k^{(m)}\}_{k=0}^{K-1}\}_{m=0}^{M-1}\end{array}$$
 
 
-**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows.<a onClick="ShowAndHide('proxsaga')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
-<div id="proxsaga" style="display:none;">
-Let \(x_a\) uniformly chosen at random from \(\{x_k\}_{k=0}^{K-1}\).<br>
+**ProxSAGA** {% include cite.html id="2016_Reddi_J_p-nips_psmnnfso"%}. By hinging on the work of {% include cite.html id="2014_Defazio_A_p-nips_saga"%}, the authors have devised a nonconvex proximal variant of SAGA as follows. {% include dropbox.html id="proxsaga" btn="convergence results" content="For some batch-size \(b=1\) and step-size \(\gamma=1/5Ln\), then
 
-For some batch-size \(b=1\) and step-size \(\gamma=1/5Ln\)
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 Ln^2}{5n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$.
 
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 Ln^2}{5n-2} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
+For some batch-size \(b=n^{2/3}\) and step-size \(\gamma=1/5L\), then
 
-For some batch-size \(b=n^{2/3}\) and step-size \(\gamma=1/5L\) 
-
-$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 L}{3} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$
-</div>
+$$\mathbb{E}\left[ \|\mathcal{G}_\gamma(x_a)\|^2 \right] \leq \frac{50 L}{3} \left( \frac{\mathcal{L}(x_0) - \mathcal{L}(x^\star)}{K} \right)$$.
+"%}
 
 $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
     \text{for}\;k=0,1,\ldots,K-1\\[0.4ex]
@@ -144,7 +140,8 @@ $$ \begin{array}{l}x_0\in\mathbb{R}^{m}\\
 	x_{k+1} = \mathrm{prox}_{\gamma R}\; \left( x_k - \gamma \bar{g}_k\right)\\
 	\bar{x}_{k+1,j}=x_{k} \text{ for } j\in J_k \text{ and } \bar{x}_{k,j} \text{ otherwise}\\
 	\tilde{g}_{k+1} = \tilde{g}_k - \frac{1}{n} \sum_{j_k\in J_k} ( \nabla F_{j_k}(\bar{x}_{k,j_k}) - \nabla F_{j_k}(\bar{x}_{k+1,j_k}))
-    \end{array}\right.\end{array}$$
+    \end{array}\right.\\
+	x_a \text{ uniformly chosen at random from }\{x_k\}_{k=0}^{K-1}\end{array}$$
 
 **ProxSpiderBoost** {% include cite.html id="2019_Wang_Z_p-nips_spiderboost"%}. SpiderBoost uses the same gradient estimator as SARAH and SPIDER. <a onClick="ShowAndHide('proxspiderboost')"><i class="fas fa-angle-double-down"></i> Convergence results</a>.
 <div id="proxspiderboost" style="display:none;">Let \(x_a\) uniformly chosen at random from \(\{x_k\}_{k=0}^{K-1}\).<br>
