@@ -4,7 +4,7 @@
 
 - name: Optimization
   percentage: 90
-  color: dark
+  color: secondary
 
 - name: Signal/Image Processing
   percentage: 80

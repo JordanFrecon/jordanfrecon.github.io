@@ -1,10 +1,10 @@
-- name: Matlab
-  percentage: 100
-  color: danger
-
 - name: Python/Pytorch
   percentage: 100
   color: success
+
+- name: Matlab
+  percentage: 95
+  color: danger
 
 - name: C/C++
   percentage: 90
