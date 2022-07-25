@@ -16,7 +16,7 @@
         {%- assign item_object = item | split: ',' -%}
 	 <div class="tab-pane fade show active" id="list-{{ item_object[1] }}" role="tabpanel"
         aria-labelledby="list-{{ item_object[1] }}-list">
-        {{ item_object[3] }}
+        {{ item_object[2] }}
         </div>
       {% endfor %}
     </div>
