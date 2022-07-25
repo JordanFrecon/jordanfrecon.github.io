@@ -1,5 +1,5 @@
 ---
-title: Algorithms for data analysis
+title: Algorithmic and Data Structure
 layout: course
 tags: [Convex, Optimization]
 shortid: datastruct
