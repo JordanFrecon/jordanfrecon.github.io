@@ -8,25 +8,27 @@
       {% for item in items %}
 	 {%- assign item_object = item | split: ',' -%}
 	 {% if counter==0 %}
-	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#{{ item_object[1] }}">{{ item_object[0] }}</a>
+	   <a class="list-group-item list-group-item-action active" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% else %}
-	    <a class="list-group-item list-group-item-action" data-toggle="tab" href="#{{ item_object[1] }}">{{ item_object[0] }}</a>
+	    <a class="list-group-item list-group-item-action" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }}</a>
 	   {% endif %}
 	   {% assign counter = counter | plus:1 %}
       {% endfor %}
     </div>
   </div>
   <div class="col-8">
-    <div class="tab-content">
+    <div class="tab-content" id="nav-tabContent">
     {% assign counter = 0 %}
      {% for item in items %}
         {%- assign item_object = item | split: ',' -%}
         {% if counter==0 %}
-	 <div class="tab-pane fade show active" id="{{ item_object[1] }}">
+	 <div class="tab-pane fade show active" id="list-{{ item_object[1] }}" role="tabpanel"
+        aria-labelledby="list-{{ item_object[1] }}-list">
         {{ item_object[2] }}
         </div>
         {% else %}
-        <div class="tab-pane fade" id="list-{{ item_object[1] }}">
+        <div class="tab-pane fade" id="list-{{ item_object[1] }}" role="tabpanel"
+        aria-labelledby="list-{{ item_object[1] }}-list">
         {{ item_object[2] }}
         </div>
         {% endif %}
