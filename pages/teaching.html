@@ -20,6 +20,12 @@ red {
 blue {
  color: #0047AB;
 }
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
 </style>
 </head>
 
@@ -51,17 +57,15 @@ blue {
 
 
 <div class="list-group list-group-light">
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#aboout">About  <button class="dropdown-btn">Dropdown 
-    <i class="fa fa-caret-down"></i>
-  </button></a>
-    <div class="tab-content tab-pane fade" id="aboout">
+  <a class="list-group-item list-group-item-action dropdown-btn" data-toggle="tab" href="#aboout">About</a>
+    <div class="tab-content dropdown-container">
+    <div class="tab-pane fade" id="aboout">
     test pas blabla
     </div> 
+  </div>
   <a class="list-group-item list-group-item-action" data-toggle="tab" href="#services">Services</a>
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#dropdown">Dropdown <button class="dropdown-btn">Dropdown 
-    <i class="fa fa-caret-down"></i>
-  </button></a>
-  <div class="tab-content">
+  <a class="list-group-item list-group-item-action dropdown-btn" data-toggle="tab" href="#dropdown">Dropdown</a>
+  <div class="tab-content dropdown-container">
     <div class="tab-pane fade" id="dropdown">
     test blabla
     </div> 
