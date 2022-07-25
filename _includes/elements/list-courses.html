@@ -6,7 +6,7 @@
     <div class="list-group list-group-light" id="list-tab" role="tablist">
       {% for item in items %}
 	 {%- assign item_object = item | split: ',' -%}
-	   <a class="list-group-item list-group-item-action" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" href="#list-{{ item_object[1] }}" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }}</a>
+	   <a class="list-group-item list-group-item-action" href="#{{ item_object[1] }}" id="list-{{ item_object[1] }}-list" role="tab" data-mdb-toggle="list" href="#list-{{ item_object[1] }}" aria-controls="list-{{ item_object[1] }}">{{ item_object[0] }} and {{ item_object[1] }}</a>
       {% endfor %}
     </div>
   </div>
