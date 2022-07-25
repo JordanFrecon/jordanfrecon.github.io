@@ -1,0 +1,31 @@
+<!-- Collect tags from all posts -->
+{%- assign tags = blank -%}
+{%- for course in site.courses -%}
+  {%- assign course_tags = course.tags | join:'|' | append:'|' -%}
+  {%- if course_tags != '|' -%}
+    {%- assign tags = tags | append:course_tags -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign tags = tags | split:'|' | uniq | sort -%}
+
+<!-- List tags & related posts -->
+{% for tag in tags %}
+<div class="py-3">
+  <h4 id="{{ tag | slugify }}">{{ tag }}</h4>
+  <ol>
+  {% for course in site.courses %}
+    {%- if course.tags contains tag -%}
+      {%- if course.external_url -%}
+        {%- assign url = course.external_url -%}
+      {%- else -%}
+        {%- assign url = course.url | relative_url -%}
+      {%- endif -%}
+    <a href="{{ url }}"><li>{{ course.title }}</li></a>
+    <small class="text-muted"> - {{ course.date | date_to_long_string }}</small>
+    <br/>
+    {%- endif -%}
+  {% endfor %}
+  </ol>
+</div>
+<hr class="bg-light">
+{% endfor %}
