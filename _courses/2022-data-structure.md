@@ -1,11 +1,10 @@
 ---
-title: Algorithmic and Data Structure
+title: Algorithms for data analysis
 layout: course
 tags: [Convex, Optimization]
-style: fill
-color: info
 shortid: datastruct
-description: This is a short description of the algorithmic course
+description: This is a short description of the data science course
+institution: Télécom Saint-Etienne
+program: Engineer Telecom Saint-Etienne
+year: 1st year
 ---
-
-test

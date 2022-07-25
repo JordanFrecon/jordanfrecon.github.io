@@ -21,9 +21,10 @@
     {% assign counter = 0 %}
      {% for item in items %}
         {%- assign item_object = item | split: ',' -%}
+        {%- assign course = {{ item_object[2] }} %-}
         {% if counter==0 %}
 	 <div class="tab-pane fade show active" id="{{ item_object[1] }}">
-        {{ item_object[2] }}
+        {{ course }}
         </div>
         {% else %}
         <div class="tab-pane fade" id="{{ item_object[1] }}">
