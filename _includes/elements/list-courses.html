@@ -29,12 +29,13 @@
 
 {% assign data_list = "" %}
 {% for inst in course_inst %}
+  {% assign counter = 0 %}
   {% if forloop.first==false %}
         {{ data_list | append: ";" }}
       {% endif %}
   {% for course in course_year %}
     {% if course.institution == inst.name %}
-      {% if forloop.first==false %}
+      {% if counter>0 %}
         {{ data_list | append: "," }}
       {% endif %}
       {{ data_list | append: course.hours }}
@@ -44,6 +45,7 @@
       {% endif %}
       {{ data_list | append: "null" }}
     {% endif %}
+    {% increment counter %}
   {% endfor %}
 {% endfor %}
 
