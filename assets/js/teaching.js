@@ -9,13 +9,6 @@ window.onload = function() {
         backgroundColor: ["#e76f51", "#264653"],
         data: [20, 18]
       }]
-    },
-    options: {
-      title: {
-        display: false,
-        fontSize: 15,
-        text: '2013-2014'
-      }
     }
   });
   var ctx2 = document.getElementById("teaching2015");
@@ -28,13 +21,6 @@ window.onload = function() {
         backgroundColor: ["#e76f51", "#f4a261","#2a9d8f","#e9c46a"],
         data: [20, 26, 10, 16]
       }]
-    },
-    options: {
-      title: {
-        display: false,
-        fontSize: 15,
-        text: '2014-2015'
-      }
     }
   });
   var ctx3 = document.getElementById("teaching2016");
@@ -47,13 +33,6 @@ window.onload = function() {
         backgroundColor: ["#e76f51", "#f4a261"," #27ae60", "#40916c","#52b788"],
         data: [20, 26, 8, 20, 20]
       }]
-    },
-    options: {
-      title: {
-        display: false,
-        fontSize: 15,
-        text: '2015-2016'
-      }
     }
   });
   var ctx4 = document.getElementById("teaching2021");
@@ -66,13 +45,6 @@ window.onload = function() {
         backgroundColor: ["#6495ED", "#1434A4"],
         data: [36, 30]
       }]
-    },
-    options: {
-      title: {
-        display: false,
-        fontSize: 15,
-        text: '2021-2022'
-      }
     }
   })
 };
