@@ -1,0 +1,38 @@
+{%- assign items = tab_items | strip | newline_to_br | split: '<br />' -%}
+
+
+<div class="row" id="{{ include.id }}">
+  <div class="col-4">
+    <div class="list-group list-group-light" id="list-tab" role="tablist">
+      {% assign counter = 0 %}
+      {% for item in items %}
+	 {%- assign item_object = item | split: ',' -%}
+	 {% if counter==0 %}
+	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{ item_object[0] }}</a>
+	   {% else %}
+	    <a class="list-group-item list-group-item-action" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{ item_object[0] }}</a>
+	   {% endif %}
+	   {% assign counter = counter | plus:1 %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content">
+    {% assign counter = 0 %}
+     {% for item in items %}
+        {%- assign item_object = item | split: ',' -%}
+        {% if counter==0 %}
+	 <div class="tab-pane fade show active" id="tab-{{ include.id }}-{{ counter }}">
+	{{ item_object[1] }}
+        </div>
+        {% else %}
+        <div class="tab-pane fade" id="tab-{{ include.id }}-{{ counter }}">
+        {{ item_object[1] }}
+        </div>
+        {% endif %}
+	{% assign counter = counter | plus:1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
