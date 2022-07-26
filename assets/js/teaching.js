@@ -12,7 +12,7 @@ window.onload = function() {
     },
     options: {
       title: {
-        display: true,
+        display: false,
         fontSize: 15,
         text: '2013-2014'
       }
@@ -31,7 +31,7 @@ window.onload = function() {
     },
     options: {
       title: {
-        display: true,
+        display: false,
         fontSize: 15,
         text: '2014-2015'
       }
@@ -50,7 +50,7 @@ window.onload = function() {
     },
     options: {
       title: {
-        display: true,
+        display: false,
         fontSize: 15,
         text: '2015-2016'
       }
@@ -69,7 +69,7 @@ window.onload = function() {
     },
     options: {
       title: {
-        display: true,
+        display: false,
         fontSize: 15,
         text: '2021-2022'
       }
