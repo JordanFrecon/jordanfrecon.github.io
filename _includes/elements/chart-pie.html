@@ -4,8 +4,6 @@
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
 
-(function() {
-
 function generateColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -14,13 +12,6 @@ function generateColor() {
   }
   return color;
 }
-
-// Set new default font family and font color to mimic Bootstrap's default styling
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.global.defaultFontColor = '#858796';
-Chart.Legend.prototype.afterFit = function() {
-    this.height = this.height + 50;
-};
 
 // Ensure the saved image has a white background
 var backgroundColor = 'white';
@@ -49,11 +40,6 @@ var myPieChart = new Chart(ctx, {
     }],
   },
   options: {
-{% if include.title %}title: {
-        display: true,
-        fontsize: 14,
-        text: '{{ include.title }}'
-    },{% endif %}
     maintainAspectRatio: false,
     tooltips: {
       backgroundColor: "rgb(255,255,255)",
@@ -72,8 +58,4 @@ var myPieChart = new Chart(ctx, {
     cutoutPercentage: 80,
   },
 });
-
-
-
-})();
 </script>
