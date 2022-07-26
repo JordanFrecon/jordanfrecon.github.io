@@ -1,5 +1,5 @@
 {% for course in site.data.teaching %}
-    {%- if {{course.from | to_integer}} == {{include.year | to_integer}} -%}
+    {%- if {{course.from | to_integer}} == {{include.year}} -%}
     <a>{{course.title}} ({{course.hours}})</a>
   {%- endif -%}
 {% endfor %}
