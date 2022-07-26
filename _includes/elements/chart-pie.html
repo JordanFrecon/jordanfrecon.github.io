@@ -1,0 +1,20 @@
+<script>
+window.onload = function() {
+  var ctx = document.getElementById("{{ include.id }}");
+  var chart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ["Electromagnetism (L1)","Agrégation de Physique"],
+      datasets: [{
+        label: "2013-2014",
+        backgroundColor: ["#e76f51", "#264653"],
+        data: [20, 18]
+      }]
+    }
+  });
+};
+</script>
+
+<div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
+
+
