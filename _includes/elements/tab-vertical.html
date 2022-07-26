@@ -1,4 +1,4 @@
-{%- assign items = tab_items | strip | split: '\\(\n)' -%}
+{%- assign items = tab_items | strip | newline_to_br | split: '\\<br />' -%}
 
 
 <div class="row" id="{{ include.id }}">
