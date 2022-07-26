@@ -27,8 +27,17 @@
 {% assign institution_sep = institution_list | split: ',' %}
 
 
-
-{% comment %}Create null array{% endcomment %}
-{% for i in (1..{{course_year | size}}) %}
- <a>{{i}}</a>
+{% assign data_list = "" %}
+{% for inst in course_inst %}
+  {% for course in course_year %}
+    {% if course.institution == inst.name %}
+      {{ data_list | append: course.hours }}
+      {{ data_list | append: "," }}
+    {% else %}
+      {{ data_list | append: "null" }}
+      {{ data_list | append: "," }}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
+
+<a>{{ data_list }}</a>
