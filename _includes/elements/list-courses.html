@@ -1,3 +1,5 @@
 {% for cours in site.data.teaching %}
-    <a>{{cours.hours}}</a>
+  {%- if {{cours.from}} == {{ include.year }} -%}
+    <a>{{cours.course}} ({{cours.hours}})</a>
+  {%- endif -%}
 {% endfor %}
