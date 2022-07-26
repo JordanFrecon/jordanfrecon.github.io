@@ -1,4 +1,4 @@
-{{<div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
+<div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
   var ctx = document.getElementById("{{ include.id }}");
   var chart = new Chart(ctx, {
@@ -12,4 +12,4 @@
       }]
     }
   });
-</script> | strip_newlines }}
+</script>
