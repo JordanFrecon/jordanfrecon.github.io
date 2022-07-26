@@ -23,11 +23,6 @@ blue {
  color: #0047AB;
 }
 
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
 </style>
 
 
@@ -63,8 +58,9 @@ During 2021-2022, I have suggested research projects on face recognition, robust
 
 In 2021-2021, I have done teaching vacations at <blue>INSA Rouen Normandie</blue>. From 2013 to 2016, I benefited from a teaching activity grant. I gave tutorial classes, oral exercices and supervised of practical exercices at <red>Université Claude Bernard Lyon 1</red> and <green>Ecole Normale Supérieure de Lyon</green>.<br><br>
 
+{% capture ttest %}{% include elements/chart-pie.html id="test" %}{% endcapture %}
 {% capture tab_items %}
-	test&{% raw %}{% include elements/chart-pie.html id="test" %}{% endraw %}
+	test&ttest
 	2021-2022&<div style="width:100%"><canvas id="teaching2021"></canvas></div>
 	2015-2016&<div style="width:100%"><canvas id="teaching2016"></canvas></div>
 	2014-2015&<div style="width:100%"><canvas id="teaching2015"></canvas></div>
