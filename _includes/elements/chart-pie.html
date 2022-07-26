@@ -1,5 +1,6 @@
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
+(function() {
   var ctx = document.getElementById("{{ include.id }}");
   var chart = new Chart(ctx, {
     type: 'doughnut',
@@ -12,6 +13,7 @@
       }]
     }
   });
+})();
 </script>
 
 
