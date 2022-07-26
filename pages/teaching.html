@@ -61,6 +61,16 @@ blue {
 {% include elements/list-courses.html%}
 
 
+{% capture accordion_items %}
+{% for course in site.courses %}
+  {%- assign course_url = course.url | relative_url -%}
+    {{course.title}},{{course.description}}
+{% endfor %}
+{% endcapture %}
+{% include elements/accordion.html id="accordiontest"%}
+
+
+
 <div id="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
