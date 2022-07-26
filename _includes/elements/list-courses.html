@@ -35,12 +35,12 @@
       {% endif %}
   {% for course in course_year %}
     {% if course.institution == inst.name %}
-      {% if counter > 0 %}
+      {% if counter == 0 %}
         {{ data_list | append: "," }}
       {% endif %}
       {{ data_list | append: course.hours }}
     {% else %}
-      {% if counter > 0 %}
+      {% if counter == 0 %}
         {{ data_list | append: "," }}
       {% endif %}
       {{ data_list | append: "null" }}
