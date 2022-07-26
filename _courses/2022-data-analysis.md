@@ -9,4 +9,9 @@ program: Data Engineering Apprenticeship Engineer
 year: 2nd year
 ---
 
-Upcoming
+
+{% capture list_items %}
+Introduction to data analysis,
+Introduction to machine learning,
+{% endcapture %}
+{% include elements/list.html title="Course Program" %}
