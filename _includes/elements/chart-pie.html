@@ -1,61 +1,7 @@
 {% assign labels = include.labels | split: "," %}
 {% assign data = include.data | split: "," %}
-{% if include.width %}{% else %}{% assign include.width = 12 %}{% endif %}{% assign width_large = include.width | plus: 1 %}
+{% assign labels_format = [{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}] %}
+{% assign data_format = [{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}] %}
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
-<script>
+createPieChart({{include.id}},{{labels_format}},["#e76f51", "#264653"],
 
-function generateColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-// Ensure the saved image has a white background
-var backgroundColor = 'white';
-Chart.plugins.register({
-    beforeDraw: function(c) {
-        var ctx = c.chart.ctx;
-        ctx.fillStyle = backgroundColor;
-        ctx.fillRect(0, 0, c.chart.width, c.chart.height);
-    }
-});
-
-var colors = [{% for label in labels %}generateColor(){% if forloop.last %}{% else %},{% endif %}{% endfor %}]
-var hoverColors = [{% for label in labels %}generateColor(){% if forloop.last %}{% else %},{% endif %}{% endfor %}]
-
-// Pie Chart!
-var ctx = document.getElementById("{{ include.id }}");
-var myPieChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: [{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
-    datasets: [{
-      data: [{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
-      backgroundColor: colors,
-      hoverBackgroundColor: hoverColors,
-      hoverBorderColor: "rgba(234, 236, 244, 1)",
-    }],
-  },
-  options: {
-    maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-    },
-    legend: {
-      display: true,
-      position: "{% if include.legend_position %}{{ include.legend_position }}{% else %}top{% endif %}"
-    },
-    cutoutPercentage: 80,
-  },
-});
-</script>
