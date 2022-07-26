@@ -64,7 +64,7 @@ collections:
     permalink: /bibliography/:name
   teaching:
     output: true
-    permalink: /teach/:name
+    permalink: /teaching/:name
   courses:
     output: true
     permalink: /:collection/:name
