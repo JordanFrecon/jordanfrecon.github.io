@@ -11,6 +11,3 @@ function createPieChart(id, labelsvar, backgroundColorvar, datavar) {
     }
   });
 }
-
-
-

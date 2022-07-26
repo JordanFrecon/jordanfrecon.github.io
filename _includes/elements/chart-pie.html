@@ -1,7 +1,5 @@
 {% assign labels = include.labels | split: "," %}
 {% assign data = include.data | split: "," %}
-{% assign labels_format = [{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}] %}
-{% assign data_format = [{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}] %}
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
-createPieChart({{include.id}},{{labels_format}},["#e76f51", "#264653"],{{data_format}})
+createPieChart({{include.id}},[{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],["#e76f51", "#264653"],[{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}])
 
