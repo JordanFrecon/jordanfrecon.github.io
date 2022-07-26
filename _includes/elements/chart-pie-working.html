@@ -1,11 +1,10 @@
-{%- assign labels = {{ include.labels }} | split: ',' -%}
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
   var ctx = document.getElementById("{{ include.id }}");
   var chart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: {{labels}},
+      labels: ["Electromagnetism (L1)","Agrégation de Physique"],
       datasets: [{
         label: "2013-2014",
         backgroundColor: ["#e76f51", "#264653"],
