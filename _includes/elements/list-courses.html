@@ -15,3 +15,9 @@
 {% for inst in course_inst %}
 <a>{{inst.name}} {{inst.items | size }}</a>
 {% endfor %}
+
+{% assign institution_list = "" %}
+{% for inst in course_inst %}
+{{ institution_list | append: inst.name }}
+{% endfor %}
+<a> institution_list </a>
