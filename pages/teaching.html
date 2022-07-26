@@ -64,7 +64,7 @@ blue {
 {% capture accordion_items %}
 {% for course in site.courses %}
   {%- assign course_url = course.url | relative_url -%}
-    {{course.title}},{{course.description}}
+    {{course.title}},{% raw %}{{course.program}} <br> {{course.description}}{% endraw %}
 {% endfor %}
 {% endcapture %}
 {% include elements/accordion.html id="accordiontest"%}
