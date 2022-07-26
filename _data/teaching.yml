@@ -13,14 +13,14 @@
   hours: 20
   
 - id: 2014-optics
-  from: 2014
+  from: '2014'
   to: 2015
   institution: Univ. Lyon 1
   title: Optics (L1)
   hours: 26
   
 - id: 2014-appliedStats
-  from: 2014
+  from: '2014'
   to: 2015
   institution: Univ. Lyon 1
   title: Applied Statistics (L3)
