@@ -27,7 +27,7 @@ var colors = [{% for label in labels %}generateColor(){% if forloop.last %}{% el
 var hoverColors = [{% for label in labels %}generateColor(){% if forloop.last %}{% else %},{% endif %}{% endfor %}]
 
 // Pie Chart!
-var ctx = document.getElementById("pie-chart-{{ include.title | slugify }}");
+var ctx = document.getElementById("{{ include.id }}");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
