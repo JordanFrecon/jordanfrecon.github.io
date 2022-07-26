@@ -13,5 +13,5 @@
 {% assign course_inst = course_year | group_by:"institution" %}
 <a>{{ course_inst | size }}</a>
 {% for inst in course_inst %}
-<a>{{inst.name}} {{inst | size }}</a>
+<a>{{inst.name}} {{inst.item | size }}</a>
 {% endfor %}
