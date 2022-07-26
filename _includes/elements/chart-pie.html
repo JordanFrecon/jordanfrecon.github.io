@@ -1,6 +1,17 @@
 {% assign labels = include.labels | split: "," %}
+{% assign data = include.data | split: "," %}
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
+function generateColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+  var colors = [{% for label in labels %}generateColor(){% if forloop.last %}{% else %},{% endif %}{% endfor %}]
   var ctx = document.getElementById("{{ include.id }}");
   var chart = new Chart(ctx, {
     type: 'doughnut',
@@ -8,8 +19,8 @@
       labels: [{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
       datasets: [{
         label: "2013-2014",
-        backgroundColor: ["#e76f51", "#264653"],
-        data: [20, 18]
+        backgroundColor: colors,
+        data: [{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
       }]
     }
   });
