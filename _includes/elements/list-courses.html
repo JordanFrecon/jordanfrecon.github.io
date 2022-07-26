@@ -5,7 +5,8 @@
 {% endfor %}
 
 
-{% assign course_year = site.data.teaching | where: 'from', "{{include.year | string}}" %}
+{% assign year_str = {{include.year}} | append: "" %}
+{% assign course_year = site.data.teaching | where: 'from', "{{year_str}}" %}
 {% for sel_course in course_year %}
   <a>{{sel_course.title}}</a>
 {% endfor %}
