@@ -60,10 +60,10 @@ In 2021-2021, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 
 
 
-{% assign trial = {% include elements/chart-pie.html id="chartest"%} | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip %}
+{% assign trial = {% include elements/chart-pie.html id="chartest"%} | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip %}
 
 {% capture tab_items %}
-	test&trial
+	test&{{trial}}
 	2021-2022&<div style="width:100%"><canvas id="teaching2021"></canvas></div>
 	2015-2016&<div style="width:100%"><canvas id="teaching2016"></canvas></div>
 	2014-2015&<div style="width:100%"><canvas id="teaching2015"></canvas></div>
