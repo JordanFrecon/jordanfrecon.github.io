@@ -9,6 +9,14 @@ weight: 3
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 <script src="/assets/js/teaching.js"></script>
+<script>
+$('[data-toggle=tab]').click(function(){
+  if ($(this).parent().hasClass('active')){
+	$($(this).attr("href")).toggleClass('active');
+  }
+})
+</script>
+
 
 <style>
 green {
@@ -27,15 +35,10 @@ blue {
   padding-left: 8px;
 }
 </style>
-</head>
 
-<script>
-$('[data-toggle=tab]').click(function(){
-  if ($(this).parent().hasClass('active')){
-	$($(this).attr("href")).toggleClass('active');
-  }
-})
-</script>
+
+
+
 
 
 <body>
