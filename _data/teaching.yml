@@ -1,0 +1,23 @@
+- from: 2014
+  to: 2015
+  institution: ENS Lyon
+  course: Complex Systems (M2)
+  hours: 10
+
+- from: 2014
+  to: 2015
+  institution: Univ. Lyon 1
+  course: Electromagnetism (L1)
+  hours: 20
+  
+- from: 2014
+  to: 2015
+  institution: Univ. Lyon 1
+  course: Optics (L1)
+  hours: 26
+  
+- from: 2014
+  to: 2015
+  institution: Univ. Lyon 1
+  course: Applied Statistics (L3)
+  hours: 16
