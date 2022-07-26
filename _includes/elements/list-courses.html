@@ -19,6 +19,10 @@
 {% comment %}Get the list of institutions{% endcomment %}
 {% assign institution_list = "" %}
 {% for inst in course_inst %}
-{{ institution_list | append: ","+inst.name }}
+{{ institution_list | append: "," }}
+{{ institution_list | append: inst.name }}
 {% endfor %}
 <a>{{ institution_list }}</a>
+
+{% assign institution_sep = institution_list | split: ',' %}
+{% echo institution_sep %}
