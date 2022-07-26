@@ -1,11 +1,11 @@
-{% for cours in site.data.teaching %}
-    {%- if {{cours.from | to_integer}} == {{include.year | to_integer}} -%}
-    <a>{{cours.course}} ({{cours.hours}})</a>
+{% for course in site.data.teaching %}
+    {%- if {{course.from | to_integer}} == {{include.year | to_integer}} -%}
+    <a>{{course.title}} ({{course.hours}})</a>
   {%- endif -%}
 {% endfor %}
 
 
 {% assign course_year = site.data.teaching | where: 'from', {{include.year | to_integer}} %}
-{% for sel_cours in course_year %}
-  <a>{{sel_cours.course}}</a>
+{% for sel_course in course_year %}
+  <a>{{sel_course.title}}</a>
 {% endfor %}
