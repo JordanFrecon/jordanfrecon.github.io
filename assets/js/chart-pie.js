@@ -1,12 +1,12 @@
-function createPieChart(id, labels, backgroundColor, data) {
+function createPieChart(id, labelsvar, backgroundColorvar, datavar) {
   var ctx = document.getElementById(id);
   var chart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: labels,
+      labels: labelsvar,
       datasets: [{
-        backgroundColor: backgroundColor,
-        data: data
+        backgroundColor: backgroundColorvar,
+        data: datavar
       }]
     }
   });
