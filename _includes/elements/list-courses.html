@@ -3,3 +3,9 @@
     <a>{{cours.course}} ({{cours.hours}})</a>
   {%- endif -%}
 {% endfor %}
+
+
+{% assign institution_year = cours.course | where: 'from', "{{include.year}}" %}
+{% for sel_cours in institution_year %}
+  <a> sel_cours </a>
+{% endfor %}
