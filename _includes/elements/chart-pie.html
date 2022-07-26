@@ -1,6 +1,16 @@
-{% assign labels = include.labels | split: "," %}
-{% assign data = include.data | split: "," %}
 <div style="width:100%"><canvas id="{{ include.id }}"></canvas></div>
 <script>
-createPieChart({{include.id}},[{% for label in labels %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],["#e76f51", "#264653"],[{% for datum in data %}{{ datum }}{% if forloop.last %}{% else %},{% endif %}{% endfor %}])
+window.onfocus = function() {var ctx = document.getElementById("{{ include.id }}");
+  var chart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ["Electromagnetism (L1)","Agrégation de Physique"],
+      datasets: [{
+        label: "2013-2014",
+        backgroundColor: ["#e76f51", "#264653"],
+        data: [20, 18]
+      }]
+    }
+  });
+};
 </script>
