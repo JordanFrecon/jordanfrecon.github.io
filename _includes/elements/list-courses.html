@@ -16,8 +16,9 @@
 <a>{{inst.name}} {{inst.items | size }}</a>
 {% endfor %}
 
+{% comment %}Get the list of institutions{% endcomment %}
 {% assign institution_list = "" %}
 {% for inst in course_inst %}
-{{ institution_list | append: inst.name }}
+{{ institution_list | append: ","+inst.name }}
 {% endfor %}
 <a>{{ institution_list }}</a>
