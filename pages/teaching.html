@@ -64,7 +64,7 @@ blue {
 {% capture accordion_items %}
 {% for course in site.courses %}
   {%- assign course_url = course.url | relative_url -%}
-    {{course.title}},<i class="fas fa-university"></i> {{course.institution}}<br><i class="fas fa-solid fa-graduation-cap"></i> {{course.year}}, {{course.program}}<br><br>{{course.description}}<br><br><a href="{{course_url}}"><i class="fas fa-chalkboard"></i> Course webpage</a>
+    {{course.title}};<i class="fas fa-university"></i> {{course.institution}}<br><i class="fas fa-solid fa-graduation-cap"></i> {{course.year}}, {{course.program}}<br><br>{{course.description}}<br><br><a href="{{course_url}}"><i class="fas fa-chalkboard"></i> Course webpage</a>
 {% endfor %}
 {% endcapture %}
 {% include elements/accordion.html id="accordiontest"%}

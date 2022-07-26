@@ -5,7 +5,7 @@
   {% assign counter = 0 %}
   {% for item in items %}
   
-  {%- assign item_object = item | split: ',' -%}
+  {%- assign item_object = item | split: ';' -%}
   
   <div class="card">
     <div class="card-header" id="heading-{{ include.id }}-{{ counter }}">
