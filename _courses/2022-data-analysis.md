@@ -1,5 +1,5 @@
 ---
-title: Algorithms for data analysis
+title: Algorithms for Data Analysis
 layout: course
 tags: [Convex, Optimization]
 shortid: datascience
