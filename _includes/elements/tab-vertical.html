@@ -6,7 +6,7 @@
     <div class="list-group list-group-light" id="list-tab" role="tablist">
       {% assign counter = 0 %}
       {% for item in items %}
-	 {%- assign item_object = item | split: ',' -%}
+	 {%- assign item_object = item | split: '&' -%}
 	 {% if counter==0 %}
 	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{ item_object[0] }}</a>
 	   {% else %}
@@ -20,7 +20,7 @@
     <div class="tab-content">
     {% assign counter = 0 %}
      {% for item in items %}
-        {%- assign item_object = item | split: ',' -%}
+        {%- assign item_object = item | split: '&' -%}
         {% if counter==0 %}
 	 <div class="tab-pane fade show active" id="tab-{{ include.id }}-{{ counter }}">
 	{{ item_object[1] }}
