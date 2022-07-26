@@ -39,26 +39,7 @@ blue {
 
 <h1>Courses</h1>
 
-{% capture list_items %}
-{% for course in site.courses %}
-{%- if course.external_url -%}
-  {%- assign course_url = course.external_url -%}
-{%- else -%}
-  {%- assign course_url = course.url | relative_url -%}
-{%- endif -%}
-    {{course.title}},{{course_url}}
-{% endfor %}
-{% endcapture %}
-{% include elements/list.html title="Telecom Saint-Etienne Courses" %}
 
-
-{% capture list_courses %}
-{% for course in site.courses %}
-  {%- assign course_url = course.url | relative_url -%}
-    {{course.title}},{{course.shortid}},{{course.program}},{{course.description}}
-{% endfor %}
-{% endcapture %}
-{% include elements/list-courses.html%}
 
 
 {% capture accordion_items %}
@@ -80,7 +61,16 @@ For the 2020-2021 edition, I have proposed subjects about card tricks and autono
 During 2021-2022, I have suggested research projects on face recognition, robust coding systems and fairness in machine learning.
 
 
-<h1>Teaching Activities</h1>
+<h1>Teaching Experience</h1>
+
+{% capture list_courses %}
+{% for course in site.courses %}
+  {%- assign course_url = course.url | relative_url -%}
+    {{course.title}},{{course.shortid}},{{course.program}},{{course.description}}
+{% endfor %}
+{% endcapture %}
+{% include elements/list-courses.html%}
+
 
 Since 2021, I do teaching vacations at <blue>INSA Rouen Normandie</blue>.
 <div style="width:100%">
