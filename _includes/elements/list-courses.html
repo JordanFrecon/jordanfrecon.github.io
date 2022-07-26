@@ -45,8 +45,8 @@
       {% endif %}
       {{ data_list | append: "null" }}
     {% endif %}
-    {% increment counter %}
   {% endfor %}
+  {% increment counter %}
 {% endfor %}
 
 <a>{{ data_list }}</a>
