@@ -9,49 +9,7 @@ weight: 3
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 <script src="/assets/js/teaching.js"></script>
-<script>
-$(function() {
 
-    var active = $('a[data-toggle="tab"]').parents('.active').length;
-    var tabClicked = false;
-
-    // Closes current active tab (toggle and pane):
-    var close = function() {
-        $('a[data-toggle="tab"]').parent().removeClass('active');
-        $('.tab-pane.active').removeClass('active');
-        active = null;
-    }
-
-    // Closing active tab when clicking on toggle:
-    $('[data-toggle=tab]').click(function(){
-        if ($(this).parent().hasClass('active')){
-            $($(this).attr("href")).toggleClass('active');
-            active = null;
-        } else {
-            tabClicked = true;
-            active = this;
-        }
-    });
-
-
-    // Closing active tab when clicking outside tab context (toggle and pane):
-    $(document).on('click.bs.tab.data-api', function(event) {
-        if(active && !tabClicked && !$(event.target).closest('.tab-pane.active').length) {
-            close();
-        }
-
-        tabClicked = false;
-    });
-
-    // Closing active tab on ESC key release:
-    $(document).keyup(function(e){
-        if(active && e.keyCode === 27) { // ESC
-            close();
-        }
-    });
-});
-
-</script>
 
 
 <style>
@@ -103,43 +61,51 @@ blue {
 {% include elements/list-courses.html%}
 
 
-<div class="list-group list-group-light">
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#aboout">About</a>
-  <div class="tab-content">
-    <div class="tab-pane fade" id="aboout">
-    test pas blabla
-    </div> 
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
   </div>
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#services">Services</a>
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#dropdown">Dropdown</a>
-  <div class="tab-content">
-    <div class="tab-pane fade" id="dropdown">
-    test blabla
-    </div> 
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
   </div>
-  <a class="list-group-item list-group-item-action" data-toggle="tab" href="#contact">Search</a>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
 </div>
-
-
-   <ul class="nav nav-tabs">
-      <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
-      <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
-      <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
-   </ul>
-
-   <div class="tab-content">
-      <div class="tab-pane active" id="tab1">
-         <p>I'm in Section 1.</p>
-      </div>
-
-      <div class="tab-pane" id="tab2">
-         <p>Howdy, I'm in Section 2.</p>
-      </div>
-     
-     <div class="tab-pane" id="tab3">
-         <p>Howdy, I'm in Section 3.</p>
-      </div>
-   </div>
 
 
 
