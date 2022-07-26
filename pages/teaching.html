@@ -61,13 +61,11 @@ During 2021-2022, I have suggested research projects on face recognition, robust
 
 <h1>Teaching Experience</h1>
 
-{% capture list_courses %}
-{% for course in site.courses %}
-  {%- assign course_url = course.url | relative_url -%}
-    {{course.title}},{{course.shortid}},{{course.program}},{{course.description}}
-{% endfor %}
+{% capture tab-items %}
+    2013-2014,<div style="width:100%"><canvas id="teaching2014"></canvas></div>
+    2014-2015,<div style="width:100%"><canvas id="teaching2015"></canvas></div>
 {% endcapture %}
-{% include elements/list-courses.html%}
+{% include elements/tab-vertical.html id="teaching"%}
 
 
 Since 2021, I do teaching vacations at <blue>INSA Rouen Normandie</blue>.
