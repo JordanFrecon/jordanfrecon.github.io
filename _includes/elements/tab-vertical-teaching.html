@@ -24,11 +24,13 @@
 	{% capture year_name %}{{year_str}}{% endcapture %}
         {% if counter==0 %}
 	 <div class="tab-pane fade show active" id="tab-{{ include.id }}-{{ counter }}">
-	{% include elements/list-courses.html id="teachpie" year=year_name %}
+	{% capture parent_str %}parent-{{ include.id }}-{{ counter }}{% endcapture %}
+	{% include elements/list-courses.html id="teachpie" parent_id=parent_str year=year_name %}
         </div>
         {% else %}
         <div class="tab-pane fade" id="tab-{{ include.id }}-{{ counter }}">
-        {% include elements/list-courses.html id="teachpie" parent_id="parent-{{ include.id }}-{{ counter }}" year=year_name %}
+        {% capture parent_str %}parent-{{ include.id }}-{{ counter }}{% endcapture %}
+        {% include elements/list-courses.html id="teachpie" parent_id=parent_str year=year_name %}
         </div>
         {% endif %}
 	{% assign counter = counter | plus:1 %}
