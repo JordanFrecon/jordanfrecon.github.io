@@ -72,13 +72,12 @@ var datasets_all = ['inst1','inst2']
 
 var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
-    datasets: [datasets_all.map( i =>
+    datasets: datasets_all.map((ds, i) => ({
         {
             backgroundColor: colors[i],
             borderColor: colors[i],
             data: data_all[i]
-        })
-   ]
+        }))
 };
 var barOptions = {
 scales: {
