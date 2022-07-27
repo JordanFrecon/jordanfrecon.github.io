@@ -123,6 +123,12 @@ var myBar = new Chart(ctx, {
             });
             
 document.getElementById({{include.parent_id}}).addEventListener('click', function() {
-      myBar.update();
+      console.log({{include.parent_id}});
+      var myBar = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: chartData,
+                options: barOptions,
+                scaleFontColor:textcolor,
+            });
 });
 </script>
