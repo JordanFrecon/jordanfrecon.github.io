@@ -28,7 +28,7 @@
 {%- assign label_list = course_year | map: 'title' -%}
 {%- assign inst_list = course_inst | map: 'name' -%}
 
-
+<a>{{include.parent_id}}</a>
 <div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
 var style = getComputedStyle(document.body);
