@@ -66,7 +66,6 @@ scales: {
     easing: "easeOutQuart",
     onComplete: function () {
         var ctx = this.chart.ctx;
-        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
         ctx.textAlign = 'left';
         ctx.textBaseline = 'bottom';
         this.data.datasets.forEach(function (dataset) {
