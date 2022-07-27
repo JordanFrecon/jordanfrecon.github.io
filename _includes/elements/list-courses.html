@@ -52,7 +52,7 @@
 {%- assign data_sep = data_list | split: ';' -%}
 {% for data_line in data_sep %}
   {%- assign data_tmp = data_line | split: ',' -%}
-  <a>[{% for datum in data_tmp %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+  <a>[{% for datum in data_tmp %}"{{ datum }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 {% endfor %}
 
 
