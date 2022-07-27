@@ -20,9 +20,10 @@
 <button id="removeData">Remove Data</button>
 
 
+<!--- Create one button for each year --->
 {% for year in years_list %}
-	{% capture year_string %}{{year}}{% endcapture %}
-	<button id="year-{{year_string}">{{year_string}}</button>
+  {% capture year_string %}{{year}}{% endcapture %}
+  <button id="btn-{{year_string}">{{year_string}}</button>
 {% endfor %}
 
 
