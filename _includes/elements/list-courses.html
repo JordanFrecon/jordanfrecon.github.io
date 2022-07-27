@@ -84,33 +84,33 @@ scales: {
         }]
     },
   events: false,
-	showTooltips: false,
+	showTooltips: true,
 	animation: {
-    duration: 500,
-    easing: "easeOutQuart",
-    onComplete: function () {
-        var ctx = this.chart.ctx;
-        ctx.textAlign = 'left';
-        ctx.textBaseline = 'bottom';
-        this.data.datasets.forEach(function (dataset) {
-            for (var i = 0; i < dataset.data.length; i++) {
-                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
-                    scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
-                    left = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.left;
-                    offset = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.longestLabelWidth;
-                var y_pos = model.y - 5;
-                var label = model.label;
-                // Make sure data value does not get overflown and hidden
-                // when the bar's value is too close to max value of scale
-                // Note: The y value is reverse, it counts from top down
-                if ((scale_max - model.y) / scale_max >= 0.93)
-                    y_pos = model.y + 20; 
-                // ctx.fillText(dataset.data[i], model.x, y_pos);
-                ctx.fillStyle = textcolor;
-                ctx.fillText(label, left + 10, model.y + 8);
-            }
-        });               
-    }
+	    duration: 500,
+	    easing: "easeOutQuart",
+	    onComplete: function () {
+		var ctx = this.chart.ctx;
+		ctx.textAlign = 'left';
+		ctx.textBaseline = 'bottom';
+		this.data.datasets.forEach(function (dataset) {
+		    for (var i = 0; i < dataset.data.length; i++) {
+		        var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+		            scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
+		            left = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.left;
+		            offset = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.longestLabelWidth;
+		        var y_pos = model.y - 5;
+		        var label = model.label;
+		        // Make sure data value does not get overflown and hidden
+		        // when the bar's value is too close to max value of scale
+		        // Note: The y value is reverse, it counts from top down
+		        if ((scale_max - model.y) / scale_max >= 0.93)
+		            y_pos = model.y + 20; 
+		        // ctx.fillText(dataset.data[i], model.x, y_pos);
+		        ctx.fillStyle = textcolor;
+		        ctx.fillText(label, left + 10, model.y + 8);
+		    }
+		});               
+	   }
 	}
 };
 Chart.defaults.global.defaultFontColor = textcolor;
