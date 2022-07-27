@@ -29,6 +29,8 @@
 {%- assign inst_list = course_inst | map: 'name' -%}
 
 
+{%- assign idparent = include.parent_id  %}
+
 <div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
 var style = getComputedStyle(document.body);
@@ -123,7 +125,7 @@ var myBar = new Chart(ctx, {
             });
     
 
-var idparent = {{include.parent_id}}
+
 console.log(idparent);
 document.getElementById(idparent).addEventListener('click', function() {
       var myBar = new Chart(ctx, {
