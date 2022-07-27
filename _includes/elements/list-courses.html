@@ -48,3 +48,33 @@
 {% endfor %}
 
 <a>{{ data_list }}</a>
+
+
+{% assign title_list = "" %}
+{% for sel_course in course_year %}
+  {% if forloop.first == false %}
+    {{ title_list | append: "," }}
+  {% endif %}
+  {{ title_list | append: sel_course.title }}
+{% endfor %}
+<a>{{ title_list }}</a>
+
+{% assign title_sep = title_list | split: ',' %}
+
+<script>
+var chartData = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+        {
+            fillColor: "#79D1CF",
+            strokeColor: "#79D1CF",
+            data: [null, null, 81, 56]
+        },
+        {
+            backgroundColor: "#26AA5A",
+            borderColor: "#26AA5A",
+            data: [60, 80,null,null]
+        }
+    ]
+};
+</script>
