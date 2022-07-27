@@ -61,6 +61,8 @@ In 2021-2022, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 	test&{{trial}}
 -->
 
+
+<!--
 {% capture trial1 %}{% include elements/list-courses.html id="teachpie" year="2014-2015"%}{% endcapture %}
 {% assign trial = trial1 | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip %}
 
@@ -72,16 +74,17 @@ In 2021-2022, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 	2013-2014&<div style="width:100%"><canvas id="teaching2014"></canvas></div>
 {% endcapture %}
 {% include elements/tab-vertical.html id="teaching"%}
+-->
 
 
 
 {% include elements/tab-vertical-teaching.html id="teachinghope"%}
 
-
+<!--
 {% assign years_all = site.data.teaching | group_by:"year" %}
 {% assign years_list = years_all | map: 'name' %}
 {% for year_str in years_list %}
 {% capture year_name %}{{year_str}}{% endcapture %}
     {% include elements/list-courses.html id="teachpie" year=year_name %}
 {% endfor %}
-
+-->
