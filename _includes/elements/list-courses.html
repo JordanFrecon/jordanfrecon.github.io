@@ -30,19 +30,19 @@
 {% assign data_list = "" %}
 {% for inst in course_inst %}
   {% if forloop.first==false %}
-    {{ data_list | append: ";" }}
+    {% assign data_list = data_list | append: ";" %}
   {% endif %}
   {% for course in course_year %}
     {% if course.institution == inst.name %}
       {% if forloop.first == false %}
-        {{ data_list | append: "," }}
+        {% assign data_list = data_list | append: "," %}
       {% endif %}
-      {{ data_list | append: course.hours }}
+      {% assign data_list = data_list | append: course.hours %}
     {% else %}
       {% if forloop.first == false %}
-        {{ data_list | append: "," }}
+        {% assign data_list = data_list | append: "," %}
       {% endif %}
-      {{ data_list | append: "null" }}
+      {% assign data_list = data_list | append: "null" %}
     {% endif %}
   {% endfor %}
 {% endfor %}
@@ -57,6 +57,8 @@
 
 
 {%- assign label_list = course_year | map: 'title' -%}
+
+
 
 
 <canvas id="myChart2" width="100%"></canvas>
