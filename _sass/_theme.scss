@@ -40,6 +40,4 @@
   @include themed(filter, invert(0), invert(1));
 }
 
-.row .active{
-   @include themed(background, $primary, $primary);
-}
+
