@@ -109,10 +109,12 @@ scales: {
 };
 Chart.defaults.global.defaultFontColor = textcolor;
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
+function hpmpGraph() {
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
                 data: chartData,
                 options: barOptions,
                 scaleFontColor:textcolor,
             });
+}
 </script>
