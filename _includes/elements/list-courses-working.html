@@ -27,10 +27,10 @@
 {% assign institution_sep = institution_list | split: ',' %}
 
 
-{% assign data_list = "[" %}
+{% assign data_list = "" %}
 {% for inst in course_inst %}
   {% if forloop.first==false %}
-    {% assign data_list = data_list | append: "],[" %}
+    {% assign data_list = data_list | append: ";" %}
   {% endif %}
   {% for course in course_year %}
     {% if course.institution == inst.name %}
@@ -45,11 +45,17 @@
       {% assign data_list = data_list | append: "null" %}
     {% endif %}
   {% endfor %}
-  {% assign data_list = data_list | append: "]" %}
 {% endfor %}
-{% assign data_list = data_list | append: "]" %}
 
 <a>{{ data_list }}</a>
+
+<br><br>
+{%- assign data_sep = data_list | split: ';' -%}
+{% for data_line in data_sep %}
+  {%- assign data_tmp = data_line | split: ',' -%}
+  <a>[{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+  {
+{% endfor %}
 
 
 
