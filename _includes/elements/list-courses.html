@@ -67,8 +67,9 @@
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var colors = ["#FF8F33","#26AA5A"];
-var data_all = [[null, null, 81, 56],[60, 80,null,null]];
+var data_all_old = [[null, null, 81, 56],[60, 80,null,null]];
 var datasets_all = ['inst1','inst2'];
+var data_all = [{% for data_line in data_sep %}[{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 
 var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
