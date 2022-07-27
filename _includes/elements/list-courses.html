@@ -57,6 +57,7 @@
   {% endif %}
   {{ title_list | append: sel_course.title }}
 {% endfor %}
+<br />
 <a>{{ title_list }}</a>
 
 {% assign title_sep = title_list | split: ',' %}
