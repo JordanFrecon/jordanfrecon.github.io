@@ -9,7 +9,7 @@
       {% for year_str in years_list %}
 	 {% capture year_name %}{{year_str}}{% endcapture %}
 	 {% if counter==0 %}
-	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
+	   <a class="list-group-item list-group-item-action" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% else %}
 	    <a class="list-group-item list-group-item-action"data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% endif %}
