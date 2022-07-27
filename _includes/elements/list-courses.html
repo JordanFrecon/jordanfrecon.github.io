@@ -36,6 +36,8 @@ var lightcolor = style.getPropertyValue('--background-color')
 
 console.log(style)
 
+var textcolor = style.getPropertyValue('--text-decoration-color')
+
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
 var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
@@ -104,7 +106,7 @@ scales: {
     }
 	}
 };
-Chart.defaults.global.defaultFontColor = textcolor;
+Chart.defaults.global.defaultFontColor = style.getPropertyValue('--success');
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
