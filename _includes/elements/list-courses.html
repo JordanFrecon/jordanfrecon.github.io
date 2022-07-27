@@ -133,19 +133,21 @@ document.getElementById(idparent).addEventListener('click', function() {
 	var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 	var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 
-var chartData = {
-	labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
-	datasets: datasets_all.map((ds, i) => ({
-	    label: datasets_all[i],
-	    backgroundColor: bgcolors[i],
-	    borderColor: colors[i],
-	    data: data_all[i],
-	    borderWidth: 2,
-	    borderRadius: 20,
-	    color: textcolor
-		}))
-	};
+	var chartData = {
+		labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+		datasets: datasets_all.map((ds, i) => ({
+		    label: datasets_all[i],
+		    backgroundColor: bgcolors[i],
+		    borderColor: colors[i],
+		    data: data_all[i],
+		    borderWidth: 2,
+		    borderRadius: 20,
+		    color: textcolor
+			}))
+		};
         
+        Chart.defaults.global.defaultFontColor = textcolor;
+	var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 	var myBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: chartData,
