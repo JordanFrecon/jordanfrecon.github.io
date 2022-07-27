@@ -103,7 +103,7 @@ scales: {
     }
 	}
 };
-Chart.defaults.global.defaultFontColor = "#C74040";
+Chart.defaults.global.defaultFontColor = lightcolor;
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
