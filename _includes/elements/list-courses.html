@@ -43,7 +43,7 @@ var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: datasets_all.map((ds, i) => ({
     	    label: datasets_all[i],
-            backgroundColor: colors[i],
+            backgroundColor: transparentize(colors[i],0.5),
             borderColor: colors[i],
             data: data_all[i],
         }))
