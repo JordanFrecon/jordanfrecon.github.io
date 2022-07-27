@@ -33,6 +33,90 @@
 
 <div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
+var style = getComputedStyle(document.body);
+
+var textcolor = style.getPropertyValue('-webkit-text-fill-color')
+
+var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
+var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
+
+var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
+var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
+
+var chartData = {
+    labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+    datasets: datasets_all.map((ds, i) => ({
+    	    label: datasets_all[i],
+            backgroundColor: bgcolors[i],
+            borderColor: colors[i],
+            data: data_all[i],
+            borderWidth: 2,
+	    borderRadius: 20,
+	    color: textcolor
+        }))
+};
+var barOptions = {
+tooltips: {
+  mode: 'index',
+  intersect: false,
+},
+hover: {
+  mode: 'nearest',
+  intersect: true
+},
+responsive: true,
+scales: {
+        yAxes: [{
+            ticks: {
+            	 display: false,
+                fontColor: textcolor,
+            },
+            stacked: true,
+            gridLines: {
+            	display: false,
+            },
+        }],
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            },
+            gridLines: {
+            	display: false,
+            },
+        }]
+    },
+  events: false,
+	showTooltips: true,
+	animation: {
+	    duration: 500,
+	    easing: "easeOutQuart",
+	    onComplete: function () {
+		var ctx = this.chart.ctx;
+		ctx.textAlign = 'left';
+		ctx.textBaseline = 'bottom';
+		this.data.datasets.forEach(function (dataset) {
+		    for (var i = 0; i < dataset.data.length; i++) {
+		        var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+		            scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
+		            left = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.left;
+		            offset = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.longestLabelWidth;
+		        var y_pos = model.y - 5;
+		        var label = model.label;
+		        // Make sure data value does not get overflown and hidden
+		        // when the bar's value is too close to max value of scale
+		        // Note: The y value is reverse, it counts from top down
+		        if ((scale_max - model.y) / scale_max >= 0.93)
+		            y_pos = model.y + 20; 
+		        // ctx.fillText(dataset.data[i], model.x, y_pos);
+		        ctx.fillStyle = textcolor;
+		        ctx.fillText(label, left + 10, model.y + 8);
+		    }
+		});               
+	   }
+	}
+};
+
+
 Chart.defaults.global.defaultFontColor = textcolor;
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 var myBar = new Chart(ctx, {
@@ -42,6 +126,7 @@ var myBar = new Chart(ctx, {
                 scaleFontColor:textcolor,
             });
     
+
 
 document.getElementById(idparent).addEventListener('click', function() {
 	var idparent = "{{include.parent_id}}"
