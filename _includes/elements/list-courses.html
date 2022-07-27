@@ -54,15 +54,15 @@ var chartData = {
         }))
 };
 var barOptions = {
+tooltips: {
+  mode: 'index',
+  intersect: false,
+},
+hover: {
+  mode: 'nearest',
+  intersect: true
+},
 responsive: true,
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-        },
-        hover: {
-          mode: 'nearest',
-          intersect: true
-        },
 scales: {
         yAxes: [{
             ticks: {
@@ -113,7 +113,7 @@ scales: {
     }
 	}
 };
-
+Chart.defaults.global.defaultFontColor = textcolor;
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
