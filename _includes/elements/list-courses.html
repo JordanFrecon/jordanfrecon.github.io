@@ -53,9 +53,10 @@
 {% assign title_list = "" %}
 {% for sel_course in course_year %}
   {% if forloop.first == false %}
-    {{ title_list | append: "," }}
+    {% assign title_list = title_list | append: "," }}
   {% endif %}
   {{ title_list | append: sel_course.title }}
+  {% assign title_list = title_list  | append: sel_course | handleize %}
 {% endfor %}
 <br><br>
 <a>{{ title_list }}</a>
