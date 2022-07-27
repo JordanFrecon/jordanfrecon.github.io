@@ -108,11 +108,14 @@ scales: {
 	}
 };
 Chart.defaults.global.defaultFontColor = textcolor;
+let input = document.querySelector({{include.parent_id}});
 var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
+input.onfocus = function() {
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
                 data: chartData,
                 options: barOptions,
                 scaleFontColor:textcolor,
             });
+};
 </script>

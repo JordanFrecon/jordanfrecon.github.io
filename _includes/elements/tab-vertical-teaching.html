@@ -28,7 +28,7 @@
         </div>
         {% else %}
         <div class="tab-pane fade" id="tab-{{ include.id }}-{{ counter }}">
-        {% include elements/list-courses.html id="teachpie" year=year_name %}
+        {% include elements/list-courses.html id="teachpie" year=year_name id_parent="tab-{{ include.id }}-{{ counter }}"%}
         </div>
         {% endif %}
 	{% assign counter = counter | plus:1 %}
