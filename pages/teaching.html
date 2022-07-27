@@ -78,3 +78,8 @@ In 2021-2022, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 
 {% include elements/list-courses.html id="teaching" year="2014-2015"%}
 
+{% assign years_all = site.data.teaching | group_by:"year" %}
+{% for year in years_all.name %}
+  {% include elements/list-courses.html id="teaching" year={{ year }}%}
+{% endfor %}
+
