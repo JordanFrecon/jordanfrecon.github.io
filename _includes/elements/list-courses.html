@@ -61,7 +61,7 @@
 
 {%- assign label_list = course_year | map: 'title' -%}
 
-{%- assign inst_list = course_year | uniq | map: 'institution' -%}
+{%- assign inst_list = course_inst | map: 'items' -%}
 {% for ii in inst_list %}
 <a>{{ii}}</a>
 {% endfor %}
