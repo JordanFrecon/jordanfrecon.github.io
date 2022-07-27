@@ -60,7 +60,7 @@
 <br><br>
 <a>{{ title_list }}</a>
 
-{% assign title_sep = title_list | split: ',' %}
+{% assign title_sep = title_list | strip | newline_to_br | split: ',' %}
 
 <a>[{% for label in title_sep %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 
