@@ -1,35 +1,27 @@
-
-
-
 {% assign course_year = site.data.teaching | where: "year",{{include.year}} %}
-
-
 {% assign course_inst = course_year | group_by:"institution" %}
 
 
-
-
-{% assign data_list = "" %}
+{% assign data_str = "" %}
 {% for inst in course_inst %}
   {% if forloop.first==false %}
-    {% assign data_list = data_list | append: ";" %}
+    {% assign data_str = data_str | append: ";" %}
   {% endif %}
   {% for course in course_year %}
     {% if course.institution == inst.name %}
       {% if forloop.first == false %}
-        {% assign data_list = data_list | append: "," %}
+        {% assign data_str = data_str | append: "," %}
       {% endif %}
-      {% assign data_list = data_list | append: course.hours %}
+      {% assign data_str = data_str | append: course.hours %}
     {% else %}
       {% if forloop.first == false %}
-        {% assign data_list = data_list | append: "," %}
+        {% assign data_str = data_str | append: "," %}
       {% endif %}
-      {% assign data_list = data_list | append: "null" %}
+      {% assign data_str = data_str | append: "null" %}
     {% endif %}
   {% endfor %}
 {% endfor %}
-{%- assign data_sep = data_list | split: ';' -%}
-
+{%- assign data_list = data_str | split: ';' -%}
 
 
 {%- assign label_list = course_year | map: 'title' -%}
@@ -40,7 +32,7 @@
 <script>
 var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
-var data_all = [{% for data_line in data_sep %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
+var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 
 
 var chartData = {
