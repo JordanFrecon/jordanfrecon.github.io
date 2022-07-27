@@ -1,31 +1,5 @@
-{% for course in site.data.teaching %}
-    {%- if {{course.from | to_integer}} == {{include.year}} -%}
-    <a>{{course.title}} ({{course.hours}})</a>
-  {%- endif -%}
-{% endfor %}
-
-
 {% assign course_year = site.data.teaching | where: "year",{{include.year}} %}
-{% for sel_course in course_year %}
-  <a>{{sel_course.title}}</a>
-{% endfor %}
-
 {% assign course_inst = course_year | group_by:"institution" %}
-<a>{{ course_inst | size }}</a>
-{% for inst in course_inst %}
-<a>{{inst.name}} {{inst.items | size }}</a>
-{% endfor %}
-
-{% comment %}Get the list of institutions{% endcomment %}
-{% assign institution_list = "" %}
-{% for inst in course_inst %}
-{{ institution_list | append: "," }}
-{{ institution_list | append: inst.name }}
-{% endfor %}
-<a>{{ institution_list }}</a>
-
-{% assign institution_sep = institution_list | split: ',' %}
-
 
 {% assign data_list = "" %}
 {% for inst in course_inst %}
@@ -46,17 +20,6 @@
     {% endif %}
   {% endfor %}
 {% endfor %}
-
-<a>{{ data_list }}</a>
-
-<br><br>
-{%- assign data_sep = data_list | split: ';' -%}
-{% for data_line in data_sep %}
-  {%- assign data_tmp = data_line | split: ',' -%}
-  <a>[{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
-{% endfor %}
-
-
 
 
 {%- assign label_list = course_year | map: 'title' -%}
