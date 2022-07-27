@@ -107,6 +107,7 @@ var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
                 data: chartData,
-                options: barOptions
+                options: barOptions,
+                scaleFontColor:textcolor,
             });
 </script>
