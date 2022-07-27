@@ -47,16 +47,15 @@
   {% endfor %}
 {% endfor %}
 
-<a>{{ data_list | strip}}</a>
-
+<a>{{ data_list }}</a>
+<br><br>
 
 {% assign title_list = "" %}
 {% for sel_course in course_year %}
   {% if forloop.first == false %}
-    {% assign title_list = title_list | append: "," }}
+    {{ title_list | append: "," }}
   {% endif %}
-  {{ title_list | append: sel_course.title }}
-  {% assign title_list = title_list  | append: sel_course | handleize %}
+  {{ title_list | append: {{sel_course.title | strip }}}}
 {% endfor %}
 <br><br>
 <a>{{ title_list }}</a>
@@ -69,7 +68,7 @@
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
-    labels: title_sep,
+    labels: [title_list],
     datasets: [
         {
             backgroundColor: "#FF8F33",
