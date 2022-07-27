@@ -8,8 +8,8 @@
 <!--- To do after sel year --->
 
 {% for year in years_list %}
-	{% assign course_year = course_sort | where: "year","{{year}}" %}
-	{% assign label_list = course_year | map: 'title' %}
+	{% assign course_this_year = course_by_inst | where: "year","{{year}}" %}
+	{% assign label_list = course_this_year | map: 'title' %}
 	<a>[{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 {% endfor %}
 
