@@ -82,6 +82,6 @@ In 2021-2022, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 {% assign years_list = years_all | map: 'name' %}
 {% for year in years_list %}
   <a>{{year}}</a>
-  {% include elements/list-courses.html id="teaching" year={{ year }}%}
+  {% include elements/list-courses.html id="teaching" year="{{ year }}"%}
 {% endfor %}
 
