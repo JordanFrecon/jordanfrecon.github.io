@@ -61,7 +61,10 @@
 
 {%- assign label_list = course_year | map: 'title' -%}
 
-
+{%- assign inst_list = course_year | uniq | map: 'institution' -%}
+{% for ii in inst_list %}
+<a>{{ii}}</a>
+{% endfor %}
 
 
 <canvas id="myChart2" width="100%"></canvas>
