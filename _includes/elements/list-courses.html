@@ -68,7 +68,8 @@
 <script>
 var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = ['inst1','inst2'];
-var data_all = [{% for data_line in data_sep %}[{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
+var data_all = [{% for data_line in data_sep %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
+
 
 var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
