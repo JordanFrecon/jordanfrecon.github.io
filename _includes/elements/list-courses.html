@@ -47,7 +47,7 @@
   {% endfor %}
 {% endfor %}
 
-<a>{{ data_list }}</a>
+<a>{{ data_list | strip}}</a>
 
 
 {% assign title_list = "" %}
@@ -68,7 +68,7 @@
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
-    labels: [title_list],
+    labels: title_sep,
     datasets: [
         {
             backgroundColor: "#FF8F33",
