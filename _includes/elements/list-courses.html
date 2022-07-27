@@ -28,7 +28,7 @@
 {%- assign inst_list = course_inst | map: 'name' -%}
 
 
-<canvas id="myChart2" width="100%"></canvas>
+<canvas id="canvas-{{ include.id }}-{{ include.year }}" width="100%"></canvas>
 <script>
 var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
@@ -90,7 +90,7 @@ scales: {
     }
 	}
 };
-var ctx = document.getElementById("myChart2").getContext("2d");
+var ctx = document.getElementById("canvas-{{ include.id }}-{{ include.year }}").getContext("2d");
 var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
                 data: chartData,
