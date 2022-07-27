@@ -57,7 +57,7 @@
   {% endif %}
   {{ title_list | append: sel_course.title }}
 {% endfor %}
-<br />
+<br><br>
 <a>{{ title_list }}</a>
 
 {% assign title_sep = title_list | split: ',' %}
@@ -69,8 +69,8 @@ var chartData = {
     labels: [{% for label in title_sep %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: [
         {
-            fillColor: "#79D1CF",
-            strokeColor: "#79D1CF",
+            backgroundColor: "#FF8F33",
+            borderColor: "#FF8F33",
             data: [null, null, 81, 56]
         },
         {
