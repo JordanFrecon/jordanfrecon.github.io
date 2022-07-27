@@ -49,15 +49,20 @@
 
 <a>{{ data_list }}</a>
 <br><br>
+{%- assign data_sep = data_list | split: ';' -%}
+{% for data_line in data_sep %}
+  {%- assign data_tmp = data_line | split: ',' -%}
+  <a>[{% for datum in data_tmp %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+{% endfor %}
 
 
-{%- assign titlenew = course_year | map: 'title' -%}
-<a>[{% for label in titlenew %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+{%- assign label_list = course_year | map: 'title' -%}
+
 
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
-    labels: [{% for label in titlenew %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+    labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: [
         {
             backgroundColor: "#FF8F33",
