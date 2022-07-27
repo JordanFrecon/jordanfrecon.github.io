@@ -62,6 +62,8 @@
 
 {% assign title_sep = title_list | split: ',' %}
 
+<a>[{% for label in title_sep %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+
 
 <canvas id="myChart2" width="100%"></canvas>
 <script>
