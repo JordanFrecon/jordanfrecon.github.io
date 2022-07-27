@@ -36,15 +36,15 @@ var lightcolor = style.getPropertyValue('--background-color')
 
 var textcolor = style.getPropertyValue('--color')
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
-var rbgcolors = [rgb(40, 167, 69), rgb(220, 53, 69), rgb(23, 162, 184)];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 
 var chartData = {
+    fillOpacity: .3,
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: datasets_all.map((ds, i) => ({
     	    label: datasets_all[i],
-            backgroundColor: bgcolors[i],
+            backgroundColor: colors[i],
             borderColor: colors[i],
             data: data_all[i],
         }))
