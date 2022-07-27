@@ -65,6 +65,9 @@
 <a>[{% for label in title_sep %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 
 
+{%- assign titlenew = course_year | map: 'title' -%}
+<a>[{% for label in titlenew %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
+
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
