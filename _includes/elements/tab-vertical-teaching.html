@@ -1,0 +1,39 @@
+{% assign years_all = site.data.teaching | group_by:"year" %}
+{% assign years_list = years_all | map: 'name' %}
+
+
+<div class="row" id="{{ include.id }}">
+  <div class="col-4">
+    <div class="list-group list-group-light" id="list-tab" role="tablist">
+      {% assign counter = 0 %}
+      {% for year_str in years_list %}
+	 {% capture year_name %}{{year_str}}{% endcapture %}
+	 {% if counter==0 %}
+	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">year_str</a>
+	   {% else %}
+	    <a class="list-group-item list-group-item-action" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">year_str</a>
+	   {% endif %}
+	   {% assign counter = counter | plus:1 %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content">
+    {% assign counter = 0 %}
+     {% for year_str in years_list %}
+	{% capture year_name %}{{year_str}}{% endcapture %}
+        {% if counter==0 %}
+	 <div class="tab-pane fade show active" id="tab-{{ include.id }}-{{ counter }}">
+	{% include elements/list-courses.html id="teachpie" year=year_name %}
+        </div>
+        {% else %}
+        <div class="tab-pane fade" id="tab-{{ include.id }}-{{ counter }}">
+        {% include elements/list-courses.html id="teachpie" year=year_name %}
+        </div>
+        {% endif %}
+	{% assign counter = counter | plus:1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
