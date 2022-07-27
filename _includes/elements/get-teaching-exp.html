@@ -21,8 +21,8 @@
 
 
 <!--- Create one button for each year --->
-{% for year in years_list %}
-  {% capture year_string %}{{year}}{% endcapture %}
+{% for yearvar in years_list %}
+{% capture year_name %}{{yearvar}}{% endcapture %}
   <button id="btn-{{year_string}">{{year_string}}</button>
 {% endfor %}
 
