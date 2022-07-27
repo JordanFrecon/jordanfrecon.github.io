@@ -28,7 +28,7 @@
 {%- assign inst_list = course_inst | map: 'name' -%}
 
 
-<canvas id="canvas-{{ include.id }}-{{ include.year }}" width="100%"></canvas>
+<div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
 var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
