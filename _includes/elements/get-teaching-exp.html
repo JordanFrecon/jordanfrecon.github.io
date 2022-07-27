@@ -29,30 +29,6 @@
 
 <script>
 
-var INSTITUTIONS = [{% for inst in institution_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
-
-
-document.getElementById('year-id').addEventListener('click', function() {
-// Define new data_structure
-var newDataObject = {
-labels: ["January", "February", "March", "April", "May", "June", "July"],
-datasets: [{
-  label: "My First dataset",
-  backgroundColor: "rgba(75,192,192,0.4)",
-  borderColor: "rgba(75,192,192,1)",
-  data: [100, 200, 300, 81, 56, 55, 40],
-}]
-};
-console.log(myLine.data);
-// the newDataObject does not override myLine.data object: why???
-myLine.data = newDataObject;
-// ... but updating a single value works: why??? 
-myLine.data.datasets[0].data[0] = 5000;
-console.log(myLine.data);
-window.myLine.update();
-});
-
-
 
 window.chartColors = {
 red: 'rgb(255, 99, 132)',
