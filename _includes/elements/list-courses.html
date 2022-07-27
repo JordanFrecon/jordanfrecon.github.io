@@ -61,6 +61,8 @@
 
 {% assign title_sep = title_list | split: ',' %}
 
+
+<canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
     labels: ["January", "February", "March", "April", "May", "June"],
@@ -77,4 +79,11 @@ var chartData = {
         }
     ]
 };
+
+var ctx = document.getElementById("myChart2").getContext("2d");
+var myBar = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: chartData,
+                options: barOptions
+            });
 </script>
