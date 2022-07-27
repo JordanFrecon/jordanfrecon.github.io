@@ -66,9 +66,9 @@
 
 <canvas id="myChart2" width="100%"></canvas>
 <script>
-var colors = ["#FF8F33","#26AA5A"]
-var data_all = [[null, null, 81, 56],[60, 80,null,null]]
-var datasets_all = ['inst1','inst2']
+var colors = ["#FF8F33","#26AA5A"];
+var data_all = [[null, null, 81, 56],[60, 80,null,null]];
+var datasets_all = ['inst1','inst2'];
 
 var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
