@@ -121,9 +121,11 @@ var myBar = new Chart(ctx, {
                 options: barOptions,
                 scaleFontColor:textcolor,
             });
-            
-document.getElementById({{include.parent_id}}).addEventListener('click', function() {
-      console.log({{include.parent_id}});
+    
+
+var idparent = {{include.parent_id}}
+console.log(idparent);
+document.getElementById(idparent).addEventListener('click', function() {
       var myBar = new Chart(ctx, {
                 type: 'horizontalBar',
                 data: chartData,
