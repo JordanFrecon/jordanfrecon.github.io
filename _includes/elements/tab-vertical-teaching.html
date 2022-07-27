@@ -9,9 +9,9 @@
       {% for year_str in years_list %}
 	 {% capture year_name %}{{year_str}}{% endcapture %}
 	 {% if counter==0 %}
-	   <a class="list-group-item list-group-item-action active" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
+	   <a class="list-group-item list-group-item-action active" data-toggle="tab" id="parent-{{ include.id }}-{{ counter }}" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% else %}
-	    <a class="list-group-item list-group-item-action" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
+	    <a class="list-group-item list-group-item-action" data-toggle="tab" id="parent-{{ include.id }}-{{ counter }}" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% endif %}
 	   {% assign counter = counter | plus:1 %}
       {% endfor %}
@@ -28,7 +28,7 @@
         </div>
         {% else %}
         <div class="tab-pane fade" id="tab-{{ include.id }}-{{ counter }}">
-        {% include elements/list-courses.html id="teachpie" year=year_name %}
+        {% include elements/list-courses.html id="teachpie" parent_id="parent-{{ include.id }}-{{ counter }}" year=year_name %}
         </div>
         {% endif %}
 	{% assign counter = counter | plus:1 %}

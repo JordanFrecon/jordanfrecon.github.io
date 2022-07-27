@@ -121,4 +121,8 @@ var myBar = new Chart(ctx, {
                 options: barOptions,
                 scaleFontColor:textcolor,
             });
+            
+document.getElementById({{include.parent_id}}).addEventListener('click', function() {
+      window.myBar.update();
+});
 </script>
