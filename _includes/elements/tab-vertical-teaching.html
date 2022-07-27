@@ -9,7 +9,7 @@
       {% for year_str in years_list %}
 	 {% capture year_name %}{{year_str}}{% endcapture %}
 	 {% if counter==0 %}
-	   <a class="list-group-item list-group-item-action active" onclick="refresh({{year_name}});" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
+	   <a class="list-group-item list-group-item-action active" onclick="refresh();" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% else %}
 	    <a class="list-group-item list-group-item-action" onclick="refresh({{year_name}});" data-toggle="tab" href="#tab-{{ include.id }}-{{ counter }}">{{year_str}}</a>
 	   {% endif %}
@@ -38,10 +38,10 @@
 </div>
 
 <script>
-function refresh(canvas_id) {
+function refresh() {
 	const name = "canvas-teachpie-";
-	var canvas = document.getElementById(name.concat(canvas_id));
-	console.log(name.concat(canvas_id));
+	var canvas = document.getElementById(name.concat("2013-2014"));
+	console.log(name.concat("2013-2014"));
 	canvas.update();
 }
 </script>
