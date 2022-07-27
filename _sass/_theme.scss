@@ -27,7 +27,7 @@
 .text-themed {
   @include themed(color, $text-black, $text-white);
 }
-W
+
 .bg-themed {
   @include themed(background-color, $light, $dark);
 }
