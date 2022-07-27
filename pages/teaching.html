@@ -61,8 +61,13 @@ In 2021-2022, I have done teaching vacations at <blue>INSA Rouen Normandie</blue
 	test&{{trial}}
 -->
 
+{% capture trial1 %}
+{% include elements/list-courses.html id="teaching" year="2014-2015"%}
+{% endcapture %}
+{% assign trial = trial1 | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip %}
 
 {% capture tab_items %}
+	test&{{trial}}
 	2021-2022&<div style="width:100%"><canvas id="teaching2021"></canvas></div>
 	2015-2016&<div style="width:100%"><canvas id="teaching2016"></canvas></div>
 	2014-2015&<div style="width:100%"><canvas id="teaching2015"></canvas></div>
