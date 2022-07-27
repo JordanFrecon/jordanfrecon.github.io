@@ -125,7 +125,7 @@ var myBar = new Chart(ctx, {
             });
     
 
-var idparent = {{include.parent_id | string}}
+var idparent = "{{include.parent_id}}"
 console.log(idparent);
 document.getElementById(idparent).addEventListener('click', function() {
       var myBar = new Chart(ctx, {
