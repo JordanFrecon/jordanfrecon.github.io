@@ -8,7 +8,7 @@
 <!--- Get all the title of the cours each year --->
 {% for year in years_list %}
 	{% capture year_str %}{{year}}{% endcapture %}
-	{% assign course_this_year = course_by_inst | where: "year",{{year_str}} %}
+	{% assign course_this_year = course_by_inst | where: "year","{{year_str}}" %}
 	{% assign title_this_year = course_this_year | map: 'title' %}
 	<a>[{% for title in title_this_year %}"{{ title }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 {% endfor %}
