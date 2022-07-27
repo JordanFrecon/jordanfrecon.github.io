@@ -55,7 +55,7 @@
   {% if forloop.first == false %}
     {{ title_list | append: "," }}
   {% endif %}
-  {{ title_list | append: {{sel_course.title | strip }}}}
+  {{ title_list | append: sel_course.title | strip }}
 {% endfor %}
 <br><br>
 <a>{{ title_list }}</a>
