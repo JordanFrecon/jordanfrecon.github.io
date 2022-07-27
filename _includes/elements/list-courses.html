@@ -31,13 +31,6 @@
 
 <div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
-function addAlpha(color: string, opacity: number): string {
-    // coerce values so ti is between 0 and 1.
-    const _opacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
-    return color + _opacity.toString(16).toUpperCase();
-}
-</script>
-<script>
 var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
@@ -46,9 +39,10 @@ var chartData = {
     labels: [{% for label in label_list %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: datasets_all.map((ds, i) => ({
     	    label: datasets_all[i],
-            backgroundColor: addAlpha(colors[i], 0.5),
+            backgroundColor: colors[i],
             borderColor: colors[i],
-            data: data_all[i]
+            data: data_all[i],
+            fillOpacity: .3
         }))
 };
 var barOptions = {
