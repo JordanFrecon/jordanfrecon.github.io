@@ -1,3 +1,33 @@
+- id: 2015-electromagnetism
+  year: 2015-2016
+  institution: Univ. Lyon 1
+  title: Electromagnetism (L1)
+  hours: 20
+  
+- id: 2015-optics
+  year: 2015-2016
+  institution: Univ. Lyon 1
+  title: Optics (L2)
+  hours: 26
+  
+- id: 2015-experimentalPhysics
+  year: 2015-2016
+  institution: ENS Lyon
+  title: Experimental Physics (L3)
+  hours: 8
+  
+- id: 2015-python
+  year: 2015-2016
+  institution: ENS Lyon
+  title: Python (L3)
+  hours: 20
+
+- id: 2015-signalProcessing
+  year: 2015-2016
+  institution: ENS Lyon
+  title: Signal Processing (L3)
+  hours: 20
+  
 - id: 2014-complexSystems
   year: 2014-2015
   institution: ENS Lyon
@@ -13,7 +43,7 @@
 - id: 2014-optics
   year: 2014-2015
   institution: Univ. Lyon 1
-  title: Optics (L1)
+  title: Optics (L2)
   hours: 26
   
 - id: 2014-appliedStats
