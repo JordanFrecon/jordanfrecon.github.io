@@ -126,6 +126,8 @@ var myBar = new Chart(ctx, {
                 scaleFontColor:textcolor,
             });
     
+var idparent = "{{include.parent_id}}"
+console.log(idparent);    
 document.getElementById(idparent).addEventListener('click', function() {
 
 
@@ -145,9 +147,7 @@ var chartData = {
 		}))
 	};
         
-        
-	var idparent = "{{include.parent_id}}"
-	console.log(idparent);
+        	
 	var myBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: chartData,
