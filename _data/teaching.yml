@@ -1,3 +1,15 @@
+- id: 2021-informatics
+  year: 2021-2022
+  institution: INSA Rouen
+  title: Informatics (L1)
+  hours: 36
+
+- id: 2021-dataScience
+  year: 2021-2022
+  institution: INSA Rouen
+  title: Data Science (L2)
+  hours: 30
+  
 - id: 2015-electromagnetism
   year: 2015-2016
   institution: Univ. Lyon 1
