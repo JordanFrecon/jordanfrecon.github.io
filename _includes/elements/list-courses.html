@@ -65,7 +65,7 @@
 <canvas id="myChart2" width="100%"></canvas>
 <script>
 var chartData = {
-    labels: title_sep,
+    labels: [{% for label in title_sep %}"{{ label }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
     datasets: [
         {
             fillColor: "#79D1CF",
