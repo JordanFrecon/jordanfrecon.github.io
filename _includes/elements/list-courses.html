@@ -30,7 +30,7 @@
 
 <div style="width:100%"><canvas id="canvas-{{ include.id }}-{{ include.year }}"></canvas></div>
 <script>
-var colors = ["#FF8F33","#26AA5A"];
+window.onfocus = function() {var colors = ["#FF8F33","#26AA5A"];
 var datasets_all = [{% for inst in inst_list %}"{{ inst }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 var data_all = [{% for data_line in data_list %}[{% assign data_tmp = data_line | split: ',' %}{% for datum in data_tmp %}{{ datum | to_integer}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{% if forloop.last %}{% else %},{% endif %}{% endfor %}];
 
@@ -96,4 +96,5 @@ var myBar = new Chart(ctx, {
                 data: chartData,
                 options: barOptions
             });
+};
 </script>
