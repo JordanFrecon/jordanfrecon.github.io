@@ -34,8 +34,7 @@
 var style = getComputedStyle(document.body);
 var lightcolor = style.getPropertyValue('--background-color')
 
-var textcolor = document.querySelector('.text-themed').style.color
-
+console.log(style)
 
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
 var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
