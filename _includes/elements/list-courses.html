@@ -56,6 +56,7 @@ var chartData = {
         }))
 };
 var barOptions = {
+responsive: true,
 scales: {
         yAxes: [{
             ticks: {
@@ -91,7 +92,6 @@ scales: {
                     scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
                     left = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.left;
                     offset = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._xScale.longestLabelWidth;
-                ctx.fillStyle = '#444';
                 var y_pos = model.y - 5;
                 var label = model.label;
                 // Make sure data value does not get overflown and hidden
@@ -100,6 +100,7 @@ scales: {
                 if ((scale_max - model.y) / scale_max >= 0.93)
                     y_pos = model.y + 20; 
                 // ctx.fillText(dataset.data[i], model.x, y_pos);
+                ctx.borderRadius: 20;
                 ctx.fillStyle = textcolor;
                 ctx.fillText(label, left + 10, model.y + 8);
             }
