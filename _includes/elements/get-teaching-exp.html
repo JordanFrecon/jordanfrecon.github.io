@@ -9,7 +9,7 @@
 {%- for yeaar in years_list -%}
 	<a>{{yeaar}}</a>
 	{% capture year_str %}{{yeaar}}{% endcapture %}
-	{%- assign course_this_year = course_by_inst | where: 'year', {{- year_str -}} -%}
+	{%- assign course_this_year = course_sort | where: 'year', {{- year_str -}} -%}
 	<a>{{year_str}}</a>
 	{%- assign title_this_year = course_this_year | map: 'title' -%}
 	{% for title in title_this_year %}
