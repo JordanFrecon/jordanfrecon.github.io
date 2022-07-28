@@ -226,7 +226,7 @@ var barOptions = {
 
 // ON LOAD
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
-var myBar = new Chart(ctx, {
+var teachingBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: chart_data[1],
 		options: barOptions,
@@ -235,13 +235,13 @@ var myBar = new Chart(ctx, {
 // CHANGE DATA
 document.getElementById("btn-year-test").addEventListener('click', function() {
 	console.log("pressed btn");
-	myBar.data = chart_data[2];
+	teachingBar.data = chart_data[2];
 	
-	myBar.data.datasets.forEach((dataset) => {
+	teachingBar.data.datasets.forEach((dataset) => {
         dataset.data.pop();
     	});
     	
-      	myBar.update();
+      	teachingBar.update();
 });
 
 
