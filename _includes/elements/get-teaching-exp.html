@@ -28,11 +28,11 @@
 	<!-- Keep unique list -->
 	{%- assign sep_tmp_institution = sep_tmp_institution | remove_first: "," -%}
 	{%- assign temporary = sep_tmp_institution | split: "," -%}
-	{%- assign unique_inst = temporary | uniq | join: "," -%}
+	{%- assign unique_inst = temporary | uniq | join: '","' -%}
 
 	<!-- Open and close bracket -->
-	{%- assign unique_inst = unique_inst | prepend: "[" -%}
-	{%- assign unique_inst = unique_inst | append: "]" -%}
+	{%- assign unique_inst = unique_inst | prepend: '["' -%}
+	{%- assign unique_inst = unique_inst | append: '"]' -%}
 
 	<!-- Append to parent sepator -->
 	{%- assign sep_institution = sep_institution | append: "#" -%}
