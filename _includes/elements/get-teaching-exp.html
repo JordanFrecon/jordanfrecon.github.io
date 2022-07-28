@@ -148,12 +148,11 @@
   </div>
   </div>
   <div class="col-8">
-
+	<canvas id="teaching-canvas" width="100%"></canvas>
   </div>
 
 </div>
 
-  	<canvas id="teaching-canvas" width="100%"></canvas>
 
 <script>
 
@@ -167,6 +166,7 @@ var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}{%- for hour_year
 
 
 // Colors (to improve transparency)
+var style = getComputedStyle(document.body);
 var textcolor = style.getPropertyValue('-webkit-text-fill-color');
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
 var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
@@ -229,7 +229,7 @@ var barOptions = {
 	}
 };
 
-// ON LOAD
+// Add on load ?
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
 var teachingBar = new Chart(ctx, {
 		type: 'horizontalBar',
@@ -237,9 +237,8 @@ var teachingBar = new Chart(ctx, {
 		options: barOptions,
 	    });
 
-// CHANGE DATA
 
-
+// CHANGE DATA (make working loop)
 document.getElementById('btn-year-0').addEventListener('click', function() {
 	// the newDataObject does not override myLine.teachingBar object but updating a single value works ...
 	teachingBar.data = chart_data[0];
