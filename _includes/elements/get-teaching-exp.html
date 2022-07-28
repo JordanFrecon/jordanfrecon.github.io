@@ -1,4 +1,4 @@
-{%- assign course_sort = site.data.teaching | sort: "year" -%}
+{%- assign course_sort = site.data.teaching | sort: "year" | reverse -%}
 {%- assign course_by_year = course_sort | group_by:"year" -%}
 {%- assign course_by_inst = course_sort | group_by:"institution" -%}
 
