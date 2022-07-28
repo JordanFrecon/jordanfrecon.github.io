@@ -7,9 +7,11 @@
 
 <!--- Get all the title of the courses each year --->
 {%- for courses_per_year in courses_per_year_list -%}
-	{%- for course in courses_per_year -%}
+	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
+	{%- for course in courses_per_year_sort -%}
 		<a>{{course.institution}}</a>
 	{%- endfor -%}
+	<br><br>
 {%- endfor -%}
 
 
