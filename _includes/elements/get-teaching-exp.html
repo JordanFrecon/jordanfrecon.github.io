@@ -150,12 +150,6 @@
 <canvas id="teaching-canvas"></canvas>
 
 
-<!--- Create one button for each year --->
-{% for year in years_list %}
-{% capture year_str %}{{year}}{% endcapture %}
-  <button id="btn-{{ year_str }}">{{year_str}}</button>
-{% endfor %}
-
 
 
 <script>
