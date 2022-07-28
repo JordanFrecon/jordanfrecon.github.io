@@ -10,7 +10,7 @@
 <!------------------------------------------- Institutions  ---------------------------------->
 
 <!-- Open bracket of parent -->
-{%- assign sep_institution = "[" -%}
+{%- assign sep_institution = "" -%}
 	
 <!--- Get all courses per year --->
 {%- for courses_per_year in courses_per_year_list -%}
@@ -41,7 +41,7 @@
 {%- endfor -%}
 
 <!-- Close bracket and remove first separator -->
-{%- assign sep_institution = sep_institution | append: "]" -%}
+<!-- {%- assign sep_institution = sep_institution | append: "]" -%} -->
 {%- assign sep_institution = sep_institution | remove_first: "#" -%}
 
 <a>{{ sep_institution }}</a>
@@ -144,7 +144,7 @@
 <a>{{ sep_hour }}</a>
 
 
-
+{%- assign institution_split = sep_institution | split: '#' -%}
 
 
 <br><br>
@@ -164,9 +164,9 @@
 <script>
 
 
-var INSTITUTIONS = {$- assign sep_institution | split: '#' -%}
-var TITLES = {$- sep_title | split: '#' -%}
+var INSTITUTIONS = [{%- for inst in institution_split -%}{{- inst -}}{%- endfor -%}]
 
+var TITLES = {%- sep_title | split: '#' -%}
 console.log(INSTITUTIONS)
 console.log(TITLES)
 
