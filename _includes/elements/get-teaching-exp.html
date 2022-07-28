@@ -3,7 +3,7 @@
 {%- assign course_by_inst = course_sort | group_by:"institution" -%}
 
 {%- assign years_list = course_by_year | map: 'name' -%}
-{%- assign institution_list = course_by_inst | map: 'name' %-}
+{%- assign institution_list = course_by_inst | map: 'name' -%}
 
 <!--- Get all the title of the courses each year --->
 {% for yeaar in years_list %}
