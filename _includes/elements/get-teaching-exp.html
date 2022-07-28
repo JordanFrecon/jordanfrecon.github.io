@@ -109,10 +109,8 @@
 			
 			{%- if course.institution == inst -%}
 				{%- assign sep_hour_inner = sep_hour_inner | append: course.hours -%}
-				<!-- <a>{{course.hours}}</a> -->
 			{%- else -%}
 				{%- assign sep_hour_inner = sep_hour_inner | append: "null" -%}
-				<!-- <a>null</a> -->
 			{%- endif -%}
 		
 		{%- endfor -%}
@@ -129,7 +127,7 @@
 	
 	<!-- Close bracket and remove first separator of child -->
 	{%- assign sep_tmp_hour = sep_tmp_hour | append: "]" -%}
-	{%- assign sep_tmp_hour = sep_tmp_hour | remove_first: "," -%}
+	{%- assign sep_tmp_hour = sep_tmp_hour | remove_first: ";" -%}
 	
 	<!-- Add to the direct parent -->
 	{%- assign sep_hour = sep_hour | append: "#" -%}
