@@ -249,10 +249,11 @@ document.getElementById('btn-year-2').addEventListener('click', function() {
 });
 document.getElementById('btn-year-3').addEventListener('click', function() {
 	teachingBar.destroy();
-	teachingBar.type ='horizontalBar';
-	teachingBar.options = barOptions;
-	teachingBar.data = chart_data[3];
-      	teachingBar.update();
+	var teachingBar = new Chart(ctx, {
+		type: 'horizontalBar',
+		data: chart_data[3],
+		options: barOptions,
+	    });
 });
 
 </script>
