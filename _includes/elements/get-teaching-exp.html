@@ -152,6 +152,7 @@
 
 <script>
 
+// Data extracted from the taught courses
 
 var INSTITUTIONS = [{%- assign institution_split = sep_institution | split: '#' -%}{%- for inst_year in institution_split -%}{%- assign inst_year_split = inst_year | split: ',' -%}[{%- for inst in inst_year_split -%}"{{- inst --}}"{% if forloop.last %}{% else %}{% if forloop.last %}{% else %},{% endif %}{% endif %}{%- endfor -%}],{%- endfor -%}];
 
@@ -160,6 +161,7 @@ var TITLES = [{%- assign titles_split = sep_title | split: '#' -%}{%- for title_
 var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}{%- for hour_year in hours_split -%}{%- assign hour_year_split = hour_year | split: ';' -%}[{%- for hours_year_per_inst in hour_year_split -%}{%- assign hours_data = hours_year_per_inst | split: ',' -%}[{%- for hours in hours_data -%}{{ hours }}{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}];
 
 
+// Colors (to improve transparency)
 var textcolor = style.getPropertyValue('-webkit-text-fill-color');
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
 var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
@@ -168,7 +170,7 @@ console.log(INSTITUTIONS);
 console.log(TITLES);
 console.log(HOURS);
 
-
+// Create one set of data per each year
 var chart_data = [];
 for (var i = 0; i < {{ years_list | size }}; ++i) {
     chart_data[i] = {
@@ -183,7 +185,7 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
 	    color: textcolor
         }))
     };
-}
+};
 
 console.log(chart_data);
 
@@ -229,7 +231,7 @@ var barOptions = {
 	scales: {
 		yAxes: [{
 		    ticks: {
-		    	 display: false,
+		    	 display: true,
 		        fontColor: textcolor,
 		    },
 		    stacked: true,
