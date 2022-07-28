@@ -270,6 +270,11 @@ window.onload = function() {
 document.getElementById("btn-year-test").addEventListener('click', function() {
 	console.log("pressed btn");
 	myBar.data = chart_data[2];
+	
+	myBar.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    	});
+    	
       	myBar.update();
 });
 
