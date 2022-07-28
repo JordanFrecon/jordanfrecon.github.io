@@ -171,9 +171,6 @@ var textcolor = style.getPropertyValue('-webkit-text-fill-color');
 var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
 var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
 
-console.log(INSTITUTIONS);
-console.log(TITLES);
-console.log(HOURS);
 
 // Create one set of data per each year
 var chart_data = [];
@@ -192,10 +189,7 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
     }
 };
 
-console.log(chart_data);
-
-
-
+// Set bar options
 var barOptions = {
 	responsive: true,
     	interaction: {
@@ -223,7 +217,7 @@ var barOptions = {
 	}
 };
 
-// Add on load ?
+// Create chart
 Chart.defaults.global.defaultFontColor = textcolor;
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
 var teachingBar = new Chart(ctx, {
@@ -233,8 +227,8 @@ var teachingBar = new Chart(ctx, {
 	    });
 
 
-// CHANGE DATA 
-// the newDataObject does not override myLine.teachingBar object but updating a single value works ...
+// Change data
+// issue: changing the data object does not override the metadata
 function refreshChart(id) {
 	teachingBar.data = chart_data[id];
       	teachingBar.update();
