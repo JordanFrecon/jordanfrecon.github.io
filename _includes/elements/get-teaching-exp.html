@@ -46,24 +46,20 @@
 <!------------------------------------------- Course Titles ---------------------------------->
 
 <!-- Open bracket of parent -->
-{%- assign sep_title = "[" -%}
+{%- assign sep_title = "" -%}
 	
 <!--- Get all courses per year --->
 {%- for courses_per_year in courses_per_year_list -%}
 	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
 	
 	<!-- Open bracket of child -->
-	{%- assign sep_tmp_title = "[" -%}
+	{%- assign sep_tmp_title = "" -%}
 	
 	<!-- Go through course titles -->
 	{%- for course in courses_per_year_sort -%}
-		{%- assign sep_tmp_title = sep_tmp_title | append: ',"' -%}
+		{%- assign sep_tmp_title = sep_tmp_title | append: ',' -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
-		{%- assign sep_tmp_title = sep_tmp_title | append: '"' -%}
 	{%- endfor -%}
-	
-	<!-- Close bracket of child -->
-	{%- assign sep_tmp_title = sep_tmp_title | append: "]" -%}
 	
 	<!-- Remove first separator -->
 	{%- assign sep_tmp_title = sep_tmp_title | remove_first: "," -%}
@@ -75,7 +71,6 @@
 {%- endfor -%}
 
 <!-- Close bracket and remove first separator -->
-{%- assign sep_title = sep_title | append: "]" -%}
 {%- assign sep_title = sep_title | remove_first: "#" -%}
 
 <br><br>
