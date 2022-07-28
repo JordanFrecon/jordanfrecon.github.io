@@ -164,7 +164,7 @@ console.log(INSTITUTIONS);
 console.log(TITLES);
 
 var chart_data = [];
-for (var i = 0; i < {{ years_list | size }}-1; ++i) {
+for (var i = 0; i < {{ years_list | size }}; ++i) {
     chart_data[i] = {
     	labels: [],
     };
@@ -239,7 +239,7 @@ var barOptions = {
 };
 
 // ON LOAD
-var ctx = document.getElementById("teaching-canvas").getContext("2d");
+var ctx = document.getElementById("teaching-canvas")
 var myBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: data,
