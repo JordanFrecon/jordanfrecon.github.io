@@ -147,7 +147,7 @@
 	{% endfor %}
   </div>
   </div>
-  <div class="col-8">
+  <div class="col-8 table-responsive">
 	<canvas id="teaching-canvas" width="100%"></canvas>
   </div>
 
@@ -191,7 +191,8 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
 
 // Set bar options
 var barOptions = {
-	responsive: true,
+	responsive: false,
+	maintainAspectRatio: false,
     	interaction: {
       		intersect: false,
     	},
