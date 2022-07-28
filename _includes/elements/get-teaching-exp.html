@@ -175,7 +175,7 @@ var chart_data = [];
 for (var i = 0; i < {{ years_list | size }}; ++i) {
     chart_data[i] = {
     	labels: TITLES[i],
-    	datasets: datasets_all.map((ds, j) => ({
+    	datasets: INSTITUTIONS[i].map((ds, j) => ({
     	    label: INSTITUTIONS[i][j],
             backgroundColor: bgcolors[j],
             borderColor: colors[j],
