@@ -233,16 +233,12 @@ var teachingBar = new Chart(ctx, {
 	    });
 
 
-// CHANGE DATA (make working loop)
+// CHANGE DATA 
 // the newDataObject does not override myLine.teachingBar object but updating a single value works ...
-
-
 function refreshChart(id) {
-	console.log(id)
 	teachingBar.data = chart_data[id];
       	teachingBar.update();
 }
-
 
 </script>
 
