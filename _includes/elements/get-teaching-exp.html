@@ -5,14 +5,38 @@
 {%- assign years_list = course_by_year | map: 'name' -%}
 {%- assign courses_per_year_list = course_by_year | map: 'items' -%}
 
+
+
+{%- assign sep_inst = "" -%}
+
+
 <!--- Get all the title of the courses each year --->
 {%- for courses_per_year in courses_per_year_list -%}
 	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
+	
+	<!-- Temporary variable -->
+	{%- assign sep_tmp_inst = "[" -%}
+	
 	{%- for course in courses_per_year_sort -%}
 		<a>{{course.institution}}</a>
+		
+		<!-- Add institutions this year -->
+		{%- assign sep_tmp_inst = sep_tmp_inst | append: "," -%}
+		{%- assign sep_tmp_inst = sep_tmp_inst | append: course.institution -%}
+		
 	{%- endfor -%}
+	
+	<!-- Close the bracket this year -->
+	{%- assign sep_tmp_inst = sep_tmp_inst | append: "]" -%}
+	
+	<!-- Remove first separator -->
+	{%- assign sep_tmp_inst = sep_tmp_inst | remove_first: "," -%}
+	
+	<!-- Append to parent sepator -->
+	{%- assign sep_inst = sep_inst | append: sep_tmp_inst -%}
 	<br><br>
 {%- endfor -%}
+<a>{{ sep_inst }}</a>
 
 
 <canvas id="canvas"></canvas>
