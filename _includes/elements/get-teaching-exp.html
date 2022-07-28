@@ -1,17 +1,17 @@
-{% assign course_sort = site.data.teaching | sort: "institution" %}
-{% assign course_by_year = course_sort | group_by:"year" %}
-{% assign course_by_inst = course_sort | group_by:"institution" %}
+{%- assign course_sort = site.data.teaching | sort: "institution" -%}
+{%- assign course_by_year = course_sort | group_by:"year" -%}
+{%- assign course_by_inst = course_sort | group_by:"institution" -%}
 
-{% assign years_list = course_by_year | map: 'name' %}
-{% assign institution_list = course_by_inst | map: 'name' %}
+{%- assign years_list = course_by_year | map: 'name' -%}
+{%- assign institution_list = course_by_inst | map: 'name' %-}
 
 <!--- Get all the title of the courses each year --->
 {% for yeaar in years_list %}
 	<a>{{yeaar}}</a>
 	{% capture year_str %}{{year}}{% endcapture %}
-	{% assign course_this_year = course_by_inst | where: "year","yeaar" %}
+	{-% assign course_this_year = course_by_inst | where: "year","yeaar" -%}
 	<a>{{year_str}}</a>
-	{% assign title_this_year = course_this_year | map: '' %}
+	{%- assign title_this_year = course_this_year | map: '' -%}
 	<a>[{% for title in title_this_year %}"{{ title }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 {% endfor %}
 
