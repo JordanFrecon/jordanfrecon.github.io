@@ -173,11 +173,24 @@ var data = {
 };
 
 
+var data2 = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+        {
+            fillColor: "#79D1CF",
+            strokeColor: "#79D1CF",
+            data: [null, 20, 54, 35, 78, null]
+        },
+        {
+            backgroundColor: "#26AA5A",
+            borderColor: "#26AA5A",
+            data: [60, null,null,null,null,55]
+        }
+    ]
+};
+
+
 var barOptions = {
-	tooltips: {
-	  mode: 'index',
-	  intersect: false,
-	},
 	hover: {
 	  mode: 'nearest',
 	  intersect: true
@@ -211,12 +224,21 @@ var barOptions = {
 	}
 };
 
+// ON LOAD
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
 var myBar = new Chart(ctx, {
 		type: 'horizontalBar',
 		data: data,
 		options: barOptions,
 	    });
+
+
+// CHANGE DATA
+document.getElementById('btn-2013-2014').addEventListener('click', function() {
+	config.data = data2
+	});
+      window.myLine.update();
+});
 
 </script>
 
