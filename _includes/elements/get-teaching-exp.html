@@ -7,15 +7,12 @@
 
 
 
-{%- assign sep_title = "" -%}
-
-
+<!-- Open bracket of parent -->
+{%- assign sep_title = "[" -%}
+	
 <!--- Get all courses per year --->
 {%- for courses_per_year in courses_per_year_list -%}
 	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
-	
-	<!-- Open bracket of parent -->
-	{%- assign sep_title = sep_title | append: "[" -%}
 	
 	<!-- Open bracket of child -->
 	{%- assign sep_tmp_title = "[" -%}
