@@ -236,7 +236,6 @@ var teachingBar = new Chart(ctx, {
 // CHANGE DATA (make working loop)
 document.getElementById('btn-year-0').addEventListener('click', function() {
 	// the newDataObject does not override myLine.teachingBar object but updating a single value works ...
-	teachingBar.data.datasets[0].data[0] = chart_data[0].datasets[0].data[0];
 	teachingBar.data = chart_data[0];
       	teachingBar.update();
 });
