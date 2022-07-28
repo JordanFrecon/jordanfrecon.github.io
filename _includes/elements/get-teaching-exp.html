@@ -232,7 +232,12 @@ var myBar = new Chart(ctx, {
 		options: barOptions,
 	    });
 
-
+// CHANGE DATA
+document.getElementById('btn-2013-2014').addEventListener('click', function() {
+	config.data = data2
+	});
+      myBar.update();
+});
 
 
 </script>
