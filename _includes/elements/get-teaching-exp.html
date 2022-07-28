@@ -6,7 +6,7 @@
 {%- assign institution_list = course_by_inst | map: 'name' -%}
 
 <!--- Get all the title of the courses each year --->
-{%- for course_this_year in course_by_year.items -%}
+{%- for course_this_year in course_by_year | map: 'items' -%}
 	<a>{{course_this_year.name}}</a>
 {%- endfor -%}
 
