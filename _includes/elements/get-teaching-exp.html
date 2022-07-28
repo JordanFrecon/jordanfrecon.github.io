@@ -233,11 +233,13 @@ var teachingBar = new Chart(ctx, {
 	    });
 
 // CHANGE DATA
-document.getElementById("btn-year-test").addEventListener('click', function() {
-	teachingBar.data = chart_data[2];
-      	teachingBar.update();
-});
-
+const btn_name = 'btn-year-';
+for (var i = 0; i < {{ years_list | size }}; ++i) {
+	document.getElementById(btn_name.concat(i)).addEventListener('click', function() {
+		teachingBar.data = chart_data[i];
+	      	teachingBar.update();
+	});
+}
 
 </script>
 
