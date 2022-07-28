@@ -14,28 +14,39 @@
 {%- for courses_per_year in courses_per_year_list -%}
 	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
 	
-	<!-- Temporary child separator -->
+	<!-- Open bracket of parent -->
+	{%- assign sep_title = sep_title | append: "[" -%}
+	
+	<!-- Open bracket of child -->
 	{%- assign sep_tmp_title = "[" -%}
 	
+	<!------------------------------>
+	<!-- GO THROUGH COURSE TITLES -->
+	<!------------------------------>
 	{%- for course in courses_per_year_sort -%}
-		<a>{{course.title}}</a>
-		
-		<!-- Add institutions this year -->
+		<!-- Add titles this year -->
 		{%- assign sep_tmp_title = sep_tmp_title | append: "," -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
-		
 	{%- endfor -%}
 	
-	<!-- Close the bracket this year -->
+	<!-- Close bracket of child -->
 	{%- assign sep_tmp_title = sep_tmp_title | append: "]" -%}
 	
 	<!-- Remove first separator -->
 	{%- assign sep_tmp_title = sep_tmp_title | remove_first: "," -%}
 	
 	<!-- Append to parent sepator -->
+	{%- assign sep_title = sep_title | append: "#" -%}
 	{%- assign sep_title = sep_title | append: sep_tmp_title -%}
 	<br><br>
 {%- endfor -%}
+
+
+<!-- Close the bracket and remove first separator -->
+{%- assign sep_title = sep_title | append: "]" -%}
+{%- assign sep_title = sep_title | remove_first: "#" -%}
+
+
 <a>{{ sep_title }}</a>
 
 
