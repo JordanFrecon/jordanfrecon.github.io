@@ -267,7 +267,7 @@ var myBar = new Chart(ctx, {
 // CHANGE DATA
 const btn_name = 'btn-year-';
 for (var i = 0; i < {{ years_list | size }}; ++i) {
-	document.getElementById(btn_name.concat(i)).addEventListener('click', function() {
+	document.getElementById("btn-year-0").addEventListener('click', function() {
 		myBar.data = chart_data[i];
 	      myBar.update();
 	});
