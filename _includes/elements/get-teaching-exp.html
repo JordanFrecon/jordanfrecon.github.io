@@ -235,7 +235,8 @@ var teachingBar = new Chart(ctx, {
 // CHANGE DATA
 const btn_name = 'btn-year-';
 for (var i = 0; i < {{ years_list | size }}; ++i) {
-	document.getElementById(btn_name.concat(i)).addEventListener('click', function() {
+	var tmp = btn_name.concat(i);
+	document.getElementById(tmp).addEventListener('click', function() {
 		teachingBar.data = chart_data[i];
 	      	teachingBar.update();
 	});
