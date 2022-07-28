@@ -1,13 +1,15 @@
-{%- assign course_sort = site.data.teaching | sort: "institution" -%}
+{%- assign course_sort = site.data.teaching | sort: "year" -%}
 {%- assign course_by_year = course_sort | group_by:"year" -%}
 {%- assign course_by_inst = course_sort | group_by:"institution" -%}
 
 {%- assign years_list = course_by_year | map: 'name' -%}
-{%- assign institution_list = course_by_inst | map: 'name' -%}
+{%- assign courses_per_year_list = course_by_year | map: 'items' -%}
 
 <!--- Get all the title of the courses each year --->
-{%- for course_this_year in course_by_year | map: 'items' -%}
-	<a>{{course_this_year.name}}</a>
+{%- for courses_per_year in courses_per_year_list -%}
+	{%- for course in courses_per_year -%}
+		<a>{{course.institution}}</a>
+	{%- endfor -%}
 {%- endfor -%}
 
 
