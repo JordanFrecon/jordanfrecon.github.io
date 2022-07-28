@@ -7,6 +7,46 @@
 
 
 
+<!------------------------------------------- Institutions  ---------------------------------->
+
+<!-- Open bracket of parent -->
+{%- assign sep_institution = "[" -%}
+	
+<!--- Get all courses per year --->
+{%- for courses_per_year in courses_per_year_list -%}
+	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
+	
+	<!-- Open bracket of child -->
+	{%- assign sep_tmp_institution = "" -%}
+	
+	<!-- Go through institutions -->
+	{%- for course in courses_per_year_sort -%}
+		{%- assign sep_tmp_institution = sep_tmp_institution | append: "," -%}
+		{%- assign sep_tmp_institution = sep_tmp_institution | append: course.institution -%}
+	{%- endfor -%}
+	
+	<!-- Keep unique list -->
+	{%- assign temporary = sep_tmp_institution | split: "," -%}
+	{%- assign unique_inst = temporary | uniq | join: "," -%}
+
+	<!-- Open and close bracket -->
+	{%- assign unique_inst = unique_inst | prepend: "[" -%}
+	{%- assign unique_inst = unique_inst | append: "]" -%}
+
+	<!-- Append to parent sepator -->
+	{%- assign sep_institution = sep_institution | append: "#" -%}
+	{%- assign sep_institution = sep_institution | append: unique_inst -%}
+	
+{-% endfor -%}
+
+<!-- Close bracket and remove first separator -->
+{%- assign sep_institution = sep_institution | append: "]" -%}
+{%- assign sep_institution = sep_institution | remove_first: "#" -%}
+
+<a>{{ sep_institution }}</a>
+
+<!------------------------------------------- Course Titles ---------------------------------->
+
 <!-- Open bracket of parent -->
 {%- assign sep_title = "[" -%}
 	
@@ -17,11 +57,8 @@
 	<!-- Open bracket of child -->
 	{%- assign sep_tmp_title = "[" -%}
 	
-	<!------------------------------>
-	<!-- GO THROUGH COURSE TITLES -->
-	<!------------------------------>
+	<!-- Go through course titles -->
 	{%- for course in courses_per_year_sort -%}
-		<!-- Add titles this year -->
 		{%- assign sep_tmp_title = sep_tmp_title | append: "," -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
 	{%- endfor -%}
@@ -38,13 +75,14 @@
 	<br><br>
 {%- endfor -%}
 
-
-<!-- Close the bracket and remove first separator -->
+<!-- Close bracket and remove first separator -->
 {%- assign sep_title = sep_title | append: "]" -%}
 {%- assign sep_title = sep_title | remove_first: "#" -%}
 
 
 <a>{{ sep_title }}</a>
+
+
 
 
 <canvas id="canvas"></canvas>
