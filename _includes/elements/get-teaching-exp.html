@@ -7,36 +7,36 @@
 
 
 
-{%- assign sep_inst = "" -%}
+{%- assign sep_title = "" -%}
 
 
-<!--- Get all the title of the courses each year --->
+<!--- Get all courses per year --->
 {%- for courses_per_year in courses_per_year_list -%}
 	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
 	
-	<!-- Temporary variable -->
-	{%- assign sep_tmp_inst = "[" -%}
+	<!-- Temporary child separator -->
+	{%- assign sep_tmp_title = "[" -%}
 	
 	{%- for course in courses_per_year_sort -%}
-		<a>{{course.institution}}</a>
+		<a>{{course.title}}</a>
 		
 		<!-- Add institutions this year -->
-		{%- assign sep_tmp_inst = sep_tmp_inst | append: "," -%}
-		{%- assign sep_tmp_inst = sep_tmp_inst | append: course.institution -%}
+		{%- assign sep_tmp_title = sep_tmp_title | append: "," -%}
+		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
 		
 	{%- endfor -%}
 	
 	<!-- Close the bracket this year -->
-	{%- assign sep_tmp_inst = sep_tmp_inst | append: "]" -%}
+	{%- assign sep_tmp_title = sep_tmp_title | append: "]" -%}
 	
 	<!-- Remove first separator -->
-	{%- assign sep_tmp_inst = sep_tmp_inst | remove_first: "," -%}
+	{%- assign sep_tmp_title = sep_tmp_title | remove_first: "," -%}
 	
 	<!-- Append to parent sepator -->
-	{%- assign sep_inst = sep_inst | append: sep_tmp_inst -%}
+	{%- assign sep_title = sep_title | append: sep_tmp_title -%}
 	<br><br>
 {%- endfor -%}
-<a>{{ sep_inst }}</a>
+<a>{{ sep_title }}</a>
 
 
 <canvas id="canvas"></canvas>
