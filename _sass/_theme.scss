@@ -10,7 +10,7 @@
 
 
 #theme-toggler:before {
-  @include themed(content, "<i class="fas fa-moon"></i>", "🔆");
+  @include themed(content, <i class="fas fa-moon"></i>, "🔆");
 }
 
 .navbar-themed {
