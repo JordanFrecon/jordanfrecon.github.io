@@ -140,9 +140,9 @@
 	{% for year in years_list %}
 	{% capture year_str %}{{year}}{% endcapture %}
 	{% if forloop.first %}
-		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action active" data-toggle="tab" href="#">{{year_str}}</a>
+		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action active" data-toggle="tab" href="#" onclick="refreshChart('${{ forloop.index | minus: 1}}')">{{year_str}}</a>
 	{% else %}
-		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action" data-toggle="tab" href="#">{{year_str}}</a>
+		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action" data-toggle="tab" href="#" onclick="refreshChart('${{ forloop.index | minus: 1}}')">{{year_str}}</a>
 	{% endif %}
 	{% endfor %}
   </div>
@@ -236,24 +236,11 @@ var teachingBar = new Chart(ctx, {
 // CHANGE DATA (make working loop)
 // the newDataObject does not override myLine.teachingBar object but updating a single value works ...
 
-document.getElementById('btn-year-0').addEventListener('click', function() {
-	teachingBar.data = chart_data[0];
-      	teachingBar.update();
-});
-document.getElementById('btn-year-1').addEventListener('click', function() {
-	teachingBar.data = chart_data[1];
-      	teachingBar.update();
-});
-document.getElementById('btn-year-2').addEventListener('click', function() {
-	teachingBar.data = chart_data[2];
-      	teachingBar.update();
-});
-document.getElementById('btn-year-3').addEventListener('click', function() {
-	teachingBar.data = chart_data[3];
-      	teachingBar.update();
-});
 
-
+function refreshChart(id) {
+	teachingBar.data = chart_data[id];
+      	teachingBar.update();
+}
 
 
 </script>
