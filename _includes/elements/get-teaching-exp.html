@@ -80,7 +80,7 @@
 <!------------------------------------------- Course Hours ---------------------------------->
 
 <!-- Open bracket of parent -->
-{%- assign sep_hour = "[" -%}
+{%- assign sep_hour = "" -%}
 	
 <!--- Get all courses per year --->
 {%- for courses_per_year in courses_per_year_list -%}
@@ -90,11 +90,11 @@
 	
 	
 	<!-- Open bracket of child -->
-	{%- assign sep_tmp_hour = "[" -%}
+	{%- assign sep_tmp_hour = "" -%}
 	
 	<!-- Go through institutions -->
 	{%- for inst in institutions_this_year -%}
-		{%- assign sep_hour_inner = "[" -%}
+		{%- assign sep_hour_inner = "" -%}
 		
 		<!-- Go through courses-->
 		{%- for course in courses_per_year_sort -%}
@@ -109,7 +109,6 @@
 		{%- endfor -%}
 		
 		<!-- Close bracket and remove first separator of child -->
-		{%- assign sep_hour_inner = sep_hour_inner | append: "]" -%}
 		{%- assign sep_hour_inner = sep_hour_inner | remove_first: "," -%}
 		
 		<!-- Add to the direct parent -->
@@ -119,7 +118,6 @@
 	{%- endfor -%}
 	
 	<!-- Close bracket and remove first separator of child -->
-	{%- assign sep_tmp_hour = sep_tmp_hour | append: "]" -%}
 	{%- assign sep_tmp_hour = sep_tmp_hour | remove_first: ";" -%}
 	
 	<!-- Add to the direct parent -->
@@ -129,7 +127,6 @@
 {%- endfor -%}
 
 <!-- Close bracket and remove first separator of child -->
-{%- assign sep_hour = sep_hour | append: "]" -%}
 {%- assign sep_hour = sep_hour | remove_first: "#" -%}
 
 <br><br>
