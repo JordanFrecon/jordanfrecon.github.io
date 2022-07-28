@@ -234,8 +234,10 @@ var teachingBar = new Chart(ctx, {
 
 
 // CHANGE DATA (make working loop)
+// the newDataObject does not override myLine.teachingBar object but updating a single value works ...
+var name = 'btn-year-3';
 document.getElementById('btn-year-0').addEventListener('click', function() {
-	// the newDataObject does not override myLine.teachingBar object but updating a single value works ...
+
 	teachingBar.data = chart_data[0];
       	teachingBar.update();
 });
@@ -247,15 +249,11 @@ document.getElementById('btn-year-2').addEventListener('click', function() {
 	teachingBar.data = chart_data[2];
       	teachingBar.update();
 });
-document.getElementById('btn-year-3').addEventListener('click', function() {
+document.getElementById(name).addEventListener('click', function() {
 	teachingBar.data = chart_data[3];
       	teachingBar.update();
 });
 
-
-for (var i = 0; i < {{ years_list | size }}; ++i) {
-    console.log(i)
-};
 
 </script>
 
