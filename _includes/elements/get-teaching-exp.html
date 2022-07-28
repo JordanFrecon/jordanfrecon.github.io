@@ -101,23 +101,48 @@
 	
 	<!-- Go through institutions -->
 	{%- for inst in institutions_this_year -%}
+		{%- assign sep_hour_inner = "[" -%}
 		
 		<!-- Go through courses-->
 		{%- for course in courses_per_year_sort -%}
+			{%- assign sep_hour_inner = sep_hour_inner | append: "," -%}
+			
 			{%- if course.institution == inst -%}
-				<a>{{course.hours}}</a>
+				{%- assign sep_hour_inner = sep_hour_inner | append: course.hours -%}
+				<!-- <a>{{course.hours}}</a> -->
 			{%- else -%}
-				<a>null</a>
+				{%- assign sep_hour_inner = sep_hour_inner | append: "null" -%}
+				<!-- <a>null</a> -->
 			{%- endif -%}
 		
 		{%- endfor -%}
 		
+		<!-- Close bracket and remove first separator of child -->
+		{%- assign sep_hour_inner = sep_hour_inner | append: "]" -%}
+		{%- assign sep_hour_inner = sep_hour_inner | remove_first: "," -%}
+		
+		<!-- Add to the direct parent -->
+		{%- assign sep_tmp_hour = sep_tmp_hour | append: ";" -%}
+		{%- assign sep_tmp_hour = sep_tmp_hour | append: sep_hour_inner -%}
 
 	{%- endfor -%}
+	
+	<!-- Close bracket and remove first separator of child -->
+	{%- assign sep_tmp_hour = sep_tmp_hour | append: "]" -%}
+	{%- assign sep_tmp_hour = sep_tmp_hour | remove_first: "," -%}
+	
+	<!-- Add to the direct parent -->
+	{%- assign sep_hour = sep_hour | append: "#" -%}
+	{%- assign sep_hour = sep_hour | append: sep_tmp_hour -%}
 
 {%- endfor -%}
 
+<!-- Close bracket and remove first separator of child -->
+{%- assign sep_hour = sep_hour | append: "]" -%}
+{%- assign sep_hour = sep_hour | remove_first: "#" -%}
 
+<br><br>
+<a>{{ sep_hour }}</a>
 
 
 <canvas id="canvas"></canvas>
