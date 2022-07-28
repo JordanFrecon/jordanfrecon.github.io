@@ -6,16 +6,8 @@
 {%- assign institution_list = course_by_inst | map: 'name' -%}
 
 <!--- Get all the title of the courses each year --->
-{%- for yeaar in years_list -%}
-	<a>{{yeaar}}</a>
-	{% capture year_str %}{{yeaar}}{% endcapture %}
-	{%- assign course_this_year = course_sort | where: 'year', {{- year_str -}} -%}
-	<a>{{year_str}}</a>
-	{%- assign title_this_year = course_this_year | map: 'title' -%}
-	{% for title in title_this_year %}
-		<a>{{title}}</a>
-	{% endfor %}
-	<!---<a>[{% for title in title_this_year %}"{{ title }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>--->
+{%- for course_this_year in course_by_year.items -%}
+	<a>{{course_this_year.name}}</a>
 {%- endfor -%}
 
 
