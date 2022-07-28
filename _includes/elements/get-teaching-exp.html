@@ -153,17 +153,14 @@
 <script>
 
 
-var INSTITUTIONS = [{%- assign institution_split = sep_institution | split: '#' -%}[{%- for inst_year in institution_split -%}{%- assign inst_year_split = inst_year | split: ',' -%}[{%- for inst in inst_year_split -%}"{{- inst --}}"{% if forloop.last %}{% else %}{% if forloop.last %}{% else %},{% endif %}{% endif %}{%- endfor -%}],{%- endfor -%}]];
+var INSTITUTIONS = [{%- assign institution_split = sep_institution | split: '#' -%}{%- for inst_year in institution_split -%}{%- assign inst_year_split = inst_year | split: ',' -%}[{%- for inst in inst_year_split -%}"{{- inst --}}"{% if forloop.last %}{% else %}{% if forloop.last %}{% else %},{% endif %}{% endif %}{%- endfor -%}],{%- endfor -%}];
 
-var TITLES = [{%- assign titles_split = sep_title | split: '#' -%}[{%- for title_year in titles_split -%}{%- assign title_year_split = title_year | split: ',' -%}[{%- for title in title_year_split -%}"{{- title --}}"{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]];
-
-var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}[{%- for hour_year in hours_split -%}{%- assign hour_year_split = hour_year | split: ';' -%}[{%- for hour_to_split in title_year_split -%}{%- assign hour_data = hour_to_split | split: ',' -%}{%- for hour in hour_data -%}{{- hour --}}{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]];
-
+var TITLES = [{%- assign titles_split = sep_title | split: '#' -%}{%- for title_year in titles_split -%}{%- assign title_year_split = title_year | split: ',' -%}[{%- for title in title_year_split -%}"{{- title --}}"{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}];
 
 
 console.log(INSTITUTIONS);
 console.log(TITLES);
-console.log(HOURS);
+
 
 var chart_data = [];
 for (var i = 0; i < {{ years_list | size }}; ++i) {
