@@ -160,6 +160,10 @@ var TITLES = [{%- assign titles_split = sep_title | split: '#' -%}{%- for title_
 var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}{%- for hour_year in hours_split -%}{%- assign hour_year_split = hour_year | split: ';' -%}[{%- for hours_year_per_inst in hour_year_split -%}{%- assign hours_data = hours_year_per_inst | split: ',' -%}[{%- for hours in hours_data -%}{{ hours }}{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}]{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}];
 
 
+var textcolor = style.getPropertyValue('-webkit-text-fill-color');
+var colors = [style.getPropertyValue('--success'),style.getPropertyValue('--danger'),style.getPropertyValue('--info')];
+var bgcolors = ["rgba(40, 167, 70, 0.5)","rgba(220, 53, 69, 0.5)","rgba(23, 163, 184, 0.5)"];
+
 console.log(INSTITUTIONS);
 console.log(TITLES);
 console.log(HOURS);
@@ -168,10 +172,20 @@ console.log(HOURS);
 var chart_data = [];
 for (var i = 0; i < {{ years_list | size }}; ++i) {
     chart_data[i] = {
-    	labels: [],
+    	labels: TITLES[i],
+    	datasets: datasets_all.map((ds, j) => ({
+    	    label: INSTITUTIONS[i][j],
+            backgroundColor: bgcolors[j],
+            borderColor: colors[j],
+            data: HOURS[i]j],
+            borderWidth: 2,
+	    borderRadius: 20,
+	    color: textcolor
+        }))
     };
 }
 
+console.log(chart_data);
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June"],
