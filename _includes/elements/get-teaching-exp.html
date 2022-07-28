@@ -236,10 +236,7 @@ var teachingBar = new Chart(ctx, {
 document.getElementById("btn-year-test").addEventListener('click', function() {
 	console.log("pressed btn");
 	teachingBar.data = chart_data[2];
-	
-	teachingBar.data.datasets.forEach((dataset) => {
-        dataset.data.pop();
-    	});
+
     	
       	teachingBar.update();
 });
