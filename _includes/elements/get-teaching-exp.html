@@ -41,7 +41,6 @@
 
 {%- assign sep_institution = sep_institution | remove_first: "#" -%}
 
-<a>{{ sep_institution }}</a>
 
 <!------------------------------------------- Course Titles ---------------------------------->
 
@@ -73,8 +72,6 @@
 <!-- Close bracket and remove first separator -->
 {%- assign sep_title = sep_title | remove_first: "#" -%}
 
-<br><br>
-<a>{{ sep_title }}</a>
 
 
 <!------------------------------------------- Course Hours ---------------------------------->
@@ -129,15 +126,6 @@
 <!-- Close bracket and remove first separator of child -->
 {%- assign sep_hour = sep_hour | remove_first: "#" -%}
 
-<br><br>
-<a>{{ sep_hour }}</a>
-
-
-
-
-
-<br><br>
-<a>{{ years_list | size }}</a>
 
 <canvas id="teaching-canvas"></canvas>
 
