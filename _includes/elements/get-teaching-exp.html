@@ -257,16 +257,18 @@ var barOptions = {
 };
 
 // ON LOAD
-var ctx = document.getElementById("teaching-canvas").getContext("2d");
-var myBar = new Chart(ctx, {
-		type: 'horizontalBar',
-		data: chart_data[1],
-		options: barOptions,
-	    });
+window.onload = function() {
+	var ctx = document.getElementById("teaching-canvas").getContext("2d");
+	var myBar = new Chart(ctx, {
+			type: 'horizontalBar',
+			data: chart_data[1],
+			options: barOptions,
+		    });
+};
 
 // CHANGE DATA
 const btn_name = 'btn-year-';
-for (var i = 0; i < {{ years_list | size }}; ++i) {
+for (var i = 0; i < 5; ++i) {
 	document.getElementById("btn-year-0").addEventListener('click', function() {
 		myBar.data = chart_data[i];
 	      myBar.update();
