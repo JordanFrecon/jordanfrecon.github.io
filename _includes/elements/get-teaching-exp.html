@@ -189,38 +189,6 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
 
 console.log(chart_data);
 
-var data = {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [
-        {
-            fillColor: "#79D1CF",
-            strokeColor: "#79D1CF",
-            data: [null, null, 81, 56, 55, 44]
-        },
-        {
-            backgroundColor: "#26AA5A",
-            borderColor: "#26AA5A",
-            data: [60, 80,null,null,null,null]
-        }
-    ]
-};
-
-
-var data2 = {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [
-        {
-            fillColor: "#79D1CF",
-            strokeColor: "#79D1CF",
-            data: [null, 20, 54, 35, 78, null]
-        },
-        {
-            backgroundColor: "#26AA5A",
-            borderColor: "#26AA5A",
-            data: [60, null,null,null,null,55]
-        }
-    ]
-};
 
 
 var barOptions = {
@@ -257,14 +225,12 @@ var barOptions = {
 };
 
 // ON LOAD
-window.onload = function() {
-	var ctx = document.getElementById("teaching-canvas").getContext("2d");
-	var myBar = new Chart(ctx, {
-			type: 'horizontalBar',
-			data: chart_data[1],
-			options: barOptions,
-		    });
-};
+var ctx = document.getElementById("teaching-canvas").getContext("2d");
+var myBar = new Chart(ctx, {
+		type: 'horizontalBar',
+		data: chart_data[1],
+		options: barOptions,
+	    });
 
 // CHANGE DATA
 document.getElementById("btn-year-test").addEventListener('click', function() {
