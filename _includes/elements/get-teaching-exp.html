@@ -147,10 +147,6 @@
 
 
 
-{%- assign TITLES = sep_title | split: '#' -%}
-
-
-
 <br><br>
 <a>{{ years_list | size }}</a>
 
@@ -168,6 +164,9 @@
 <script>
 
 
+var INSTITUTIONS = {$- sep_institution | split: '#' -%}
+var TITLES = {$- sept_title | split: '#' -%}
+
 var chart_data = [];
 for (var i = 0; i < {{ years_list | size }}-1; ++i) {
     chart_data[i] = {
@@ -175,6 +174,8 @@ for (var i = 0; i < {{ years_list | size }}-1; ++i) {
     };
 }
 
+console.log(INSTITUTIONS)
+console.log(TITLES)
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June"],
