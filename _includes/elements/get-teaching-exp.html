@@ -84,6 +84,24 @@
 <a>{{ sep_title }}</a>
 
 
+<!------------------------------------------- Course Hours ---------------------------------->
+
+<!-- Open bracket of parent -->
+{%- assign sep_hour = "[" -%}
+	
+<!--- Get all courses per year --->
+{%- for courses_per_year in courses_per_year_list -%}
+	{%- assign courses_per_year_sort = courses_per_year | sort: "institution" -%}
+	{%- assign courses_per_year_sort_group = courses_per_year_sort | group_by:"institution" -%}
+	{%- assign institutions_this_year = courses_per_year_sort_group | map:'name' -%}
+	
+	{%- for inst in institutions_this_year -%}
+		<a>{{inst}}</a>
+	{%- endfor -%}
+
+{%- endfor -%}
+
+
 
 
 <canvas id="canvas"></canvas>
