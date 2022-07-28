@@ -224,6 +224,7 @@ var barOptions = {
 };
 
 // Add on load ?
+Chart.defaults.global.defaultFontColor = textcolor;
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
 var teachingBar = new Chart(ctx, {
 		type: 'horizontalBar',
