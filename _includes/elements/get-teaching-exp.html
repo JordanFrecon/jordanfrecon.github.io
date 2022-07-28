@@ -61,7 +61,9 @@
 	<!-- Go through course titles -->
 	{%- for course in courses_per_year_sort -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: "," -%}
+		{%- assign sep_tmp_title = sep_tmp_title | append: """ -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
+		{%- assign sep_tmp_title = sep_tmp_title | append: """ -%}
 	{%- endfor -%}
 	
 	<!-- Close bracket of child -->
@@ -143,6 +145,13 @@
 <a>{{ sep_hour }}</a>
 
 
+
+
+
+{%- assign TITLES = sep_title | split: '#' -%}
+
+
+
 <br><br>
 <a>{{ years_list | size }}</a>
 
@@ -159,9 +168,12 @@
 
 <script>
 
+
 var chart_data = [];
-for (var i = 0; i < 5; ++i) {
-    chart_data[i] = "some stuff";
+for (var i = 0; i < {{ years_list | size }}-1; ++i) {
+    chart_data[i] = {
+    	labels: [],
+    };
 }
 
 
