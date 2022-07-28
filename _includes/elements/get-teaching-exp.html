@@ -229,12 +229,11 @@ var barOptions = {
 var ctx = document.getElementById("teaching-canvas").getContext("2d");
 var teachingBar = new Chart(ctx, {
 		type: 'horizontalBar',
-		data: chart_data[1],
+		data: chart_data[0],
 		options: barOptions,
 	    });
 
 // CHANGE DATA
-
 
 
 document.getElementById('btn-year-0').addEventListener('click', function() {
