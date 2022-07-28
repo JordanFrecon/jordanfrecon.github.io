@@ -95,8 +95,24 @@
 	{%- assign courses_per_year_sort_group = courses_per_year_sort | group_by:"institution" -%}
 	{%- assign institutions_this_year = courses_per_year_sort_group | map:'name' -%}
 	
+	
+	<!-- Open bracket of child -->
+	{%- assign sep_tmp_hour = "[" -%}
+	
+	<!-- Go through institutions -->
 	{%- for inst in institutions_this_year -%}
-		<a>{{inst}}</a>
+		
+		<!-- Go through courses-->
+		{%- for course in courses_per_year_sort -%}
+			{%- if course.institution == inst -%}
+				<a>{{course.hours}}</a>
+			{%- else -%}
+				<a>null</a>
+			{%- endif -%}
+		
+		{%- endfor -%}
+		
+
 	{%- endfor -%}
 
 {%- endfor -%}
