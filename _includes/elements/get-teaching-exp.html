@@ -11,7 +11,7 @@
 	{% capture year_str %}{{yeaar}}{% endcapture %}
 	{%- assign course_this_year = course_by_inst | where: "year",{{yeaar}} -%}
 	<a>{{year_str}}</a>
-	{%- assign title_this_year = course_this_year | map: '' -%}
+	{%- assign title_this_year = course_this_year | map: 'title' -%}
 	<a>[{% for title in title_this_year %}"{{ title }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]</a>
 {% endfor %}
 
