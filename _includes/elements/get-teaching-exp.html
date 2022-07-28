@@ -8,7 +8,7 @@
 <!--- Get all the title of the courses each year --->
 {% for yeaar in years_list %}
 	<a>{{yeaar}}</a>
-	{% capture year_str %}{{yearr}}{% endcapture %}
+	{% capture year_str %}{{yeaar}}{% endcapture %}
 	{%- assign course_this_year = course_by_inst | where: "year",{{yeaar}} -%}
 	<a>{{year_str}}</a>
 	{%- assign title_this_year = course_this_year | map: '' -%}
