@@ -26,6 +26,7 @@
 	{%- endfor -%}
 	
 	<!-- Keep unique list -->
+	{%- assign sep_tmp_institution = sep_tmp_institution | remove_first: "," -%}
 	{%- assign temporary = sep_tmp_institution | split: "," -%}
 	{%- assign unique_inst = temporary | uniq | join: "," -%}
 
