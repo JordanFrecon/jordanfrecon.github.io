@@ -73,14 +73,14 @@
 	<!-- Append to parent sepator -->
 	{%- assign sep_title = sep_title | append: "#" -%}
 	{%- assign sep_title = sep_title | append: sep_tmp_title -%}
-	<br><br>
+
 {%- endfor -%}
 
 <!-- Close bracket and remove first separator -->
 {%- assign sep_title = sep_title | append: "]" -%}
 {%- assign sep_title = sep_title | remove_first: "#" -%}
 
-
+<br><br>
 <a>{{ sep_title }}</a>
 
 
