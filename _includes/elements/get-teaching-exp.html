@@ -143,7 +143,7 @@
 		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action active" data-toggle="tab">{{year_str}}</a>
 	{% else %}
 		<a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action" data-toggle="tab">{{year_str}}</a>
-	{$ endif %}
+	{% endif %}
 	{% endfor %}
   </div>
   </div>
