@@ -164,7 +164,7 @@
 <script>
 
 
-var INSTITUTIONS = [{%- for inst in institution_split -%}{{- inst -}}{%- endfor -%}]
+var INSTITUTIONS = {%- for inst in institution_split -%}{{- inst -}}{%- endfor -%}
 
 
 console.log(INSTITUTIONS)
