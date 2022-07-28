@@ -233,14 +233,24 @@ var teachingBar = new Chart(ctx, {
 	    });
 
 // CHANGE DATA
-const btn_name = 'btn-year-';
-for (var i = 0; i < {{ years_list | size }}; ++i) {
-	var tmp = btn_name.concat(i);
-	document.getElementById(tmp).addEventListener('click', function() {
-		teachingBar.data = chart_data[i];
-	      	teachingBar.update();
-	});
-}
+
+
+document.getElementById('btn-year-0').addEventListener('click', function() {
+	teachingBar.data = chart_data[0];
+      	teachingBar.update();
+});
+document.getElementById('btn-year-1').addEventListener('click', function() {
+	teachingBar.data = chart_data[1];
+      	teachingBar.update();
+});
+document.getElementById('btn-year-2').addEventListener('click', function() {
+	teachingBar.data = chart_data[2];
+      	teachingBar.update();
+});
+document.getElementById('btn-year-3').addEventListener('click', function() {
+	teachingBar.data = chart_data[3];
+      	teachingBar.update();
+});
 
 </script>
 
