@@ -248,6 +248,7 @@ document.getElementById('btn-year-2').addEventListener('click', function() {
       	teachingBar.update();
 });
 document.getElementById('btn-year-3').addEventListener('click', function() {
+	teachingBar.destroy();
 	teachingBar.data = chart_data[3];
       	teachingBar.update();
 });
