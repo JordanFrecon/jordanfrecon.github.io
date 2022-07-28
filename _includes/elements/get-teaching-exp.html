@@ -30,9 +30,6 @@
 	{%- assign temporary = sep_tmp_institution | split: "," -%}
 	{%- assign unique_inst = temporary | uniq | join: '","' -%}
 
-	<!-- Open and close bracket -->
-	{%- assign unique_inst = unique_inst | prepend: '["' -%}
-	{%- assign unique_inst = unique_inst | append: '"]' -%}
 
 	<!-- Append to parent sepator -->
 	{%- assign sep_institution = sep_institution | append: "#" -%}
@@ -144,7 +141,7 @@
 <a>{{ sep_hour }}</a>
 
 
-{%- assign institution_split = sep_institution | split: '#' -%}
+
 
 
 <br><br>
@@ -164,7 +161,17 @@
 <script>
 
 
-var INSTITUTION = [{%- for inst in institution_split -%}{{- inst -}}{%- endfor -%}];
+var INSTITUTION = [
+	{%- assign institution_split = sep_institution | split: '#' -%}
+	[{%- for inst_year in institution_split -%}
+		{%- assign inst_year_split = inst_year | split: ',' -%}
+		[{%- for inst in inst_year_split -%}
+			"{{- inst --}}"
+		{%- endfor -%}]
+	{%- endfor -%}]
+];
+
+
 console.log(INSTITUTION);
 
 var chart_data = [];
