@@ -145,7 +145,7 @@
 <!--- Create one button for each year --->
 {% for year in years_list %}
 {% capture year_str %}{{year}}{% endcapture %}
-  <button id="btn-{{ year_str }}">{{year_str}}</button>
+  <button id="btn-year-{{- forloop.index -}}">{{year_str}}</button>
 {% endfor %}
 
 
@@ -265,11 +265,13 @@ var myBar = new Chart(ctx, {
 	    });
 
 // CHANGE DATA
-document.getElementById('btn-2013-2014').addEventListener('click', function() {
-	myBar.data = data2
-      myBar.update();
-});
-
+const btn_name = 'btn-year-'
+for (var i = 0; i < {{ years_list | size }}; ++i) {
+	document.getElementById(btn_name.concat(i)).addEventListener('click', function() {
+		myBar.data = chart_data[i];
+	      myBar.update();
+	});
+}'
 
 </script>
 
