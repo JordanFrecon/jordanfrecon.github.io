@@ -148,7 +148,7 @@
   <button id="btn-year-{{ forloop.index | minus: 1}}">{{year_str}}</button>
 {% endfor %}
 
-
+<button id="btn-year-test">test</button>
 
 <script>
 
@@ -184,7 +184,7 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
 	    borderRadius: 20,
 	    color: textcolor
         }))
-    };
+    }
 };
 
 console.log(chart_data);
@@ -267,7 +267,7 @@ window.onload = function() {
 };
 
 // CHANGE DATA
-document.getElementById("btn-year-0").addEventListener('click', function() {
+document.getElementById("btn-year-test").addEventListener('click', function() {
 	myBar.data = chart_data[2];
       	myBar.update();
 });
