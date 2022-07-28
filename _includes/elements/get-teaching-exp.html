@@ -148,7 +148,6 @@
   <button id="btn-year-{{ forloop.index | minus: 1}}">{{year_str}}</button>
 {% endfor %}
 
-<button id="btn-year-test">test</button>
 
 <script>
 
@@ -248,12 +247,8 @@ document.getElementById('btn-year-2').addEventListener('click', function() {
       	teachingBar.update();
 });
 document.getElementById('btn-year-3').addEventListener('click', function() {
-	teachingBar.destroy();
-	var teachingBar = new Chart(ctx, {
-		type: 'horizontalBar',
-		data: chart_data[3],
-		options: barOptions,
-	    });
+	teachingBar.data = chart_data[3];
+      	teachingBar.update();
 });
 
 </script>
