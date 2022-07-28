@@ -143,6 +143,9 @@
 <a>{{ sep_hour }}</a>
 
 
+<br><br>
+<a>{{ years_list | size }}</a>
+
 <canvas id="teaching-canvas"></canvas>
 
 
@@ -155,6 +158,12 @@
 
 
 <script>
+
+var chart_data = [];
+for (var i = 0; i < 5; ++i) {
+    chart_data[i] = "some stuff";
+}
+
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June"],
