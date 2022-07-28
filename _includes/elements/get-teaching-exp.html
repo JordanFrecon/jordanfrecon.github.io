@@ -135,11 +135,11 @@
 
 <div class="row" id="{{ include.id }}">
   <div class="col-2">
-  <div class="list-group list-group-light">
+  <div class="list-group list-group-light" >
 	  <!--- Create one button for each year --->
 	{% for year in years_list %}
 	{% capture year_str %}{{year}}{% endcapture %}
-	  <a id="btn-year-{{ forloop.index | minus: 1}}">{{year_str}}</a>
+	  <a id="btn-year-{{ forloop.index | minus: 1}}" class="list-group-item list-group-item-action">{{year_str}}</a>
 	{% endfor %}
   </div>
   </div>
