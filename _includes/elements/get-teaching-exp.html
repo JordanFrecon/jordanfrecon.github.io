@@ -267,13 +267,11 @@ window.onload = function() {
 };
 
 // CHANGE DATA
-const btn_name = 'btn-year-';
-for (var i = 0; i < 5; ++i) {
-	document.getElementById("btn-year-0").addEventListener('click', function() {
-		myBar.data = chart_data[i];
-	      myBar.update();
-	});
-}
+document.getElementById("btn-year-0").addEventListener('click', function() {
+	myBar.data = chart_data[2];
+      	myBar.update();
+});
+
 
 </script>
 
