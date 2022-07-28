@@ -238,6 +238,7 @@ var teachingBar = new Chart(ctx, {
 
 
 function refreshChart(id) {
+	console.log(id)
 	teachingBar.data = chart_data[id];
       	teachingBar.update();
 }
