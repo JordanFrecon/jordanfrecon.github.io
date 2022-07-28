@@ -61,9 +61,7 @@
 	<!-- Go through course titles -->
 	{%- for course in courses_per_year_sort -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: "," -%}
-		{%- assign sep_tmp_title = sep_tmp_title | append: """ -%}
 		{%- assign sep_tmp_title = sep_tmp_title | append: course.title -%}
-		{%- assign sep_tmp_title = sep_tmp_title | append: """ -%}
 	{%- endfor -%}
 	
 	<!-- Close bracket of child -->
