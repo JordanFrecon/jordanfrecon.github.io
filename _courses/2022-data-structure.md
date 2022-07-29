@@ -7,4 +7,5 @@ description: This is a short description of the algorithmic course
 institution: Télécom Saint-Etienne
 program: Engineer Telecom Saint-Etienne
 year: 1st year
+hours: 39
 ---
