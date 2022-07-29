@@ -1,6 +1,6 @@
 {%- assign items = accordion_items | strip | newline_to_br | split: '<br />' -%}
 
-
+<div class="list-group my-3" id="{{ include.id }}">
 
   {% assign counter = 0 %}
   {% for item in items %}
@@ -26,4 +26,4 @@
     {% assign counter = counter | plus:1 %}
   {% endfor %}
 
-
+</div>
