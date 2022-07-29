@@ -14,7 +14,7 @@
 }
 
 #theme-icon {
-  @include themed(toggleClass,"fas fa-moon", "fas fa-sun");
+  @include themed(class,"fas fa-moon", "fas fa-sun");
 }
 
 
