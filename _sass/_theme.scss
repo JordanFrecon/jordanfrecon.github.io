@@ -41,6 +41,3 @@
   @include themed(filter, invert(0), invert(1));
 }
 
-.card-body{
-  @include themed(background-color, $light, $dark);
-}
