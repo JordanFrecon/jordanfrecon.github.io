@@ -5,14 +5,10 @@ layout: page
 <h1><b>{{ page.title }}</b></h1>
 
 <p class="post-metadata text-muted">
-  {{ page.date | date_to_long_string }} -  
+  <i class="fas fa-university"></i> {{page.institution}}<br>
+  <i class="fas fa-solid fa-graduation-cap"></i> {{page.year}}, 
   <b>
-  {%- assign words = content | number_of_words -%}
-  {%- if words < 360 -%}
-    less than 1 min read time
-  {%- else -%}
-    {{ words | divided_by: 180 }} mins read time
-  {%- endif -%}
+  {{page.program}}
   </b>
 
   <br>
