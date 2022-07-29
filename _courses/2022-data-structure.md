@@ -9,3 +9,6 @@ program: Engineer Telecom Saint-Etienne
 year: 1st year
 hours: 39
 ---
+
+> This course is based on the one written by [Christophe Gravier](https://cgravier.fr/). It will evolve over the next few years according to feedback from students and teachers.
+
