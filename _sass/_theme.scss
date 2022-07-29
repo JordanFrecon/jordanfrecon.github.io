@@ -41,6 +41,8 @@
   @include themed(filter, invert(0), invert(1));
 }
 
-.card .card-header .mb-0 .btn-link .active {
+.card-header{
+  .btn-link {
   @include themed(background-color, $primary, $primary);
+}
 }
