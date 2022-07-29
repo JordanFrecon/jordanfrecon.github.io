@@ -13,8 +13,8 @@
   @include themed(content,"🌙", "☀️");
 }
 
-#theme-toggler:after {
-  @include themed(class,"fas fa-moon", "fas fa-sun");
+#theme-icon {
+  @include themed(toggleClass,"fas fa-moon", "fas fa-sun");
 }
 
 
