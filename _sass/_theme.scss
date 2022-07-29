@@ -41,6 +41,3 @@
   @include themed(filter, invert(0), invert(1));
 }
 
-.btn-link {
-  @include themed(background-color, $light,$light);
-}
