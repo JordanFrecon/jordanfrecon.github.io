@@ -10,7 +10,7 @@
 
 
 #theme-toggler:before {
-  @include themed(content,<i class="fas fa-moon"></i>, <i class="fas fa-sun"></i>);
+  @include themed(content,"<i class='fas fa-moon'></i>","<i class='fas fa-sun'></i>");
 }
 
 #theme-icon {
