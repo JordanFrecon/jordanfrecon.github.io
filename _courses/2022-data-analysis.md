@@ -14,7 +14,7 @@ hours: 24
 
 
 {% capture accordion_items %}
-Introduction to data analysis,<a href="https://jordan-frecon.com/slides/data-analysis/course1"><i class="fas fa-chalkboard"></i>Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i>Jupyter notebook</a>
+Introduction to data analysis;<a href="https://jordan-frecon.com/slides/data-analysis/course1"><i class="fas fa-chalkboard"></i>Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i>Jupyter notebook</a>
 Introduction to machine learning,
 {% endcapture %}
 {% include elements/accordion.html id="program-data-analysis" %}
