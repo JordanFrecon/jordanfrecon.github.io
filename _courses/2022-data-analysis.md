@@ -15,7 +15,8 @@ hours: 24
 ## Course Program
 
 {% capture accordion_items %}
-**Session 1.** Introduction;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> General introduction and presentation of the most popular Python librairies for data analysis<br><a href="https://jordan-frecon.com/slides/data-analysis/course1"><i class="fas fa-chalkboard"></i> Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>
-**Session 2.** Exploratory Data Analysis;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> ....<br>
+<b>Session 1.</b> Introduction;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> General introduction and presentation of the most popular Python librairies for data analysis<br><a href="https://jordan-frecon.com/slides/data-analysis/course1"><i class="fas fa-chalkboard"></i> Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>
+<b>Session 2.</b> Exploratory Data Analysis;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> ....<br>
+<b>Session 3.</b> Introduction to Machine Learning;
 {% endcapture %}
 {% include elements/accordion.html id="program-data-analysis" %}
