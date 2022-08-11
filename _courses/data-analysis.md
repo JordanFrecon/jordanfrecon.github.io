@@ -26,11 +26,11 @@ hours: 24
 ## Course Materials
 
 {% capture accordion_items %}
-Data Analysis Librairies, https://jordan-frecon.com/courses/data-analysis/introduction
-Introduction to Machine Learning, https://jordan-frecon.com/courses/data-analysis/machine-learning
-Supervised Learning (part 1), https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1
-Supervised Learning (part 2), https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2
-Supervised Learning (part 3), https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3
+Data Analysis Librairies,https://jordan-frecon.com/courses/data-analysis/introduction
+Introduction to Machine Learning,https://jordan-frecon.com/courses/data-analysis/machine-learning
+Supervised Learning (part 1),https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1
+Supervised Learning (part 2),https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2
+Supervised Learning (part 3),https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
