@@ -39,7 +39,7 @@ Numerical Optimization,
 Supervised Learning: Part 1,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1
 Supervised Learning: Part 2,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2
 Supervised Learning Part 3,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3
-Unsupervised Learning,
+Unsupervised Learning,https://jordan-frecon.com/courses/data-analysis/unsupervised-learning
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
