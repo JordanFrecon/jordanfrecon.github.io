@@ -14,9 +14,9 @@ hours: 24
 
 
 
-<i class="fas fa-calendar-check"></i> The course is given over 8 sessions
+<i class="fas fa-calendar-check"></i> The course is given in 8 sessions of 3 hours each
 
-<i class="fas fa-exclamation-triangle"></i>Prerequisites
+<i class="fas fa-exclamation-triangle"></i> Prerequisites
 
 <i class="fas fa-bookmark"></i>
 
