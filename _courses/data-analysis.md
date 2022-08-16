@@ -35,7 +35,7 @@ hours: 24
 {% capture list_items %}
 Data Analysis Librairies,https://jordan-frecon.com/courses/data-analysis/introduction
 Introduction to Machine Learning,https://jordan-frecon.com/courses/data-analysis/machine-learning
-Numerical Optimization,
+Numerical Optimization,https://jordan-frecon.com/courses/data-analysis/numerical-optimization
 Supervised Learning: Part 1,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1
 Supervised Learning: Part 2,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2
 Supervised Learning Part 3,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3
