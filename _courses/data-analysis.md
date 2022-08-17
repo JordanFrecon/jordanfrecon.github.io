@@ -1,7 +1,6 @@
 ---
 title: Algorithms for Data Analysis
 layout: course
-tags: [Convex, Optimization]
 shortid: datascience
 description: This is a short description of the data science course
 institution: Télécom Saint-Etienne
@@ -13,14 +12,23 @@ hours: 24
 > This course is largely based on the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. It will evolve over the next few years according to feedback from students and teachers.
 
 
+<i class="fas fa-exclamation-triangle"></i> **Prerequisites**. It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
+- the manipulation of vectors and matrix multplication
+- probabilities distributions (common distributions, mean, variance, etc.)
+- the basics of the calculus of variations
 
-<i class="fas fa-calendar-check"></i> The course is given in 8 sessions of 3 hours each
 
-<i class="fas fa-exclamation-triangle"></i> Prerequisites
-
-<i class="fas fa-bookmark"></i>
+<i class="fas fa-bookmark"></i> **Educational Goals**. This course is designed to provide a quick introduction to data analysis algorithms for data engineers. As such, it meets different educational objectives:
+- Understand the differences between artificial intelligence and machine learning
+- Know which model / algorithm to choose depending on the task
+- Learn how to train, validate and test machine learning models
+- Discover the basics of numerical optimization
+- Apply the most popular supervised learning algorithms (linear regression, svm, hierarchical decision trees, etc.)
+- Use two unsupervised learning algorithms (K-means, PCA)
 
 ## Course Program
+
+<i class="fas fa-calendar-check"></i> The course is given in 8 sessions of 3 hours each
 
 {% capture accordion_items %}
 <b>Session 1.</b> Concepts & Librairies;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> General introduction and presentation of the most popular Python librairies for data analysis<br><a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>
