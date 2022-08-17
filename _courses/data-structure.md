@@ -2,7 +2,7 @@
 title: Algorithmic and Data Structure
 layout: course
 shortid: datastruct
-description: *Work in progress*
+description: (Work in progress)
 institution: Télécom Saint-Etienne
 program: Engineer Telecom Saint-Etienne
 year: 1st year
