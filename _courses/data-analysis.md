@@ -57,6 +57,7 @@ The course is given in 8 sessions of 3 hours each
 - Tutorial class on numerical optimization (<a href="https://jordan-frecon.com/courses/data-analysis/numerical-optimization"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Convex vs. nonconvex</li><li>Role and impact of the step-size</li></ul>
 - Practical exercices
+<ol><li>Toy examples (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-3/session-3.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Wine quality analysis (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-2/wine-quality.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>
 ---
 <b>Session 5.</b> Master advanced supervised classification algorithms;
 - Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
