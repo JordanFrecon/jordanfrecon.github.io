@@ -2,7 +2,7 @@
 title: Algorithms for Data Analysis
 layout: course
 shortid: datascience
-description: This is a short description of the data science course
+description: A quick introduction to data analysis for engineers
 institution: Télécom Saint-Etienne
 program: Data Engineering Apprenticeship Engineer
 year: 2nd year
