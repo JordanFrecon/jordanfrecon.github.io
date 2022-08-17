@@ -37,8 +37,8 @@ The course is given in 8 sessions of 3 hours each
 
 {% capture accordion_items %}
 <b>Session 1.</b> Concepts & Librairies;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> General introduction and presentation of the most popular Python librairies for data analysis<br><a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>
-<b>Session 2.</b> Exploratory Data Analysis;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> Practical study on two use cases.<br>
-<b>Session 3.</b> Introduction to Machine Learning & Supervised Learning (K-NN, linear regression);<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> ... + practical exercices to master k-nearest neighbors (classification and regression), simple least square linear regression and ridge regression<br><a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>
+<b>Session 2.</b> Exploratory Data Analysis;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> Practical study on two use cases.<ol><li>Analysis of the behaviour of a telecom operator's customers</li><li>Analyzing video games sales</li></ol><br>
+<b>Session 3.</b> Introduction to Machine Learning & Supervised Learning (K-NN, linear regression);<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i>  + practical exercices to master k-nearest neighbors (classification and regression), simple least square linear regression and ridge regression<br><a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>
 <b>Session 4.</b> Logistic Regression and Decision Trees;
 <b>Session 5.</b> Support Vector Machine and Neural Networks;
 <b>Session 6.</b> Unsupervised Learning (PCA and K-Means);
