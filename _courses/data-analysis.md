@@ -73,7 +73,7 @@ The course is given in 8 sessions of 3 hours each
 ---
 <b>Session 8.</b> Master data analysis algorithms;
 - Practical exercices on two use cases
-<ol><li>Determine if a mushroom is poisonous</li><li>Predict cell phone prices</li></ol>
+<ol><li>Determine if a mushroom is poisonous (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-4/1-poisonous-mushrooms.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Predict cell phone prices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-4/2-phone-prices.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
