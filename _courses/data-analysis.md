@@ -23,7 +23,7 @@ hours: 24
 - Know which model / algorithm to choose depending on the task
 - Learn how to train, validate and test machine learning models
 - Discover the basics of numerical optimization
-- Apply the most popular supervised learning algorithms (linear regression, svm, hierarchical decision trees, etc.)
+- Apply the most popular supervised learning algorithms (linear regression, svm, decision trees, etc.)
 - Use two unsupervised learning algorithms (K-means, PCA)
 
 ## Course Program
