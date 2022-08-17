@@ -1,4 +1,4 @@
-{%- assign items = accordion_items | strip | newline_to_br | split: '---<br />' -%}
+{%- assign items = accordion_items | strip | newline_to_br | split: '<br />---<br />' -%}
 
 <div class="list-group my-3" id="{{ include.id }}">
 
