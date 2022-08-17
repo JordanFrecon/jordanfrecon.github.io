@@ -31,7 +31,7 @@ This course is designed to provide a quick introduction to data analysis algorit
 - Apply the most popular supervised learning algorithms (linear regression, SVM , decision trees, etc.)
 - Use two unsupervised learning algorithms (K-means, PCA)
 
-## Course Program
+## <i class="fas fa-book"></i> Course Program
 
 <i class="fas fa-calendar-check"></i> The course is given in 8 sessions of 3 hours each
 
@@ -43,7 +43,7 @@ This course is designed to provide a quick introduction to data analysis algorit
 {% include elements/accordion.html id="program-data-analysis" %}
 
 
-## Course Materials
+## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
 Data Analysis Librairies,https://jordan-frecon.com/courses/data-analysis/introduction
