@@ -10,11 +10,9 @@ hours: 24
 ---
 
 
-## Key information
-
 > This course is inspired by the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. So far, I use the same jupyter notebooks. Note that it will evolve over the next few years according to feedback from students and teachers.
 
-### <i class="fas fa-exclamation-triangle"></i> Prerequisites
+## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
 It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
 - the manipulation of vectors and matrix multplication
@@ -22,7 +20,7 @@ It is necessary to have prior knowledge on both the fundamentals of mathematics 
 - the basics of the calculus of variations
 
 
-### <i class="fas fa-bookmark"></i> Educational Goals
+## <i class="fas fa-bookmark"></i> Educational Goals
 
 This course is designed to provide a quick introduction to data analysis algorithms for data engineers. As such, it meets different educational objectives:
 - Understand the differences between artificial intelligence and machine learning
@@ -30,7 +28,7 @@ This course is designed to provide a quick introduction to data analysis algorit
 - Learn how to train, validate and test machine learning models
 - Discover the basics of numerical optimization
 - Master data analysis Python librairies
-- Apply the most popular supervised learning algorithms (linear regression, svm, decision trees, etc.)
+- Apply the most popular supervised learning algorithms (linear regression, SVM , decision trees, etc.)
 - Use two unsupervised learning algorithms (K-means, PCA)
 
 ## Course Program
