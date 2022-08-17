@@ -1,7 +1,6 @@
 ---
 title: Algorithmic and Data Structure
 layout: course
-tags: [Convex, Optimization]
 shortid: datastruct
 description: *Work in progress*
 institution: Télécom Saint-Etienne
