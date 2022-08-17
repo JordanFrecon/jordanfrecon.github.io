@@ -16,7 +16,7 @@ hours: 24
 
 It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
 - the manipulation of vectors and matrix multiplication
-- probabilities distributions (common distributions, mean, variance, etc.)
+- probability distributions (common distributions, mean, variance, etc.)
 - the basics of the calculus of variations
 
 
