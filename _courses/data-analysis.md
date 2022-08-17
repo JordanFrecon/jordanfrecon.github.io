@@ -62,14 +62,14 @@ The course is given in 8 sessions of 3 hours each
 <b>Session 5.</b> Master advanced supervised classification algorithms;
 - Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>SVM</li><li>Neural Networks</li></ul>
-- Practical exercices
+- Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-4/session-4.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 6.</b> Discover unsupervised learning algorithms;
 - Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
-- Practical exercices
+- Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-5/session-5.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 7.</b> Apply unsupervised learning algorithms to predict digits;
-- Practical exercice
+- Practical exercice on one use case (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-3/digits-recognition.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 8.</b> Master data analysis algorithms;
 - Practical exercices on two use cases
