@@ -9,16 +9,22 @@ year: 2nd year
 hours: 24
 ---
 
-> This course is largely based on the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. It will evolve over the next few years according to feedback from students and teachers.
 
+## Key information
 
-<i class="fas fa-exclamation-triangle"></i> **Prerequisites**. It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
+> This course is inspired by the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. So far, I use the same jupyter notebooks. Note that it will evolve over the next few years according to feedback from students and teachers.
+
+### <i class="fas fa-exclamation-triangle"></i> Prerequisites
+
+It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
 - the manipulation of vectors and matrix multplication
 - probabilities distributions (common distributions, mean, variance, etc.)
 - the basics of the calculus of variations
 
 
-<i class="fas fa-bookmark"></i> **Educational Goals**. This course is designed to provide a quick introduction to data analysis algorithms for data engineers. As such, it meets different educational objectives:
+### <i class="fas fa-bookmark"></i> Educational Goals
+
+This course is designed to provide a quick introduction to data analysis algorithms for data engineers. As such, it meets different educational objectives:
 - Understand the differences between artificial intelligence and machine learning
 - Know which model / algorithm to choose depending on the task
 - Learn how to train, validate and test machine learning models
