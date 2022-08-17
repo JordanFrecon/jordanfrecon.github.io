@@ -56,7 +56,7 @@ The course is given in 8 sessions of 3 hours each
 	- Scikit-learn
 - Practical exercice
 
-**Perform basics exploratory data analysis**
+**Perform basics exploratory data analysis**;
 - Practical exercices 
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
