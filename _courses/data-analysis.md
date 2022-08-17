@@ -47,28 +47,21 @@ The course is given in 8 sessions of 3 hours each
 ---
 <b>Session 3.</b> Apply your first supervised learning algorithms;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
-	- differences between AI and ML
-	- distinction between supervised and unsupervised learning
-	- training, validation and testing of ML models
+<ol><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ol>
 - Tutorial class on simple supervised learning models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1"><i class="fas fa-chalkboard"></i> Slides</a>)
-	- K-NN
-	- Linear Regression
-	- Ridge Regression
+<ol><li>K neirest neighbors</li><li>Linear Regression</li><li>Ridge Regression</li></ol>
 - Practice exercices (jupyter notebook)
 ---
 <b>Session 4.</b> Train and use simple supervised classification models;
 - Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)
-	- Logistic Regression
-	- Decision Trees
+<ol><li>Logistic Regression</li><li>Decision Trees</li></ol>
 - Tutorial class on numerical optimization (<a href="https://jordan-frecon.com/courses/data-analysis/numerical-optimization"><i class="fas fa-chalkboard"></i> Slides</a>)
-	- Convex vs. nonconvex
-	- Role and impact of the step-size
+<ol><li>Convex vs. nonconvex</li><li>Role and impact of the step-size</li></ol>
 - Practical exercices
 ---
 <b>Session 5.</b> Master advanced supervised classification algorithms;
 - Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
-	- SVM
-	- Neural Networks
+<ol><li>SVM</li><li>Neural Networks</li></ol>
 - Practical exercices
 ---
 <b>Session 6.</b> Discover unsupervised learning algorithms;
