@@ -65,7 +65,7 @@ The course is given in 8 sessions of 3 hours each
 - Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-4/session-4.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 6.</b> Discover unsupervised learning algorithms;
-- Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)<br>
 - Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-5/session-5.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 7.</b> Apply unsupervised learning algorithms to predict digits;
