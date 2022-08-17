@@ -55,7 +55,7 @@ The course is given in 8 sessions of 3 hours each
 	- Pandas
 	- Scikit-learn
 - Practical exercice
-
+---
 **Perform basics exploratory data analysis**;
 - Practical exercices 
 {% endcapture %}
