@@ -36,19 +36,6 @@ This course is designed to provide a quick introduction to data analysis algorit
 The course is given in 8 sessions of 3 hours each
 
 {% capture accordion_items %}
-<b>Session 1.</b> Concepts & Librairies;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> General introduction and presentation of the most popular Python librairies for data analysis<br><a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a><br><a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>
-<b>Session 2.</b> Exploratory Data Analysis;<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i> This session is devoted to the practical study of two use cases:<ol><li>Behaviours of a telecom operator's customers (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/1-telecom-client.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Video games sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/2-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>
-<b>Session 3.</b> Introduction to Machine Learning & Supervised Learning (K-NN, linear regression);<i class="fas fa-clock"></i> 3 hours<br><i class="fas fa-book-open"></i>  + practical exercices to master k-nearest neighbors (classification and regression), simple least square linear regression and ridge regression<br><a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>
-<b>Session 4.</b> Logistic Regression and Decision Trees;
-<b>Session 5.</b> Support Vector Machine and Neural Networks;
-<b>Session 6.</b> Unsupervised Learning (PCA and K-Means);
-<b>Session 7.</b> K-Means;
-<b>Session 8.</b> Recap;
-{% endcapture %}
-{% include elements/accordion.html id="program-data-analysis" %}
-
-
-{% capture accordion_items %}
 <b>Session 1.</b> Introduction to data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis (<a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul>
@@ -56,7 +43,7 @@ The course is given in 8 sessions of 3 hours each
 	<li>Pandas</li>
 	<li>Scikit-learn</li>
 </ul>
-- Practical exercice
+- Practical exercice (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 2.</b> Perform basics exploratory data analysis;
 - Practical exercices on two use cases
@@ -81,6 +68,21 @@ The course is given in 8 sessions of 3 hours each
 	- Convex vs. nonconvex
 	- role of step-size
 - Practical exercices
+---
+<b>Session 5.</b> Master advanced supervised classification algorithms;
+- Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
+	- SVM
+	- Neural Networks
+- Practical exercices
+---
+<b>Session 6.</b> Discover unsupervised learning algorithms;
+- Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Practical exercices
+---
+<b>Session 7.</b> Apply unsupervised learning algorithms to predict digits;
+- Practical exercice
+---
+<b>Session 8.</b> Master data analysis algorithms;
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
