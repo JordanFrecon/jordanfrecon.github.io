@@ -49,14 +49,16 @@ The course is given in 8 sessions of 3 hours each
 
 
 {% capture accordion_items %}
-**Introduction to data analysis with Python**;
+<b>Session 1.</b> Introduction to data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis
-	- Numpy
-	- Pandas
-	- Scikit-learn
+<ul>
+	<li>Numpy</li>
+	<li>Pandas</li>
+	<li>Scikit-learn</li>
+</ul>
 - Practical exercice
 ---
-**Perform basics exploratory data analysis**;
+<b>Session 2.</b> Perform basics exploratory data analysis;
 - Practical exercices 
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
