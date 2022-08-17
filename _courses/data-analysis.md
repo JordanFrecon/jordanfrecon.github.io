@@ -15,7 +15,7 @@ hours: 24
 ## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
 It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
-- the manipulation of vectors and matrix multplication
+- the manipulation of vectors and matrix multiplication
 - probabilities distributions (common distributions, mean, variance, etc.)
 - the basics of the calculus of variations
 
@@ -49,7 +49,7 @@ The course is given in 8 sessions of 3 hours each
 <ul><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ul>
 - Tutorial class on simple supervised learning models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>K neirest neighbors</li><li>Linear Regression</li><li>Ridge Regression</li></ul>
-- Practice exercices (jupyter notebook)
+- Practice exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-2/2-session-2.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 4.</b> Train and use simple supervised classification models;
 - Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)
