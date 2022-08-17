@@ -47,21 +47,21 @@ The course is given in 8 sessions of 3 hours each
 ---
 <b>Session 3.</b> Apply your first supervised learning algorithms;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ol><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ol>
+<ul><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ul>
 - Tutorial class on simple supervised learning models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ol><li>K neirest neighbors</li><li>Linear Regression</li><li>Ridge Regression</li></ol>
+<ul><li>K neirest neighbors</li><li>Linear Regression</li><li>Ridge Regression</li></ul>
 - Practice exercices (jupyter notebook)
 ---
 <b>Session 4.</b> Train and use simple supervised classification models;
 - Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ol><li>Logistic Regression</li><li>Decision Trees</li></ol>
+<ul><li>Logistic Regression</li><li>Decision Trees</li></ul>
 - Tutorial class on numerical optimization (<a href="https://jordan-frecon.com/courses/data-analysis/numerical-optimization"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ol><li>Convex vs. nonconvex</li><li>Role and impact of the step-size</li></ol>
+<ul><li>Convex vs. nonconvex</li><li>Role and impact of the step-size</li></ul>
 - Practical exercices
 ---
 <b>Session 5.</b> Master advanced supervised classification algorithms;
 - Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ol><li>SVM</li><li>Neural Networks</li></ol>
+<ul><li>SVM</li><li>Neural Networks</li></ul>
 - Practical exercices
 ---
 <b>Session 6.</b> Discover unsupervised learning algorithms;
@@ -72,6 +72,8 @@ The course is given in 8 sessions of 3 hours each
 - Practical exercice
 ---
 <b>Session 8.</b> Master data analysis algorithms;
+- Practical exercices on two use cases
+<ol><li>Determine if a mushroom is poisonous</li><li>Predict cell phone prices</li></ol>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
