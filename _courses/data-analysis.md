@@ -59,7 +59,8 @@ The course is given in 8 sessions of 3 hours each
 - Practical exercice
 ---
 <b>Session 2.</b> Perform basics exploratory data analysis;
-- Practical exercices 
+- Practical exercices on two use cases
+<ol><li>Behaviours of a telecom operator's customers (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/1-telecom-client.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Video games sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/2-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>
 ---
 <b>Session 3.</b> Apply your first supervised learning algorithms;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
@@ -71,6 +72,15 @@ The course is given in 8 sessions of 3 hours each
 	- Linear Regression
 	- Ridge Regression
 - Practice exercices (jupyter notebook)
+---
+<b>Session 4.</b> Train and use simple supervised classification models;
+- Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)
+	- Logistic Regression
+	- Decision Trees
+- Tutorial class on numerical optimization (<a href="https://jordan-frecon.com/courses/data-analysis/numerical-optimization"><i class="fas fa-chalkboard"></i> Slides</a>)
+	- Convex vs. nonconvex
+	- role of step-size
+- Practical exercices
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
