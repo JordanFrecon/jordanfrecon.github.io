@@ -10,7 +10,7 @@ hours: 24
 ---
 
 
-> This course is inspired by the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. So far, I use the same jupyter notebooks. Note that it will evolve over the next few years according to feedback from students and teachers.
+> This course is inspired by the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. So far, I use the jupyter notebooks cowritten by [Charlotte Laclau](https://laclauc.github.io/index.html) and Julien Tissier. Note that it will change over the next few years according to feedback from students and teachers.
 
 ## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
