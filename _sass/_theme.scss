@@ -41,6 +41,6 @@
   @include themed(filter, invert(0), invert(1));
 }
 
-.answer {
+.answer .iframe .style{
   @include themed(color, $text-black, $text-white);
 }
