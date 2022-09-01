@@ -1,6 +1,12 @@
+- title: Associate Professor
+  from: 2022
+  to: Present
+  description: <b>Institution:</b> Télécom Saint-Etienne (Jean Monnet University, Université de Lyon).<br>
+               <b>Laboratory:</b> Hubert Curien Laboratory.<br>
+
 - title: Postdoc, LITIS, INSA Rouen Normandie
   from: 2020
-  to: present
+  to: 2022
   description: <b>Supervisor:</b> Stéphane Canu.<br>
                <b>Title:</b> Towards safe artificial intelligence in mobility.<br>
                <b>Keywords:</b> Deep learning, bilevel optimization, adversarial machine learning
