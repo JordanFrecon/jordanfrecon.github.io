@@ -1,34 +1,36 @@
 - title: Associate Professor
   from: 2022
   to: Present
-  description: <b>Institution:</b> Télécom Saint-Etienne (Jean Monnet University, Université de Lyon).<br>
-               <b>Laboratory:</b> Hubert Curien Laboratory.<br>
+  description: <b>Institution:</b> Télécom Saint-Etienne (Jean Monnet University, Université de Lyon)<br>
+               <b>Laboratory:</b> Hubert Curien Laboratory<br>
+               <b>Team:</b> Data Intelligence
+               
 
 - title: Postdoc, LITIS, INSA Rouen Normandie
   from: 2020
   to: 2022
-  description: <b>Supervisor:</b> Stéphane Canu.<br>
-               <b>Title:</b> Towards safe artificial intelligence in mobility.<br>
+  description: <b>Supervisor:</b> Stéphane Canu<br>
+               <b>Title:</b> Towards safe artificial intelligence in mobility<br>
                <b>Keywords:</b> Deep learning, bilevel optimization, adversarial machine learning
 
 - title: Postdoc, CSML, Italian Institute of Technology
   from: 2017
   to: 2020
-  description: <b>Supervisor:</b> Massimiliano Pontil.<br>
-               <b>Title:</b> Non-smooth bilevel optimization for multi-task learning.<br>
-               <b>Keywords:</b> Multi-task learning, bilevel optimization, hyperparameters selection.
+  description: <b>Supervisor:</b> Massimiliano Pontil<br>
+               <b>Title:</b> Non-smooth bilevel optimization for multi-task learning<br>
+               <b>Keywords:</b> Multi-task learning, bilevel optimization, hyperparameters selection
 
 
 - title: Ph.D., Sisyphe, Ecole Normale Supérieure de Lyon
   from: 2013
   to: 2016
-  description: <b>Supervisors:</b> Patrice Abry and Nelly Pustelnik.<br>
-               <b>Title:</b> Optimization methods for the analysis of scale-invariant processes.<br>
-               <b>Keywords:</b> Multifractal analysis, change-points detection, online optimization, models selection.
+  description: <b>Supervisors:</b> Patrice Abry and Nelly Pustelnik<br>
+               <b>Title:</b> Optimization methods for the analysis of scale-invariant processes<br>
+               <b>Keywords:</b> Multifractal analysis, change-points detection, online optimization, models selection
                
 - title: B.Sc. & M.Sc., Ecole Normale Supérieure de Lyon
   from: 2010
   to: 2013
-  description: <b>Program:</b> Sciences de la matière.<br>
-               <b>Major:</b> Physics.<br>
-               <b>Specialty:</b> Complex systems.
+  description: <b>Program:</b> Sciences de la matière<br>
+               <b>Major:</b> Physics<br>
+               <b>Specialty:</b> Complex systems
