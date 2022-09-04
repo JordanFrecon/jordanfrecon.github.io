@@ -30,7 +30,7 @@ This course is designed to provide a quick introduction to stastical inference f
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
-Data Analysis Librairies,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
+Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
