@@ -7,6 +7,7 @@ institution: Télécom Saint-Etienne
 program: Engineer Telecom Saint-Etienne
 year: 1st year
 hours: 39
+year_post: 2022
 ---
 
 > This course is based on the one written by [Christophe Gravier](https://cgravier.fr/). For the moment it contains all the original elements. It will evolve over the next few years according to feedback from students and teachers.

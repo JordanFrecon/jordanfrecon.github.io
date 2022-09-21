@@ -6,5 +6,6 @@ institution: Télécom Saint-Etienne
 program: Data Engineering Apprenticeship Engineer
 year: 3rd year
 hours: 9
+year_post: 2022
 ---
 
