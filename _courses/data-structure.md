@@ -10,7 +10,7 @@ hours: 39
 year_post: 2022
 ---
 
-> This course is based on the one written by [Christophe Gravier](https://cgravier.fr/). For the moment it contains all the original elements. It will evolve over the next few years according to feedback from students and teachers.
+> This course is inspired and partly based on the one written by [Christophe Gravier](https://cgravier.fr/). It will evolve over the next few years according to feedback from students and teachers.
 
 {% capture list_items %}
 Introduction,
