@@ -32,6 +32,7 @@ This course is designed to provide a quick introduction to stastical inference f
 
 {% capture list_items %}
 Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
+Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
