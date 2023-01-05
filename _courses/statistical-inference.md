@@ -17,7 +17,7 @@ year_post: 2022
 It is necessary to have prior knowledge in Probabilities. As such, it is advised to be proficient in
 - random variables and usual distributions
 - expectation (variance, conditional expectation, etc.)
-- convergence of random varaibles (law of large numbers, central limit theorem, etc.)
+- convergence of random variables (law of large numbers, central limit theorem, etc.)
 
 
 ## <i class="fas fa-bookmark"></i> Educational Goals
@@ -33,6 +33,8 @@ This course is designed to provide a quick introduction to stastical inference f
 {% capture list_items %}
 Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
 Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
+Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
+Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/ 
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
