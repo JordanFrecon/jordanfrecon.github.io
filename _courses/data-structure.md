@@ -15,12 +15,12 @@ year_post: 2022
 {% capture list_items %}
 Introduction,
 Parameter Passing in C and C++,
-Static and Dynamic Arrays,
-Data Structures,
-Standard Template Library,
-Linked Lists,
-Stacks Queues,
-Hash Tables,
-Binary Search Trees,
+Static Arrays,
+Dynamic Arrays,
+Linked Lists,https://jordan-frecon.com/courses/data-structure/linked-lists
+Stacks Queues,https://jordan-frecon.com/courses/data-structure/stacks-queues
+Hash Tables,https://jordan-frecon.com/courses/data-structure/hash-tables
+Binary Search Trees,https://jordan-frecon.com/courses/data-structure/binary-search-trees
+Bloom Filters,https://jordan-frecon.com/courses/data-structure/bloom-filters 
 {% endcapture %}
 {% include elements/list.html title="Course Program" %}
