@@ -15,10 +15,10 @@ year_post: 2022
 ## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
 It is necessary to have prior knowledge in Probabilities. As such, it is advised to be proficient in
-- random variables and usual distributions
+- random variables and usual distributions (normal, Bernoulli, etc.)
 - expectation (variance, conditional expectation, etc.)
 - convergence of random variables (law of large numbers, central limit theorem, etc.)
-
+- probability distribution, cumulative distribution function, etc.
 
 ## <i class="fas fa-bookmark"></i> Educational Goals
 
