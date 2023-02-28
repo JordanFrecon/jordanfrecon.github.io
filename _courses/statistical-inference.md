@@ -35,6 +35,7 @@ Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-
 Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
 Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
 Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/ 
+Independence Tests,https://jordan-frecon.com/courses/statistical-inference/independence-tests/ 
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
