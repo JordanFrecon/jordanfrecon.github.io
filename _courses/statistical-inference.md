@@ -34,8 +34,9 @@ This course is designed to provide a quick introduction to stastical inference f
 Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
 Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
 Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
-Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/ 
-Independence Tests,https://jordan-frecon.com/courses/statistical-inference/independence-tests/ 
+Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/
+Tests of Normality, https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/normality-tests/normality-tests.ipynb"
+Tests of Independence,https://jordan-frecon.com/courses/statistical-inference/independence-tests/ 
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
