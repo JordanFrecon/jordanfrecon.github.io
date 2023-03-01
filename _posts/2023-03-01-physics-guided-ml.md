@@ -22,7 +22,7 @@ In what follows, we distinguish two cases wether the PDE describing the underlyi
 
 In practice, $$\ell_2^2$$ residuals (i.e., MSEs) are computed on some pre-defined spatio-temporal points to quantify, to what extents, each of the condition is satisfied. As such, $$\theta$$ is found so that the sum of $$\mathcal{L}_{\rm PDE}$$, $$\mathcal{L}_{\rm BC}$$ and $$\mathcal{L}_{\rm IC}$$ is minimized
 
-**Fourier Neural Operators** {% include cite.html id="2021_Li_Z_p-iclr_fourier"%}.
+**FNO** {% include cite.html id="2021_Li_Z_p-iclr_fourier"%} <span class="badge badge-pill text-danger border border-danger">PDE-unknown</span>. *Fourier Neural Operators* (FNO)
 
 ## 2. Meta-Learning
 
