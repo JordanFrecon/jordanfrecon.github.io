@@ -638,3 +638,9 @@
   title: Fourier neural operator for parametric partial differential equations
   authors: Z. Li, N. B. Kovachki, K. Azizzadenesheli, B. Liu, K. Bhattacharya, A. Stuart and A. Anandkumar
 
+- id: 2021_Yin_Y_j-sm_aphynity
+  cite: Yin et al., 2021
+  year: 2021
+  publication: Journal of Statistical Mechanics - Theory and Experiment
+  title: Augmenting physical models with deep networks for complex dynamics forecasting
+  authors: Y. Yin, V. Le Guen, J. Dona, E. de Bézenac, I. Ayed, N. Thome and P. Gallinari 
