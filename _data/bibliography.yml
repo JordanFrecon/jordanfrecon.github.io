@@ -624,3 +624,10 @@
   publication: Journal of Computational Physics
   authors: M. Raissi, P. Perdikaris and G.E. Karniadakis
   
+- id: 2022-Kirchmeyer_M_p-icml_coda
+  cite: Kirchmeyer et al., 2022
+  year: 2022
+  title: Generalizing to new physical systems via context-informed dynamics model
+  publication: Proceedings of the International Conference on Machine Learning (ICML)
+  authors: M. Kirchmeyer, Y. Yin, J. Donà, N. Baskiotis, A. Rakotomamonjy and P. Gallinari
+ 
