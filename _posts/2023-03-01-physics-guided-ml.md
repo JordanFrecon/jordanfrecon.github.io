@@ -29,3 +29,5 @@ In practice, $$\ell_2^2$$ residuals (i.e., MSEs) are computed on some pre-define
 **CoDA** {%include cite.html id="2022-Kirchmeyer_M_p-icml_coda"%} <span class="badge badge-pill text-danger border border-danger">PDE-unknown</span>. The *COntext-informed Dynamics Adaptation* (CoDA) method ...
 
 <img class="post-img-themed" src="/images/posts/physics-ml/coda.png"/>
+{:.image-caption}
+*Image Credit: {%include cite.html id="2022-Kirchmeyer_M_p-icml_coda"%}*
