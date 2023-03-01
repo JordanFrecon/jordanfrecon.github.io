@@ -630,4 +630,11 @@
   title: Generalizing to new physical systems via context-informed dynamics model
   publication: Proceedings of the International Conference on Machine Learning (ICML)
   authors: M. Kirchmeyer, Y. Yin, J. Donà, N. Baskiotis, A. Rakotomamonjy and P. Gallinari
- 
+  
+- id: 2021_Li_Z_p-iclr_fourier
+  cite: Li et al., 2021
+  year: 2021
+  publication: Proceedings of the International Conference on Learning Representations (ICLR)
+  title: Fourier neural operator for parametric partial differential equations
+  authors: Z. Li, N. B. Kovachki, K. Azizzadenesheli, B. Liu, K. Bhattacharya, A. Stuart and A. Anandkumar
+
