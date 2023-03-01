@@ -617,3 +617,10 @@
   publication: Proceedings of the International Conference on Neural Information Processing Systems (NeurIPS)
   authors: Z. Li and J. Li
   
+- id: 2018_Raissi_M_j-cp_pinns
+  cite: Raissi et al., 2018
+  year: 2018
+  title: Physics-informed neural networks - a deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations
+  publication: Journal of Computational Physics
+  authors: M. Raissi, P. Perdikaris and G.E. Karniadakis
+  
