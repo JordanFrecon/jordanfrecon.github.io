@@ -19,8 +19,11 @@ In what follows, we distinguish two cases wether the PDE describing the underlyi
 - The PDE is satisfied
 - The boundary conditions (BC) are satisfied 
 - The initial conditions (IC) are satisfied
-In practice, $$\ell_2^2$$ residuals (i.e., MSEs) are computed on some pre-defined spatio-temporal points to quantify, to what extents, each of the condition is satisfied. As such, $\theta$ is found so that the sum of $$\mathcal{L}_{\rm PDE}$$, $$\mathcal{L}_{\rm BC}$$ and $$\mathcal{L}_{\rm IC}$$ is minimized
+
+In practice, $$\ell_2^2$$ residuals (i.e., MSEs) are computed on some pre-defined spatio-temporal points to quantify, to what extents, each of the condition is satisfied. As such, $$\theta$$ is found so that the sum of $$\mathcal{L}_{\rm PDE}$$, $$\mathcal{L}_{\rm BC}$$ and $$\mathcal{L}_{\rm IC}$$ is minimized
 
 ## 2. Meta-Learning
 
-**CoDA** {%include cite.html id="2022-Kirchmeyer_M_p-icml_coda"%} <span class="badge badge-pill text-danger border border-danger">PDE-unknown</span>
+**CoDA** {%include cite.html id="2022-Kirchmeyer_M_p-icml_coda"%} <span class="badge badge-pill text-danger border border-danger">PDE-unknown</span>. The *COntext-informed Dynamics Adaptation* (CoDA) method ...
+
+<img class="post-img-themed" style="border:rounded" src="/images/posts/coda.png"/>
