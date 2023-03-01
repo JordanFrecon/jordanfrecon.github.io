@@ -6,7 +6,7 @@ color: info
 description: Should be hidden
 comments: true
 hidden: true
-biblio: [2018_Raissi_M_j-cp_pinns, 2022-Kirchmeyer_M_p-icml_coda]
+biblio: [2018_Raissi_M_j-cp_pinns, 2022-Kirchmeyer_M_p-icml_coda,2022-Kirchmeyer_M_p-icml_coda]
 ---
 
 > Work in progress
