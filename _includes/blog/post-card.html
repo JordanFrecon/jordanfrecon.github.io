@@ -1,3 +1,4 @@
+{%- if post.hidden != true -%}
 {%- comment -%} Default Styles {%- endcomment -%}
 {%- assign card_style  = '' -%}
 {%- assign text_style  = 'text-themed' -%}
@@ -47,3 +48,5 @@
     </div>
   </a>
 </div>
+
+{%- endif -%}
