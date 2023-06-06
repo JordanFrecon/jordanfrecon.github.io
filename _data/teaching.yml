@@ -1,4 +1,28 @@
-- id: 2022-rd
+- id: 2022-coachingAlt
+  year: 2022-2023
+  institution: TSE (FISE)
+  title: Coaching (M2)
+  hours: 4
+
+- id: 2022-respWorkStudy
+  year: 2022-2023
+  institution: TSE (FISE)
+  title: Resp. Work-Study (M2)
+  hours: 16
+
+- id: 2022-respBlocInfo
+  year: 2022-2023
+  institution: TSE (FISE)
+  title: Resp. Informatics (L3)
+  hours: 4
+
+- id: 2022-respBlocFondamentaux
+  year: 2022-2023
+  institution: TSE (FISA)
+  title: Resp. Fundamentals (M1)
+  hours: 4
+
+- id: 2022-advML
   year: 2022-2023
   institution: FST (MLDM)
   title: Advanced Machine Learning (M2)
