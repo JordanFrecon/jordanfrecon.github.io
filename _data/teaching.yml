@@ -1,3 +1,15 @@
+- id: 2022-dataAnalysis
+  year: 2022-2023
+  institution: FISA TSE 
+  title: Algorithms for Data Analysis (M1)
+  hours: 28.5
+  
+- id: 2022-stats
+  year: 2022-2023
+  institution: FISA TSE 
+  title: Statistical Inference (M1)
+  hours: 30
+
 - id: 2022-dataStructure
   year: 2022-2023
   institution: FISE TSE 
