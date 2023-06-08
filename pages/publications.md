@@ -16,13 +16,13 @@ weight: 2
  <li>
  <div class="pubitem">
    <div class="pubauthors">
-     {{ pub.authors }},
+     {{ pub.authors }}
    </div>
    <div class="pubtitle">
-     {{ pub.title }},
+     {{ pub.title }}
    </div>
-   <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}.
+   <div class="pubtype">
+	 {{ pub.publication }}, </div><div class="pubinfo"> {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -42,13 +42,13 @@ weight: 2
  <li>
  <div class="pubitem">
    <div class="pubauthors">
-     {{ pub.authors }},
+     {{ pub.authors }}
    </div>
    <div class="pubtitle">
-     {{ pub.title }},
+     {{ pub.title }}
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}.
+     {{ pub.publication }}, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -78,7 +78,7 @@ weight: 2
      {{ pub.title }}
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}.
+     {{ pub.publication }}, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -111,7 +111,7 @@ weight: 2
      {{ pub.title }}
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}.
+     {{ pub.publication }}, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -144,7 +144,7 @@ weight: 2
      {{ pub.title }}
    </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}.
+     {{ pub.publication }}, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
