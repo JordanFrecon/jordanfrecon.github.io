@@ -5,7 +5,7 @@ authors: J. Frecon, P. Viallard, E. Morvant, G. Gasso, A. Habrard and S. Canu
 publication: Under review
 year: 2023
 doi:
-image: True
+image: False
 type: preprint
 project: adversarialLearning
 ---

@@ -5,7 +5,7 @@ authors: M. De Santis, J. Frecon, F. Rinaldo, S. Salzo and M. Schmidt
 publication: Under review
 year: 2023
 doi:
-image: True
+image: False
 type: unpublished
 project: hyperparamOpt
 ---
