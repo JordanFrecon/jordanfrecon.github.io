@@ -15,11 +15,11 @@ weight: 2
  {% if pub.type == 'unpublished' or pub.type == 'preprint' %}
  <li>
  <div class="pubitem">
-   <div class="pubauthors">
-     {{ pub.authors }}
-   </div>
    <div class="pubtitle">
      {{ pub.title }}
+   </div>
+   <div class="pubauthors">
+     {{ pub.authors }}
    </div>
    <div class="pubinfo">
 	 <i>{{ pub.publication }}</i>, {{ pub.year}}
@@ -41,14 +41,14 @@ weight: 2
  {% if pub.type == 'journal' %}
  <li>
  <div class="pubitem">
-   <div class="pubauthors">
-     {{ pub.authors }}
-   </div>
    <div class="pubtitle">
      {{ pub.title }}
    </div>
+   <div class="pubauthors">
+     {{ pub.authors }}
+   </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+	 <i>{{ pub.publication }}</i>, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -71,14 +71,14 @@ weight: 2
  {% if pub.type == 'conference' %}
  <li>
  <div class="pubitem">
-   <div class="pubauthors">
-     {{ pub.authors }}
-   </div>
    <div class="pubtitle">
      {{ pub.title }}
    </div>
+   <div class="pubauthors">
+     {{ pub.authors }}
+   </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+	 <i>{{ pub.publication }}</i>, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -104,14 +104,14 @@ weight: 2
  {% if pub.type == 'workshop' %}
  <li>
  <div class="pubitem">
-   <div class="pubauthors">
-     {{ pub.authors }}
-   </div>
    <div class="pubtitle">
      {{ pub.title }}
    </div>
+   <div class="pubauthors">
+     {{ pub.authors }}
+   </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+	 <i>{{ pub.publication }}</i>, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
@@ -137,14 +137,14 @@ weight: 2
  {% if pub.type == 'thesis' %}
  <li>
  <div class="pubitem">
-   <div class="pubauthors">
-     {{ pub.authors }}
-   </div>
    <div class="pubtitle">
      {{ pub.title }}
    </div>
+   <div class="pubauthors">
+     {{ pub.authors }}
+   </div>
    <div class="pubinfo">
-     {{ pub.publication }}, {{ pub.year}}
+	 <i>{{ pub.publication }}</i>, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
