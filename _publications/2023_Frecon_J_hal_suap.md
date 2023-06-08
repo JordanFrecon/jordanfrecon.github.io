@@ -2,7 +2,7 @@
 layout: publication
 title: Semi-Universal Adversarial Perturbations
 authors: J. Frecon, P. Viallard, E. Morvant, G. Gasso, A. Habrard and S. Canu
-publication: Submitted
+publication: Under review
 year: 2023
 doi:
 image: True
