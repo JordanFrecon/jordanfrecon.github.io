@@ -2,10 +2,10 @@
 layout: publication
 title: Linear Model of the Adversarial Noise Space
 authors: J. Frecon, L. Anquetil, Y. Liu, G. Gasso and S. Canu
-publication: Submitted
+publication: Under review
 year: 2023
 doi:
-type: preprint
+type: unpublished
 project: adversarialLearning
 ---
 
