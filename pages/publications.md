@@ -21,8 +21,8 @@ weight: 2
    <div class="pubtitle">
      {{ pub.title }}
    </div>
-   <div class="pubtype">
-	 {{ pub.publication }}, </div><div class="pubinfo"> {{ pub.year}}
+   <div class="pubinfo">
+     *{{ pub.publication }}*, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
