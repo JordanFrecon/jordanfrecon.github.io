@@ -22,7 +22,7 @@ weight: 2
      {{ pub.title }}
    </div>
    <div class="pubinfo">
-     *{{ pub.publication }}*, {{ pub.year}}
+	 <i>{{ pub.publication }}</i>, {{ pub.year}}
    </div>
  </div>
  <div class="publinks">
