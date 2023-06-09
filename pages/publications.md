@@ -161,6 +161,6 @@ weight: 2
 {% endfor %}
 </ol>
 
-## Test
+# Test
 
 {% bibliography %}
