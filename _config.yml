@@ -12,7 +12,16 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll/scholar
-
+  - jekyll-archives
+  - jekyll-diagrams
+  - jekyll-email-protect
+  - jekyll-feed
+  - jekyll-imagemagick
+  - jekyll-minifier
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-link-attributes
+  - jekyll-twitter-plugin
 
 ### Navbar Settings ###
 nav_exclude:                                            # The following paths are excluded from navbar
