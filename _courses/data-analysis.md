@@ -13,12 +13,17 @@ year_post: 2022
 
 > This course is inspired by the one written by [Charlotte Laclau](https://laclauc.github.io/index.html) who kindly granted me her source files. So far, I use the jupyter notebooks cowritten by [Charlotte Laclau](https://laclauc.github.io/index.html) and Julien Tissier. Note that it will change over the next few years according to feedback from students and teachers.
 
+The present course aims to develop a solid understanding of various algorithms and techniques used for processing and analyzing data. This includes gaining proficiency in implementing and evaluating algorithms, selecting appropriate algorithms for specific tasks, understanding algorithmic complexity and efficiency, and applying algorithms to solve real-world data analysis problems. The goal is to equip students with the necessary knowledge and skills to effectively and efficiently analyze large datasets, extract valuable insights, and make data-driven decisions.
+
+
 ## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
 It is necessary to have prior knowledge on both the fundamentals of mathematics (analysis, linear algebra, probability, statistics) and computer science. As such, it is advised to be proficient in
-- the manipulation of vectors and matrix multiplication
-- probability distributions (common distributions, mean, variance, etc.)
-- the basics of the calculus of variations
+- Basic concepts of probability and statistical inference
+- Vector manipulation and matrix multiplication
+- Basics of calculus of variations
+- Linear algebra (eigenvalue - eigenvector, hyperplane, projection, etc.)
+- Python programming and vector manipulation using NumPy
 
 
 ## <i class="fas fa-bookmark"></i> Educational Goals
