@@ -6,7 +6,7 @@ publication: Under review
 year: 2023
 doi:
 image: False
-type: unpublished
+type: preprint
 project: hyperparamOpt
 ---
 
