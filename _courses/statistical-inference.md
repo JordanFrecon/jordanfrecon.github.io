@@ -24,7 +24,7 @@ It is necessary to have prior knowledge in Probability. Therefore, it is advisab
 
 ## <i class="fas fa-bookmark"></i> Educational Goals
 
-This course is designed to provide a quick introduction to stastical inference for data engineers. As such, it meets different educational objectives:
+This course is designed to provide a quick introduction to statistical inference for data engineers. As such, it meets different educational objectives:
 - Understand the principles of statistical inference.
 - Choose and apply statistical tests to real data.
 - Interpret the result of a statistical test.
