@@ -35,7 +35,8 @@ This course is designed to provide a quick introduction to statistical inference
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
-Introduction to Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
+Introduction, https://jordan-frecon.com/courses/statistical-inference/introduction/
+Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
 Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
 Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
 Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/
