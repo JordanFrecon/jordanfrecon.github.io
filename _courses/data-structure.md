@@ -13,7 +13,7 @@ year_post: 2022
 > This course is inspired and partly based on the one written by [Christophe Gravier](https://cgravier.fr/). It will evolve over the next few years according to feedback from students and teachers.
 
 {% capture list_items %}
-Introduction,
+Introduction, https://jordan-frecon.com/courses/data-structure/introduction
 Parameter Passing in C and C++,
 Static Arrays,
 Dynamic Arrays,
