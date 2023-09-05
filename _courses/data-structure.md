@@ -14,7 +14,8 @@ year_post: 2022
 
 {% capture list_items %}
 Introduction, https://jordan-frecon.com/courses/data-structure/introduction
-Parameter Passing in C and C++,
+Structure Variables, https://jordan-frecon.com/courses/data-structure/structure-variables
+Functional Programming,
 Static Arrays,
 Dynamic Arrays,
 Linked Lists,https://jordan-frecon.com/courses/data-structure/linked-lists
