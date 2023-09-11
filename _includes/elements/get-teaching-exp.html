@@ -191,31 +191,38 @@ for (var i = 0; i < {{ years_list | size }}; ++i) {
 
 // Set bar options
 var barOptions = {
-	responsive: false,
-	maintainAspectRatio: false,
-    	interaction: {
-      		intersect: false,
-    	},
-	scales: {
-		yAxes: [{
-		    ticks: {
-		    	 display: true,
-		        fontColor: textcolor,
-		    },
-		    stacked: true,
-		    gridLines: {
-		    	display: false,
-		    },
-		}],
-		xAxes: [{
-		    ticks: {
-		        beginAtZero: true
-		    },
-		    gridLines: {
-		    	display: false,
-		    },
-		}]
-	}
+    responsive: false,
+    maintainAspectRatio: false,
+    interaction: {
+        intersect: false,
+    },
+    scales: {
+        yAxes: [{
+            ticks: {
+                display: true,
+                fontColor: textcolor,
+            },
+            stacked: true,
+            gridLines: {
+                display: false,
+            },
+        }],
+        xAxes: [{
+            ticks: {
+                beginAtZero: true
+            },
+            gridLines: {
+                display: false,
+            },
+        }]
+    },
+    tooltips: {
+        callbacks: {
+            label: function (tooltipItem, data) {
+		return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+            }
+        }
+    }
 };
 
 // Create chart
