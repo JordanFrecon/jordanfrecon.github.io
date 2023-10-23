@@ -15,7 +15,7 @@ year_post: 2022
 {% capture list_items %}
 Introduction, https://jordan-frecon.com/courses/data-structure/introduction
 Structure Variables, https://jordan-frecon.com/courses/data-structure/structure-variables
-Functional Programming,
+Functional Programming, https://jordan-frecon.com/courses/data-structure/functional-programming
 Parameter Passing Techniques,
 Static Arrays,
 Dynamic Arrays,
