@@ -19,6 +19,7 @@ Functional Programming, https://jordan-frecon.com/courses/data-structure/functio
 Parameter Passing Techniques, https://jordan-frecon.com/courses/data-structure/parameter-passing
 Static Arrays, https://jordan-frecon.com/courses/data-structure/static-arrays
 Dynamic Allocation, https://jordan-frecon.com/courses/data-structure/dynamic-allocation
+Characters Arrays, https://jordan-frecon.com/courses/data-structure/characters-arrays
 Linked Lists,https://jordan-frecon.com/courses/data-structure/linked-lists
 Stacks Queues,https://jordan-frecon.com/courses/data-structure/stacks-queues
 Hash Tables,https://jordan-frecon.com/courses/data-structure/hash-tables
