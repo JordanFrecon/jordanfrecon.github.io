@@ -1,16 +1,16 @@
 - title: Associate Professor, Data Intelligence, LabHC
   from: 2022
   to: Present
-  description: <b>Laboratory:</b> Laboratoire Hubert Curien (LabHC)<br>
-               <b>Team:</b> Data Intelligence<br>
+  description: <b>Team:</b> Data Intelligence<br>
+               <b>Laboratory:</b> Laboratoire Hubert Curien (LabHC)<br>
                <b>Teaching institution:</b> Télécom Saint-Etienne, Jean Monnet University, Université de Lyon<br>
                
 
 - title: Postdoc, App, LITIS
   from: 2020
   to: 2022
-  description: <b>Laboratory:</b> Laboratoire d’Informatique, du Traitement de l’Information et des Systèmes (LITIS)<br>
-               <b>Team:</b> Apprentissage (App)<br>
+  description: <b>Team:</b> Apprentissage (App)<br>
+               <b>Laboratory:</b> Laboratoire d’Informatique, du Traitement de l’Information et des Systèmes (LITIS)<br>
                <b>Supervisor:</b> Stéphane Canu<br>
                <b>Title:</b> Towards safe artificial intelligence in mobility<br>
                <b>Keywords:</b> Deep learning, bilevel optimization, adversarial machine learning
@@ -18,8 +18,8 @@
 - title: Postdoc, CSML, IIT
   from: 2017
   to: 2020
-  description: <b>Laboratory:</b> Italian Institute of Technology (IIT)<br>
-               <b>Team:</b> Computational statistics and machine learning (CSML)<br>
+  description: <b>Team:</b> Computational statistics and machine learning (CSML)<br>
+               <b>Laboratory:</b> Italian Institute of Technology (IIT)<br>
                <b>Supervisor:</b> Massimiliano Pontil<br>
                <b>Title:</b> Non-smooth bilevel optimization for multi-task learning<br>
                <b>Keywords:</b> Multi-task learning, bilevel optimization, hyperparameters selection
@@ -28,8 +28,8 @@
 - title: Ph.D., Sisyphe, LPENSL
   from: 2013
   to: 2016
-  description: <b>Laboratory:</b> Laboratoire de Physique de l'ENS de Lyon (LPENSL)<br>
-               <b>Team:</b> Signaux, systèmes et physique (Sisyphe)<br>
+  description: <b>Team:</b> Signaux, systèmes et physique (Sisyphe)<br>
+               <b>Laboratory:</b> Laboratoire de Physique de l'ENS de Lyon (LPENSL)<br>
                <b>Supervisors:</b> Patrice Abry and Nelly Pustelnik<br>
                <b>Title:</b> Optimization methods for the analysis of scale-invariant processes<br>
                <b>Keywords:</b> Multifractal analysis, change-points detection, online optimization, models selection
