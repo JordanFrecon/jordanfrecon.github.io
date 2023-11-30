@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Jordan Frecon-Deloire
 description         : >-
-                      Associate Professor in Machine Learning<br>Member of Data Intelligence Team
+                      Associate Professor in Machine Learning<br>Member of the Data Intelligence Team
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : jordanfrecon/jordanfrecon.github.io
 remote_theme        : YoussefRaafatNasry/portfolYOU
