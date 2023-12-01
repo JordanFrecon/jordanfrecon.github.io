@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Jordan Frecon-Deloire
 description         : >-
-                      Associate Professor at Télécom Saint-Etienne<br>Member of the Data Intelligence Team
+                      Associate Professor at Télécom Saint-Etienne<br>Member of the MALICE Inria Team
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : jordanfrecon/jordanfrecon.github.io
 remote_theme        : YoussefRaafatNasry/portfolYOU
