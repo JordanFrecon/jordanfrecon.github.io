@@ -16,11 +16,22 @@ This course provides a comprehensive understanding of fundamental data structure
 
 ## <i class="fas fa-exclamation-triangle"></i> Prerequisites
 
-It is advised to have a foundational understanding of mathematical concepts such as sets, functions, and elementary algorithms. Prior experience in programming is recommended.
+Participants are expected to have a proficient understanding of the following prerequisites:
+
+- Fundamental problem-solving skills.
+- Familiarity with algorithmic (loops, conditional statements, etc.).
+- Basic mathematical concepts such as sets, functions, and elementary algorithms.
+- Prior experience in computing (Python or C/C++), ensuring a comfortable entry into the complexities of data structures and algorithms.
 
 ## <i class="fas fa-bookmark"></i> Educational Goals
 
-By the end of the course, participants should be adept at structuring programs using various data structures like arrays, linked lists, stacks, queues, hash tables, binary search trees, and bloom filters. Furthermore, the course aims to cultivate problem-solving skills by demonstrating how to choose and implement appropriate data structures and algorithms for different scenarios. Through practical examples and exercises, participants will not only enhance their coding skills but also develop the ability to analyze the time and space complexity of algorithms, enabling them to make informed decisions in real-world programming scenarios.
+This course delineates specific educational goals aimed at enhancing algorithmic and data structure skills:
+
+- Master the art of structuring programs using static arrays, dynamic allocation, character arrays, linked lists, stacks, queues, hash tables, binary search trees, and bloom filters.
+- Develop advanced problem-solving skills by selecting and implementing appropriate data structures and algorithms for diverse scenarios.
+- Analyze the time and space complexity of algorithms, facilitating informed decision-making in real-world programming challenges.
+- Hone coding proficiency through practical examples and exercises.
+- Cultivate a deep understanding of the principles behind data structures and algorithms, ensuring participants can confidently tackle intricate computational problems.
 
 ## <i class="fas fa-file-download"></i> Course Materials
 
