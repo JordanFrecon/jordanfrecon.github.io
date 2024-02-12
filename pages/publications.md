@@ -11,24 +11,24 @@ weight: 2
 
 # **Upcoming**
 <ol>
-{% for pub in publications %}
- {% if pub.type == 'unpublished' or pub.type == 'preprint' %}
+{% for publication in publications %}
+ {% if publication.type == 'unpublished' or publication.type == 'preprint' %}
  <li>
  <div class="pubitem">
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ publication.title }}
    </div>
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ publication.authors }}
    </div>
    <div class="pubinfo">
-	 <i>{{ pub.publication }}</i>, {{ pub.year}}
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>{% if pub.type == 'preprint' %}&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="#" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>{% if publication.type == 'preprint' %}&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
  </div>
  </li>
  {% endif %}
@@ -37,29 +37,29 @@ weight: 2
 
 # **International Journals**
 <ol>
-{% for pub in publications %}
- {% if pub.type == 'journal' %}
+{% for publication in publications %}
+ {% if publication.type == 'journal' %}
  <li>
  <div class="pubitem">
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ publication.title }}
    </div>
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ publication.authors }}
    </div>
    <div class="pubinfo">
-	 <i>{{ pub.publication }}</i>, {{ pub.year}}
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
-   {% if pub.toolbox %}
-   <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   {% if publication.toolbox %}
+   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+ <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
@@ -67,32 +67,32 @@ weight: 2
 
 # **International Conferences**
 <ol>
-{% for pub in publications %}
- {% if pub.type == 'conference' %}
+{% for publication in publications %}
+ {% if publication.type == 'conference' %}
  <li>
  <div class="pubitem">
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ publication.title }}
    </div>
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ publication.authors }}
    </div>
    <div class="pubinfo">
-	 <i>{{ pub.publication }}</i>, {{ pub.year}}
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
-   {% if pub.spotlight %}
-   <a href="{{ pub.spotlight }}"><i class="fas fa-video"></i> Spotlight</a>&nbsp;&nbsp;
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   {% if publication.spotlight %}
+   <a href="{{ publication.spotlight }}"><i class="fas fa-video"></i> Spotlight</a>&nbsp;&nbsp;
    {% endif %}
-   {% if pub.toolbox %}
-   <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   {% if publication.toolbox %}
+   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+ <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
@@ -100,31 +100,31 @@ weight: 2
 
 # **Workshops and National Conferences**
 <ol>
-{% for pub in publications %}
- {% if pub.type == 'workshop' %}
+{% for publication in publications %}
+ {% if publication.type == 'workshop' %}
  <li>
  <div class="pubitem">
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ publication.title }}
    </div>
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ publication.authors }}
    </div>
    <div class="pubinfo">
-	 <i>{{ pub.publication }}</i>, {{ pub.year}}
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   {% if pub.nobib == False %}
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   {% if publication.nobib == False %}
+   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% endif %}
-   {% if pub.toolbox %}
-   <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   {% if publication.toolbox %}
+   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+ <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
@@ -133,29 +133,29 @@ weight: 2
 
 # **Thesis**
 <ol>
-{% for pub in publications %}
- {% if pub.type == 'thesis' %}
+{% for publication in publications %}
+ {% if publication.type == 'thesis' %}
  <li>
  <div class="pubitem">
    <div class="pubtitle">
-     {{ pub.title }}
+     {{ publication.title }}
    </div>
    <div class="pubauthors">
-     {{ pub.authors }}
+     {{ publication.authors }}
    </div>
    <div class="pubinfo">
-	 <i>{{ pub.publication }}</i>, {{ pub.year}}
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
  <div class="publinks">
-   <a href="{{pub.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
-   <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ pub.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
-   {% if pub.toolbox %}
-   <a href="{{ pub.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
+   {% if publication.toolbox %}
+   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
  </div>
- <div class="answer" id="{{ pub.slug }}"><p><iframe src="/download/{{ pub.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+ <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
  </li>
  {% endif %}
 {% endfor %}
