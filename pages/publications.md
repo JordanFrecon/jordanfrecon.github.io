@@ -14,18 +14,18 @@ weight: 2
 {% for publication in publications %}
  {% if publication.type == 'unpublished' or publication.type == 'preprint' %}
  <li>
- <div class="pubitem">
-   <div class="pubtitle">
+ <div class="publication-item">
+   <div class="publication-title">
      {{ publication.title }}
    </div>
-   <div class="pubauthors">
+   <div class="publication-authors">
      {{ publication.authors }}
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
 	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>{% if publication.type == 'preprint' %}&nbsp;&nbsp;
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
@@ -40,18 +40,18 @@ weight: 2
 {% for publication in publications %}
  {% if publication.type == 'journal' %}
  <li>
- <div class="pubitem">
-   <div class="pubtitle">
+ <div class="publication-item">
+   <div class="publication-title">
      {{ publication.title }}
    </div>
-   <div class="pubauthors">
+   <div class="publication-authors">
      {{ publication.authors }}
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
 	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
@@ -70,18 +70,18 @@ weight: 2
 {% for publication in publications %}
  {% if publication.type == 'conference' %}
  <li>
- <div class="pubitem">
-   <div class="pubtitle">
+ <div class="publication-item">
+   <div class="publication-title">
      {{ publication.title }}
    </div>
-   <div class="pubauthors">
+   <div class="publication-authors">
      {{ publication.authors }}
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
 	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
@@ -103,18 +103,18 @@ weight: 2
 {% for publication in publications %}
  {% if publication.type == 'workshop' %}
  <li>
- <div class="pubitem">
-   <div class="pubtitle">
+ <div class="publication-item">
+   <div class="publication-title">
      {{ publication.title }}
    </div>
-   <div class="pubauthors">
+   <div class="publication-authors">
      {{ publication.authors }}
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
 	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    {% if publication.nobib == False %}
@@ -136,18 +136,18 @@ weight: 2
 {% for publication in publications %}
  {% if publication.type == 'thesis' %}
  <li>
- <div class="pubitem">
-   <div class="pubtitle">
+ <div class="publication-item">
+   <div class="publication-title">
      {{ publication.title }}
    </div>
-   <div class="pubauthors">
+   <div class="publication-authors">
      {{ publication.authors }}
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
 	 <i>{{ publication.publication }}</i>, {{ publication.year}}
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
