@@ -89,9 +89,9 @@ The course is given in 8 sessions of 3 hours each
 Data Analysis Librairies,https://jordan-frecon.com/courses/data-analysis/introduction
 Introduction to Machine Learning,https://jordan-frecon.com/courses/data-analysis/machine-learning
 Numerical Optimization,https://jordan-frecon.com/courses/data-analysis/numerical-optimization
-Supervised Learning: Part 1,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1
-Supervised Learning: Part 2,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2
-Supervised Learning: Part 3,https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3
+Fundamental Supervised Models,https://jordan-frecon.com/courses/data-analysis/fundamental-supervised-models
+Advanced Supervised Models,https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models
+Neural Networks,https://jordan-frecon.com/courses/data-analysis/neural-networks
 Unsupervised Learning,https://jordan-frecon.com/courses/data-analysis/unsupervised-learning
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
