@@ -1,1 +1,0 @@
-import{o,b as t,f as s}from"../modules/vue-B8uRXbDq.js";import{b as a}from"../index-B5RzD3mo.js";const c={},l={class:"slidev-layout default"};function n(e,r){return o(),t("div",l,[s(e.$slots,"default")])}const f=a(c,[["render",n],["__file","/home/fj103585/Documents/GitHub/course-data-analysis/node_modules/@slidev/client/layouts/default.vue"]]);export{f as I};
