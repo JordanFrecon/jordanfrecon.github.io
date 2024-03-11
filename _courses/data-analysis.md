@@ -86,8 +86,8 @@ The course is given in 8 sessions of 3 hours each
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
-Data Analysis Librairies,https://jordan-frecon.com/courses/data-analysis/introduction
-Introduction to Machine Learning,https://jordan-frecon.com/courses/data-analysis/machine-learning
+Introduction,https://jordan-frecon.com/courses/data-analysis/introduction
+Machine Learning,https://jordan-frecon.com/courses/data-analysis/machine-learning
 Numerical Optimization,https://jordan-frecon.com/courses/data-analysis/numerical-optimization
 Fundamental Supervised Models,https://jordan-frecon.com/courses/data-analysis/fundamental-supervised-models
 Advanced Supervised Models,https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models
