@@ -39,7 +39,7 @@ This course is designed to provide a quick introduction to data analysis algorit
 
 ## <i class="fas fa-book"></i> Course Program
 
-The course is given in 10 sessions of 1.5 or 3 hours
+The course is given in 10 sessions of 1.5 or 3 hours (indicated by <i class="fas fa-clock"></i>)
 
 {% capture accordion_items %}
 <b>Session 1.</b> Data analysis with Python;
@@ -52,7 +52,7 @@ The course is given in 10 sessions of 1.5 or 3 hours
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Formal definition; Supervised learning; Unsupervised learning</li><li>What is learning; Hypothesis space; Generalization</li><li>Training, validating and testing models</li><li>Hyperparameters; Data splitting techniques; Regularization</li></ul>
 ---
-<b>Session 3.</b> ML for non ML Practionners;
+<b>Session 3.</b> ML for non ML Practionners <i class="fas fa-clock"></i>;
 Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab2-diamonds-market/lab2-diamonds-market.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>1D linear regression</li><li>Link between statistics and ML</li><li>Grid-search algorithm</li></ul>
 ---
@@ -66,7 +66,7 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Tutorial class on fundamental supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/fundamental-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>K-nearest neighbors</li><li>Linear regression</li><li>Ridge regression</li></ul>
 ---
-<b>Session 6.</b> Train and use simple supervised models to study penguins;
+<b>Session 6.</b> Train and use simple supervised models to study penguins <i class="fas fa-clock"></i>;
 - Lab exercise: Penguins of antartica (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab3-penguins-of-antarctica/lab3-penguins-of-antarctica.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Visualize meaningful features</li><li>Cross-validation; K-fold cross-validation</li><li>KNN Classification; Linear and KNN Regression</li></ul>
 ---
@@ -74,11 +74,11 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Tutorial class on advanced supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Decision trees</li><li>Logistic regression</li><li>Support vector machine</li></ul>
 ---
-<b>Session 8.</b> Forecast loan repayment success with supervised classification models;
+<b>Session 8.</b> Forecast loan repayment success with supervised classification models <i class="fas fa-clock"></i>;
 - Lab exercise: Loan prediction (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab4-loan-prediction/lab4-loan-prediction.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Model and visualize decision trees</li><li>Impact of the tree depth on the decision boundaries</li><li>Comparison with logistic regression and SVM</li></ul>
 ---
-<b>Session 9.</b> Real-time camera classification using neural networks.;
+<b>Session 9.</b> Real-time camera classification using neural networks <i class="fas fa-clock"></i>;
 - Tutorial class on neural networks (<a href="https://jordan-frecon.com/courses/data-analysis/neural-networks"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Linear layers; Neurons; Activation function; Softmax layer</li><li>Backpropagation</li><li>Adversarial attacks</li></ul>
 - Presentations by students
@@ -86,7 +86,7 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Lab exercise: Live camera (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab5-live-camera/lab5-live-camera.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Train and evaluate multi-layer perceptrons</li><li>Prevent overfitting with early stopping</li><li>Hyperparameters and architecture search</li></ul>
 ---
-<b>Session 10.</b> Apply unsupervised learning algorithms to predict digits;
+<b>Session 10.</b> Apply unsupervised learning algorithms to predict digits <i class="fas fa-clock"></i>;
 - Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>K-means</li><li>Principal component analysis</li></ul>
 - Lab exercise: Digits recognition (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab6-digits-recognition/lab6-digits-recognition.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
