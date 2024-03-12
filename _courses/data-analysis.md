@@ -42,14 +42,15 @@ This course is designed to provide a quick introduction to data analysis algorit
 The course is given in 8 sessions of 3 hours each
 
 {% capture accordion_items %}
-<b>Session 1.</b> Introduction to data analysis with Python;
+<b>Session 1.</b> Data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis (<a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Data analysis; Types of data; Data representation</li><li>Differences between AI and ML</li><li>Python librairies: Numpy, Pandas, Scikit-learn</li></ul>
 - Lab1: First steps of data analysis | Video Games Sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab1-video-games-sales/lab1-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
-<b>Session 2.</b> Perform basics exploratory data analysis;
-- Practical exercices on two use cases
-<ol><li>Behaviours of a telecom operator's customers (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/1-telecom-client.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Video games sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-1/2-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>---
+<b>Session 2.</b> Introduction to machine learning;
+- Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Formal definition; Supervised learning; Unsupervised learning</li><li>What is learning; Hypothesis space; Generalization</li><li>Training, validating and testing models</li><li>Hyperparameters; Data splitting techniques; Regularization</li></ul>
+---
 <b>Session 3.</b> Apply your first supervised learning algorithms;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ul>
