@@ -55,13 +55,11 @@ The course is given in 8 sessions of 3 hours each
 Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab2-diamonds-market/lab2-diamonds-market.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>1D linear regression</li><li>Link between statistics and ML</li><li>Grid-search algorithm</li></ul>
 ---
-<b>Session 4.</b> Train and use simple supervised classification models;
-- Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>Logistic Regression</li><li>Decision Trees</li></ul>
+<b>Session 4.</b> Panorama of numerical optimization algorithms;
 - Tutorial class on numerical optimization (<a href="https://jordan-frecon.com/courses/data-analysis/numerical-optimization"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>Convex vs. nonconvex</li><li>Role and impact of the step-size</li></ul>
-- Practical exercices
-<ol><li>Toy examples (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-3/session-3.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li><li>Wine quality analysis (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-2/wine-quality.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)</li></ol>
+<ul><li>Principle</li><li>Convex vs. nonconvex</li><li>Gradient descent; Impact of the step-size</li></ul>
+- Presentations by students
+<ul><li>Random search; SGD; Adam; BFGS; Coordinate descent; Linesearch</li><li>Newton's method; Genetic algorithm; Branch-and-bound algorithm</li></ul>
 ---
 <b>Session 5.</b> Master advanced supervised classification algorithms;
 - Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
