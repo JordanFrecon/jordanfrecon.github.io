@@ -45,18 +45,14 @@ The course is given in 8 sessions of 3 hours each
 <b>Session 1.</b> Data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis (<a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Data analysis; Types of data; Data representation</li><li>Differences between AI and ML</li><li>Python librairies: Numpy, Pandas, Scikit-learn</li></ul>
-- Lab1: First steps of data analysis | Video Games Sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab1-video-games-sales/lab1-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+- Lab1: Video games sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab1-video-games-sales/lab1-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 2.</b> Introduction to machine learning;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Formal definition; Supervised learning; Unsupervised learning</li><li>What is learning; Hypothesis space; Generalization</li><li>Training, validating and testing models</li><li>Hyperparameters; Data splitting techniques; Regularization</li></ul>
 ---
-<b>Session 3.</b> Apply your first supervised learning algorithms;
-- Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>differences between AI and ML</li><li>distinction between supervised and unsupervised learning</li><li>training, validation and testing of ML models</li></ul>
-- Tutorial class on simple supervised learning models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part1"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>K neirest neighbors</li><li>Linear Regression</li><li>Ridge Regression</li></ul>
-- Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-2/session-2.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<b>Session 3.</b> ML for non ML Practionners;
+Lab2: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab2-diamonds-market/lab2-diamonds-market.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 4.</b> Train and use simple supervised classification models;
 - Tutorial class on simple supervised classification models (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part2"><i class="fas fa-chalkboard"></i> Slides</a>)

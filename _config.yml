@@ -1,5 +1,5 @@
 ### Site Settings ###
-title               : Jordan <i>Frecon</i> Patracone
+title               : Jordan Frecon Patracone
 description         : >-
                       Associate Professor at Télécom Saint-Etienne<br>Member of the MALICE Inria Team
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
@@ -33,7 +33,7 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : Jordan Frecon-Deloire
+  name              : Jordan Frecon Patracone
   image             : images/identity.jpg
 #  behance           : your_username
 # dribbble          : your_username
