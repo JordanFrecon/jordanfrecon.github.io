@@ -45,7 +45,7 @@ The course is given in 8 sessions of 3 hours each
 <b>Session 1.</b> Introduction to data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis (<a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Numpy</li><li>Pandas</li><li>Scikit-learn</li></ul>
-- Practical exercice (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-1/session-1.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+- Lab1: First steps of data analysis | Video Games Sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab1-video-games-sales/lab1-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 ---
 <b>Session 2.</b> Perform basics exploratory data analysis;
 - Practical exercices on two use cases
