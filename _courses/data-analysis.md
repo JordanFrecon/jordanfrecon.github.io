@@ -39,13 +39,14 @@ This course is designed to provide a quick introduction to data analysis algorit
 
 ## <i class="fas fa-book"></i> Course Program
 
-The course is given in 8 sessions of 3 hours each
+The course is given in 10 sessions of 1.5 or 3 hours
 
 {% capture accordion_items %}
 <b>Session 1.</b> Data analysis with Python;
 - Tutorial class on the concepts & librairies of data analysis (<a href="https://jordan-frecon.com/courses/data-analysis/introduction"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Data analysis; Types of data; Data representation</li><li>Differences between AI and ML</li><li>Python librairies: Numpy, Pandas, Scikit-learn</li></ul>
 - Lab exercise: Video games sales (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab1-video-games-sales/lab1-video-games-sales.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Collecting and cleaning data</li><li>Exploratory data analysis</li><li>Data visualization</li></ul>
 ---
 <b>Session 2.</b> Introduction to machine learning;
 - Tutorial class on machine learning (<a href="https://jordan-frecon.com/courses/data-analysis/machine-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
@@ -66,14 +67,14 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 <ul><li>K-nearest neighbors</li><li>Linear regression</li><li>Ridge regression</li></ul>
 ---
 <b>Session 6.</b> Train and use simple supervised models to study penguins;
-- Lab exercise: Penguins of antartica market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab3-penguins-of-antarctica/lab3-penguins-of-antarctica.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+- Lab exercise: Penguins of antartica (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab3-penguins-of-antarctica/lab3-penguins-of-antarctica.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Visualize meaningful features</li><li>Cross-validation; K-fold cross-validation</li><li>KNN Classification; Linear and KNN Regression</li></ul>
 ---
 <b>Session 7.</b> Advanced supervised models;
 - Tutorial class on advanced supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Decision trees</li><li>Logistic regression</li><li>Support vector machine</li></ul>
 ---
-<b>Session 8.</b> Forecast loan repayment success with advanced supervised classification algorithms;
+<b>Session 8.</b> Forecast loan repayment success with supervised classification models;
 - Lab exercise: Loan prediction (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab4-loan-prediction/lab4-loan-prediction.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Model and visualize decision trees</li><li>Impact of the tree depth on the decision boundaries</li><li>Comparison with logistic regression and SVM</li></ul>
 ---
@@ -83,10 +84,13 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Presentations by students
 <ul><li>CNNs, RNNs, GNNs, GANs</li><li>Autoencoders; Attention mechanisms</li><li>Transfer learning; Interpretability; Ethical considerations</li></ul>
 - Lab exercise: Live camera (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab5-live-camera/lab5-live-camera.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Train and evaluate multi-layer perceptrons</li><li>Prevent overfitting with early stopping</li><li>Hyperparameters and architecture search</li></ul>
 ---
 <b>Session 10.</b> Apply unsupervised learning algorithms to predict digits;
 - Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>K-means</li><li>Principal component analysis</li></ul>
 - Lab exercise: Digits recognition (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab6-digits-recognition/lab6-digits-recognition.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Representing and clustering data in 2D</li><li>Choosing PCA components and K-means clusters</li></ul>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
