@@ -61,14 +61,13 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Presentations by students
 <ul><li>Random search; SGD; Adam; BFGS; Coordinate descent; Linesearch</li><li>Newton's method; Genetic algorithm; Branch-and-bound algorithm</li></ul>
 ---
-<b>Session 5.</b> Master advanced supervised classification algorithms;
-- Tutorial class on advanced supervised classification algorithms (<a href="https://jordan-frecon.com/courses/data-analysis/supervised-learning-part3"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>SVM</li><li>Neural Networks</li></ul>
-- Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-4/session-4.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<b>Session 5.</b> Fundamental supervised models;
+- Tutorial class on fundamental supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/fundamental-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>K-nearest neighbors</li><li>Linear regression</li><li>Ridge regression</li></ul>
 ---
-<b>Session 6.</b> Discover unsupervised learning algorithms;
-- Tutorial class on unsupervised learning (<a href="https://jordan-frecon.com/courses/data-analysis/unsupervised-learning"><i class="fas fa-chalkboard"></i> Slides</a>)<br>
-- Practical exercices (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/session-5/session-5.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<b>Session 6.</b> Train and use simple supervised models;
+Lab exercise: Penguins of antartica market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab3-penguins-of-antarctica/lab3-penguins-of-antarctica.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Visualize meaningful features</li><li>Cross-validation; K-fold cross-validation</li><li>KNN Classification; Linear and KNN Regression</li></ul>
 ---
 <b>Session 7.</b> Apply unsupervised learning algorithms to predict digits;
 - Practical exercice on one use case (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-3/digits-recognition.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
