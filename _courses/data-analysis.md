@@ -65,9 +65,23 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 - Tutorial class on fundamental supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/fundamental-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>K-nearest neighbors</li><li>Linear regression</li><li>Ridge regression</li></ul>
 ---
-<b>Session 6.</b> Train and use simple supervised models;
+<b>Session 6.</b> Train and use simple supervised models to analyze penguins;
 Lab exercise: Penguins of antartica market (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab3-penguins-of-antarctica/lab3-penguins-of-antarctica.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Visualize meaningful features</li><li>Cross-validation; K-fold cross-validation</li><li>KNN Classification; Linear and KNN Regression</li></ul>
+---
+<b>Session 7.</b> Advanced supervised models;
+- Tutorial class on advanced supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Decision trees</li><li>Logistic regression</li><li>Support vector machine</li></ul>
+---
+<b>Session 8.</b> Forecast loan repayment success with advanced supervised classification algorithms;
+Lab exercise: Loan prediction (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab4-loan-prediction/lab4-loan-prediction.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Model and visualize decision trees</li><li>Impact of the tree depth on the decision boundaries</li><li>Comparison with logistic regression and SVM</li></ul>
+---
+<b>Session 9.</b> Neural networks;
+- Tutorial class on advanced supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/neural-networks"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Linear layers; Neurons; Activation function; Softmax layer</li><li>Backpropagation</li><li>Adversarial attacks</li></ul>
+- Presentations by students
+<ul><li>CNNs, RNNs, GNNs, GANs</li><li>Autoencoders; Attention mechanisms</li><li>Transfer learning; Interpretability; Ethical considerations</li></ul>
 ---
 <b>Session 7.</b> Apply unsupervised learning algorithms to predict digits;
 - Practical exercice on one use case (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/use-cases-DA-3/digits-recognition.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
