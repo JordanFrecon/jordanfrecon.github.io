@@ -33,7 +33,7 @@ weight: 3
 
 <ol>
 {% for student in students %}
-  {% if student.type == 'internship'%}
+  {% if student.type == 'internship' %}
   <b>Interns</b>
   <li>{{student.name}} - <em>{{student.title}}</em> ({{student.month}} {{student.year}})</li>
   {% endif %}
