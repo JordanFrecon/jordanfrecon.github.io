@@ -1,6 +1,6 @@
 - name: Ben Gao
   type: phd  
-  year: 2025
+  year: 2024
   month: October
   title: Toward frugal machine learning with physics-aware models
   cosupervisor: Olivier Alata
@@ -19,7 +19,7 @@
   
 - name: Abdel-Rahim Mezidi
   type: phd  
-  year: 2024
+  year: 2023
   month: October
   title: Unveiling and incorporating knowledge in physics-guided machine learning models
   cosupervisor: Amaury Habrard
