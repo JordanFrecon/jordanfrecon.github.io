@@ -31,14 +31,14 @@ weight: 3
 
 {% assign students = site.students | sort: "year" | reverse %}
 
-<ol>
+<b>Interns</b>
+<ul>
 {% for student in students %}
-  <b>Interns</b>
   {% if student.type == 'internship' %}
   <li>{{student.name}} - <em>{{student.title}}</em> ({{student.month}} {{student.year}})</li>
   {% endif %}
 {% endfor %}
-</ol>
+</ul>
 
 
 <h1>Courses</h1>
