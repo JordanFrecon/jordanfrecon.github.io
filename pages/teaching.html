@@ -16,16 +16,29 @@ weight: 3
 
 <b>PhD students</b>
 <ul>
+<li>Ben Gao - <em>Toward frugal machine learning with physics-aware models</em> (starting date: October 2024 - co-supervised with Olivier Alata)</li>
 <li>Abdel-Rahim Mezidi - <em>Unveiling and incorporating knowledge in physics-guided machine learning models</em> (starting date: October 2023 - co-supervised with Amaury Habrard)</li>
 </ul>
 
 <b>Interns</b>
 <ul>
+<li>Aubin Sionville - <em>Discovering the laws of physics through the bilevel learning of neural operators</em> (May-August 2024)</li>
+<li>Wynona Bouchenot - <em>Predicting publications with continuous deep models</em> (May-June 2024)</li>
 <li>Antoine Grand - <em>Multi-task learning of neural ODEs</em> (March-September 2023)</li>
 <li>Abdel-Rahim Mezidi - <em>Fast approximation of high-order hyper-gradients</em> (April-September 2023)</li>
 </ul>
 
 
+{% assign students = site.students | sort: "year" | reverse %}
+
+<ol>
+{% for student in students %}
+  {% if student.type == 'internship'%}
+  <b>Interns</b>
+  <li>{{student.name}} - <em>{{student.title}}</em> ({{student.month}} {{student.year}})</li>
+  {% endif %}
+{% endfor %}
+</ol>
 
 
 <h1>Courses</h1>

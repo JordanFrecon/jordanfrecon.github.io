@@ -79,6 +79,9 @@ collections:
   courses:
     output: true
     permalink: /:collection/:name
+  students:
+    output: true
+    permalink: /:collection/:name
 
 ### Disqus ###
 disqus: jfrecon                          # Your website Shortname on disqus
