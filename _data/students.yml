@@ -3,3 +3,22 @@
   year: 2024
   month: May-August
   title: Discovering the laws of physics through the bilevel learning of neural operators
+  
+- name: Wynona Bouchenot
+  type: internship  
+  year: 2024
+  month: May-June
+  title: Predicting publications with continuous deep models
+  
+- name: Antoine Grand
+  type: internship  
+  year: 2023
+  month: March-September
+  title: Multi-task learning of neural ODEs
+  
+- name: Abdel-Rahim Mezidi
+  type: internship  
+  year: 2023
+  month: April-September
+  title: Fast approximation of high-order hyper-gradients
+
