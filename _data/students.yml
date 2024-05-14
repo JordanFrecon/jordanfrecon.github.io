@@ -1,3 +1,10 @@
+- name: Ben Gao
+  type: phd  
+  year: 2025
+  month: October
+  title: Toward frugal machine learning with physics-aware models
+  cosupervisor: Olivier Alata
+
 - name: Aubin Sionville
   type: internship  
   year: 2024
@@ -9,6 +16,13 @@
   year: 2024
   month: May-June
   title: Predicting publications with continuous deep models
+  
+- name: Abdel-Rahim Mezidi
+  type: phd  
+  year: 2024
+  month: October
+  title: Unveiling and incorporating knowledge in physics-guided machine learning models
+  cosupervisor: Amaury Habrard
   
 - name: Antoine Grand
   type: internship  
