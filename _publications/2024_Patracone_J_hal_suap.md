@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: A Theoretically Grounded Extension of Universal Attacks from the Attacker's Viewpoint
-authors: J. Frecon, P. Viallard, E. Morvant, G. Gasso, A. Habrard and S. Canu
+authors: J. Patracone, P. Viallard, E. Morvant, G. Gasso, A. Habrard and S. Canu
 publication: Under review
 year: 2024
 doi:
