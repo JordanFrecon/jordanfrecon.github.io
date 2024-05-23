@@ -19,18 +19,18 @@ layout: page
 {% for publi in publications %}
  {% if publi.project ==  page.keyword %}
  <li>
- <div class="pubitem">
-   <div class="pubauthors">
+ <div class="publication-item">
+   <div class="publication-authors">
      {{ publi.authors }},
    </div>
-   <div class="pubtitle">
+   <div class="publication-title">
      {{ publi.title }},
    </div>
-   <div class="pubinfo">
+   <div class="publication-info">
      {{ publi.publication }}, {{ publi.year}}.
    </div>
  </div>
- <div class="publinks">
+ <div class="publication-links">
    <a href="{{publi.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
    <a href="/download/{{ publi.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    <a href="/download/{{ publi.slug}}.bib"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
