@@ -35,35 +35,7 @@ weight: 2
 {% endfor %}
 </ol>
 
-# **International Journals**
-<ol>
-{% for publication in publications %}
- {% if publication.type == 'journal' %}
- <li>
- <div class="publication-item">
-   <div class="publication-title">
-     {{ publication.title }}
-   </div>
-   <div class="publication-authors">
-     {{ publication.authors }}
-   </div>
-   <div class="publication-info">
-	 <i>{{ publication.publication }}</i>, {{ publication.year}}
-   </div>
- </div>
- <div class="publication-links">
-   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
-   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
-   {% if publication.toolbox %}
-   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
-   {% endif %}
- </div>
- <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
- </li>
- {% endif %}
-{% endfor %}
-</ol>
+
 
 # **International Conferences**
 <ol>
@@ -88,6 +60,36 @@ weight: 2
    {% if publication.spotlight %}
    <a href="{{ publication.spotlight }}"><i class="fas fa-video"></i> Spotlight</a>&nbsp;&nbsp;
    {% endif %}
+   {% if publication.toolbox %}
+   <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
+   {% endif %}
+ </div>
+ <div class="answer" id="{{ publication.slug }}"><p><iframe src="/download/{{ publication.slug}}.txt" scrolling='yes' width="100%" frameborder='0'></iframe></p></div>
+ </li>
+ {% endif %}
+{% endfor %}
+</ol>
+
+# **International Journals**
+<ol>
+{% for publication in publications %}
+ {% if publication.type == 'journal' %}
+ <li>
+ <div class="publication-item">
+   <div class="publication-title">
+     {{ publication.title }}
+   </div>
+   <div class="publication-authors">
+     {{ publication.authors }}
+   </div>
+   <div class="publication-info">
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
+   </div>
+ </div>
+ <div class="publication-links">
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>&nbsp;&nbsp;
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   <a href="javascript:void(0)" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>&nbsp;&nbsp;
    {% if publication.toolbox %}
    <a href="{{ publication.toolbox }}"><i class="fab fa-github"></i> Toolbox</a>&nbsp;&nbsp;
    {% endif %}
