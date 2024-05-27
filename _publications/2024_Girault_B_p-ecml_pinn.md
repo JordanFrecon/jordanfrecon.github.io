@@ -2,11 +2,10 @@
 layout: publication
 title: Approximation Error of Sobolev Regular Functions with tanh Neural Networks - Theoretical Impact on PINNs
 authors: B. Girault, R. Emonet, A. Habrard, J. Patracone and M. Sebban
-publication: Under review
+publication: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)
 year: 2024
 doi:
-image: False
-type: preprint
+type: conference
 project: physics
 ---
 
