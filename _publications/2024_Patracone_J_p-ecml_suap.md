@@ -2,11 +2,10 @@
 layout: publication
 title: A Theoretically Grounded Extension of Universal Attacks from the Attacker's Viewpoint
 authors: J. Patracone, P. Viallard, E. Morvant, G. Gasso, A. Habrard and S. Canu
-publication: Under review
+publication: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)
 year: 2024
 doi:
-image: False
-type: unpublished
+type: conference
 project: adversarialLearning
 ---
 

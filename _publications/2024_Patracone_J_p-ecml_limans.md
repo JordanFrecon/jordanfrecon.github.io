@@ -2,10 +2,10 @@
 layout: publication
 title: Linear Modeling of the Adversarial Noise Space
 authors: J. Patracone, L. Anquetil, Y. Liu, G. Gasso and S. Canu
-publication: Under review
+publication: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)
 year: 2024
 doi:
-type: unpublished
+type: conference
 project: adversarialLearning
 ---
 
