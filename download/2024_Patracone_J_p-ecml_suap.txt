@@ -1,0 +1,13 @@
+@unpublished{Patracone:hal-03615461,
+  TITLE = {{Semi-Universal Adversarial Perturbations}},
+  AUTHOR = {Patracone, Jordan and Viallard, Paul and Morvant, Emilie and Gasso, Gilles and Habrard, Amaury and Canu, St{\'e}phane},
+  URL = {https://hal.science/hal-03615461},
+  NOTE = {working paper or preprint},
+  YEAR = {2023},
+  MONTH = Jun,
+  KEYWORDS = {adversarial},
+  PDF = {https://hal.science/hal-03615461v2/file/suap_hal.pdf},
+  HAL_ID = {hal-03615461},
+  HAL_VERSION = {v2},
+}
+

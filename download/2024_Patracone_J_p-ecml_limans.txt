@@ -1,0 +1,12 @@
+@proceedings{Patracone:hal-04589704,
+  TITLE = {{Linear Modeling of the Adversarial Noise Space}},
+  AUTHOR = {Patracone, Jordan and Anquetil, Lucas and Liu, Yuan and Gasso, Gilles and Canu, St{\'e}phane},
+  URL = {https://inria.hal.science/hal-04589704},
+  BOOKTITLE = {{ECML}},
+  YEAR = {2024},
+  KEYWORDS = {Adversarial attacks ; Dictionary learning ; Manifold learning},
+  PDF = {https://inria.hal.science/hal-04589704/file/LIMANS_ECML_2024.pdf},
+  HAL_ID = {hal-04589704},
+  HAL_VERSION = {v1},
+}
+
