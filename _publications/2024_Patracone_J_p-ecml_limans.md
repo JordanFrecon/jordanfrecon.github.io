@@ -5,6 +5,7 @@ authors: J. Patracone, L. Anquetil, Y. Liu, G. Gasso and S. Canu
 publication: European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)
 year: 2024
 doi:
+slides: True
 type: conference
 project: adversarialLearning
 ---
