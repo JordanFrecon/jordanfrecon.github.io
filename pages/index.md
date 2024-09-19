@@ -22,6 +22,5 @@ permalink: /
 <span class="title">Open positions</span>
 <ul>
 <li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://perso.univ-st-etienne.fr/sebbanma/">offer</a>)</li>
-<li>Postdoc: <em>Modeling, optimization and transfer in physics-based machine learning</em> (<a href="/download/postdoc/2024-Postdoc-LabHC-PhysicsML.pdf">offer</a>)</li>
 </ul>
 </div>
