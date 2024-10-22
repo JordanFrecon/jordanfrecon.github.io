@@ -9,6 +9,10 @@ hours: 9
 year_post: 2024
 ---
 
+## <i class="fas fa-book"></i> Course Program
+
+Each year, one of the following programs is taught.
+
 {% capture accordion_items %}
 <b>Program 2.</b> Adversarial Machine Learning;
 - Tutorial class on adversarial machine learning (<a href="https://jordan-frecon.com/courses/mldm-advanced-ml/adversarial-ml"><i class="fas fa-chalkboard"></i> Slides</a>)
