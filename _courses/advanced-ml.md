@@ -17,5 +17,10 @@ Each year, one of the following programs is taught.
 <b>Program 2.</b> Adversarial Machine Learning;
 - Tutorial class on adversarial machine learning (<a href="https://jordan-frecon.com/courses/mldm-advanced-ml/adversarial-ml"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principle; Specific and universal attacks; Transferability; Defense mechanisms</li><li>Optimization problem</li><li>Applications</li></ul>
+- Lab exercise: Introduction to adversarial ML (<a href="http://jordan-frecon.com/jupyterlite/lab?path=mldm-advanced-ml%2F2-adversarial-ml%2Fadversarial-learning.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>FGSM attack</li><li>Adversarial retraining</li></ul>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-adversarial-ml" %}
+
+
+
