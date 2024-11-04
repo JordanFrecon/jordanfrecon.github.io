@@ -16,7 +16,7 @@ Each year, one of the following programs is taught.
 {% capture accordion_items %}
 <b>Program 1.</b> Proximal Splitting Algorithms;
 - Tutorial class (<a href="https://jordan-frecon.com/courses/mldm-advanced-ml/proximal-splitting-algorithms"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>Introduction to non-smooth optimization; Specific and universal attacks; Transferability; Defense mechanisms</li><li>First-order algorithms (gradient descent, subgradient descent, proximal algorithm)</li><li>Fenchel duality</li><li>Proximal splitting algorithms (forward-backward, Douglas-Rachford, primal-dual, proximal ADMM)</li></ul>
+<ul><li>Introduction to non-smooth optimization</li><li>First-order algorithms (gradient descent, subgradient descent, proximal algorithm)</li><li>Fenchel duality</li><li>Proximal splitting algorithms (forward-backward, Douglas-Rachford, primal-dual, proximal ADMM)</li></ul>
 - Lab exercise: Introduction to proximal splitting algorithms (<a href="https://jordan-frecon.com/jupyterlite/lab?path=mldm-advanced-ml%2F1-proximal-optimization%2FTD_proximal_splitting_algorithms.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Feature selection with Lasso</li><li>Piecewise constant denoising</li></ul>
 ---
