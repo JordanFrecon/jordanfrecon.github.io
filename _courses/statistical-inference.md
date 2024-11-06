@@ -50,11 +50,14 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 <b>Part 4.</b> Solving various conformity tests <i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
-<b>Part 5.</b> Homogeneity Tests: Theory and Practice <i class="fas fa-clock"></i>;
+<b>Part 5.</b> Homogeneity tests: theory and practice <i class="fas fa-clock"></i>;
 - Tutorial class on tests of homogeneity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Homogeneity Tests</li><li>Distributions: Student’s t-distribution, Fisher</li><li>Tests: Fisher, Levene, Student, Welch</li></ul>
 - Tutorial exercices
 ---
+<b>Part 6.</b> Performing statistical tests in Python <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+- Lab exercise: The Italian Grand Prix (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/monza/monza.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Descriptive statistics</li><li>Conformity tests</li><li>Data visualization</li></ul>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
