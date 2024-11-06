@@ -43,12 +43,18 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 <b>Part 2.</b> First hands-on practice with statistical tests <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
-<b>Part 3.</b> Statistical Tests of Conformity;
+<b>Part 3.</b> Statistical tests of conformity;
 - Tutorial class on tests of conformity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Conformity Tests</li><li>Distributions: Student’s t-distribution, Chi-squared, Bernoulli</li></ul>
 ---
 <b>Part 4.</b> Solving various conformity tests <i class="fas fa-clock"></i>;
 - Tutorial exercices
+---
+<b>Part 5.</b> Homogeneity Tests: Theory and Practice <i class="fas fa-clock"></i>;
+- Tutorial class on tests of homogeneity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Principles of Mean, Variance, and Proportion Homogeneity Tests</li><li>Distributions: Student’s t-distribution, Fisher</li><li>Tests: Fisher, Levene, Student, Welch</li></ul>
+- Tutorial exercices
+---
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
