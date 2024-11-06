@@ -72,7 +72,7 @@ Lab exercise: Diamonds market (<a href="https://jordan-frecon.com/jupyterlite/re
 ---
 <b>Session 7.</b> Advanced supervised models;
 - Tutorial class on advanced supervised models (<a href="https://jordan-frecon.com/courses/data-analysis/advanced-supervised-models"><i class="fas fa-chalkboard"></i> Slides</a>)
-<ul><li>Decision trees</li><li>Logistic regression</li><li>Support vector machine</li></ul>
+<ul><li>Decision trees</li><li>Logistic regression (<a href="https://marimo.app/?mode=read&include-code=false&show-code=false&slug=vwwxcw"><i class="fa-solid fa-sliders"></i> Animation</a>)</li><li>Support vector machine</li></ul>
 ---
 <b>Session 8.</b> Forecast loan repayment success with supervised classification models <i class="fas fa-clock"></i>;
 - Lab exercise: Loan prediction (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=data-analysis/lab4-loan-prediction/lab4-loan-prediction.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
