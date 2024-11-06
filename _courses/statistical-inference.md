@@ -43,7 +43,7 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 <b>Session 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
-<b>Session 3.</b> Statistical Tests of Conformity <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+<b>Session 3.</b> Statistical Tests of Conformity;
 - Tutorial class on tests of conformity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Conformity Tests</li><li>Distributions: Student’s t-distribution, Chi-squared, Bernoulli</li></ul>
 <b>Session 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i>;
