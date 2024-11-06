@@ -40,7 +40,7 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 <b>Part 1.</b> Introduction to statistical tests;
 - Tutorial class on the concepts of statistical inference (<a href="https://jordan-frecon.com/courses/statistical-inference/introduction/"><i class="fas fa-chalkboard"></i> Slides</a>)
 ---
-<b>Part 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+<b>Part 2.</b> First hands-on practice with statistical tests <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
 <b>Part 3.</b> Statistical Tests of Conformity;
@@ -49,7 +49,6 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 ---
 <b>Part 4.</b> Solving various conformity tests <i class="fas fa-clock"></i>;
 - Tutorial exercices
----
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
