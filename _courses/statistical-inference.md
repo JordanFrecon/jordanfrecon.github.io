@@ -32,6 +32,24 @@ This course is designed to provide a quick introduction to statistical inference
 - Use Python to design a test.
 
 
+## <i class="fas fa-book"></i> Course Program
+
+The course is given in 10 sessions of 1.5 or 3 hours (indicated by <i class="fas fa-clock"></i>)
+
+{% capture accordion_items %}
+<b>Session 1.</b> Introduction to statistical tests;
+- Tutorial class on the concepts of statistical inference (<a href="https://jordan-frecon.com/courses/statistical-inference/introduction/"><i class="fas fa-chalkboard"></i> Slides</a>)
+---
+<b>Session 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+- Tutorial exercices
+---
+<b>Session 3.</b> Statistical Tests of Conformity <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+- Tutorial class on tests of conformity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Principles of Mean, Variance, and Proportion Conformity Tests</li><li>Distributions: Student’s t-distribution, Chi-squared, Bernoulli</li></ul>
+{% endcapture %}
+{% include elements/accordion-test.html id="program-data-analysis-v2" %}
+
+
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
