@@ -37,16 +37,16 @@ This course is designed to provide a quick introduction to statistical inference
 The course is divided in multiple parts of varying length (each symbol <i class="fas fa-clock"></i> approximately corresponds to 1.5 hour)
 
 {% capture accordion_items %}
-<b>Session 1.</b> Introduction to statistical tests;
+<b>Part 1.</b> Introduction to statistical tests;
 - Tutorial class on the concepts of statistical inference (<a href="https://jordan-frecon.com/courses/statistical-inference/introduction/"><i class="fas fa-chalkboard"></i> Slides</a>)
 ---
-<b>Session 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
+<b>Part 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
-<b>Session 3.</b> Statistical Tests of Conformity;
+<b>Part 3.</b> Statistical Tests of Conformity;
 - Tutorial class on tests of conformity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Conformity Tests</li><li>Distributions: Student’s t-distribution, Chi-squared, Bernoulli</li></ul>
-<b>Session 2.</b> Solving statistical tests in practice <i class="fas fa-clock"></i>;
+<b>Part 4.</b> Solving various conformity tests <i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
 {% endcapture %}
