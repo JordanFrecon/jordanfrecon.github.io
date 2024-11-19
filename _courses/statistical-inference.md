@@ -58,6 +58,16 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 <b>Part 6.</b> Performing statistical tests in Python <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Lab exercise: The Italian Grand Prix (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/monza/monza.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Descriptive statistics</li><li>Conformity tests</li><li>Data visualization</li></ul>
+---
+<b>Part 7.</b> Dependence and paired comparisons in statistics;
+- Tutorial class on paired samples tests (<a href="https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Contingency tables, Mc Nemar's test statistic</li></ul>
+- Tutorial class on independence tests (<a href="https://jordan-frecon.com/courses/statistical-inference/independence-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
+<ul><li>Chi square test of independence</li></ul>
+---
+<b>Part 8.</b> Mastering statistical inference with Python <i class="fas fa-clock"></i>;
+- Lab exercise: UFO Sightings (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/ufo-sightings/ufo.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+<ul><li>Extracting statistical traits</li><li>Independence tests</li><li>Data visualization</li></ul>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
@@ -70,8 +80,8 @@ Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statis
 Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
 Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
 Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/
-Tests of Normality,https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/normality-tests/normality-test.ipynb
 Tests of Independence,https://jordan-frecon.com/courses/statistical-inference/independence-tests/ 
+Tests of Normality,https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/normality-tests/normality-test.ipynb
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
 
