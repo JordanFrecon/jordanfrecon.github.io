@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Relax and Penalize - a New Bilevel Approach to Mixed-Binary Hyperparameter Optimization
-authors: M. De Santis, J. Frecon, F. Rinaldi, S. Salzo, M. Schmidt and S. Venturini
+authors: M. De Santis, J. Patracone, F. Rinaldi, S. Salzo, M. Schmidt and S. Venturini
 publication: Under review
 year: 2024
 doi:
