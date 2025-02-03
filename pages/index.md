@@ -21,6 +21,6 @@ permalink: /
 <div class="danger-box-titled">
 <span class="title">Open positions</span>
 <ul>
-<li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://perso.univ-st-etienne.fr/sebbanma/">offer</a>)</li>
+<li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://labhc-malice.github.io/">offer</a>)</li>
 </ul>
 </div>
