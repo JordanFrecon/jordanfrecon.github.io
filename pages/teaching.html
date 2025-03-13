@@ -12,33 +12,37 @@ weight: 3
 
 <h1>Supervision</h1>
 
+
 {% assign students = site.data.students | sort: "year" | reverse %}
 
-<h2>Postdoctoral Researchers</h2>
+<b>Postdoctoral researchers</b>
+<ul>
 {% for student in students %}
   {% if student.type == 'postdoc' %}
-    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> (starting: {{ student.month }} {{ student.year }})</p>
+  <li><strong>{{student.name}}</strong> - <em>{{student.title}}</em> (starting: {{student.month}} {{student.year}})</li>
   {% endif %}
 {% endfor %}
+</ul>
 
-<h2>PhD Students</h2>
+<b>PhD students</b>
+<ul>
 {% for student in students %}
   {% if student.type == 'phd' %}
-    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> (starting: {{ student.month }} {{ student.year }})
-      {% if student.cosupervisor %}– Co-supervised with {{ student.cosupervisor }}{% endif %}
-    </p>
+  <li><strong>{{student.name}}</strong> - <em>{{student.title}}</em> (starting: {{student.month}} {{student.year}}) - co-supervised with {{student.cosupervisor}}</li>
   {% endif %}
 {% endfor %}
+</ul>
 
-<h2>Interns</h2>
+<b>Interns</b>
+<ul>
 {% for student in students %}
   {% if student.type == 'internship' %}
-    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> ({{ student.month }} {{ student.year }})
-      {% if student.cosupervisor %}– Co-supervised with {{ student.cosupervisor }}{% endif %}
-    </p>
+  <li><strong>{{student.name}}</strong> - <em>{{student.title}}</em> ({{student.month}} {{student.year}})
+    {% if student.cosupervisor %}- co-supervised with {{student.cosupervisor}}{% endif %}
+  </li>
   {% endif %}
 {% endfor %}
-
+</ul>
 
 
 <h1>Courses</h1>
