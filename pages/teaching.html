@@ -15,48 +15,29 @@ weight: 3
 {% assign students = site.data.students | sort: "year" | reverse %}
 
 <h2>Postdoctoral Researchers</h2>
-<table>
-  <tr><th>Name</th><th>Title</th><th>Starting Date</th></tr>
-  {% for student in students %}
-    {% if student.type == 'postdoc' %}
-      <tr>
-        <td>{{ student.name }}</td>
-        <td><em>{{ student.title }}</em></td>
-        <td>{{ student.month }} {{ student.year }}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+{% for student in students %}
+  {% if student.type == 'postdoc' %}
+    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> (starting: {{ student.month }} {{ student.year }})</p>
+  {% endif %}
+{% endfor %}
 
 <h2>PhD Students</h2>
-<table>
-  <tr><th>Name</th><th>Title</th><th>Starting Date</th><th>Co-supervisor</th></tr>
-  {% for student in students %}
-    {% if student.type == 'phd' %}
-      <tr>
-        <td>{{ student.name }}</td>
-        <td><em>{{ student.title }}</em></td>
-        <td>{{ student.month }} {{ student.year }}</td>
-        <td>{% if student.cosupervisor %}{{ student.cosupervisor }}{% else %}-{% endif %}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+{% for student in students %}
+  {% if student.type == 'phd' %}
+    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> (starting: {{ student.month }} {{ student.year }})
+      {% if student.cosupervisor %}– Co-supervised with {{ student.cosupervisor }}{% endif %}
+    </p>
+  {% endif %}
+{% endfor %}
 
 <h2>Interns</h2>
-<table>
-  <tr><th>Name</th><th>Title</th><th>Period</th><th>Co-supervisor</th></tr>
-  {% for student in students %}
-    {% if student.type == 'internship' %}
-      <tr>
-        <td>{{ student.name }}</td>
-        <td><em>{{ student.title }}</em></td>
-        <td>{{ student.month }} {{ student.year }}</td>
-        <td>{% if student.cosupervisor %}{{ student.cosupervisor }}{% else %}-{% endif %}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+{% for student in students %}
+  {% if student.type == 'internship' %}
+    <p><strong>{{ student.name }}</strong> – <em>{{ student.title }}</em> ({{ student.month }} {{ student.year }})
+      {% if student.cosupervisor %}– Co-supervised with {{ student.cosupervisor }}{% endif %}
+    </p>
+  {% endif %}
+{% endfor %}
 
 
 
