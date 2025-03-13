@@ -1,3 +1,22 @@
+- name: Volodimir Mitarchuk
+  type: postdoc
+  year: 2025
+  month: January
+  title: Preserved function classes in neural operators and robust learning of Koopman eigenfunctions under distribution shifts
+
+- name: Alexin Choisnet
+  type: internship
+  year: 2025
+  month: May-July
+  title: Physics-informed modeling of the optical response of a diffractive structure
+  cosupervisor: Nicolas Crespo-Monteiro
+
+- name: Valentin Malquy
+  type: internship
+  year: 2025
+  month: May-July
+  title: Physics-guided machine learning of free-form reflector design
+
 - name: Ben Gao
   type: phd  
   year: 2024
