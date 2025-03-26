@@ -1,25 +1,26 @@
-{%- comment %}
-Manually flatten and annotate teaching data from separate year files in _data/teaching/.
-Compatible with Jekyll 3.10 (GitHub Pages).
+{%- comment -%}
+This manually flattens all course data from _data/teaching/*.yml where each file is named with the academic year (e.g. "2022-2023").
+Fully compatible with GitHub Pages (Jekyll 3.10).
 {%- endcomment -%}
 
 {%- assign all_courses = "" | split: "" -%}
 {%- assign years = "2013-2014,2014-2015,2015-2016,2021-2022,2022-2023" | split: "," -%}
 
 {%- for year in years -%}
-  {%- assign courses = site.data.teaching[year] -%}
-  {%- for course in courses -%}
-    {%- assign course_with_year = course | merge: {"year": year} -%}
+  {%- assign year_data = site.data.teaching[year] -%}
+  {%- for course in year_data -%}
+    {%- assign course_with_year = course | merge: { "year": year } -%}
     {%- assign all_courses = all_courses | push: course_with_year -%}
   {%- endfor -%}
 {%- endfor -%}
 
 {%- assign course_sort = all_courses | sort: "year" | reverse -%}
-{%- assign course_by_year = course_sort | group_by:"year" -%}
-{%- assign course_by_inst = course_sort | group_by:"institution" -%}
+{%- assign course_by_year = course_sort | group_by: "year" -%}
+{%- assign course_by_inst = course_sort | group_by: "institution" -%}
 
 {%- assign years_list = course_by_year | map: 'name' -%}
 {%- assign courses_per_year_list = course_by_year | map: 'items' -%}
+
 
 
 
