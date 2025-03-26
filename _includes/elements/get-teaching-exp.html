@@ -4,7 +4,7 @@
   {%- assign academic_year = entry[0] -%} {# e.g., "2012-2013" #}
   {%- assign courses = entry[1] -%}
   {%- assign year_string = academic_year | split: "-" | first -%}
-  {%- assign year = year_string | plus: 0 -%} {# Convert to integer #}
+  {%- assign year = year_string | to_integer -%} {# Convert to integer #}
   {%- for course in courses %}
     {%- assign course_with_year = course | merge: {"year": year} -%}
     {%- assign all_courses = all_courses | push: course_with_year -%}
