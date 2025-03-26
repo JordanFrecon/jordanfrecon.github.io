@@ -3,12 +3,11 @@
 {%- for pair in site.data.teaching %}
   {%- assign filename = pair[0] -%}
   {%- assign course_list = pair[1] -%}
-  {%- assign year_string = filename | split: "-" | first -%}
-  {%- assign year = year_string | plus: 0 -%}
+  {%- assign year = filename | split: "-" | first -%}
 
   {%- for course in course_list %}
-    {%- assign course_with_year = course | merge: { "year": year_string, "academic_year": filename } -%}
-    {%- assign all_courses = all_courses | push: course_with_year -%}
+    {%- assign annotated_course = course | merge: { "year": year, "academic_year": filename } -%}
+    {%- assign all_courses = all_courses | push: annotated_course -%}
   {%- endfor -%}
 {%- endfor -%}
 
