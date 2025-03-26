@@ -1,4 +1,3 @@
-```html name=_includes/elements/get-teaching-exp.html
 {%- assign all_courses = "" | split: "" -%}
 
 {%- for pair in site.data.teaching %}
@@ -106,7 +105,8 @@
 			{%- assign sep_hour_inner = sep_hour_inner | append: "," -%}
 			
 			{%- if course.institution == inst -%}
-				{%- assign sep_hour_inner = sep_hour_inner | append: course.hours | plus: 0 -%}
+				{%- assign course_hours = course.hours | plus: 0 -%}
+				{%- assign sep_hour_inner = sep_hour_inner | append: course_hours -%}
 			{%- else -%}
 				{%- assign sep_hour_inner = sep_hour_inner | append: "null" -%}
 			{%- endif -%}
@@ -162,7 +162,7 @@ var INSTITUTIONS = [{%- assign institution_split = sep_institution | split: '#' 
 
 var TITLES = [{%- assign titles_split = sep_title | split: '#' -%}{%- for title_year in titles_split -%}{%- assign title_year_split = title_year | split: ',' -%}[{%- for title in title_year_split -%}"{{title}}"{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}];
 
-var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}{%- for hour_year in hours_split -%}{%- assign hour_year_split = hour_year | split: ';' -%}[{%- for hours_year_per_inst in hour_year_split -%}[{%- assign hours_year_split = hours_year_per_inst | split: ',' -%}{%- for hour in hours_year_split -%}{%- if hour == "null" -%}null{%- else -%}{{hour}}{%- endif -%}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}];
+var HOURS = [{%- assign hours_split = sep_hour | split: '#' -%}{%- for hour_year in hours_split -%}{%- assign hour_year_split = hour_year | split: ';' -%}[{%- for hours_year_per_inst in hour_year_split -%}[{%- assign hours_year_split = hours_year_per_inst | split: ',' -%}{%- for hour in hours_year_split -%}{%- if hour == "null" -%}null{%- else -%}{{hour | plus: 0}}{%- endif -%}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}];
 
 // Colors (to improve transparency)
 var style = getComputedStyle(document.body);
