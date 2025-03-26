@@ -1,8 +1,8 @@
 {%- assign all_courses = "" | split: "" -%}
 
-{%- for pair in site.data.teaching %}
-  {%- assign filename = pair[0] -%}
-  {%- assign course_list = pair[1] -%}
+{%- assign filenames = site.data.teaching | keys -%}
+{%- for filename in filenames %}
+  {%- assign course_list = site.data.teaching[filename] -%}
   {%- assign year = filename | split: "-" | first -%}
 
   {%- for course in course_list %}
@@ -17,6 +17,7 @@
 
 {%- assign years_list = course_by_year | map: "name" -%}
 {%- assign courses_per_year_list = course_by_year | map: "items" -%}
+
 
 
 <!------------------------------------------- Institutions  ---------------------------------->
