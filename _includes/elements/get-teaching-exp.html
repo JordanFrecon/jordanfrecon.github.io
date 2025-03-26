@@ -21,6 +21,8 @@
 {%- assign course_by_inst = course_sort | group_by: "institution" -%}
 {%- assign course_by_academic_year = course_sort | group_by: "academic_year" -%}
 
+{%- assign years_list = course_by_year | map: 'name' -%}
+{%- assign courses_per_year_list = course_by_year | map: 'items' -%}
 
 
 <!------------------------------------------- Institutions  ---------------------------------->
