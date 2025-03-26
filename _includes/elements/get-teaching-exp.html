@@ -3,15 +3,14 @@
 {%- for entry in site.data.teaching %}
   {%- assign academic_year = entry[0] -%}
   {%- assign courses = entry[1] -%}
-
-  {%- if courses and courses.first -%}
+  {%- if courses and courses.first %}
     {%- assign year = academic_year | split: "-" | first | append: "" -%}
     {%- for course in courses %}
-      {%- assign course_with_year = course | merge: {
+      {%- assign course_with_info = course | merge: {
         "year": year,
         "academic_year": academic_year
       } -%}
-      {%- assign all_courses = all_courses | push: course_with_year -%}
+      {%- assign all_courses = all_courses | push: course_with_info -%}
     {%- endfor -%}
   {%- endif -%}
 {%- endfor -%}
@@ -20,6 +19,7 @@
 {%- assign course_by_year = course_sort | group_by: "year" -%}
 {%- assign course_by_inst = course_sort | group_by: "institution" -%}
 {%- assign course_by_academic_year = course_sort | group_by: "academic_year" -%}
+
 
 {%- assign years_list = course_by_year | map: 'name' -%}
 {%- assign courses_per_year_list = course_by_year | map: 'items' -%}
