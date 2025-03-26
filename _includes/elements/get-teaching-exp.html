@@ -3,24 +3,24 @@
 {%- for entry in site.data.teaching %}
   {%- assign academic_year = entry[0] -%}
   {%- assign courses = entry[1] -%}
-  {%- if courses and courses.first and courses.first.title -%}
+
+  {%- if courses and courses.first -%}
+    {%- assign year = academic_year | split: "-" | first | append: "" -%}
     {%- for course in courses %}
-      {%- assign course_with_year = course | merge: {"year": academic_year} -%}
+      {%- assign course_with_year = course | merge: {
+        "year": year,
+        "academic_year": academic_year
+      } -%}
       {%- assign all_courses = all_courses | push: course_with_year -%}
     {%- endfor -%}
   {%- endif -%}
 {%- endfor -%}
 
-
 {%- assign course_sort = all_courses | sort: "year" | reverse -%}
-{%- assign course_by_year = course_sort | group_by:"year" -%}
-{%- assign course_by_inst = course_sort | group_by:"institution" -%}
+{%- assign course_by_year = course_sort | group_by: "year" -%}
+{%- assign course_by_inst = course_sort | group_by: "institution" -%}
+{%- assign course_by_academic_year = course_sort | group_by: "academic_year" -%}
 
-<pre>
-{% for entry in site.data.teaching %}
-  {{ entry[0] }}: type = {{ entry[1] | class }}, size = {{ entry[1].size }}
-{% endfor %}
-</pre>
 
 
 <!------------------------------------------- Institutions  ---------------------------------->
