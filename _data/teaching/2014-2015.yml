@@ -1,0 +1,15 @@
+- institution: ENS Lyon
+  title: Complex Systems (M2)
+  hours: 10
+
+- institution: Univ. Lyon 1
+  title: Electromagnetism (L1)
+  hours: 20
+  
+- institution: Univ. Lyon 1
+  title: Optics (L2)
+  hours: 26
+  
+- institution: Univ. Lyon 1
+  title: Applied Statistics (L3)
+  hours: 16

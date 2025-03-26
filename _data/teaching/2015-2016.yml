@@ -1,0 +1,20 @@
+- institution: Univ. Lyon 1
+  title: Electromagnetism (L1)
+  hours: 20
+  
+- institution: Univ. Lyon 1
+  title: Optics (L2)
+  hours: 26
+  
+- institution: ENS Lyon
+  title: Experimental Physics (L3)
+  hours: 8
+  
+- institution: ENS Lyon
+  title: Python (L3)
+  hours: 20
+
+- institution: ENS Lyon
+  title: Signal Processing (L3)
+  hours: 20
+

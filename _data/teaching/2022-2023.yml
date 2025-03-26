@@ -1,0 +1,43 @@
+- institution: TSE (FISE)
+  title: Coaching (M2)
+  hours: 4
+
+- institution: TSE (FISE)
+  title: Resp. Work-Study (M2)
+  hours: 16
+
+- institution: TSE (FISE)
+  title: Resp. Informatics (L3)
+  hours: 4
+
+- institution: TSE (FISA)
+  title: Resp. Fundamentals (M1)
+  hours: 4
+
+- institution: UJM (MLDM)
+  title: Advanced Machine Learning (M2)
+  hours: 6
+
+- institution: TSE (FISA)
+  title: R&D (M2)
+  hours: 2.25
+
+- institution: TSE (FISE) 
+  title: Big Data Project (M2)
+  hours: 10
+
+- institution: TSE (FISA) 
+  title: Operational Quality (M2)
+  hours: 4.5
+
+- institution: TSE (FISA)
+  title: Algorithms for Data Analysis (M1)
+  hours: 28.5
+  
+- institution: TSE (FISA) 
+  title: Statistical Inference (M1)
+  hours: 30
+
+- institution: TSE (FISE)
+  title: Algorithmic and Data Structure (L3)
+  hours: 27
