@@ -1,9 +1,9 @@
 ---
 layout: publication
-title: Bregman Proximal Viewpoint on Neural Operators
+title: A Bregman Proximal Viewpoint on Neural Operators
 authors: A.-R. Mezidi, J. Patracone, S. Salzo, A. Habrard, M. Pontil, R. Emonet and M. Sebban
 publication: International Conference on Machine Learning (ICML)
-year: 2024
+year: 2025
 doi:
 image: False
 type: conference
