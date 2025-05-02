@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Apprentissage incrémental de l'opérateur de Koopman pour systèmes non-autonomes via prédiction conforme,
+title: Apprentissage incrémental de l'opérateur de Koopman pour systèmes non-autonomes via prédiction conforme
 authors: B. Gao, J. Patracone, O. Alata, and S. Chrétien
 publication: Preprint
 year: 2025
