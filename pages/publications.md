@@ -30,7 +30,9 @@ weight: 2
    {% if publication.nopdf == False %}
    <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
    {% endif %}
+   {% if publication.nobib == False %}
    <a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
+   {% endif %}
  </div>
  </li>
  {% endif %}
