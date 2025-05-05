@@ -5,7 +5,7 @@ authors: A.-R. Mezidi, J. Patracone, S. Salzo, A. Habrard, M. Pontil, R. Emonet 
 publication: International Conference on Machine Learning (ICML)
 year: 2025
 doi:
-image: False
+image: True
 type: conference
 project: physics
 ---
