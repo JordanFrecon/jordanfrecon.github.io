@@ -23,5 +23,6 @@ permalink: /
 <ul>
 <li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://labhc-malice.github.io/">offer</a>)</li>
 <li>PhD Thesis: <em>Leveraging monotone operator theory and variational principles for physics-informed neural operators</em> (<a href="https://jordan-frecon.com/download/thesis/2025-Thesis-LabHC-Physics_informed_Neural_Architecture_Design.pdf">offer</a>)</li>
+<li>Postdoc: <em>Unfolded proximal neural operators for inverse problems in imaging</em> (<a href="https://jordan-frecon.com/download/postdoc/2025-Postdoc-LabHC-proxima.pdf">offer</a>)</li>
 </ul>
 </div>
