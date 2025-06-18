@@ -1,3 +1,17 @@
+- name: Kais Hariz
+  type: postdoc
+  year: 2025
+  month: September
+  title: Unfolded proximal neural operators for inverse problems in imaging
+  cosupervisor: Loïc Denis
+
+- name: Diego Pinto-Suarez
+  type: phd  
+  year: 2025
+  month: December
+  title: Leveraging monotone operators theory for studying and designing neural architectures
+  cosupervisor: Marc Sebban
+
 - name: Volodimir Mitarchuk
   type: postdoc
   year: 2025
