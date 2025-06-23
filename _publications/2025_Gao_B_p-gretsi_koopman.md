@@ -2,11 +2,11 @@
 layout: publication
 title: Apprentissage incrémental de l'opérateur de Koopman pour systèmes non-autonomes via prédiction conforme
 authors: B. Gao, J. Patracone, O. Alata, and S. Chrétien
-publication: Preprint
+publication: Colloque francophone de traitement du signal et des images (GRETSI)
 year: 2025
 doi:
 image: False
-type: preprint
+type: workshop
 project: physics
 nopdf: True
 nobib: True
