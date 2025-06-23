@@ -22,5 +22,6 @@ permalink: /
 <span class="title">Open positions</span>
 <ul>
 <li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://labhc-malice.github.io/">offer</a>)</li>
+<li>Postdoc: <em>Unfolded proximal neural operators for inverse problems in imaging</em> (<a href="https://jordan-frecon.com/download/postdoc/2025-Postdoc-LabHC-proxima.pdf">offer</a>)</li>
 </ul>
 </div>
