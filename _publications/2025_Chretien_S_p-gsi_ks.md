@@ -2,11 +2,11 @@
 layout: publication
 title: Using Signatures and Koopman operators to learn non-linear dynamics
 authors: S. Chrétien, B. Gao, J. Patracone, and O. Alata
-publication: Preprint
+publication: International Conference on Geometric Science of Information (GSI)
 year: 2025
 doi:
 image: False
-type: preprint
+type: conference
 project: physics
 nopdf: True
 nobib: True
