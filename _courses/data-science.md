@@ -6,7 +6,7 @@ description: A introduction to data science with Python
 institution: Télécom Saint-Etienne
 program: Engineer Telecom Saint-Etienne
 year: 2nd year
-hours: 6
+hours: 15
 year_post: 2025
 ---
 
@@ -31,6 +31,8 @@ The course is designed to provide both programming practice and methodological g
 - Employ methods to effectively represent, explore, and interpret data.
 
 ## <i class="fas fa-file-download"></i> Course Materials
+
+After a brief introduction, the course is structured into four 1.5-hour chapters, complemented by three practical sessions of three hours each.
 
 {% capture list_items %}
 Introduction, https://jordan-frecon.com/courses/data-science/introduction
