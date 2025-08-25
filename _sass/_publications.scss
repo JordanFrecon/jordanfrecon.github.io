@@ -1,25 +1,4 @@
-/* 1) Make publication styles apply inside #toggleText */
-#toggleText {
-  .byType, .byYear {
-    .publication-item { line-height: 1.5em; }
-    .publication-title { font-weight: bold; }
-    .publication-authors { }
-    .publication-type { font-style: italic; }
-    .publication-links { font-size: 75%; margin-bottom: 1em; }
-    .publication-teaser {
-      display: block; max-width: 75%; height: auto;
-      margin-left: auto; margin-right: auto;
-    }
-    .publication-info { }
-    .answer {
-      display: none;
-      background-color: rgba($primary, 0.8); /* if $primary is a Sass color */
-      padding: 5px; border: 2px solid $primary; border-radius: 10px;
-    }
-  }
-}
-
-/* 2) Toggle pill + labels (z-index so text sits above the pill) */
+/* ===== Toggle pill ===== */
 .toggleContainer {
   position: relative;
   display: grid;
@@ -48,35 +27,68 @@
   div {
     padding: 6px;
     text-align: center;
-    position: relative; /* ensure z-index takes effect */
+    position: relative;
     z-index: 1;
   }
 }
 
 .hcentered { display: flex; justify-content: center; }
 
-/* 3) Checkbox controls pill position + label colors */
-.toggleCheckbox {
-  display: none;
+/* ===== Checkbox controls pill + label colors ===== */
+.toggleCheckbox { display: none; }
 
-  /* when checked: slide pill right, flip label colors */
-  &:checked ~ .hcentered .toggleContainer::before { left: 50%; }
-  &:checked ~ .hcentered .toggleContainer div:first-child { color: white; transition: color 0.3s; }
-  &:checked ~ .hcentered .toggleContainer div:last-child  { color: #343434; transition: color 0.3s; }
+.toggleCheckbox:checked ~ .hcentered .toggleContainer::before { left: 50%; }
+.toggleCheckbox:checked ~ .hcentered .toggleContainer div:first-child { color: white; }
+.toggleCheckbox:checked ~ .hcentered .toggleContainer div:last-child  { color: #343434; }
 
-  /* default (unchecked) label colors */
-  & ~ .hcentered .toggleContainer div:first-child { color: #343434; transition: color 0.3s; }
-  & ~ .hcentered .toggleContainer div:last-child  { color: white;   transition: color 0.3s; }
+.toggleCheckbox ~ .hcentered .toggleContainer div:first-child { color: #343434; }
+.toggleCheckbox ~ .hcentered .toggleContainer div:last-child  { color: white; }
+
+/* ===== Publications content block ===== */
+#toggleText {
+  .byYear,
+  .byType {
+    font-size: 20px;
+    color: var(--text-color, #e6e6e6); // adjust if you prefer dark text
+  }
+
+  .byYear li,
+  .byType li,
+  .publication-item,
+  .publication-title,
+  .publication-authors,
+  .publication-info,
+  .publication-links {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .publication-item { line-height: 1.5em; }
+  .publication-title { font-weight: bold; }
+  .publication-type { font-style: italic; }
+  .publication-links { font-size: 75%; margin-bottom: 1em; }
+
+  .publication-teaser {
+    display: block;
+    max-width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .answer {
+    display: none;
+    background-color: rgba($primary, 0.8);
+    padding: 5px;
+    border: 2px solid $primary;
+    border-radius: 10px;
+  }
 }
 
-/* 4) Text block + which list is visible */
-#toggleText { font-size: 20px; color: #343434; }
+/* ===== Which list is visible ===== */
 .byYear { display: block; }
 .byType { display: none; }
+
 .toggleCheckbox:checked ~ #toggleText .byYear { display: none; }
 .toggleCheckbox:checked ~ #toggleText .byType { display: block; }
-
-/* extras from your file */
-.byYear li { margin-bottom: 1em; }
-#exhaustive { font-size: 80%; h2 { font-size: 100%; } }
 
