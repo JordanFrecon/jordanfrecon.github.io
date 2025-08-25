@@ -1,41 +1,36 @@
-.publication-item {
-  line-height: 1.5em;
-}
+.toggleContainer {
+  .byType, .byYear {
+    .publication-item { line-height: 1.5em; }
 
-.publication-title {
-  font-weight: bold;
-}
+    .publication-title { font-weight: bold; }
 
-.publication-authors {
-}
+    .publication-authors {}
 
-.publication-type {
-  font-style: italic;
-}
+    .publication-type { font-style: italic; }
 
-.publication-links {
-  font-size: 75%;
-  margin-bottom: 1em;
-}
+    .publication-links {
+      font-size: 75%;
+      margin-bottom: 1em;
+    }
 
-.publication-teaser {
-  display: block;
-  max-width: 75%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto
-}
+    .publication-teaser {
+      display: block;
+      max-width: 75%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto; // <-- missing semicolon fixed
+    }
 
-.publication-info {
-}
+    .publication-info {}
 
-
-.answer {
-    display:none;
-    background-color: rgba(var($primary), 0.8);
-    padding:5px;
-    border: 2px solid $primary;
-    border-radius: 10px;
+    .answer {
+      display: none;
+      background-color: rgba($primary, 0.8); // if $primary is a color
+      padding: 5px;
+      border: 2px solid $primary;
+      border-radius: 10px;
+    }
+  }
 }
 
 
