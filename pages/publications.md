@@ -57,7 +57,7 @@ weight: 2
 
 <div class="byType">
 
-# **Upcoming**
+<h2><b>Upcoming</b></h2>
 <ol>
 {% for publication in publications %}
  {% if publication.type == 'unpublished' or publication.type == 'preprint' %}
