@@ -1,131 +1,86 @@
-.toggleContainer {
+/* Publication styles apply to both views inside #toggleText */
+#toggleText {
   .byType, .byYear {
     .publication-item { line-height: 1.5em; }
-
     .publication-title { font-weight: bold; }
-
     .publication-authors {}
-
     .publication-type { font-style: italic; }
-
-    .publication-links {
-      font-size: 75%;
-      margin-bottom: 1em;
-    }
-
+    .publication-links { font-size: 75%; margin-bottom: 1em; }
     .publication-teaser {
-      display: block;
-      max-width: 75%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto; // <-- missing semicolon fixed
+      display: block; max-width: 75%; height: auto;
+      margin-left: auto; margin-right: auto;
     }
-
     .publication-info {}
-
     .answer {
       display: none;
-      background-color: rgba($primary, 0.8); // if $primary is a color
-      padding: 5px;
-      border: 2px solid $primary;
-      border-radius: 10px;
+      background-color: rgba($primary, 0.8); // if $primary is a Sass color
+      padding: 5px; border: 2px solid $primary; border-radius: 10px;
     }
   }
 }
 
-
+/* Toggle pill */
 .toggleContainer {
-   position: relative;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   width: fit-content;
-   border: 3px solid #343434;
-   border-radius: 20px;
-   background: #343434;
-   font-weight: bold;
-   color: #343434;
-   cursor: pointer;
-   margin-bottom: 20px; /* Adds space between the toggle and the text */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 3px solid #343434;
+  border-radius: 20px;
+  background: #343434;
+  font-weight: bold;
+  color: #343434;
+  cursor: pointer;
+  margin-bottom: 20px;
 
-   &::before {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      left: 0%;
-      border-radius: 20px;
-      background: white;
-      transition: all 0.3s;
-   }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 50% 0 0;      /* width: 50%, height: 100%, left: 0 */
+    border-radius: 20px;
+    background: white;
+    transition: all 0.3s;
+    z-index: 0;
+  }
 
-   div {
-      padding: 6px;
-      text-align: center;
-      z-index: 1;
-   }
+  div {
+    padding: 6px;
+    text-align: center;
+    position: relative; /* ensure z-index works */
+    z-index: 1;
+  }
 }
+
+.hcentered { display: flex; justify-content: center; }
 
 .toggleCheckbox {
-   display: none;
-   &:checked ~ .toggleContainer, &:checked ~ * .toggleContainer {
-      &::before {
-         left: 50%;
-      }
-      div:first-child {
-         color: white;
-         transition: color 0.3s;
-      }
-      div:last-child {
-         color: #343434;
-         transition: color 0.3s;
-      }
-   }
-   & ~ .toggleContainer, & ~ * .toggleContainer {
-      div:first-child {
-         color: #343434;
-         transition: color 0.3s;
-      }
-      div:last-child {
-         color: white;
-         transition: color 0.3s;
-      }
-   }
+  display: none;
+
+  /* When checked, move the pill and swap label colors */
+  &:checked ~ .hcentered .toggleContainer::before { left: 50%; inset: 0 0 0 50%; }
+  &:checked ~ .hcentered .toggleContainer div:first-child { color: white; transition: color 0.3s; }
+  &:checked ~ .hcentered .toggleContainer div:last-child  { color: #343434; transition: color 0.3s; }
+
+  /* Default (unchecked) label colors */
+  & ~ .hcentered .toggleContainer div:first-child { color: #343434; transition: color 0.3s; }
+  & ~ .hcentered .toggleContainer div:last-child  { color: white;   transition: color 0.3s; }
 }
 
-#toggleText {
-   font-size: 20px;
-   color: #343434;
-}
+/* Text block under the toggle */
+#toggleText { font-size: 20px; color: #343434; }
 
-/* Hide the default text and show the new text when checked */
-.toggleCheckbox:checked ~ #toggleText .byYear {
-   display: none;
-}
+/* Switch which list is visible */
+.byYear { display: block; }
+.byType { display: none; }
+.toggleCheckbox:checked ~ #toggleText .byYear { display: none; }
+.toggleCheckbox:checked ~ #toggleText .byType { display: block; }
 
-.toggleCheckbox:checked ~ #toggleText .byType {
-   display: block;
-}
+/* Spacing for year listing */
+.byYear li { margin-bottom: 1em; }
 
-.byYear {
-   display: block;
-}
-
-.byType {
-   display: none;
-}
-
-
+/* Optional: exhaustive section sizes */
 #exhaustive {
-   font-size: 80%;
-   h2 {
-      font-size: 100%;
-   }
-}
-.byYear li {
-      margin-bottom: 1em;
+  font-size: 80%;
+  h2 { font-size: 100%; }
 }
 
-.hcentered {
-   display: flex;
-   justify-content: center;
-}
