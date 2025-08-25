@@ -33,6 +33,7 @@ The course is designed to provide both programming practice and methodological g
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
+Introduction, https://jordan-frecon.com/courses/data-science/introduction
 Analyzing Real-World Data with Python, https://jordan-frecon.com/courses/data-science/tools
 Numerical Computing with NumPy, https://jordan-frecon.com/courses/data-science/numerical-computing
 {% endcapture %}
