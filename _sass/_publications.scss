@@ -1,121 +1,82 @@
-.toggleContainer {
+/* 1) Make publication styles apply inside #toggleText */
+#toggleText {
   .byType, .byYear {
     .publication-item { line-height: 1.5em; }
-
     .publication-title { font-weight: bold; }
-
-    .publication-authors {}
-
+    .publication-authors { }
     .publication-type { font-style: italic; }
-
-    .publication-links {
-      font-size: 75%;
-      margin-bottom: 1em;
-    }
-
+    .publication-links { font-size: 75%; margin-bottom: 1em; }
     .publication-teaser {
-      display: block;
-      max-width: 75%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto; // <-- missing semicolon fixed
+      display: block; max-width: 75%; height: auto;
+      margin-left: auto; margin-right: auto;
     }
-
-    .publication-info {}
-
+    .publication-info { }
     .answer {
       display: none;
-      background-color: rgba($primary, 0.8); // if $primary is a color
-      padding: 5px;
-      border: 2px solid $primary;
-      border-radius: 10px;
+      background-color: rgba($primary, 0.8); /* if $primary is a Sass color */
+      padding: 5px; border: 2px solid $primary; border-radius: 10px;
     }
   }
 }
 
-
+/* 2) Toggle pill + labels (z-index so text sits above the pill) */
 .toggleContainer {
-   position: relative;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   width: fit-content;
-   border: 3px solid #343434;
-   border-radius: 20px;
-   background: #343434;
-   font-weight: bold;
-   color: #343434;
-   cursor: pointer;
-   margin-bottom: 20px; /* Adds space between the toggle and the text */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 3px solid #343434;
+  border-radius: 20px;
+  background: #343434;
+  font-weight: bold;
+  color: #343434;
+  cursor: pointer;
+  margin-bottom: 20px;
 
-   &::before {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      left: 0%;
-      border-radius: 20px;
-      background: white;
-      transition: all 0.3s;
-   }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    border-radius: 20px;
+    background: white;
+    transition: all 0.3s;
+    z-index: 0;
+  }
 
-   div {
-      padding: 6px;
-      text-align: center;
-      z-index: 1;
-   }
+  div {
+    padding: 6px;
+    text-align: center;
+    position: relative; /* ensure z-index takes effect */
+    z-index: 1;
+  }
 }
 
+.hcentered { display: flex; justify-content: center; }
+
+/* 3) Checkbox controls pill position + label colors */
 .toggleCheckbox {
-   display: none;
-   &:checked ~ .toggleContainer, &:checked ~ * .toggleContainer {
-      &::before {
-         left: 50%;
-      }
-      div:first-child {
-         color: white;
-         transition: color 0.3s;
-      }
-      div:last-child {
-         color: #343434;
-         transition: color 0.3s;
-      }
-   }
-   & ~ .toggleContainer, & ~ * .toggleContainer {
-      div:first-child {
-         color: #343434;
-         transition: color 0.3s;
-      }
-      div:last-child {
-         color: white;
-         transition: color 0.3s;
-      }
-   }
+  display: none;
+
+  /* when checked: slide pill right, flip label colors */
+  &:checked ~ .hcentered .toggleContainer::before { left: 50%; }
+  &:checked ~ .hcentered .toggleContainer div:first-child { color: white; transition: color 0.3s; }
+  &:checked ~ .hcentered .toggleContainer div:last-child  { color: #343434; transition: color 0.3s; }
+
+  /* default (unchecked) label colors */
+  & ~ .hcentered .toggleContainer div:first-child { color: #343434; transition: color 0.3s; }
+  & ~ .hcentered .toggleContainer div:last-child  { color: white;   transition: color 0.3s; }
 }
 
-#toggleText {
-   font-size: 20px;
-   color: #343434;
-}
+/* 4) Text block + which list is visible */
+#toggleText { font-size: 20px; color: #343434; }
+.byYear { display: block; }
+.byType { display: none; }
+.toggleCheckbox:checked ~ #toggleText .byYear { display: none; }
+.toggleCheckbox:checked ~ #toggleText .byType { display: block; }
 
-/* Hide the default text and show the new text when checked */
-.toggleCheckbox:checked ~ #toggleText .byYear {
-   display: none;
-}
+/* extras from your file */
+.byYear li { margin-bottom: 1em; }
+#exhaustive { font-size: 80%; h2 { font-size: 100%; } }
 
-.toggleCheckbox:checked ~ #toggleText .byType {
-   display: block;
-}
-
-.byYear {
-   display: block;
-}
-
-.byType {
-   display: none;
-}
-
-
-.hcentered {
-   display: flex;
-   justify-content: center;
-}
