@@ -39,3 +39,98 @@
 }
 
 
+.toggleContainer {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   width: fit-content;
+   border: 3px solid #343434;
+   border-radius: 20px;
+   background: #343434;
+   font-weight: bold;
+   color: #343434;
+   cursor: pointer;
+   margin-bottom: 20px; /* Adds space between the toggle and the text */
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      left: 0%;
+      border-radius: 20px;
+      background: white;
+      transition: all 0.3s;
+   }
+
+   div {
+      padding: 6px;
+      text-align: center;
+      z-index: 1;
+   }
+}
+
+.toggleCheckbox {
+   display: none;
+   &:checked ~ .toggleContainer, &:checked ~ * .toggleContainer {
+      &::before {
+         left: 50%;
+      }
+      div:first-child {
+         color: white;
+         transition: color 0.3s;
+      }
+      div:last-child {
+         color: #343434;
+         transition: color 0.3s;
+      }
+   }
+   & ~ .toggleContainer, & ~ * .toggleContainer {
+      div:first-child {
+         color: #343434;
+         transition: color 0.3s;
+      }
+      div:last-child {
+         color: white;
+         transition: color 0.3s;
+      }
+   }
+}
+
+#toggleText {
+   font-size: 20px;
+   color: #343434;
+}
+
+/* Hide the default text and show the new text when checked */
+.toggleCheckbox:checked ~ #toggleText .byYear {
+   display: none;
+}
+
+.toggleCheckbox:checked ~ #toggleText .byType {
+   display: block;
+}
+
+.byYear {
+   display: block;
+}
+
+.byType {
+   display: none;
+}
+
+
+#exhaustive {
+   font-size: 80%;
+   h2 {
+      font-size: 100%;
+   }
+}
+.byYear li {
+      margin-bottom: 1em;
+}
+
+.hcentered {
+   display: flex;
+   justify-content: center;
+}

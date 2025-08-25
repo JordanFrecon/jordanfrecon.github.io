@@ -9,6 +9,53 @@ weight: 2
 
 {% assign publications = site.publications | sort: "year" | reverse %}
 
+
+<div>
+<input type="checkbox" id="toggle" class="toggleCheckbox" />
+<div class="hcentered">
+<label for="toggle" class="toggleContainer">
+  <div>By Year</div>   
+  <div>By Type</div>
+</label>
+</div>
+
+<div id="toggleText">
+
+<div class="byYear">
+
+<ol>
+{% for publication in publications %}
+ <li>
+ <div class="publication-item">
+   <div class="publication-title">
+     {{ publication.title }}
+   </div>
+   <div class="publication-authors">
+     {{ publication.authors }}
+   </div>
+   <div class="publication-info">
+	 <i>{{ publication.publication }}</i>, {{ publication.year}}
+   </div>
+ </div>
+ <div class="publication-links">
+   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>{% if publication.type == 'preprint' %}&nbsp;&nbsp;
+   {% if publication.nopdf == False %}
+   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+   {% endif %}
+   {% if publication.nobib == False %}
+   <a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
+   {% endif %}
+ </div>
+ </li>
+{% endfor %}
+</ol>
+
+
+</div>
+
+
+<div class="byType">
+
 # **Upcoming**
 <ol>
 {% for publication in publications %}
@@ -167,4 +214,5 @@ weight: 2
 {% endfor %}
 </ol>
 
-
+</div>
+</div>
