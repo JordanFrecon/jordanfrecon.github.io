@@ -18,6 +18,7 @@ weight: 2
   <div>By Type</div>
 </label>
 </div>
+</div>
 
 <div id="toggleText">
 
