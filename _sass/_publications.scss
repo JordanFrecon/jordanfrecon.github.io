@@ -66,8 +66,6 @@
   & ~ .hcentered .toggleContainer div:last-child  { color: white;   transition: color 0.3s; }
 }
 
-/* Text block under the toggle */
-#toggleText { font-size: 20px; color: #343434; }
 
 /* Switch which list is visible */
 .byYear { display: block; }
@@ -75,12 +73,5 @@
 .toggleCheckbox:checked ~ #toggleText .byYear { display: none; }
 .toggleCheckbox:checked ~ #toggleText .byType { display: block; }
 
-/* Spacing for year listing */
-.byYear li { margin-bottom: 1em; }
-
-/* Optional: exhaustive section sizes */
-#exhaustive {
-  font-size: 80%;
-  h2 { font-size: 100%; }
 }
 
