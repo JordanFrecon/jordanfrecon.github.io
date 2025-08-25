@@ -10,7 +10,6 @@ weight: 2
 {% assign publications = site.publications | sort: "year" | reverse %}
 
 
-<div>
 <input type="checkbox" id="toggle" class="toggleCheckbox" />
 <div class="hcentered">
 <label for="toggle" class="toggleContainer">
@@ -18,7 +17,7 @@ weight: 2
   <div>By Type</div>
 </label>
 </div>
-</div>
+
 
 <div id="toggleText">
 
