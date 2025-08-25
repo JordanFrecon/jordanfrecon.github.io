@@ -36,7 +36,7 @@ After a brief introduction, the course is structured into four 1.5-hour chapters
 
 {% capture list_items %}
 Introduction, https://jordan-frecon.com/courses/data-science/introduction
-Analyzing Real-World Data with Pandas, https://jordan-frecon.com/courses/data-science/tools
+Analyzing Real-World Data with Pandas and Plotly, https://jordan-frecon.com/courses/data-science/tools
 Numerical Computing with NumPy, https://jordan-frecon.com/courses/data-science/numerical-computing
 Feature Engineering with Scikit-Learn, https://jordan-frecon.com/courses/data-science/feature-engineering
 {% endcapture %}
