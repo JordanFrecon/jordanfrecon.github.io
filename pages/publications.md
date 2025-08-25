@@ -89,7 +89,7 @@ weight: 2
 
 
 
-# **International Conferences**
+<h2><b>International Conferences</b></h2>
 <ol>
 {% for publication in publications %}
  {% if publication.type == 'conference' %}
@@ -122,7 +122,7 @@ weight: 2
 {% endfor %}
 </ol>
 
-# **International Journals**
+<h2><b>International Journals</b></h2>
 <ol>
 {% for publication in publications %}
  {% if publication.type == 'journal' %}
@@ -152,7 +152,7 @@ weight: 2
 {% endfor %}
 </ol>
 
-# **Workshops and National Conferences**
+<h2><b>Workshops and National Conferences</b></h2>
 <ol>
 {% for publication in publications %}
  {% if publication.type == 'workshop' %}
@@ -184,8 +184,7 @@ weight: 2
 {% endfor %}
 </ol>
 
-
-# **Thesis**
+<h2><b>Thesis</b></h2>
 <ol>
 {% for publication in publications %}
  {% if publication.type == 'thesis' %}
