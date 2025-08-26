@@ -39,5 +39,6 @@ Introduction, https://jordan-frecon.com/courses/data-science/introduction
 Analyzing Real-World Data with Pandas and Plotly, https://jordan-frecon.com/courses/data-science/tools
 Numerical Computing with NumPy, https://jordan-frecon.com/courses/data-science/numerical-computing
 Feature Engineering with Scikit-Learn, https://jordan-frecon.com/courses/data-science/feature-engineering
+Vectorization and Dimensionality Reduction with Scikit-Learn, https://jordan-frecon.com/courses/data-science/vectorization-reduction
 {% endcapture %}
 {% include elements/list.html title="Course Program" %}
