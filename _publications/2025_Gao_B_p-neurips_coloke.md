@@ -5,10 +5,9 @@ authors: B. Gao, J. Patracone, O. Alata, and S. Chrétien
 publication: Conference on Neural Information Processing Systems (NeurIPS)
 year: 2025
 doi:
-image: False
+image: True
 type: conference
 project: physics
-nopdf: True
 nobib: True
 ---
 
