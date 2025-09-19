@@ -2,11 +2,11 @@
 layout: publication
 title: Conformal Online Learning of Deep Koopman Linear Embeddings
 authors: B. Gao, J. Patracone, O. Alata, and S. Chrétien
-publication: Preprint
+publication: Conference on Neural Information Processing Systems (NeurIPS)
 year: 2025
 doi:
 image: False
-type: preprint
+type: conference
 project: physics
 nopdf: True
 nobib: True
