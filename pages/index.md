@@ -25,3 +25,9 @@ permalink: /
 <li>Postdoc: <em>Unfolded proximal neural operators for inverse problems in imaging</em> (<a href="https://jordan-frecon.com/download/postdoc/2025-Postdoc-LabHC-proxima.pdf">offer</a>)</li>
 </ul>
 </div>
+
+<div class="logos">
+  <img src="/logos/inria.png" alt="Inria logo">
+  <img src="/logos/labhc.png" alt="LabHC logo">
+</div>
+

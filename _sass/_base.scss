@@ -41,3 +41,19 @@ body {
     border-radius: 10px;
 }
 
+.logos {
+  display: flex;                /* side by side */
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* align vertically */
+  gap: 2rem;                    /* spacing between logos */
+  flex-wrap: wrap;              /* allows wrapping on small screens */
+  padding: 1rem;
+}
+
+.logos img {
+  max-height: 50px;             /* uniform height */
+  height: auto;
+  width: auto;                  /* keeps proportions */
+  object-fit: contain;          /* avoids distortion */
+}
+
