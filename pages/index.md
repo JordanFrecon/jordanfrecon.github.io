@@ -27,7 +27,7 @@ permalink: /
 </div>
 
 <div class="logos">
-  <img src="/logos/inria.png" alt="Inria logo">
-  <img src="/logos/labhc.png" alt="LabHC logo">
+  <img src="{{ '/images/logos/inria.png' | relative_url }}" alt="Inria logo">
+  <img src="{{ '/images/logos/labhc.png' | relative_url }}" alt="LabHC logo">
 </div>
 
