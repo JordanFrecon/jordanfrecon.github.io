@@ -8,6 +8,8 @@ doi:
 image: True
 type: preprint
 project: physics
+nopdf: True
+nobib: True
 ---
 
 
