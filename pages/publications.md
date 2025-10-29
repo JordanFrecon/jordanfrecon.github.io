@@ -24,30 +24,35 @@ weight: 2
 
 <div class="byYear">
 
+{% set current_year = None %}
 <ol>
-{% for publication in publications %}
- <li>
- <div class="publication-item">
-   <div class="publication-title">
-     {{ publication.title }}
-   </div>
-   <div class="publication-authors">
-     {{ publication.authors }}
-   </div>
-   <div class="publication-info">
-	 <i>{{ publication.publication }}</i>, {{ publication.year}}
-   </div>
- </div>
- <div class="publication-links">
-   <a href="{{publication.url}}"><i class="fas fa-link"></i> Article Page</a>{% if publication.type == 'preprint' %}&nbsp;&nbsp;
-   {% if publication.nopdf == False %}
-   <a href="/download/{{ publication.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-   {% endif %}
-   {% if publication.nobib == False %}
-   <a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>{% endif %}
-   {% endif %}
- </div>
- </li>
+{% for publication in publications | sort(attribute='year', reverse=True) %}
+  {% if publication.year != current_year %}
+    {% if not loop.first %}</ol>{% endif %}
+    <h2><b>{{ publication.year }}</b></h2>
+    <ol>
+    {% set current_year = publication.year %}
+  {% endif %}
+  <li>
+    <div class="publication-item">
+      <div class="publication-title">{{ publication.title }}</div>
+      <div class="publication-authors">{{ publication.authors }}</div>
+      <div class="publication-info">
+        <i>{{ publication.publication }}</i>, {{ publication.year }}
+      </div>
+    </div>
+    <div class="publication-links">
+      <a href="{{ publication.url }}"><i class="fas fa-link"></i> Article Page</a>
+      {% if publication.type == 'preprint' %}
+        {% if not publication.nopdf %}
+          &nbsp;&nbsp;<a href="/download/{{ publication.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>
+        {% endif %}
+        {% if not publication.nobib %}
+          &nbsp;&nbsp;<a href="#" onClick="ShowAndHide('{{ publication.slug }}');event.preventDefault()"><i class="fas fa-quote-left"></i> BibTeX</a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </li>
 {% endfor %}
 </ol>
 
