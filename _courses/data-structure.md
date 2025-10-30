@@ -36,17 +36,18 @@ This course delineates specific educational goals aimed at enhancing algorithmic
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
-Introduction, https://jordan-frecon.com/courses/data-structure/introduction
-Structure Variables, https://jordan-frecon.com/courses/data-structure/structure-variables
-Functional Programming, https://jordan-frecon.com/courses/data-structure/functional-programming
-Parameter Passing Techniques, https://jordan-frecon.com/courses/data-structure/parameter-passing
-Static Arrays, https://jordan-frecon.com/courses/data-structure/static-arrays
-Dynamic Allocation, https://jordan-frecon.com/courses/data-structure/dynamic-allocation
-Characters Arrays, https://jordan-frecon.com/courses/data-structure/characters-arrays
-Linked Lists,https://jordan-frecon.com/courses/data-structure/linked-lists
-Stacks Queues,https://jordan-frecon.com/courses/data-structure/stacks-queues
-Hash Tables,https://jordan-frecon.com/courses/data-structure/hash-tables
-Binary Search Trees,https://jordan-frecon.com/courses/data-structure/binary-search-trees
-Bloom Filters,https://jordan-frecon.com/courses/data-structure/bloom-filters 
+Introduction, {{ site.baseurl }}/courses/data-structure/introduction
+Structure Variables, {{ site.baseurl }}/courses/data-structure/structure-variables
+Functional Programming, {{ site.baseurl }}/courses/data-structure/functional-programming
+Parameter Passing Techniques, {{ site.baseurl }}/courses/data-structure/parameter-passing
+Static Arrays, {{ site.baseurl }}/courses/data-structure/static-arrays
+Dynamic Allocation, {{ site.baseurl }}/courses/data-structure/dynamic-allocation
+Characters Arrays, {{ site.baseurl }}/courses/data-structure/characters-arrays
+Linked Lists, {{ site.baseurl }}/courses/data-structure/linked-lists
+Stacks Queues, {{ site.baseurl }}/courses/data-structure/stacks-queues
+Hash Tables, {{ site.baseurl }}/courses/data-structure/hash-tables
+Binary Search Trees, {{ site.baseurl }}/courses/data-structure/binary-search-trees
+Bloom Filters, {{ site.baseurl }}/courses/data-structure/bloom-filters
 {% endcapture %}
 {% include elements/list.html title="Course Program" %}
+

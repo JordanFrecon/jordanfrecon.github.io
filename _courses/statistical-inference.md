@@ -38,52 +38,50 @@ The course is divided in multiple parts of varying length (each symbol <i class=
 
 {% capture accordion_items %}
 <b>Part 1.</b> Introduction to statistical tests;
-- Tutorial class on the concepts of statistical inference (<a href="https://jordan-frecon.com/courses/statistical-inference/introduction/"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on the concepts of statistical inference (<a href="{{ site.baseurl }}/courses/statistical-inference/introduction/"><i class="fas fa-chalkboard"></i> Slides</a>)
 ---
 <b>Part 2.</b> First hands-on practice with statistical tests <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
 <b>Part 3.</b> Statistical tests of conformity;
-- Tutorial class on tests of conformity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on tests of conformity (<a href="{{ site.baseurl }}/courses/statistical-inference/tests-conformity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Conformity Tests</li><li>Distributions: Student’s t-distribution, Chi-squared, Bernoulli</li></ul>
 ---
 <b>Part 4.</b> Solving various conformity tests <i class="fas fa-clock"></i>;
 - Tutorial exercices
 ---
 <b>Part 5.</b> Homogeneity tests: theory and practice <i class="fas fa-clock"></i>;
-- Tutorial class on tests of homogeneity (<a href="https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on tests of homogeneity (<a href="{{ site.baseurl }}/courses/statistical-inference/tests-homogeneity/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Principles of Mean, Variance, and Proportion Homogeneity Tests</li><li>Distributions: Student’s t-distribution, Fisher</li><li>Tests: Fisher, Levene, Student, Welch</li></ul>
 - Tutorial exercices
 ---
 <b>Part 6.</b> Performing statistical tests in Python <i class="fas fa-clock"></i><i class="fas fa-clock"></i>;
-- Lab exercise: The Italian Grand Prix (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/monza/monza.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+- Lab exercise: The Italian Grand Prix (<a href="{{ site.baseurl }}/jupyterlite/retro/notebooks/?path=statistical-inference/monza/monza.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Descriptive statistics</li><li>Conformity tests</li><li>Data visualization</li></ul>
 ---
 <b>Part 7.</b> Dependence and paired comparisons in statistics;
-- Tutorial class on paired samples tests (<a href="https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on paired samples tests (<a href="{{ site.baseurl }}/courses/statistical-inference/paired-samples-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Contingency tables, Mc Nemar's test statistic</li></ul>
-- Tutorial class on independence tests (<a href="https://jordan-frecon.com/courses/statistical-inference/independence-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
+- Tutorial class on independence tests (<a href="{{ site.baseurl }}/courses/statistical-inference/independence-tests/"><i class="fas fa-chalkboard"></i> Slides</a>)
 <ul><li>Chi square test of independence</li></ul>
 ---
 <b>Part 8.</b> Mastering statistical inference with Python <i class="fas fa-clock"></i>;
-- Lab exercise: UFO Sightings (<a href="https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/ufo-sightings/ufo.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
+- Lab exercise: UFO Sightings (<a href="{{ site.baseurl }}/jupyterlite/retro/notebooks/?path=statistical-inference/ufo-sightings/ufo.ipynb"><i class="fab fa-python"></i> Jupyter notebook</a>)
 <ul><li>Extracting statistical traits</li><li>Independence tests</li><li>Data visualization</li></ul>
 {% endcapture %}
 {% include elements/accordion-test.html id="program-data-analysis-v2" %}
 
-
 ## <i class="fas fa-file-download"></i> Course Materials
 
 {% capture list_items %}
-Introduction, https://jordan-frecon.com/courses/statistical-inference/introduction/
-Statistical Tests,https://jordan-frecon.com/courses/statistical-inference/statistical-tests/
-Tests of Conformity,https://jordan-frecon.com/courses/statistical-inference/tests-conformity/
-Tests of Homogeneity,https://jordan-frecon.com/courses/statistical-inference/tests-homogeneity/
-Paired Samples Tests,https://jordan-frecon.com/courses/statistical-inference/paired-samples-tests/
-Tests of Independence,https://jordan-frecon.com/courses/statistical-inference/independence-tests/ 
-Tests of Normality,https://jordan-frecon.com/jupyterlite/retro/notebooks/?path=statistical-inference/normality-tests/normality-test.ipynb
+Introduction, {{ site.baseurl }}/courses/statistical-inference/introduction/
+Statistical Tests, {{ site.baseurl }}/courses/statistical-inference/statistical-tests/
+Tests of Conformity, {{ site.baseurl }}/courses/statistical-inference/tests-conformity/
+Tests of Homogeneity, {{ site.baseurl }}/courses/statistical-inference/tests-homogeneity/
+Paired Samples Tests, {{ site.baseurl }}/courses/statistical-inference/paired-samples-tests/
+Tests of Independence, {{ site.baseurl }}/courses/statistical-inference/independence-tests/
+Tests of Normality, {{ site.baseurl }}/jupyterlite/retro/notebooks/?path=statistical-inference/normality-tests/normality-test.ipynb
 {% endcapture %}
 {% include elements/list.html title="Slides" %}
-
 
 
