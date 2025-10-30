@@ -34,11 +34,13 @@ The course is designed to provide both programming practice and methodological g
 
 After a brief introduction, the course is structured into four 1.5-hour chapters, complemented by three practical sessions of three hours each.
 
+
 {% capture list_items %}
-Introduction, https://jordan-frecon.com/courses/data-science/introduction
-Analyzing Real-World Data with Pandas and Plotly, https://jordan-frecon.com/courses/data-science/tools
-Numerical Computing with NumPy, https://jordan-frecon.com/courses/data-science/numerical-computing
-Feature Engineering with Scikit-Learn, https://jordan-frecon.com/courses/data-science/feature-engineering
-Vectorization and Dimensionality Reduction with Scikit-Learn, https://jordan-frecon.com/courses/data-science/vectorization-reduction
+Introduction, {{ site.baseurl }}/courses/data-science/introduction
+Analyzing Real-World Data with Pandas and Plotly, {{ site.baseurl }}/courses/data-science/tools
+Numerical Computing with NumPy, {{ site.baseurl }}/courses/data-science/numerical-computing
+Feature Engineering with Scikit-Learn, {{ site.baseurl }}/courses/data-science/feature-engineering
+Vectorization and Dimensionality Reduction with Scikit-Learn, {{ site.baseurl }}/courses/data-science/vectorization-reduction
 {% endcapture %}
 {% include elements/list.html title="Course Program" %}
+
