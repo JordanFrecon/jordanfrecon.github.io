@@ -2,7 +2,7 @@
 layout: publication
 title: Douglas-Rachford Splitting for Hybrid Differentiable Models
 authors: A.-R. Mezidi, J. Patracone and A. Habrard
-publication: EurIPS Workshop on Differentiable Systems and Scientific Machine Learning (DiffSys)
+publication: EurIPS Workshop - Differentiable Systems and Scientific Machine Learning (DiffSys)
 year: 2025
 doi:
 image: false
