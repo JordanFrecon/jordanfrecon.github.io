@@ -8,7 +8,6 @@ doi:
 image: false
 type: workshop
 project: physics
-nopdf: True
 nobib: True
 ---
 
