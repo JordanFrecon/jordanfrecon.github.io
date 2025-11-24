@@ -19,7 +19,7 @@ weight: 3
 <ul>
 {% for student in students %}
   {% if student.type == 'postdoc' %}
-  <li><strong>{{student.name}}</strong> (starting: {{student.month}} {{student.year}})
+  <li><strong>{{student.name}}</strong> ({{student.month}} {{student.year}})
   {% if student.cosupervisor %}- co-supervised with {{student.cosupervisor}}{% endif %}
   </li>
   {% endif %}
