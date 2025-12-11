@@ -1,0 +1,1 @@
+const i="/courses/machine-learning/classification/ml_chap4/generative.png",s="/courses/machine-learning/classification/ml_chap4/probabilistic.png",a="/courses/machine-learning/classification/ml_chap4/discriminative.png",c="/courses/machine-learning/classification/ml_chap4/geometric.png";export{i as _,s as a,a as b,c};
