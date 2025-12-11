@@ -1,3 +1,10 @@
+- name: Matthieu Muller
+  type: postdoc
+  year: 2026
+  month: "starting: February"
+  title: Unfolded Proximal Neural Operators for Inverse Problems in Imaging
+  cosupervisor: Loïc Denis
+
 - name: Diego Pinto-Suarez
   type: phd  
   year: 2025
