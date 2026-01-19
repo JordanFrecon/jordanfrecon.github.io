@@ -17,7 +17,9 @@ After a brief introduction, the course is structured into multiple chapters of 1
 
 
 {% capture list_items %}
-Introduction, {{ site.baseurl }}/courses/machine-learning/introduction
+Course Overview, {{ site.baseurl }}/courses/machine-learning/overview
+Introduction <i class="fas fa-clock"></i>, {{ site.baseurl }}/courses/machine-learning/introduction
+Learning Theory <i class="fas fa-clock"></i>, {{ site.baseurl }}/courses/machine-learning/learning-theory
 Probabilistic Modeling <i class="fas fa-clock"></i>, {{ site.baseurl }}/courses/machine-learning/probabilistic-modeling
 Classification  <i class="fas fa-clock"></i><i class="fas fa-clock"></i>, {{ site.baseurl }}/courses/machine-learning/classification
 Kernels <i class="fas fa-clock"></i><i class="fas fa-clock"></i>, {{ site.baseurl }}/courses/machine-learning/kernels
