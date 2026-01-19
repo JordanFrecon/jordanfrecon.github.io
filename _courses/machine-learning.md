@@ -1,13 +1,13 @@
 ---
-title: Data Science with Python
+title: Machine Learning
 layout: course
-shortid: datascience
-description: A introduction to data science with Python
+shortid: machinelearning
+description: A introduction to Machine Learning
 institution: Télécom Saint-Etienne
 program: Engineer Telecom Saint-Etienne
 year: 2nd year
 hours: 15
-year_post: 2025
+year_post: 2026
 ---
 
 
