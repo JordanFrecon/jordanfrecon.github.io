@@ -8,6 +8,7 @@ program: Engineer Telecom Saint-Etienne
 year: 2nd year
 hours: 15
 year_post: 2026
+hidden: true
 ---
 
 
