@@ -3,11 +3,11 @@ layout: publication
 title: Tukey-Median of Means-Gradients for Langevin Dynamics - a Robust Approach to Fitting Machine Learning Models
 authors: S. Chrétien, B. Gao, J. Patracone, A.-R. Mezidi and O. Alata
 publication: preprint
-year: 2025
+year: 2026
 doi:
 image: False
 type: preprint
-project: physics
+project: adversarialLearning
 nopdf: True
 nobib: True
 ---
