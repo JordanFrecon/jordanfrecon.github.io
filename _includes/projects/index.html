@@ -2,7 +2,7 @@
 <script src="{{ '/assets/js/remote-projects.js' | relative_url }}"></script>
 
 <div class="container-fluid">
-  <div class="row m-3 mt-5">
+  <div class="card-columns m-3 mt-5">
 
     {% assign sorted_projects = site.projects | sort: "year_added" | reverse %}
 
