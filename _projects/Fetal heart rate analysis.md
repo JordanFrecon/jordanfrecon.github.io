@@ -5,6 +5,7 @@ image: /images/projects/fhr_preview.jpg
 description: Scale invariance analysis of fetal heart rate.
 layout: project
 keyword: fhr
+year_added: 2017
 ---
 
 

@@ -5,6 +5,7 @@ image: /images/projects/multivariateScaleInvariance_preview.jpg
 description: Joint analysis of the scale invariance of multivariate data.
 layout: project
 keyword: multiScaleInvariance
+year_added: 2016
 ---
 
 ![preview](/images/projects/multivariateScaleInvariance_internet.png)

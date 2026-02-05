@@ -5,6 +5,7 @@ image: /images/projects/inhomogeneousScaleInvariance_preview.png
 description: This project deals with the case where the scale invariance properties are inhomogenous in time or in space.
 layout: project
 keyword: piecewiseMF
+year_added: 2015
 ---
 
 ![preview](/images/projects/inhomogeneousScaleInvariance.png)

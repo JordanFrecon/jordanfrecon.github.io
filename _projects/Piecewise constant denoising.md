@@ -5,6 +5,7 @@ image: /images/projects/piecewiseConstantDenoising_preview.png
 description: Various contributions about piecewise constant denoising.
 layout: project
 keyword: piecewiseCstDenoising
+year_added: 2015
 ---
 
 Piecewise constant denoising, tightly related to change-point detection, is of considerable potential interest in numerous signal processing applications including, e.g., econometrics and biomedical analysis. Denoising the piecewise constant information has been addressed by several strategies, such as Cusum procedures or hierarchical Bayesian inference frameworks. Here, we focus on functional optimization formulations, involving either the L1-norm or the L0-pseudo-norm of the first differences of the signal, leading to the Total-variation (TV) and Potts models, respectively.
