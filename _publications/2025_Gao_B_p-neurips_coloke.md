@@ -7,7 +7,7 @@ year: 2025
 doi:
 image: True
 type: conference
-project: physics
+project: dynamics
 nobib: True
 ---
 

@@ -7,7 +7,7 @@ year: 2025
 doi:
 image: False
 type: workshop
-project: physics
+project: dynamics
 nopdf: True
 nobib: True
 ---
