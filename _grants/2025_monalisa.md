@@ -9,5 +9,3 @@ end: 2029
 amount: "€287k"
 ---
 
-(Optional) Short description of the project.
-

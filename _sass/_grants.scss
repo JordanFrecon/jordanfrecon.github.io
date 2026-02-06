@@ -1,0 +1,90 @@
+.grants-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+  margin: 1.5rem 0;
+}
+
+.grant-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-radius:18px;
+  text-decoration:none;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.grant-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.24);
+}
+
+.grant-body{
+  padding:22px 22px 16px 22px;
+}
+
+.grant-title{
+  margin:0 0 10px 0;
+  font-size: 1.55rem;
+  line-height:1.15;
+}
+
+.grant-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin: 2px 0 14px 0;
+}
+
+.tag{
+  display:inline-block;
+  padding: 2px 8px;
+  font-size:.78rem;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,.45);
+  background: rgba(0,0,0,.10);
+}
+
+.grant-desc{
+  margin:0;
+  opacity:.92;
+  line-height:1.35;
+}
+
+.grant-footer{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 22px;
+  border-top:1px solid rgba(255,255,255,.16);
+  font-size:.9rem;
+  opacity:.92;
+}
+
+/* --- 3 color modes --- */
+.grant--lead{
+  background:#0ea5b7;           /* you are funder/PI */
+  color:#ffffff;
+}
+
+.grant--co{
+  background:#111827;           /* co-funder / co-PI */
+  color:#ffffff;
+  border:1px solid rgba(34,197,94,.55); /* subtle green outline */
+}
+
+.grant--part{
+  background:#f3f4f6;           /* participating */
+  color:#111827;
+  border:1px solid rgba(0,0,0,.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+
+.grant--part .tag{
+  border-color: rgba(0,0,0,.25);
+  background: rgba(255,255,255,.55);
+}
+
