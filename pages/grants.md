@@ -7,7 +7,7 @@ permalink: /grants/
 {% assign grants = site.grants | sort: "start" | reverse %}
 {% for g in grants %}
 
-  {%- comment -%} Map role -> color class {%- endcomment -%}
+  {%- comment -%} role -> color class {%- endcomment -%}
   {%- assign role_lc = g.role | downcase | strip -%}
   {%- if role_lc == "pi" or role_lc contains "lead" -%}
     {%- assign grant_class = "grant--lead" -%}
@@ -26,6 +26,10 @@ permalink: /grants/
   <a class="grant-card {{ grant_class }}" href="{{ href }}">
     <div class="grant-body">
       <h3 class="grant-title">{{ g.title }}</h3>
+
+      {% if g.subtitle %}
+        <p class="grant-subtitle">{{ g.subtitle }}</p>
+      {% endif %}
 
       <div class="grant-tags">
         {% if g.funder %}<span class="tag">{{ g.funder }}</span>{% endif %}
