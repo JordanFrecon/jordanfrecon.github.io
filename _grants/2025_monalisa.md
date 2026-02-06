@@ -13,7 +13,6 @@ leaders:
   - Jordan Patracone
 
 partners:
-  - Inria, LabHC, UJM
   - Université Lyon 2
   - Istituto Italiano di Tecnologia
   - Sapienza Università di Roma

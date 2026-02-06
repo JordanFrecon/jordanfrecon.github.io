@@ -2,21 +2,62 @@
 layout: default
 ---
 
-<main class="page-content" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
-  <h1>{{ page.title }}</h1>
+<main class="page-content" style="max-width: 900px; margin: 2.5rem auto; padding: 0 1rem;">
 
-  <div style="margin-top: 1rem; padding: 1rem; border: 1px solid #ddd; border-radius: 12px;">
-    <p><strong>Funder:</strong> {{ page.funder }}</p>
-    <p><strong>Role:</strong> {{ page.role }}</p>
-    <p><strong>Status:</strong> {{ page.status }}</p>
-    <p><strong>Period:</strong> {{ page.start }}–{{ page.end }}</p>
-    <p><strong>Amount:</strong> {{ page.amount }}</p>
-  </div>
+  <header style="margin-bottom: 2rem;">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+      <p style="font-size:1.1rem; opacity:.8; margin-top:.5rem;">
+        {{ page.subtitle }}
+      </p>
+    {% endif %}
+  </header>
+
+  <section style="margin-bottom: 2rem;">
+    <ul style="list-style:none; padding:0; line-height:1.6;">
+      {% if page.funder %}
+        <li><strong>Funder:</strong> {{ page.funder }}</li>
+      {% endif %}
+      {% if page.role %}
+        <li><strong>Your role:</strong> {{ page.role }}</li>
+      {% endif %}
+      {% if page.start %}
+        <li><strong>Period:</strong> {{ page.start }}{% if page.end %}–{{ page.end }}{% endif %}</li>
+      {% endif %}
+      {% if page.amount %}
+        <li><strong>Amount:</strong> {{ page.amount }}</li>
+      {% endif %}
+    </ul>
+  </section>
+
+  {% if page.co_leaders and page.co_leaders.size > 0 %}
+    <section style="margin-bottom: 1.5rem;">
+      <h3>Co-leaders</h3>
+      <ul>
+        {% for l in page.co_leaders %}
+          <li>{{ l }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if page.partners and page.partners.size > 0 %}
+    <section style="margin-bottom: 1.5rem;">
+      <h3>Partners</h3>
+      <ul>
+        {% for p in page.partners %}
+          <li>{{ p }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 
   {% if content and content != "" %}
-    <div style="margin-top: 1.5rem;">
+    <section>
       {{ content }}
-    </div>
+    </section>
   {% endif %}
+
 </main>
 
