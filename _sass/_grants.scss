@@ -1,9 +1,7 @@
-/* assets/css/grants.css */
-
-/* ====== Grid: 2 columns (desktop), 1 column (mobile) ====== */
+/* ====== Grid ====== */
 .grants-grid{
   display:grid;
-  grid-template-columns: 1fr 1fr;   /* exactly two columns */
+  grid-template-columns: 1fr 1fr;
   gap:22px;
   margin: 1.5rem 0;
 }
@@ -14,7 +12,7 @@
   }
 }
 
-/* ====== Card base ====== */
+/* ====== Card ====== */
 a.grant-card{
   display:flex;
   flex-direction:column;
@@ -23,11 +21,8 @@ a.grant-card{
   text-decoration:none;
   overflow:hidden;
 
-  /* baseline border/shadow */
   border:1px solid rgba(255,255,255,.12);
   box-shadow: 0 10px 24px rgba(0,0,0,.18);
-
-  /* interaction */
   transition: transform .12s ease, box-shadow .12s ease;
 }
 
@@ -38,71 +33,93 @@ a.grant-card:focus{
   outline: none;
 }
 
-/* ====== Content blocks ====== */
+/* HARD OVERRIDE: freeze colors on hover */
+a.grant-card:hover,
+a.grant-card:focus,
+a.grant-card:hover *,
+a.grant-card:focus *{
+  color: inherit !important;
+}
+
+/* ====== Content ====== */
 .grant-body{
   padding:22px 22px 16px 22px;
 }
 
 .grant-title{
   margin:0 0 10px 0;
-  font-size: 1.55rem;
+  font-size:1.55rem;
   line-height:1.15;
 }
 
 .grant-subtitle{
-  margin: 0 0 12px 0;
-  font-size: .95rem;
-  line-height: 1.3;
-  opacity: .85;
+  margin:0 0 12px 0;
+  font-size:.95rem;
+  line-height:1.3;
+  opacity:.85;
 }
 
 .grant-tags{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
-  margin: 2px 0 14px 0;
+  margin:2px 0 14px 0;
 }
 
 .tag{
-  display:inline-block;
-  padding: 2px 8px;
+  padding:2px 8px;
   font-size:.78rem;
   border-radius:6px;
   border:1px solid rgba(255,255,255,.45);
-  background: rgba(0,0,0,.10);
+  background:rgba(0,0,0,.10);
 }
 
+/* Leaders / Partners */
+.grant-meta{
+  margin-bottom:6px;
+  font-size:.85rem;
+  line-height:1.25;
+}
+
+.meta-label{
+  font-weight:600;
+  opacity:.85;
+  margin-right:4px;
+}
+
+.meta-value{
+  opacity:.9;
+}
+
+/* Optional description */
 .grant-desc{
-  margin:0;
+  margin-top:10px;
   opacity:.92;
   line-height:1.35;
 }
 
+/* Footer */
 .grant-footer{
   display:flex;
   justify-content:space-between;
-  gap:12px;
   padding:12px 22px;
   border-top:1px solid rgba(255,255,255,.16);
   font-size:.9rem;
   opacity:.92;
 }
 
-/* ====== 3 role-based color modes ====== */
-/* 1) You are funder / lead (PI) */
+/* ====== Role colors ====== */
 .grant--lead{
   background:#0ea5b7;
   color:#ffffff;
 }
 
-/* 2) You are co-funder / co-PI */
 .grant--co{
   background:#111827;
   color:#ffffff;
   border:1px solid rgba(34,197,94,.55);
 }
 
-/* 3) Participating */
 .grant--part{
   background:#f3f4f6;
   color:#111827;
@@ -110,20 +127,8 @@ a.grant-card:focus{
   box-shadow: 0 10px 24px rgba(0,0,0,.10);
 }
 
-/* Tag styling adjustments on light card */
 .grant--part .tag{
   border-color: rgba(0,0,0,.25);
   background: rgba(255,255,255,.55);
-}
-
-/* ====== HARD OVERRIDE: prevent theme hover color changes ======
-   Many themes (e.g., Minimal Mistakes) apply a:hover to headings/spans inside links.
-   This block ensures NOTHING inside the card changes color on hover/focus.
-*/
-a.grant-card:hover,
-a.grant-card:focus,
-a.grant-card:hover *,
-a.grant-card:focus *{
-  color: inherit !important;
 }
 
