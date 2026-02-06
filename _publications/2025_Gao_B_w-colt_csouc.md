@@ -7,7 +7,7 @@ year: 2025
 doi:
 image: False
 type: workshop
-project: dynamics
+project: dynamicalSyst
 nopdf: True
 nobib: True
 ---

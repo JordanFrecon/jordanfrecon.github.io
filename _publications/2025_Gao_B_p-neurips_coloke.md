@@ -7,7 +7,7 @@ year: 2025
 doi:
 image: True
 type: conference
-project: dynamics
+project: dynamicalSyst
 nobib: True
 ---
 
