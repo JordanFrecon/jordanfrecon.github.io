@@ -1,16 +1,12 @@
 ---
-title: Grants
+title: "Grants & Funded Projects"
 permalink: /grants/
+layout: archive
+weight: 1
 ---
 
-{% for grant in site.grants %}
-### {{ grant.title }}
-
-- **Funder:** {{ grant.funder }}
-- **Role:** {{ grant.role }}
-- **Status:** {{ grant.status }}
-- **Period:** {{ grant.start }}–{{ grant.end }}
-- **Amount:** {{ grant.amount }}
-
+{% assign grants = site.grants | sort: "start" | reverse %}
+{% for post in grants %}
+  {% include archive-grant.html %}
 {% endfor %}
 
