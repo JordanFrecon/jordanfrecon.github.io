@@ -1,6 +1,6 @@
 ---
 layout: grant
-title: GreenAI
+title: MELISSA
 funder: ANR
 role: Partner
 start: 2024
