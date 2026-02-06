@@ -9,8 +9,7 @@ start: 2025
 end: 2029
 amount: "€287k"
 
-leaders:
-  - Jordan Patracone
+leader: Jordan Patracone
 
 partners:
   - Université Lyon 2

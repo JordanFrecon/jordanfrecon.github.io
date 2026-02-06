@@ -25,6 +25,13 @@ permalink: /grants/
         {% if g.role %}<span class="tag">{{ g.role }}</span>{% endif %}
       </div>
 
+      {% if g.leader %}
+        <div class="grant-meta">
+          <span class="meta-label">Leader</span>
+          <span class="meta-value">{{ g.leader }}</span>
+        </div>
+      {% endif %}
+
       {% if g.co_leaders and g.co_leaders.size > 0 %}
         <div class="grant-meta">
           <span class="meta-label">
