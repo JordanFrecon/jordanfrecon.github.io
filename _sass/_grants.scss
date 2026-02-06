@@ -1,8 +1,17 @@
+/* assets/css/grants.css */
+
 .grants-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  grid-template-columns: 1fr 1fr;   /* exactly two columns */
   gap:22px;
   margin: 1.5rem 0;
+}
+
+/* Responsive: 1 column on smaller screens */
+@media (max-width: 900px){
+  .grants-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 .grant-card{
@@ -17,9 +26,20 @@
   transition: transform .12s ease, box-shadow .12s ease;
 }
 
-.grant-card:hover{
+/* Hover effect: lift + shadow only (no color changes) */
+.grant-card:hover,
+.grant-card:focus{
   transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(0,0,0,.24);
+  outline: none;
+}
+
+/* Lock text color against theme's a:hover rules */
+.grant-card,
+.grant-card:hover,
+.grant-card:focus,
+.grant-card *{
+  color: inherit;
 }
 
 .grant-body{
@@ -65,24 +85,28 @@
 }
 
 /* --- 3 color modes --- */
+/* 1) You are funder / lead (PI) */
 .grant--lead{
-  background:#0ea5b7;           /* you are funder/PI */
+  background:#0ea5b7;
   color:#ffffff;
 }
 
+/* 2) You are co-funder / co-PI */
 .grant--co{
-  background:#111827;           /* co-funder / co-PI */
+  background:#111827;
   color:#ffffff;
-  border:1px solid rgba(34,197,94,.55); /* subtle green outline */
+  border:1px solid rgba(34,197,94,.55);
 }
 
+/* 3) Participating */
 .grant--part{
-  background:#f3f4f6;           /* participating */
+  background:#f3f4f6;
   color:#111827;
   border:1px solid rgba(0,0,0,.10);
   box-shadow: 0 10px 24px rgba(0,0,0,.10);
 }
 
+/* Tag styling adjustments on light card */
 .grant--part .tag{
   border-color: rgba(0,0,0,.25);
   background: rgba(255,255,255,.55);
