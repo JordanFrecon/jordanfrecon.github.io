@@ -4,7 +4,6 @@ title: MONALISA
 subtitle: "Monotone Operators and Neural Architectures – Leveraging Interactions for Physically Structured Approximations"
 funder: ANR
 role: PI
-status: Funded
 start: 2025
 end: 2029
 amount: "€287k"
