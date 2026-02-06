@@ -2,7 +2,6 @@
 title: "Grants & Funded Projects"
 permalink: /grants/
 layout: archive
-weight: 1
 ---
 
 {% assign grants = site.grants | sort: "start" | reverse %}
