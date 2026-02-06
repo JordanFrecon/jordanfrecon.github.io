@@ -1,11 +1,14 @@
 ---
-title: "Grants & Funded Projects"
+title: Grants
 permalink: /grants/
-layout: archive
 ---
 
-{% assign grants = site.grants | sort: "start" | reverse %}
-{% for post in grants %}
-  {% include archive-grant.html %}
+<ul>
+{% for g in site.grants %}
+  <li>
+    <a href="{{ g.url | relative_url }}">{{ g.title }}</a>
+    — {{ g.funder }}, {{ g.start }}–{{ g.end }}
+  </li>
 {% endfor %}
+</ul>
 
