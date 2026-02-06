@@ -84,7 +84,7 @@ collections:
     permalink: /:collection/:name
   grants:
     output: true
-    permalink: /:collection/:name
+    permalink: /grants/:path/
 
 
 
