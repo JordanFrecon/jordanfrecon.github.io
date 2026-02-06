@@ -1,3 +1,5 @@
+/* assets/css/grants.css */
+
 /* ====== Grid ====== */
 .grants-grid{
   display:grid;
@@ -33,7 +35,7 @@ a.grant-card:focus{
   outline: none;
 }
 
-/* HARD OVERRIDE: freeze colors on hover */
+/* HARD OVERRIDE: prevent theme hover color changes */
 a.grant-card:hover,
 a.grant-card:focus,
 a.grant-card:hover *,
@@ -74,7 +76,7 @@ a.grant-card:focus *{
   background:rgba(0,0,0,.10);
 }
 
-/* Leaders / Partners */
+/* Co-leaders / Partners */
 .grant-meta{
   margin-bottom:6px;
   font-size:.85rem;

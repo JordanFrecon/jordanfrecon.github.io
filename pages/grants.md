@@ -33,24 +33,21 @@ permalink: /grants/
       <div class="grant-tags">
         {% if g.funder %}<span class="tag">{{ g.funder }}</span>{% endif %}
         {% if g.role %}<span class="tag">{{ g.role }}</span>{% endif %}
-        {% if g.status %}<span class="tag">{{ g.status }}</span>{% endif %}
       </div>
 
-      {% if g.leaders %}
+      {% if g.co_leaders and g.co_leaders.size > 0 %}
         <div class="grant-meta">
-          <span class="meta-label">Leaders</span>
-          <span class="meta-value">
-            {{ g.leaders | join: ", " }}
+          <span class="meta-label">
+            {% if g.co_leaders.size == 1 %}Co-leader{% else %}Co-leaders{% endif %}
           </span>
+          <span class="meta-value">{{ g.co_leaders | join: ", " }}</span>
         </div>
       {% endif %}
 
-      {% if g.partners %}
+      {% if g.partners and g.partners.size > 0 %}
         <div class="grant-meta">
           <span class="meta-label">Partners</span>
-          <span class="meta-value">
-            {{ g.partners | join: ", " }}
-          </span>
+          <span class="meta-value">{{ g.partners | join: ", " }}</span>
         </div>
       {% endif %}
 
