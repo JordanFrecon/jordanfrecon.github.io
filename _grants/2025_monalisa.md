@@ -1,11 +1,21 @@
 ---
 layout: grant
 title: MONALISA
+subtitle: "Monotone Operators and Neural Architectures – Leveraging Interactions for Physically Structured Approximations"
 funder: ANR
 role: PI
 status: Funded
 start: 2025
 end: 2029
 amount: "€287k"
+
+leaders:
+  - Jordan Patracone
+
+partners:
+  - Inria, LabHC, UJM
+  - Université Lyon 2
+  - Istituto Italiano di Tecnologia
+  - Sapienza Università di Roma
 ---
 

@@ -7,7 +7,6 @@ permalink: /grants/
 {% assign grants = site.grants | sort: "start" | reverse %}
 {% for g in grants %}
 
-  {%- comment -%} role -> color class {%- endcomment -%}
   {%- assign role_lc = g.role | downcase | strip -%}
   {%- if role_lc == "pi" or role_lc contains "lead" -%}
     {%- assign grant_class = "grant--lead" -%}
@@ -36,6 +35,24 @@ permalink: /grants/
         {% if g.role %}<span class="tag">{{ g.role }}</span>{% endif %}
         {% if g.status %}<span class="tag">{{ g.status }}</span>{% endif %}
       </div>
+
+      {% if g.leaders %}
+        <div class="grant-meta">
+          <span class="meta-label">Leaders</span>
+          <span class="meta-value">
+            {{ g.leaders | join: ", " }}
+          </span>
+        </div>
+      {% endif %}
+
+      {% if g.partners %}
+        <div class="grant-meta">
+          <span class="meta-label">Partners</span>
+          <span class="meta-value">
+            {{ g.partners | join: ", " }}
+          </span>
+        </div>
+      {% endif %}
 
       {% if g.excerpt %}
         <p class="grant-desc">{{ g.excerpt | strip_html }}</p>
