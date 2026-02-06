@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 permalink: /publications/
-weight: 2
+weight: 5
 ---
 
 > Ad blockers may prevent the display of publications

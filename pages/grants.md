@@ -1,6 +1,7 @@
 ---
 title: Grants
 permalink: /grants/
+weight: 3
 ---
 
 <div class="grants-grid">
