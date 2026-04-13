@@ -21,7 +21,8 @@ permalink: /
 <div class="danger-box-titled">
 <span class="title">Open positions</span>
 <ul>
-<li>Internship: <em>Master's internship on Online Koopman Operator Learning </em> (<a href="/download/internship/2025-Intership-LabHC-Koopman.pdf">offer</a>)</li>
+<li>Postdoc: <em>Optimization and physics-informed machine learning </em> (contact me)</li>
+<li>Postdoc: <em>MSCA Fellowships </em> (see <a href="/https://www.inria.fr/sites/default/files/2026-02/Inria_hosting_offers_2026-Artificial_intelligence.pdf">offer 5</a>)</li>
 <li>Inria CR/ISFP: <em>Full time research position in our MALICE Inria project-team</em> (<a href="https://labhc-malice.github.io/">offer</a>)</li>
 </ul>
 </div>
