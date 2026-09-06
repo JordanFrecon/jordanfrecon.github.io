@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Beyond Gaussian Initialization: Activation-Induced Gibbs States for Critical and Width-Efficient Networks
+title: Beyond Gaussian Initialization - Activation-Induced Gibbs States for Critical and Width-Efficient Networks
 authors: D. Pinto-Suarez, J. Patracone and M. Sebban
 publication: preprint
 year: 2026
