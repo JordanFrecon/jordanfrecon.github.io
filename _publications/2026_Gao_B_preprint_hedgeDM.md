@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Forecasting under Persistent-Transient Ambiguity
+title: Cautious Adaptation under Persistent–Transient Ambiguity for Online Forecasting
 authors: B. Gao, J. Patracone and O. Alata
 publication: preprint
 year: 2026
