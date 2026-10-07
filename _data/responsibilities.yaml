@@ -1,0 +1,23 @@
+- id: 2020-2022-raimo
+  years: [2020, 2021, 2022]
+  organization: RAIMo AI Chair
+  role: Chair Assistant
+  title: null
+  
+- id: 2020-2022-deep-in-normandy
+  years: [2020, 2021, 2022]
+  organization: CRIANN
+  role: Project Lead
+  title: Deep in Normandy
+  
+- id: 2024-present-cumi-inria-lyon
+  years: [2024, 2025, 2026, 2027]
+  organization: Inria Lyon
+  role: Member of the Commission des Utilisateurs de Moyens Informatiques
+  title: null
+  
+- id: 2025-2028-dynamo
+  years: [2025, 2026, 2027, 2028]
+  organization: Hubert Curien Laboratory / IIT Genoa
+  role: Founder and Scientific Coordinator
+  title: Inria Associate Team DYNAMO

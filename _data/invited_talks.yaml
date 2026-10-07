@@ -1,0 +1,89 @@
+- id: 2027-sampta
+  year: 2027
+  date: null
+  place: null
+  event: SampTA
+  title: null
+
+- id: 2026-time-series-deep-learning
+  year: 2026
+  date: 09/06/2026
+  place: Institut Camille Jordan
+  event: Time Series Analysis and Deep Learning workshop
+  title: Conformal Online Learning of Koopman Embedding
+
+- id: 2026-wlds
+  year: 2026
+  date: 20/03/2026
+  place: Kyoto University
+  event: WLDS 2026
+  title: Learning Dynamical Systems from Incomplete Physical Knowledge
+  
+- id: 2026-piml-day
+  year: 2026
+  date: 15/04/2026
+  place: AgroParisTech
+  event: PIML Day 2026
+  title: 'Bridging Physics and Learning: An optimization Framework for Hybrid Differentiable Models'
+  
+- id: 2024-teu
+  year: 2024
+  date: 13/11/2024
+  place: Université Jean Monnet
+  event: Matchmaking event T4EU - Core AI Workshop
+  title: Robustness and Adversarial Machine Learning
+  
+- id: 2024-labhc
+  year: 2024
+  date: 02/2024
+  place: Hubert Curien Laboratory, Université Jean Monnet
+  event: Seminar
+  title: Physics-Informed Machine Learning
+  
+- id: 2022-limos
+  year: 2022
+  place: LIMOS, Université Clermont Auvergne
+  event: Seminar
+  title: 'Bilevel optimization for hyperparameters learning'
+  
+- id: 2022-labhc
+  year: 2022
+  place: Hubert Curien Laboratory, Télécom Saint-Étienne
+  event: Seminar
+  title: 'Bilevel Optimization of Group-wise Penalties: Application to Structure Discovery'
+  
+- id: 2022-litis
+  year: 2022
+  place: LITIS, INSA Rouen
+  event: Seminar
+  title: A Survey of Bilevel Optimization for Hyperparameters Learning
+  
+- id: 2021-lagrange
+  year: 2021
+  place: Laboratoire Lagrange
+  event: Seminar
+  title: 'Bilevel optimization of hyperparameters: Application to structure discovery'
+  
+- id: 2021-digital-vision-center
+  year: 2021
+  place: Digital Vision Center, CentraleSupélec, Inria Saclay
+  event: Seminar
+  title: 'Bilevel optimization of hyperparameters: Application to structure discovery'
+  
+- id: 2021-imag
+  year: 2021
+  place: IMAG, Université de Montpellier
+  event: Seminar
+  title: 'Bilevel Optimization of Hyperparameters: Application to Structure Discovery'
+  
+- id: 2020-parietal
+  year: 2020
+  place: Parietal team, Inria Saclay
+  event: Team seminar
+  title: Bilevel Optimization of Groupwise Penalties
+  
+- id: 2020-sims
+  year: 2020
+  place: SIMS team, École Centrale Nantes
+  event: Seminar
+  title: Bilevel Optimization of Groupwise Penalties

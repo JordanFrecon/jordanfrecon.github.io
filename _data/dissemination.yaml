@@ -1,0 +1,30 @@
+- id: 2026-radio-dio-infinis
+  years: [2026]
+  place: Radio Dio
+  event: Les Baladeuses – INFINI(s)
+  title: "Radio Interview on Artificial Intelligence and the Infinite"
+
+- id: 2024-carsat
+  years: [2024]
+  place: CARSAT Rhône-Alpes
+  event: Management Committee
+  title: "Artificial Intelligence for Public-Sector Organizations"
+
+- id: 2024-edsis-phday
+  years: [2024]
+  place: École Doctorale Sciences Ingénierie Santé
+  event: Research Day – PhDay
+  title: "Career Path Testimonial"
+
+- id: 2023-cordees
+  years: [2023, 2024, 2025, 2026, 2027]
+  place: Télécom Saint-Étienne / Partner High Schools
+  event: "Cordées de la réussite – Engineer, Why Not You?"
+  title: "Artificial Intelligence Workshops"
+
+- id: 2020-math-en-jeans
+  years: [2020, 2021, 2022, 2023]
+  place: European School The Hague / Lycée Français Vincent-Van-Gogh
+  event: MATh.en.JEANS
+  title: "Research Workshops in Mathematics and Artificial Intelligence"
+ 

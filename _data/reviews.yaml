@@ -1,0 +1,86 @@
+- id: AAAI
+  category: Conference
+  role: Reviewer
+  years: [2026]
+  
+- id: AISTATS
+  category: Conference
+  role: Reviewer
+  years: [2027]
+  
+- id: NeurIPS Workshop AXIOM
+  category: Workshop
+  role: Reviewer
+  years: [2026]
+  
+- id: ICML
+  category: Conference
+  role: Reviewer
+  years: [2022, 2025, 2026]
+  
+- id: ICLR
+  category: Conference
+  role: Reviewer
+  years: [2025]
+  
+- id: NeurIPS
+  category: Conference
+  role: Reviewer
+  years: [2024, 2026]
+  
+- id: Gretsi
+  category: Conference
+  role: Reviewer
+  years: [2025]
+  
+- id: Journal on Machine Learning Research
+  category: Journal
+  role: Reviewer
+  years: [2021, 2022, 2023]
+ 
+- id: Transactions on Machine Learning Research
+  category: Journal
+  role: Reviewer
+  years: [2025]
+  count-by-year: 2
+  
+- id: Journal of Mathematical Imaging and Vision
+  category: Journal
+  role: Reviewer
+  years: [2025]
+  
+- id: EURO Journal on Computational Optimization
+  category: Journal
+  role: Reviewer
+  years: [2026]
+
+- id: IEEE Transactions on Signal Processing
+  category: Journal
+  role: Reviewer
+  years: [2022]
+  
+- id: ANR-DST
+  category: Funding agency
+  role: Reviewer
+  years: [2026]
+  note: Applied mathematics and artificial intelligence
+ 
+- id: Statistics, Optimization & Information Computing
+  category: Journal
+  role: Reviewer
+  years: [2020]
+  
+- id: IEEE Signal Processing Letters
+  category: Journal
+  role: Reviewer
+  years: [2020]
+  
+- id: SIAM Journal on Imaging Sciences
+  category: Journal
+  role: Reviewer
+  years: [2021]
+  
+- id: IEEE Transactions on Signal Processing
+  category: Journal
+  role: Reviewer
+  years: [2022]

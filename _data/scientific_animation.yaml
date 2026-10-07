@@ -1,0 +1,18 @@
+- id: 2025-gdr-iasis-bilevel
+  years: 2025
+  place: Lyon
+  event: GDR IASIS Thematic Day on Bilevel Optimization and Hyperparameter Learning
+  role: Organizer
+
+- id: 2024-2026-popilss
+  years: [2024, 2025, 2026]
+  place: Lyon / Annecy / Saint-Étienne
+  event: POPILSS Workshops on Sparsity, Optimization and Inverse Problems
+  role: Co-organizer
+  
+- id: 2026-smai-mas-pinn-chair
+  years: 2026
+  place: Université Lyon 1
+  event: MAS Days - Session on "Physics-Informed Neural Networks"
+  role: Chair
+
